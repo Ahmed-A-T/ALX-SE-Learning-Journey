@@ -16,22 +16,22 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 * **Low-level programming & Algorithm**
   * Low-level programming & Algorithm - Hatching out
   * Low-level programming & Algorithm - Data structures and Algorithms
-  * **Low-level programming & Algorithm - Linux and Unix system programming**
+  * Low-level programming & Algorithm - Linux and Unix system programming
  * **Higher-level programming**
-   * **Higher-level programming - Python**
-   * **Higher-level programming - Javascript**
-   * **Higher-level programming - Databases**
-   * **Higher-level programming - AirBnB clone**
+   * Higher-level programming - Python
+   * Higher-level programming - Javascript
+   * Higher-level programming - Databases
+   * Higher-level programming - AirBnB clone
  * **System engineering & DevOps**
-   * **System engineering & DevOps - Bash**
-   * **System engineering & DevOps - Scripting**
-   * **System engineering & DevOps - Networking**
-   * **System engineering & DevOps - Web stack**
-   * **System engineering & DevOps - Security**
-   * **System engineering & DevOps - CI/CD**
-   * **System engineering & DevOps - Web stack debugging**
+   * System engineering & DevOps - Bash
+   * System engineering & DevOps - Scripting
+   * System engineering & DevOps - Networking
+   * System engineering & DevOps - Web stack
+   * System engineering & DevOps - Security
+   * System engineering & DevOps - CI/CD
+   * System engineering & DevOps - Web stack debugging
  * **Technical Writing and Networking**
-    * **Technical Writing and Networking - Social media**
+    * Technical Writing and Networking - Social media
   * **More! - More!**
 
 ## Resources
