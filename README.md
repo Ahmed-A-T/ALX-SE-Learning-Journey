@@ -12,6 +12,11 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 # What You'll Find Here
 ## Curriculum
 * **Getting Started**
+* **Tools**
+* **Low-level programming & Algorithm**
+  * **Low-level programming & Algorithm - Hatching out**
+  * **Low-level programming & Algorithm - Data structures and Algorithms**
+  * **Low-level programming & Algorithm - Linux and Unix system programming**
 
 ## Resources
 * **Learning Materials**: Links to relevant articles, documentation, and tutorials that supplement the ALX coursework and deepen understanding.
