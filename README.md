@@ -10,7 +10,8 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 ***
 
 # What You'll Find Here
-## curriculum
+## Curriculum
+* **Getting Started**
 
 ## Resources
 * **Learning Materials**: Links to relevant articles, documentation, and tutorials that supplement the ALX coursework and deepen understanding.
