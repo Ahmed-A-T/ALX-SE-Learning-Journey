@@ -14,8 +14,8 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 * **Getting Started**
 * **Tools**
 * **Low-level programming & Algorithm**
-  * **Low-level programming & Algorithm - Hatching out**
-  * **Low-level programming & Algorithm - Data structures and Algorithms**
+  * Low-level programming & Algorithm - Hatching out
+  * Low-level programming & Algorithm - Data structures and Algorithms
   * **Low-level programming & Algorithm - Linux and Unix system programming**
  * **Higher-level programming**
    * **Higher-level programming - Python**
