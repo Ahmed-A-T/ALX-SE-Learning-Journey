@@ -53,23 +53,74 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x18. C - Dynamic libraries
      * 0x1C. C - Makefiles
   * Low-level programming & Algorithm - Data structures and Algorithms
+     * 0x12. C - Singly linked lists
+     * 0x13. C - More singly linked lists
+     * 0x17. C - Doubly linked lists
+     * 0x19. C - Stacks, Queues - LIFO, FIFO
+     * 0x1A. C - Hash tables
+     * 0x1B. C - Sorting algorithms & Big O
+     * 0x1D. C - Binary trees 
   * Low-level programming & Algorithm - Linux and Unix system programming
+     * 0x15. C - File I/O
+     * 0x16. C - Simple Shell
  * **Higher-level programming**
    * Higher-level programming - Python
+     * 0x00. Python - Hello, World
+     * 0x01. Python - if/else, loops, functions
+     * 0x02. Python - import & modules
+     * 0x03. Python - Data Structures: Lists, Tuples
+     * 0x04. Python - More Data Structures: Set, Dictionary
+     * 0x05. Python - Exceptions
+     * 0x06. Python - Classes and Objects
+     * 0x08. Python - More Classes and Objects
+     * 0x07. Python - Test-driven development
+     * 0x09. Python - Everything is object
+     * 0x0A. Python - Inheritance
+     * 0x0B. Python - Input/Output
+     * 0x0C. Python - Almost a circle
+     * 0x0F. Python - Object-relational mapping
    * Higher-level programming - Javascript
+     * 0x12. JavaScript - Warm up
+     * 0x13. JavaScript - Objects, Scopes and Closures
    * Higher-level programming - Databases
+      * 0x0D. SQL - Introduction
+      * 0x0E. SQL - More queries 
    * Higher-level programming - AirBnB clone
+      * 0x00. AirBnB clone - The console
+      * 0x01. AirBnB clone - Web static
+      * 0x02. AirBnB clone - MySQL
  * **System engineering & DevOps**
    * System engineering & DevOps - Bash
+     * 0x00. Shell, basics
+     * 0x01. Shell, permissions
+     * 0x02. Shell, I/O Redirections and filters
+     * 0x03. Shell, init files, variables and expansions
+     * 0x04. Loops, conditions and parsing
+     * 0x05. Processes and signals 
    * System engineering & DevOps - Scripting
+      * 0x06. Regular expression
    * System engineering & DevOps - Networking
+     * 0x07. Networking basics #0
+     * 0x08. Networking basics #1
    * System engineering & DevOps - Web stack
+     * 0x09. Web infrastructure design
+     * 0x0C. Web server
+     * 0x0F. Load balancer
    * System engineering & DevOps - Security
+      * 0x0B. SSH
    * System engineering & DevOps - CI/CD
+    * 0x0A. Configuration management
    * System engineering & DevOps - Web stack debugging
+      * 0x0D. Web stack debugging #0
  * **Technical Writing and Networking**
     * Technical Writing and Networking - Social media
+      * Professional Relationships
+      * Professional Social Presence
   * **More! - More!**
+     * RSA Factoring Challenge
+     * Command line for the win
+     * 0x00. Fix my code
+     * Attack is the best defense
 
 ## Resources
 * **Learning Materials**: Links to relevant articles, documentation, and tutorials that supplement the ALX coursework and deepen understanding.
