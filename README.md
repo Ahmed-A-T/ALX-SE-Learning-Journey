@@ -8,10 +8,8 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 ## About Me
 > I'm Ahmed, an aspiring software engineer fueled by curiosity and driven by ambition. With a thirst for knowledge and a love for coding, I've embarked on this journey to transform my passion into expertise and     make a meaningful impact in the world of technology.
 ***
-
 # What You'll Find Here
 ## Curriculum
-
 * **Getting Started**
   *  Introduction to mindsets (Grit and growth mindsets)
   *  A tweet a day keeps the @julienbarbier42 far away
@@ -21,8 +19,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
   *  Your network is your net worth
   *  Owning your Learning
   *  Preserving your mental health & Conquering imposter syndrome
-  *  The real buddies
-    
+  *  The real buddies 
 * **Tools**
   *  0x00. Shell, navigation
   *  0x01. Emacs
@@ -30,7 +27,6 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
   *  0x03. Git
   *  0x04. Professional Technologies
   *  Setting up your local coding environment
-    
 * **Low-level programming & Algorithm**
   * Low-level programming & Algorithm - Hatching out
      * 0x00. C - Hello, World
@@ -55,7 +51,6 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x14. C - Bit manipulation
      * 0x18. C - Dynamic libraries
      * 0x1C. C - Makefiles
-       
   * Low-level programming & Algorithm - Data structures and Algorithms
      * 0x12. C - Singly linked lists
      * 0x13. C - More singly linked lists
@@ -63,12 +58,10 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x19. C - Stacks, Queues - LIFO, FIFO
      * 0x1A. C - Hash tables
      * 0x1B. C - Sorting algorithms & Big O
-     * 0x1D. C - Binary trees
-       
+     * 0x1D. C - Binary trees  
   * Low-level programming & Algorithm - Linux and Unix system programming
      * 0x15. C - File I/O
-     * 0x16. C - Simple Shell
-       
+     * 0x16. C - Simple Shell     
  * **Higher-level programming**
    * Higher-level programming - Python
      * 0x00. Python - Hello, World
@@ -84,21 +77,17 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x0A. Python - Inheritance
      * 0x0B. Python - Input/Output
      * 0x0C. Python - Almost a circle
-     * 0x0F. Python - Object-relational mapping
-       
+     * 0x0F. Python - Object-relational mapping  
    * Higher-level programming - Javascript
      * 0x12. JavaScript - Warm up
      * 0x13. JavaScript - Objects, Scopes and Closures
-       
    * Higher-level programming - Databases
       * 0x0D. SQL - Introduction
       * 0x0E. SQL - More queries
-        
    * Higher-level programming - AirBnB clone
       * 0x00. AirBnB clone - The console
       * 0x01. AirBnB clone - Web static
-      * 0x02. AirBnB clone - MySQL
-        
+      * 0x02. AirBnB clone - MySQL   
  * **System engineering & DevOps**
    * System engineering & DevOps - Bash
      * 0x00. Shell, basics
@@ -107,33 +96,25 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x03. Shell, init files, variables and expansions
      * 0x04. Loops, conditions and parsing
      * 0x05. Processes and signals
-       
    * System engineering & DevOps - Scripting
       * 0x06. Regular expression
-        
    * System engineering & DevOps - Networking
      * 0x07. Networking basics #0
      * 0x08. Networking basics #1
-       
    * System engineering & DevOps - Web stack
      * 0x09. Web infrastructure design
      * 0x0C. Web server
      * 0x0F. Load balancer
-       
    * System engineering & DevOps - Security
-      * 0x0B. SSH
-        
+      * 0x0B. SSH 
    * System engineering & DevOps - CI/CD
     * 0x0A. Configuration management
-      
    * System engineering & DevOps - Web stack debugging
       * 0x0D. Web stack debugging #0
-        
  * **Technical Writing and Networking**
     * Technical Writing and Networking - Social media
       * Professional Relationships
-      * Professional Social Presence
-        
+      * Professional Social Presence 
   * **More! - More!**
      * RSA Factoring Challenge
      * Command line for the win
