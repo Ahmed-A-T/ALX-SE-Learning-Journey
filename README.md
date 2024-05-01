@@ -7,6 +7,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 
 ## About Me
 > I'm Ahmed, an aspiring software engineer fueled by curiosity and driven by ambition. With a thirst for knowledge and a love for coding, I've embarked on this journey to transform my passion into expertise and     make a meaningful impact in the world of technology.
+***
 
 ## What You'll Find Here
 ### curriculum
