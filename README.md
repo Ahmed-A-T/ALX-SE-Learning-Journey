@@ -12,9 +12,46 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 # What You'll Find Here
 ## Curriculum
 * **Getting Started**
+  *  Introduction to mindsets (Grit and growth mindsets)
+  *  A tweet a day keeps the @julienbarbier42 far away
+  *  Map your mind
+  *  You and your learning community
+  *  Grit Assignment Part 2
+  *  Your network is your net worth
+  *  Owning your Learning
+  *  Preserving your mental health & Conquering imposter syndrome
+  *  The real buddies 
 * **Tools**
+  *  0x00. Shell, navigation
+  *  0x01. Emacs
+  *  0x02. vi
+  *  0x03. Git
+  *  0x04. Professional Technologies
+  *  Setting up your local coding environment
 * **Low-level programming & Algorithm**
   * Low-level programming & Algorithm - Hatching out
+     * 0x00. C - Hello, World
+     * 0x01. C - Variables, if, else, while
+     * First Day of C Programming
+     * 0x02. C - Functions, nested loops
+     * 0x04. C - More functions, more nested loops
+     * 0x03. C - Debugging
+     * 0x05. C - Pointers, arrays and strings
+     * 0x06. C - More pointers, arrays and strings
+     * 0x07. C - Even more pointers, arrays and strings
+     * 0x08. C - Recursion
+     * 0x09. C - Static libraries
+     * 0x0A. C - argc, argv
+     * 0x0B. C - malloc, free
+     * 0x0C. C - More malloc, free
+     * 0x0D. C - Preprocessor
+     * 0x0E. C - Structures, typedef
+     * 0x0F. C - Function pointers
+     * 0x10. C - Variadic functions
+     * 0x11. C - printf
+     * 0x14. C - Bit manipulation
+     * 0x18. C - Dynamic libraries
+     * 0x1C. C - Makefiles
   * Low-level programming & Algorithm - Data structures and Algorithms
   * Low-level programming & Algorithm - Linux and Unix system programming
  * **Higher-level programming**
