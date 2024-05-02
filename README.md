@@ -10,7 +10,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 ***
 # What You'll Find Here
 ## Curriculum
-* ### [***Getting Started***](Getting_Started/)
+* ### [**Getting Started**](Getting_Started/)
   *  Introduction to mindsets (Grit and growth mindsets)
   *  A tweet a day keeps the @julienbarbier42 far away
   *  Map your mind
@@ -21,7 +21,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
   *  Preserving your mental health & Conquering imposter syndrome
   *  The real buddies
     
-* ### [***Tools***](Tools/)
+* ### [**Tools**](Tools/)
   *  0x00. Shell, navigation
   *  0x01. Emacs
   *  0x02. vi
@@ -29,7 +29,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
   *  0x04. Professional Technologies
   *  Setting up your local coding environment
     
-* # [***Low-level programming & Algorithm***](Low_Level_Programming&Algorithm/)
+* ### [***Low-level programming & Algorithm***](Low_Level_Programming&Algorithm/)
   * Low-level programming & Algorithm - Hatching out
      * 0x00. C - Hello, World
      * 0x01. C - Variables, if, else, while
