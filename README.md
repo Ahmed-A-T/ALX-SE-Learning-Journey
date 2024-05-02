@@ -10,7 +10,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 ***
 # What You'll Find Here
 ## Curriculum
-* **Getting Started**
+* # [**Getting Started**](Getting_Started/)
   *  Introduction to mindsets (Grit and growth mindsets)
   *  A tweet a day keeps the @julienbarbier42 far away
   *  Map your mind
@@ -67,7 +67,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x15. C - File I/O
      * 0x16. C - Simple Shell
          
- * **Higher-level programming**
+ * # [**Higher-level programming**](Higher_Level_Programming/)
    * Higher-level programming - Python
      * 0x00. Python - Hello, World
      * 0x01. Python - if/else, loops, functions
