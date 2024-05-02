@@ -29,7 +29,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
   *  0x04. Professional Technologies
   *  Setting up your local coding environment
     
-* [**Low-level programming & Algorithm**](Low_Level_Programming&Algorithm/)
+* # [**Low-level programming & Algorithm**](Low_Level_Programming&Algorithm/)
   * Low-level programming & Algorithm - Hatching out
      * 0x00. C - Hello, World
      * 0x01. C - Variables, if, else, while
