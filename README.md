@@ -10,7 +10,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 ***
 # What You'll Find Here
 ## Curriculum
-* # [**Getting Started**](Getting_Started/)
+* ### [**Getting Started**](Getting_Started/)
   *  Introduction to mindsets (Grit and growth mindsets)
   *  A tweet a day keeps the @julienbarbier42 far away
   *  Map your mind
@@ -21,7 +21,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
   *  Preserving your mental health & Conquering imposter syndrome
   *  The real buddies
     
-* **Tools**
+* ### [**Tools**](Tools/)
   *  0x00. Shell, navigation
   *  0x01. Emacs
   *  0x02. vi
@@ -67,7 +67,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x15. C - File I/O
      * 0x16. C - Simple Shell
          
- * # [**Higher-level programming**](Higher_Level_Programming/)
+ * ### [**Higher-level programming**](Higher_Level_Programming/)
    * Higher-level programming - Python
      * 0x00. Python - Hello, World
      * 0x01. Python - if/else, loops, functions
@@ -97,7 +97,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
       * 0x01. AirBnB clone - Web static
       * 0x02. AirBnB clone - MySQL
         
- * **System engineering & DevOps**
+ * ### [**System engineering & DevOps**](System_Engineering_Devops/)
    * System engineering & DevOps - Bash
      * 0x00. Shell, basics
      * 0x01. Shell, permissions
@@ -127,12 +127,12 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
    * System engineering & DevOps - Web stack debugging
       * 0x0D. Web stack debugging #0
         
- * **Technical Writing and Networking**
+ * ### **Technical Writing and Networking**
     * Technical Writing and Networking - Social media
       * Professional Relationships
       * Professional Social Presence
         
-  * **More! - More!**
+  * ### **More! - More!**
      * RSA Factoring Challenge
      * Command line for the win
      * 0x00. Fix my code
