@@ -122,9 +122,9 @@ int main(void)
 julien@ubuntu:~/c/0x00$ 
 ```
 #### Repo:
-* GitHub repository: alx-low_level_programming
-* Directory: 0x00-hello_world
-* File: 0-preprocessor
+* GitHub repository: `alx-low_level_programming`
+* Directory: `0x00-hello_world`
+* File: `0-preprocessor`
 ---
 > ### 1. Compiler
 Write a script that compiles a C file but does not link.
@@ -378,6 +378,6 @@ julien@ubuntu:~/c/0x00$ grep put < 101-quote.c
 julien@ubuntu:~/c/0x00$
 ```
 #### Repo:
-GitHub repository: `alx-low_level_programming`
-Directory: `0x00-hello_world`
-File: `101-quote.c`
+* GitHub repository: `alx-low_level_programming`
+* Directory: `0x00-hello_world`
+* File: `101-quote.c`
