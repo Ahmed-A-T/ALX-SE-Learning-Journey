@@ -10,7 +10,7 @@
   *  0x03. C - Debugging
   *  0x04. C - More functions, more nested loops
 
-### [2. Low-level programming & Algorithm - Data structures and Algorithms](Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Data_Structures_And _Algorithms)
+### [2. Low-level programming & Algorithm - Data structures and Algorithms](Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Data_Structures_And_Algorithms)
   * #### 0x12. C - Singly linked lists
   * #### 0x13. C - More singly linked lists
   * #### 0x17. C - Doubly linked lists
