@@ -54,7 +54,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x18. C - Dynamic libraries
      * 0x1C. C - Makefiles
        
-  * [**Low-level programming & Algorithm - Data structures and Algorithms**](Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Data_Structures_And_Algorithms/)
+  * [**Low-level programming & Algorithm - Data structures and Algorithms**](/Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Data_Structures_And_Algorithms)
      * 0x12. C - Singly linked lists
      * 0x13. C - More singly linked lists
      * 0x17. C - Doubly linked lists
