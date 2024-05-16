@@ -63,7 +63,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x1B. C - Sorting algorithms & Big O
      * 0x1D. C - Binary trees
        
-  * [**Low-level programming & Algorithm - Linux and Unix system programming**](/Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Data_Structures_And_Algorithms/)
+  * [**Low-level programming & Algorithm - Linux and Unix system programming**](/Low_Level_Programming&Algorithm/)
      * 0x15. C - File I/O
      * 0x16. C - Simple Shell
          
