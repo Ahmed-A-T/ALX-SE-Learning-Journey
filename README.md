@@ -30,7 +30,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
   *  Setting up your local coding environment
     
 * ### [**Low-level programming & Algorithm**](Low_Level_Programming&Algorithm/)
-  * **Low-level programming & Algorithm - Hatching out**
+  * **[Low-level programming & Algorithm - Hatching out](Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Hatching_Out)**
      * [0x00. C - Hello, World](Low_Level_Programming\&Algorithm/0x00-hello_world/)
      * [0x01. C - Variables, if, else, while](Low_Level_Programming\&Algorithm/0x01-variables_if_else_while/)
      * First Day of C Programming
@@ -54,7 +54,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x18. C - Dynamic libraries
      * 0x1C. C - Makefiles
        
-  * Low-level programming & Algorithm - Data structures and Algorithms
+  * [**Low-level programming & Algorithm - Data structures and Algorithms**](Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Data_Structures_And_Algorithms/)
      * 0x12. C - Singly linked lists
      * 0x13. C - More singly linked lists
      * 0x17. C - Doubly linked lists
@@ -63,7 +63,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
      * 0x1B. C - Sorting algorithms & Big O
      * 0x1D. C - Binary trees
        
-  * Low-level programming & Algorithm - Linux and Unix system programming
+  * [**Low-level programming & Algorithm - Linux and Unix system programming**](/Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Linux_And_Unix_System_Programming/)
      * 0x15. C - File I/O
      * 0x16. C - Simple Shell
          
