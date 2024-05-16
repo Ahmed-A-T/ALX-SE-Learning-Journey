@@ -32,7 +32,7 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 * ### [**Low-level programming & Algorithm**](Low_Level_Programming&Algorithm/)
   * **Low-level programming & Algorithm - Hatching out**
      * [0x00. C - Hello, World](Low_Level_Programming\&Algorithm/0x00-hello_world/)
-     *[ 0x01. C - Variables, if, else, while](Low_Level_Programming&Algorithm/0x01-variables_if_else_while/)
+     * [0x01. C - Variables, if, else, while](Low_Level_Programming\&Algorithm/0x01-variables_if_else_while/)
      * First Day of C Programming
      * 0x02. C - Functions, nested loops
      * 0x04. C - More functions, more nested loops
