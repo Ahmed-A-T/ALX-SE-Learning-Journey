@@ -25,7 +25,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 # Tasks
 ## 0. Multiple mains
-In most projects, we often give you only one main file to test with. For example, this main file is a test for a `postitive_or_negative()` function similar to the one you worked with in [an earlier C project](ALX-SE-Learning-Journey/Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Hatching_Out/0x01-variables_if_else_while/0-positive_or_negative.c):
+In most projects, we often give you only one main file to test with. For example, this main file is a test for a `postitive_or_negative()` function similar to the one you worked with in [an earlier C project](ALX-SE-Learning-Journey/Low_Level_Programming&Algorithm/Low_Level_Programming&Algorithm-Hatching_Out/0-positive_or_negative.c):
 ```
 carrie@ubuntu:/debugging$ cat main.c
 #include "main.h"
@@ -211,9 +211,9 @@ Fix the code in `2-largest_number.c` so that it correctly prints out the largest
 
 ### Repo:
 
-* GitHub repository: alx-low_level_programming
-* Directory: 0x03-debugging
-* File: 2-largest_number.c, main.h
+* GitHub repository: `alx-low_level_programming`
+* Directory: `0x03-debugging`
+* File: `2-largest_number.c, main.h`
 ---
 ## 3. Leap year
 This program converts a date to the day of year and determines how many days are left in the year, taking leap year into consideration.
