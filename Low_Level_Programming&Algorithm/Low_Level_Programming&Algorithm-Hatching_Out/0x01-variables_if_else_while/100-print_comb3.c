@@ -23,9 +23,10 @@ int main(void)
 
 			if (first_digit == 8 && second_digit == 9) 
 			{
-				putchar(',');
-				putchar(' ');
+				continue;
 			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
