@@ -12,13 +12,18 @@
  */
 int main(void)
 {
-	char number;
+	int number;
 
-	for (number = '0'; number <= '9'; number++)
+	for (number = 0; number <= 9; number++)
 	{
-		putchar(number);
+		/*
+		 * Here compiler will convert '0' to equivalent
+		 * ASCII Deciaml number that equal to 48 and add 1 for
+		 * every loop
+		 */
+		putchar(number + '0');
 
-		if (number == '9')
+		if (number == 9)
 			break;
 
 		putchar(',');
