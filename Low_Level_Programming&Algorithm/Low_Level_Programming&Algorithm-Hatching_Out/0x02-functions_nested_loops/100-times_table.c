@@ -2,6 +2,7 @@
  * Filename: 100-times_table.c
  * Author: Ahmed-A-T
  */
+#include "main.h"
 #include <stdio.h>
 
 /**
