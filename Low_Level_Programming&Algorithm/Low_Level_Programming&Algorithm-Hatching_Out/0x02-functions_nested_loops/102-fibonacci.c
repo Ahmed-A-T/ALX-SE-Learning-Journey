@@ -11,16 +11,18 @@
  */
 int main(void)
 {
-	long int i, n1 = 1, n2 = 2, sum;
+	unsigned long i, fib1 = 0, fib2 = 1, sum;
 
-	printf("%lu, %lu", n1, n2);
-	for (i = 1; i <= 48; i++)
+	for (i = 0; i <= 49; i++)
 	{
-		sum = n1 + n2;
-		n1 = n2;
-		n2 = sum;
-		printf(", %lu", sum);
+		sum = fib1 + fib2;
+		fib1 = fib2;
+		fib2 = sum;
+		printf("%lu", sum);
+		if (i < 49)
+			printf(", ");
+		else
+			printf("\n");
 	}
-	printf("\n");
 	return (0);
 }
