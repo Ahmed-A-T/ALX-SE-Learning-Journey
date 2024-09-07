@@ -182,8 +182,8 @@ julien@ubuntu:~/0x08. Recursion$
 >
 > * Prototype: **`int _pow_recursion(int x, int y);`**
 > * If **`y`** is lower than **`0`**, the function should return **`-1`**
-
-* FYI: The standard library provides a different function: **`pow`**. Run **`man pow`** to learn more.
+>
+> FYI: The standard library provides a different function: **`pow`**. Run **`man pow`** to learn more.
 ```
 julien@ubuntu:~/0x08. Recursion$ cat 4-main.c
 #include "main.h"
@@ -229,12 +229,12 @@ julien@ubuntu:~/0x08. Recursion$
 * File: 4-pow_recursion.c
 ---
 ## 5. Your subconscious is looking for the dreamer
-Write a function that returns the natural square root of a number.
-
-* Prototype: **`int _sqrt_recursion(int n);`**
-* If n does not have a natural square root, the function should return -1
-  
-FYI: The standard library provides a different function: **`sqrt`**. Run **`man sqrt`** to learn more.
+> Write a function that returns the natural square root of a number.
+> 
+> * Prototype: **`int _sqrt_recursion(int n);`**
+> * If n does not have a natural square root, the function should return -1
+>  
+> FYI: The standard library provides a different function: **`sqrt`**. Run **`man sqrt`** to learn more.
 ```
 julien@ubuntu:~/0x08. Recursion$ cat 5-main.c 
 #include "main.h"
