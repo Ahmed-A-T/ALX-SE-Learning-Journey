@@ -489,7 +489,7 @@ julien@ubuntu:~/0x06$
 ---
 ## 9. Numbers have life; they're not just symbols on paper
 > Write a function that prints an integer.
-
+>
 > * Prototype: **`void print_number(int n);`**
 > * You can only use **`_putchar`** function to print
 > * You are not allowed to use **`long`**
@@ -535,7 +535,7 @@ julien@ubuntu:~/0x06$
 ---
 ## 10. A dream doesn't become reality through magic; it takes sweat, determination and hard work
 > Add one line to [this code](https://github.com/alx-tools/make_magic_happen/blob/master/magic.c), so that the program prints **`a[2] = 98`**, followed by a new line.
-
+>
 > * You are not allowed to use the variable **`a`** in your new line of code
 > * You are not allowed to modify the variable **`p`**
 > * You can only write one statement
@@ -639,7 +639,7 @@ julien@ubuntu:~/0x06$
 * **File:** 103-infinite_add.c
 ---
 ## 12. Noise is a buffer, more effective than cubicles or booth walls
-> rite a function that prints a buffer.
+> Write a function that prints a buffer.
 > 
 > * Prototype: **`void print_buffer(char *b, int size);`**
 > * The function must print the content of **`size`** bytes of the buffer pointed by **`b`**
