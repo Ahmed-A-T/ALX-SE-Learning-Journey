@@ -298,7 +298,7 @@ julien@ubuntu:~/0x07$
 > * Prototype: **`char *_strpbrk(char *s, char *accept);`**
 > * The **`_strpbrk()`** function locates the first occurrence in the string **`s`** of any of the bytes in the string **`accept`**
 > * Returns a pointer to the byte in s that matches one of the bytes in **`accept`**, or **`NULL`** if no such byte is found
-
+>
 > FYI: The standard library provides a similar function: **`strpbrk`**. Run **`man strpbrk`** to learn more.
 ```
 julien@ubuntu:~/0x07$ cat 4-main.c
