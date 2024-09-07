@@ -372,7 +372,7 @@ julien@ubuntu:~/0x07$
 ---
 ## 6. Chess is mental torture
 > Write a function that prints the chessboard.
-
+>
 > * Prototype: **`void print_chessboard(char (*a)[8]);`**
 ```
 julien@ubuntu:~/0x07$ cat 7-main.c 
