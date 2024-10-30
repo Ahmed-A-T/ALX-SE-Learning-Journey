@@ -115,77 +115,77 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 >> * **[] 0x1E. C - Search Algorithms**
 >> * **[] 0x11. What happens when you type google.com in your browser and press Enter**
 >> * **[] 0x13. Firewall**
->> * [] 0x12. Web stack debugging #2
->> * [] 0x14. MySQL
->> * [] 0x04. AirBnB clone - Web framework
->> * [] 0x15. API
->> * [] 0x14. JavaScript - Web scraping
->> * [] 0x05. AirBnB clone - RESTful API
->> * [] Research & Project approval (Part 1)
->> * [] 0x15. JavaScript - Web jQuery
->> * [] Evaluation #7
+>> * **[] 0x12. Web stack debugging #2**
+>> * **[] 0x14. MySQL**
+>> * **[] 0x04. AirBnB clone - Web framework**
+>> * **[] 0x15. API**
+>> * **[] 0x14. JavaScript - Web scraping**
+>> * **[] 0x05. AirBnB clone - RESTful API**
+>> * **[] Research & Project approval (Part 1)**
+>> * **[] 0x15. JavaScript - Web jQuery**
+>> * **[] Evaluation #7**
 >
 > ### Month #8
->> * [] 0x06. AirBnB clone - Web dynamic
->> * [] Research & Project approval (Part 2)
->> * [] 0x19. Postmortem
->> * [] 0x16. API advanced
->> * [] 0x17. Web stack debugging #3
->> * [] 0x18. Webstack monitoring
->> * [] Research & Project approval (Part 3)
->> * [] 0x1A. Application server
->> * [] 0x1B. Web stack debugging #4
->> * [] Build your portfolio project (Week 1): Making Progress
->> * [] Build your portfolio project (Week 2): MVP Complete
->> * [] Build your portfolio project (Week 3): Project Landing Page
->> * [] Build your portfolio project (Week 3): Presentation
->> * [] Cleanup your Portfolio Project
->> * [] Portfolio Project Blog post
->> * [] Evaluation #8
+>> * **[] 0x06. AirBnB clone - Web dynamic**
+>> * **[] Research & Project approval (Part 2)**
+>> * **[] 0x19. Postmortem**
+>> * **[] 0x16. API advanced**
+>> * **[] 0x17. Web stack debugging #3**
+>> * **[] 0x18. Webstack monitoring**
+>> * **[] Research & Project approval (Part 3)**
+>> * **[] 0x1A. Application server**
+>> * **[] 0x1B. Web stack debugging #4**
+>> * **[] Build your portfolio project (Week 1): Making Progress**
+>> * **[] Build your portfolio project (Week 2): MVP Complete**
+>> * **[] Build your portfolio project (Week 3): Project Landing Page**
+>> * **[] Build your portfolio project (Week 3): Presentation**
+>> * **[] Cleanup your Portfolio Project**
+>> * **[] Portfolio Project Blog post**
+>> * **[] Evaluation #8**
 >
 >
 > ## Short Specialization (Backend)
 > ### Month #0
->> * [] 0x00. ES6 Basics
->> * [] 0x00. Pascal's Triangle
->> * [] 0x01. ES6 Promises
->> * [] 0x02. ES6 classes
->> * [] 0x03. ES6 data manipulation
->> * [] 0x01. Lockboxes
->> * [] 0x04. Typescript
->> * [] 0x00. Python - Variable Annotations
->> * [] 0x01. Python - Async
->> * [] 0x02. Minimum Operations
->> * [] 0x02. Python - Async Comprehension
->> * [] 0x00. MySQL advanced
->> * [] 0x01. NoSQL
->> * [] 0x03. Log Parsing
->> * [] 0x02. Redis basic
+>> * **[] 0x00. ES6 Basics**
+>> * **[] 0x00. Pascal's Triangle**
+>> * **[] 0x01. ES6 Promises**
+>> * **[] 0x02. ES6 classes**
+>> * **[] 0x03. ES6 data manipulation**
+>> * **[] 0x01. Lockboxes**
+>> * **[] 0x04. Typescript**
+>> * **[] 0x00. Python - Variable Annotations**
+>> * **[] 0x01. Python - Async**
+>> * **[] 0x02. Minimum Operations**
+>> * **[] 0x02. Python - Async Comprehension**
+>> * **[] 0x00. MySQL advanced**
+>> * **[] 0x01. NoSQL**
+>> * **[] 0x03. Log Parsing**
+>> * **[] 0x02. Redis basic**
 >
 > ### Month #1
->> * [] 0x00. Pagination
->> * [] 0x04. UTF-8 Validation
->> * [] 0x01. Caching
->> * [] 0x03. Unittests and Integration Tests
->> * [] 0x05. N Queens
->> * [] 0x02. i18n
->> * [] 0x00. Personal data
->> * [] 0x01. Basic authentication
->> * [] 0x06. Star Wars API
->> * [] 0x02. Session authentication
->> * [] 0x03. User authentication service
->> * [] 0x07. Rotate 2D Matrix
+>> * **[] 0x00. Pagination**
+>> * **[] 0x04. UTF-8 Validation**
+>> * **[] 0x01. Caching**
+>> * **[] 0x03. Unittests and Integration Tests**
+>> * **[] 0x05. N Queens**
+>> * **[] 0x02. i18n**
+>> * **[] 0x00. Personal data**
+>> * **[] 0x01. Basic authentication**
+>> * **[] 0x06. Star Wars API**
+>> * **[] 0x02. Session authentication**
+>> * **[] 0x03. User authentication service**
+>> * **[] 0x07. Rotate 2D Matrix**
 >
 > ### Month #2
->> * [] 0x05. NodeJS Basics
->> * [] 0x08. Making Change
->> * [] 0x06. Unittests in JS
->> * [] 0x03. Queuing System in JS
->> * [] 0x09. Island Perimeter
->> * [] Webstack - Portfolio Project - Pitch
->> * [] 0x04. Files manager
->> * [] 0x0A. Prime Game
->> * [] Webstack - Portfolio Project
+>> * **[] 0x05. NodeJS Basics**
+>> * **[] 0x08. Making Change**
+>> * **[] 0x06. Unittests in JS**
+>> * **[] 0x03. Queuing System in JS**
+>> * **[] 0x09. Island Perimeter**
+>> * **[] Webstack - Portfolio Project - Pitch**
+>> * **[] 0x04. Files manager**
+>> * **[] 0x0A. Prime Game**
+>> * **[] Webstack - Portfolio Project**
 >
 ---
 * ### [**Getting Started**](Getting_Started/)
