@@ -10,30 +10,184 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 ***
 # What You'll Find Here
 ## Curriculum
+> ## Software Engineering Foundation
 > ### Month #0
 >> * [x] **0x01. Emacs**
 >> * [x] **0x00. Shell, navigation**
 >> * [x] **Setting up your local coding environment (optional)**
 >> * [x] **0x02. vi**
 >> * [x] **0x03. Git**
->> * [] **0x04. Professional Technologies**
->> * [] **0x00. Shell, basics**
->> * [] 0x01. Shell, permissions
->> * [] 0x02. Shell, I/O Redirections and filters
->> * [] Professional Relationships (optional)
->> * [] 0x03. Shell, init files, variables and expansions
->> * [] 0x00. C - Hello, World
->> * [] 0x01. C - Variables, if, else, while
->> * [] 0x02. C - Functions, nested loops
->> * [] 0x03. C - Debugging
->> * [] 0x04. C - More functions, more nested loops
->> * [] 0x05. C - Pointers, arrays and strings
->> * [] 0x06. C - More pointers, arrays and strings
->> * [] 0x07. C - Even more pointers, arrays and strings
->> * [] Evaluation #0
+>> * [x] **0x04. Professional Technologies**
+>> * [x] **0x00. Shell, basics**
+>> * [x] **0x01. Shell, permissions**
+>> * [x] **0x02. Shell, I/O Redirections and filters**
+>> * [x] **Professional Relationships (optional)**
+>> * [x] **0x03. Shell, init files, variables and expansions**
+>> * [x] **0x00. C - Hello, World**
+>> * [x] **0x01. C - Variables, if, else, while**
+>> * [x] **0x02. C - Functions, nested loops**
+>> * [x] **0x03. C - Debugging**
+>> * [x] **0x04. C - More functions, more nested loops**
+>> * [x] **0x05. C - Pointers, arrays and strings**
+>> * [x] **0x06. C - More pointers, arrays and strings**
+>> * [x] **0x07. C - Even more pointers, arrays and strings**
+>> * [x] **Evaluation #0**
 >
 > ### Month #1
 >> * [] **0x08. C - Recursion**
+>> * [] **0x09. C - Static libraries**
+>> * [] **0x0A. C - argc, argv**
+>> * [] **0x0B. C - malloc, free**
+>> * [] **Professional Social Presence**
+>> * [] **0x0C. C - More malloc, free**
+>> * [] **0x0D. C - Preprocessor**
+>> * [] **0x0E. C - Structures, typedef**
+>> * [] **0x0F. C - Function pointers**
+>> * [] **0x10. C - Variadic functions**
+>> * [] **0x11. C - printf**
+>> * [] **0x12. C - Singly linked lists**
+>> * [] **0x13. C - More singly linked lists**
+>> * [] **Evaluation #1**
+>
+> ### Month #2
+>> * [] **0x14. C - Bit manipulation**
+>> * [] **0x15. C - File I/O**
+>> * [] **0x16. C - Simple Shell**
+>> * [] **Evaluation #2**
+>
+> ### Month #3
+>> * [] **0x00. Python - Hello, World**
+>> * [] **0x01. Python - if/else, loops, functions**
+>> * [] **0x02. Python - import & modules**
+>> * [] **0x03. Python - Data Structures: Lists, Tuples**
+>> * [] **0x04. Python - More Data Structures: Set, Dictionary**
+>> * [] **0x17. C - Doubly linked lists**
+>> * [] **0x18. C - Dynamic libraries**
+>> * [] **0x19. C - Stacks, Queues - LIFO, FIFO**
+>> * [] **0x05. Python - Exceptions**
+>> * [] **0x06. Python - Classes and Objects**
+>
+> ### Month #4
+>> * [] **0x07. Python - Test-driven development**
+>> * [] **0x08. Python - More Classes and Objects**
+>> * [] **0x09. Python - Everything is object**
+>> * [] **0x1A. C - Hash tables**
+>> * [] **0x0A. Python - Inheritance**
+>> * [] **0x0B. Python - Input/Output**
+>> * [] **0x0C. Python - Almost a circle**
+>> * [] **0x1B. C - Sorting algorithms & Big O**
+>> * [] **0x04. Loops, conditions and parsing**
+>> * [] **0x05. Processes and signals**
+>
+> ### Month #5
+>> * [] **0x06. Regular expression**
+>> * [] **0x07. Networking basics #0**
+>> * [] **0x08. Networking basics #1**
+>> * [] **0x00. AirBnB clone - The console**
+>> * [] **0x00. Fix my code (optional)**
+>> * [] **0x0D. SQL - Introduction**
+>> * [] **0x0E. SQL - More queries**
+>> * [] **0x01. AirBnB clone - Web static**
+>> * [] **0x1C. C - Makefiles**
+>> * [] **0x09. Web infrastructure design**
+>> * [] **0x1D. C - Binary trees**
+>> * [] **Evaluation #5**
+>
+> ### Month #6
+>> * [] **0x12. JavaScript - Warm up**
+>> * [] **0x0F. Python - Object-relational mapping**
+>> * [] **0x13. JavaScript - Objects, Scopes and Closures**
+>> * [] **0x02. AirBnB clone - MySQL**
+>> * [] **Attack is the best defense (optional)**
+>> * [] **0x0A. Configuration management**
+>> * [] **0x0B. SSH**
+>> * [] **0x0C. Web server**
+>> * [] **0x0D. Web stack debugging #0**
+>> * [] **0x10. Python - Network #0**
+>> * [] **0x11. Python - Network #1**
+>> * [] **0x0F. Load balancer**
+>> * **[] Evaluation #6**
+>
+> ### Month #7
+>> * **[] 0x0E. Web stack debugging #1**
+>> * **[] 0x10. HTTPS SSL**
+>> * **[] 0x03. AirBnB clone - Deploy static**
+>> * **[] 0x1E. C - Search Algorithms**
+>> * **[] 0x11. What happens when you type google.com in your browser and press Enter**
+>> * **[] 0x13. Firewall**
+>> * [] 0x12. Web stack debugging #2
+>> * [] 0x14. MySQL
+>> * [] 0x04. AirBnB clone - Web framework
+>> * [] 0x15. API
+>> * [] 0x14. JavaScript - Web scraping
+>> * [] 0x05. AirBnB clone - RESTful API
+>> * [] Research & Project approval (Part 1)
+>> * [] 0x15. JavaScript - Web jQuery
+>> * [] Evaluation #7
+>
+> ### Month #8
+>> * [] 0x06. AirBnB clone - Web dynamic
+>> * [] Research & Project approval (Part 2)
+>> * [] 0x19. Postmortem
+>> * [] 0x16. API advanced
+>> * [] 0x17. Web stack debugging #3
+>> * [] 0x18. Webstack monitoring
+>> * [] Research & Project approval (Part 3)
+>> * [] 0x1A. Application server
+>> * [] 0x1B. Web stack debugging #4
+>> * [] Build your portfolio project (Week 1): Making Progress
+>> * [] Build your portfolio project (Week 2): MVP Complete
+>> * [] Build your portfolio project (Week 3): Project Landing Page
+>> * [] Build your portfolio project (Week 3): Presentation
+>> * [] Cleanup your Portfolio Project
+>> * [] Portfolio Project Blog post
+>> * [] Evaluation #8
+>
+>
+> ## Short Specialization (Backend)
+> ### Month #0
+>> * [] 0x00. ES6 Basics
+>> * [] 0x00. Pascal's Triangle
+>> * [] 0x01. ES6 Promises
+>> * [] 0x02. ES6 classes
+>> * [] 0x03. ES6 data manipulation
+>> * [] 0x01. Lockboxes
+>> * [] 0x04. Typescript
+>> * [] 0x00. Python - Variable Annotations
+>> * [] 0x01. Python - Async
+>> * [] 0x02. Minimum Operations
+>> * [] 0x02. Python - Async Comprehension
+>> * [] 0x00. MySQL advanced
+>> * [] 0x01. NoSQL
+>> * [] 0x03. Log Parsing
+>> * [] 0x02. Redis basic
+>
+> ### Month #1
+>> * [] 0x00. Pagination
+>> * [] 0x04. UTF-8 Validation
+>> * [] 0x01. Caching
+>> * [] 0x03. Unittests and Integration Tests
+>> * [] 0x05. N Queens
+>> * [] 0x02. i18n
+>> * [] 0x00. Personal data
+>> * [] 0x01. Basic authentication
+>> * [] 0x06. Star Wars API
+>> * [] 0x02. Session authentication
+>> * [] 0x03. User authentication service
+>> * [] 0x07. Rotate 2D Matrix
+>
+> ### Month #2
+>> * [] 0x05. NodeJS Basics
+>> * [] 0x08. Making Change
+>> * [] 0x06. Unittests in JS
+>> * [] 0x03. Queuing System in JS
+>> * [] 0x09. Island Perimeter
+>> * [] Webstack - Portfolio Project - Pitch
+>> * [] 0x04. Files manager
+>> * [] 0x0A. Prime Game
+>> * [] Webstack - Portfolio Project
+>
+---
 * ### [**Getting Started**](Getting_Started/)
   *  Introduction to mindsets (Grit and growth mindsets)
   *  A tweet a day keeps the @julienbarbier42 far away
