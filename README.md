@@ -10,6 +10,30 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 ***
 # What You'll Find Here
 ## Curriculum
+> ### Month #0
+>> * [x] **0x01. Emacs**
+>> * [x] **0x00. Shell, navigation**
+>> * [x] **Setting up your local coding environment (optional)**
+>> * [x] **0x02. vi**
+>> * [x] **0x03. Git**
+>> * [] **0x04. Professional Technologies**
+>> * [] **0x00. Shell, basics**
+>> * [] 0x01. Shell, permissions
+>> * [] 0x02. Shell, I/O Redirections and filters
+>> * [] Professional Relationships (optional)
+>> * [] 0x03. Shell, init files, variables and expansions
+>> * [] 0x00. C - Hello, World
+>> * [] 0x01. C - Variables, if, else, while
+>> * [] 0x02. C - Functions, nested loops
+>> * [] 0x03. C - Debugging
+>> * [] 0x04. C - More functions, more nested loops
+>> * [] 0x05. C - Pointers, arrays and strings
+>> * [] 0x06. C - More pointers, arrays and strings
+>> * [] 0x07. C - Even more pointers, arrays and strings
+>> * [] Evaluation #0
+>
+> ### Month #1
+>> * [] **0x08. C - Recursion**
 * ### [**Getting Started**](Getting_Started/)
   *  Introduction to mindsets (Grit and growth mindsets)
   *  A tweet a day keeps the @julienbarbier42 far away
