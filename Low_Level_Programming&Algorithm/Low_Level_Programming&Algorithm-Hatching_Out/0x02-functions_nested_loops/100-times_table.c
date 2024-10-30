@@ -21,12 +21,34 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				result = i * j;
-				if (j == n)
-					printf("%d", result);
+				if (result < 10)
+				{
+					putchar(result + '0');
+				}
+				else if ((result < 100) && (result >= 10))
+				{
+					putchar((result / 10) + '0');
+					putchar((result % 10) + '0');
+				}
 				else
-					printf("%d,   ", result);
+				{
+					putchar((result % 10) + '0');
+					putchar((result % 100) / 10 + '0');
+					putchar((result / 100) + '0');
+				}
+				if(j < n)
+				{
+					putchar(',');
+					putchar('	');
+				}
 			}
-			printf("\n");
+			putchar('\n');
 		}
 	}
+}
+ int main(void)
+{
+	print_times_table(12);
+
+	return (0);
 }
