@@ -262,19 +262,19 @@ julien@ubuntu:~/0x0e. Function pointers$
 > Write a program that performs simple operations.
 >
 > * You are allowed to use the standard library
-> * Usage: calc num1 operator num2
-> * You can assume num1 and num2 are integers, so use the atoi function to convert them from the string input to int
-> * operator is one of the following:
->   * +: addition
->   * -: subtraction
->   * *: multiplication
->   * /: division
->   * %: modulo
+> * Usage: **`calc num1 operator num2`**
+> * You can assume **`num1`** and **`num2`** are integers, so use the **`atoi`** function to convert them from the string input to **`int`**
+> * **`operator`** is one of the following:
+>   * **`+`**: addition
+>   * **`-`**: subtraction
+>   * **`*`**: multiplication
+>   * **`/`**: division
+>   * **`%`**: modulo
 > * The program prints the result of the operation, followed by a new line
-> * You can assume that the result of all operations can be stored in an int
-> * if the number of arguments is wrong, print Error, followed by a new line, and exit with the status 98
-> * if the operator is none of the above, print Error, followed by a new line, and exit with the status 99
-> * if the user tries to divide (/ or %) by 0, print Error, followed by a new line, and exit with the status 100
+> * You can assume that the result of all operations can be stored in an **`int`**
+> * if the number of arguments is wrong, print **`Error`**, followed by a new line, and exit with the status **`98`**
+> * if the **`operator`** is none of the above, print **`Error`**, followed by a new line, and exit with the status **`99`**
+> * if the user tries to divide (**`/`** or **`%`**) by **`0`**, print **`Error`**, followed by a new line, and exit with the status **`100`**
 >
 > This task requires that you create four different files.
 >
@@ -296,11 +296,11 @@ typedef struct op
 > ### 3-op_functions.c
 > This file should contain the 5 following functions (not more):
 > 
-> * op_add: returns the sum of a and b. Prototype: int op_add(int a, int b);
-> * op_sub: returns the difference of a and b. Prototype: int op_sub(int a, int b);
-> * op_mul: returns the product of a and b. Prototype: int op_mul(int a, int b);
-> * op_div: returns the result of the division of a by b. Prototype: int op_div(int a, int b);
-> * op_mod: returns the remainder of the division of a by b. Prototype: int op_mod(int a, int b);
+> * **`op_add`**: returns the sum of **`a`** and **`b`**. Prototype: **`int op_add(int a, int b);`**
+> * **`op_sub`**: returns the difference of **`a`** and **`b`**. **`Prototype: int op_sub(int a, int b);`**
+> * **`op_mul`**: returns the product of **`a`** and **`b`**. **`Prototype: int op_mul(int a, int b);`**
+> * **`op_div`**: returns the result of the division of **`a`** by **`b`**. **`Prototype: int op_div(int a, int b);`**
+> * **`op_mod`**: returns the remainder of the division of a by b. Prototype: **`int op_mod(int a, int b);`**
 > ### 3-get_op_func.c
 > This file should contain the function that selects the correct function to perform the operation asked by the user. You’re not allowed to declare any other function.
 > * Prototype: **`int (*get_op_func(char *s))(int, int);`**
