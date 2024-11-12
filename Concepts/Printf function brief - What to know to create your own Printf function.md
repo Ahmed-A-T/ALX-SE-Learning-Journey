@@ -10,7 +10,7 @@ The first secret to being able to complete this project successfully is to first
 This concept page will therefore give you a detailed explanation of how the printf function works and that will go a long way to help you understand what it takes to create a custom version of it.
 
 Here is the outline for the what we will cover in this concept page:
-## 1.ntroduction to **`printf`**
+## 1. Introduction to **`printf`**
 * Brief overview of **`printf`** and its role in C programming.
 * The format string: How **`printf`** uses format specifiers to control output.
 ## 2. Argument Handling
@@ -21,7 +21,7 @@ Here is the outline for the what we will cover in this concept page:
 * Understanding format specifiers like **`%d`**, **`%s`**, **`%c`**, etc.
 * How **`printf`** matches format specifiers to arguments.
 * Handling flags, field width, precision, and length modifiers.
-## 4.Converting and Formatting
+## 4. Converting and Formatting
 * The role of type conversion in **`printf`**.
 * How to format data for output based on the format specifier.
 * Handling different data types: integers, characters, strings, floats, etc.
