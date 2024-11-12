@@ -406,6 +406,6 @@ julien@ubuntu:~/0x0e. Function pointers$
 
 ### Repo:
 
-GitHub repository: **`alx-low_level_programming`**
-Directory: **`0x0F-function_pointers`**
-File: **`100-main_opcodes.c`**
+* GitHub repository: **`alx-low_level_programming`**
+* Directory: **`0x0F-function_pointers`**
+* File: **`100-main_opcodes.c`**
