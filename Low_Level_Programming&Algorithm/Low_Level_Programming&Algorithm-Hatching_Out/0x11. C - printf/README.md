@@ -5,9 +5,9 @@
 > * [Printf function brief - What to know to create your own Printf function](/Concepts/Printf-function-brief_What-to-know-to-create-your-own-Printf-function.md)
 > * All about Team Projects + Pairings + FAQ (A must read)
 > * Group Projects
-> * Flowcharts
+> * [Flowcharts](Concepts/Flowcharts.md)
 > * Pair Programming - How To
-> * Technical Writing
+> * [Technical Writing](Concepts/Technical_Writing.md)
 
 # Background Context
 > Write your own **`printf`** function.
