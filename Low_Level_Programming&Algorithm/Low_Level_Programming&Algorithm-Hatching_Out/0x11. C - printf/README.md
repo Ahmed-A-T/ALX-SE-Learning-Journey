@@ -13,15 +13,15 @@
 > Write your own **`printf`** function.
 
 # Resources
-> ## Read or watch:
+## Read or watch:
 > * [Secrets of printf](https://www.academia.edu/10297206/Secrets_of_printf_)
 > * **Group Projects** concept page (Don’t forget to read this)
 > * **Flowcharts** concept page
-> ## man or help:
+## man or help:
 > * **`printf (3)`**
 
 # Requirements
-> ## General
+## General
 > * Allowed editors: vi, vim, emacs
 > * All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 > * All your files should end with a new line
