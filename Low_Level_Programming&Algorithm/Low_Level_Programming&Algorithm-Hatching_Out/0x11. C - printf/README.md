@@ -151,4 +151,4 @@
 
 ### Repo:
 
-* GitHub repository: **printf**
+* GitHub repository: **`printf`**
