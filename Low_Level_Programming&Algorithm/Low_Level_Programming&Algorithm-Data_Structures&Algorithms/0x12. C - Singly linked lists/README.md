@@ -1,7 +1,7 @@
 # 0x12. C - Singly linked lists
 
 # Concepts
-> * For this project, we expect you to look at this concept:
+> For this project, we expect you to look at this concept:
 > * [Data Structures](/Concepts/Data_Structures.md)
 
 # Resources
