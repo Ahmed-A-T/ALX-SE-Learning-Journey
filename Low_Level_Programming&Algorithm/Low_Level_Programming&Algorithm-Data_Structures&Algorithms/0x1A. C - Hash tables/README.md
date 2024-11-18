@@ -217,7 +217,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 >> #include <stdlib.h>
 >> #include <string.h>
 >> #include <stdio.h>
-#include "hash_tables.h"
+>> #include "hash_tables.h"
 >> 
 >> /**
 >>  * main - check the code
