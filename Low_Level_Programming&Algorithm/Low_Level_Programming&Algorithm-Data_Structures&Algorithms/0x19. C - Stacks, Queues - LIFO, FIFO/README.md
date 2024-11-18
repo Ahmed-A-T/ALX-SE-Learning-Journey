@@ -144,7 +144,7 @@
 
 # Tasks
 ## 0. push, pall
-> Implement the push and pall opcodes.
+> Implement the **`push`** and **`pall`** opcodes.
 > 
 > **The push opcode**
 > 
