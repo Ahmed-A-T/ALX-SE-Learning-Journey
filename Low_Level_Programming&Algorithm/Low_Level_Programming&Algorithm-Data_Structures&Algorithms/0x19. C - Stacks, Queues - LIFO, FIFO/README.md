@@ -178,7 +178,7 @@
 
 ### Repo:
 
-> * GitHub repository: **`monty`**
+* GitHub repository: **`monty`**
 
 ---
 
