@@ -134,8 +134,8 @@
 # Tasks
 ---
 ## 0. Bubble sort
-<video width="320" height="240" controls>
-  <source src="https://www.youtube.com/watch?v=lyZQPjUT5B4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=lyZQPjUT5B4" 
+frameborder="0" allowfullscreen></iframe>
+ 
 
 
