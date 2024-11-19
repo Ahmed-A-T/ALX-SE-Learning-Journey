@@ -317,8 +317,7 @@ File: **`0-bubble_sort.c, 0-O`**
 ---
 
 ## 2. Selection sort
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Ns4TPTC8whw" 
-frameborder="0" allowfullscreen></iframe>
+[![Watch the video](/Concepts/img/Screenshot_2024-11-19_14-54-54.png)](https://www.youtube.com/watch?v=Ns4TPTC8whw)
 
 > Write a function that sorts an array of integers in ascending order using the [Selection sort](https://en.wikipedia.org/wiki/Selection_sort) algorithm
 >
@@ -379,8 +378,7 @@ frameborder="0" allowfullscreen></iframe>
 
 ## 3. Quick sort
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ywWBy6J5gz8" 
-frameborder="0" allowfullscreen></iframe>
+[![Watch the video](/Concepts/img/Screenshot_2024-11-19_14-58-08.png)](https://www.youtube.com/watch?v=ywWBy6J5gz8)
 
 > Write a function that sorts an array of integers in ascending order using the [Quick sort](https://en.wikipedia.org/wiki/Quicksort) algorithm
 > 
@@ -1100,8 +1098,7 @@ frameborder="0" allowfullscreen></iframe>
 
 ## 12. Dealer
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=_HJlGWXzlLA" 
-frameborder="0" allowfullscreen></iframe>
+[![Watch the video](/Concepts/img/Screenshot_2024-11-19_15-00-34.png)](https://www.youtube.com/watch?v=_HJlGWXzlLA)
 
 > Write a function that sorts a deck of cards.
 >
