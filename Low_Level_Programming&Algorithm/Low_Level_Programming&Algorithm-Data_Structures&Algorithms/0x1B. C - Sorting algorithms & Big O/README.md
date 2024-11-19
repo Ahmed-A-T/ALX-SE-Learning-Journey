@@ -134,8 +134,7 @@
 # Tasks
 ---
 ## 0. Bubble sort
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=lyZQPjUT5B4" 
-frameborder="0" allowfullscreen></iframe>
+[![Watch the video](/Concepts/img/Screenshot_2024-11-18_21-35-38.png)](https://www.youtube.com/watch?v=lyZQPjUT5B4&embeds_referring_euri=https%3A%2F%2Fintranet.alxswe.com%2F&source_ve_path=MjM4NTE)
 
 > Write a function that sorts an array of integers in ascending order using the [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) algorithm
 >
@@ -209,8 +208,7 @@ File: **`0-bubble_sort.c, 0-O`**
 
 ## 1. Insertion sort
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ROalU379l3U" 
-frameborder="0" allowfullscreen></iframe>
+[![Watch the video](/Concepts/img/Screenshot_2024-11-19_13-59-35.png)](https://www.youtube.com/watch?v=ROalU379l3U)
 
 > Write a function that sorts a doubly linked list of integers in ascending order using the [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort) algorithm
 > 
