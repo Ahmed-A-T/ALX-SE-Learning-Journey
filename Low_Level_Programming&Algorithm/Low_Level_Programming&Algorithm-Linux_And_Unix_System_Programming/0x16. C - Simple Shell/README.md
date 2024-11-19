@@ -21,7 +21,7 @@
 >
 > I would like to take this moment to remind you about a few important things.
 >
-> First, remember the framework. If you do not know it by heart already, it is probably a good idea to read it again: [/concepts/559](Concepts/The-Framework.md)
+> First, remember the framework. If you do not know it by heart already, it is probably a good idea to read it again: [/concepts/559](/Concepts/The-Framework.md)
 >
 > Note that there is no point in this framework that says it is ok to look at code from other people. It is not allowed to look at other people’s code, either other students or online articles or videos. At ALX SE we do not copy solutions and we do not look at it when we start a project.
 >
@@ -46,7 +46,7 @@
 >
 > A group project at ALX SE is a project that both of you are responsible for. Everything anyone pushes to Github is the responsibility of both partners. It is not ok to say later “I didn’t cheat it’s my partner I didn’t > know they didn’t tell me”.
 > 
-> So you are supposed to work TOGETHER. And you should both understand every single line of code that any of you pushes. Here is a link for you to read about pair programming: [/concepts/121](Concepts/Pair-Programming-How-To.md)
+> So you are supposed to work TOGETHER. And you should both understand every single line of code that any of you pushes. Here is a link for you to read about pair programming: [/concepts/121](/Concepts/Pair-Programming-How-To.md)
 > 
 > If you plan on not working on the shell project (or if at any point in time you can’t), it is your responsibility to tell both the staff and your partner so that they can find another partner who will work with them asap.
 > 
