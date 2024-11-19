@@ -407,3 +407,177 @@ But also in non-interactive mode:
 
 ---
 
+## 10. cd
+> Simple shell 1.0 +
+>
+> Implement the builtin command **`cd`**:
+>
+> * Changes the current directory of the process.
+> * Command syntax: **`cd [DIRECTORY]`**
+> * If no argument is given to **`cd`** the command must be interpreted like **`cd $HOME`**
+> * You have to handle the command **`cd -`**
+> * You have to update the environment variable **`PWD`** when you change directory
+>   
+> **`man chdir`**, **`man getcwd`**
+
+### Repo:
+
+* GitHub repository: **`simple_shell`**
+
+---
+
+## 11. ;
+> Simple shell 1.0 +
+> 
+> * Handle the commands separator **`;`**
+>
+>> ```
+>> alex@~$ ls /var ; ls /var
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> alex@~$ ls /hbtn ; ls /var
+>> ls: cannot access /hbtn: No such file or directory
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> alex@~$ ls /var ; ls /hbtn
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> ls: cannot access /hbtn: No such file or directory
+>> alex@~$ ls /var ; ls /hbtn ; ls /var ; ls /var
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> ls: cannot access /hbtn: No such file or directory
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> alex@~$
+>> ```
+
+### Repo:
+
+* GitHub repository: **`simple_shell`**
+
+---
+
+## 12. && and ||
+> Simple shell 1.0 +
+> 
+> * Handle the `**&&**` and **`||`** shell logical operators
+>
+>> ```
+>> alex@~$ ls /var && ls /var
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> alex@~$ ls /hbtn && ls /var
+>> ls: cannot access /hbtn: No such file or directory
+>> alex@~$ ls /var && ls /var && ls /var && ls /hbtn
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> ls: cannot access /hbtn: No such file or directory
+>> alex@~$ ls /var && ls /var && ls /var && ls /hbtn && ls /hbtn
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> ls: cannot access /hbtn: No such file or directory
+>> alex@~$
+>> alex@~$ ls /var || ls /var
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> alex@~$ ls /hbtn || ls /var
+>> ls: cannot access /hbtn: No such file or directory
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> alex@~$ ls /hbtn || ls /hbtn || ls /hbtn || ls /var
+>> ls: cannot access /hbtn: No such file or directory
+>> ls: cannot access /hbtn: No such file or directory
+>> ls: cannot access /hbtn: No such file or directory
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> alex@~$ ls /hbtn || ls /hbtn || ls /hbtn || ls /var || ls /var
+>> ls: cannot access /hbtn: No such file or directory
+>> ls: cannot access /hbtn: No such file or directory
+>> ls: cannot access /hbtn: No such file or directory
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+>> alex@~$
+>> ```
+
+### Repo:
+
+* GitHub repository: **`simple_shell`**
+
+---
+
+## 13. alias
+> Simple shell 1.0 +
+> 
+> * Implement the **`alias`** builtin command
+> * Usage: **`alias [name[='value'] ...]`**
+>   * **`alias`**: Prints a list of all aliases, one per line, in the form name='value'
+>   * **`alias name [name2 ...]`**: Prints the aliases name, name2, etc 1 per line, in the form **`name='value'`**
+>   * **`alias name='value' [...]`**: Defines an alias for each **`name`** whose **`value`** is given. If **`name`** is already an alias, replaces its value with **`value`**
+>
+
+### Repo:
+
+* GitHub repository: **`simple_shell`**
+
+---
+
+## 14. Variables
+> Simple shell 1.0 +
+> 
+> * Handle variables replacement
+> * Handle the **`$?`** variable
+> * Handle the **`$$`** variable
+>
+>> ```
+>> julien@ubuntu:~/shell$ ./hsh
+>> $ ls /var
+>> backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  snap  spool  tmp
+>> $ echo $?
+>> 0
+>> $ echo $$
+>> 5104
+>> $ echo $PATH
+>> /home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+>> $ exit 
+>> julien@ubuntu:~/shell$
+>> ```
+
+### Repo:
+
+* GitHub repository: **`simple_shell`**
+
+---
+
+## 15. Comments
+> Simple shell 1.0 +
+> 
+> * Handle comments (**`#`**)
+>
+>> ```
+>> julien@ubuntu:~/shell$ sh
+>> $ echo $$ # ls -la
+>> 5114
+>> $ exit
+>> julien@ubuntu:~/shell$
+>> ```
+
+### Repo:
+
+* GitHub repository: **`simple_shell`**
+
+---
+
+## 16. File as input
+> Simple shell 1.0 +
+>
+> * Usage: **`simple_shell [filename]`**
+> * Your shell can take a file as a command line argument
+> * The file contains all the commands that your shell should run before exiting
+> * The file should contain one command per line
+> * In this mode, the shell should not print a prompt and should not read from **`stdin`**
+>   
+> Well done on completing this project! Let the world hear about this milestone achieved.
+> 
+> [Click here to tweet!](https://twitter.com/intent/tweet?text=I+have+successfully+completed+my+simple+shell+project+on+%23ALX_SE+%40facesofalxse)
+
+### Repo:
+
+* GitHub repository: **`simple_shell`**
+
+
