@@ -13,7 +13,11 @@
 > 7. Walk through your solution with an example as if you were a machine. Do only what is written down. Correct your solution if needed.
 > 8. Whiteboard your solution with code.
 > 9. Walk through your solution with an example as if you were a machine. Do only what is written down. Correct your solution if needed.
-> 10. Write your code on your computer. [Note: This is this first time you are using your computer! Only when you know exactly what to code.]
+> 10. Write your code on your computer. [Note: This is this first time you are using your computer! Only when you know **exactly** what to code.]
 > 11. Test your code on your computer.
 > 12. Debug if necessary.
 > 13. You complete the task or challenge!
+>
+> Be sure to break your task or project into smaller and smaller pieces, until you are comfortable solving each piece with the above steps.
+>
+> When you are in step 10, “Write your code on your computer”, you should code each piece one at a time and debug right after each small step to make sure everything works properly. This will also prevent you from having to debug multiple pieces at the same time and thus, will make your life much easier.
