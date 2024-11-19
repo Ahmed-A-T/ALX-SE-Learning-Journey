@@ -50,3 +50,107 @@ Containers are lightweight, standalone, executable packages of software that inc
 
 ## 1. Docker Installation on Windows
 [![Watch the video](/Concepts/img/Screenshot_2024-11-19_13-55-37.png)](https://www.youtube.com/watch?v=rATNU0Fr8zs)
+
+### Key steps:
+> 1. Download & install docker
+> 2. Download & install WSL
+> 3. Enable virtualization
+> 4. Integrate WSL Ubuntu 20.04 with docker
+> 5. Run docker
+
+## 2. Docker Installation on macOS
+
+[![Watch the video](/Concepts/img/Screenshot_2024-11-19_15-28-32.png)](https://www.youtube.com/watch?v=qX7nyMijOIo)
+#### 1. Go to the Docker website: https://www.docker.com/products/docker-desktop
+![1](/Concepts/img/1G.png)
+#### 2. Click the “Download for Mac” button to download the latest version of Docker Desktop for Mac.
+#### 3. Once the download is complete, double-click the Docker.dmg file to open the installer.
+#### 4. Drag the Docker icon to the Applications folder to install Docker Desktop.
+![2](/Concepts/img/2G.png)
+#### 5. Open Docker Desktop from the Applications folder.
+
+# Understanding important concepts about Docker
+> * **Docker images**: A Docker image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries, and settings.
+> * **Docker containers**: A Docker container is a runnable instance of a Docker image. It includes the application code and all of its dependencies, but it runs isolated from other containers on the same host.
+> * **Dockerfile**: A Dockerfile is a text file that contains the instructions for building a custom Docker image. It tells Docker what software to install, what configuration settings to use, and so on.
+> * **Docker Hub**: Docker Hub is a public registry of Docker images. It allows you to find and share images with other users.
+> * **Docker Compose**: Docker Compose is a tool that allows you to define and run multi-container Docker applications. It makes it easy to manage complex applications that require multiple containers.
+
+# Important Docker Commands
+> * **`docker pull`** - This command is used to pull a Docker ubuntu image from a registry.
+> * **`docker run`** - creates and starts a Docker container from an image
+> * **`docker start`** - is used for containers that have been previously created but are currently stopped. If you want to create and start a new container in a single step, you can use the **`docker run`** command.
+> * **`docker exec`** - runs a command in a running Docker container.
+> * **`docker stop`** - stops a running Docker container.
+> * **`docker ps -a`** - This command is used to list all of the Docker containers, including those that are not running.
+> * **`docker kill`** - This command is used to forcefully stop a Docker container.
+> * **`docker rm`** - This command is used to remove a Docker container.
+> * **`docker images`** - This command is used to list all of the Docker images that are stored on your machine.
+> * **`docker search`** - This command is used to search for Docker images in a registry.
+> * **`docker inspect`** - This command is used to get detailed information about a Docker container or image.
+> * **`docker logs`** - This command is used to view the logs for a Docker container.
+> * **`docker commit`** - This command is used to create a new Docker image from an existing container.
+> * **`docker push`** - This command is used to push a Docker image to a registry.
+> * **`docker tag`** - This command is used to tag a Docker image with a new name or identifier.
+> * **`docker build`** - This command is used to build a Docker image from a Dockerfile.
+> * **`docker compose`** - This command is used to run a Docker application that is defined in a Docker Compose file.
+
+# Building Ubuntu 20.04 Docker Image for alx projects
+## First-Time Setup
+> * - **`docker pull ubuntu:20.04`** - Pull the ubuntu 20.04 image from docker hub
+> * **`docker run -it --name my-ubuntu-container ubuntu:20.04`** - This command is used to run a Docker ubuntu 20.04 container.
+
+## How to Use the Container Again
+> * **`docker start my-ubuntu-container`** - starting the container named “my-ubuntu-container” that was created from the Ubuntu 20.04 image.
+> * **`docker exec -it my-ubuntu-container /bin/bash`** - executes the /bin/bash command inside the my-ubuntu-container container in interactive mode.
+> * **`docker stop my-ubuntu-container`** - When you are done and want to stop the “my-ubuntu-container” container, use the following command.
+
+# Windows Subsystem for Linux (WSL)
+> Windows Subsystem for Linux (WSL) is a feature of Windows that allows you to run Linux command-line tools and applications directly on Windows, without the need for a virtual machine or dual boot setup.
+> 
+> It is powered by a real Linux kernel, which means that you can run any Linux binary executable on Windows, as long as it is compatible with the x86-64 architecture.
+>   
+> WSL is a popular choice for developers who need to use Linux tools and applications on Windows. It is also a good choice for students who are learning Linux, as it allows them to learn Linux without having to install a > > separate operating system.
+
+## Benefits of using WSL
+> 1. **Speed**: WSL is much faster than running Linux in a virtual machine, as it uses the native Windows kernel.
+> 2. **Convenience**: WSL is more convenient than dual booting, as you can run Linux tools and applications alongside your Windows applications.
+> 3. **Compatibility**: WSL is compatible with a wide range of Linux tools and applications.
+> 4. **Flexibility**: WSL can be used for a variety of purposes, including development, education, and research.
+
+## Setting up WSL in Windows OS
+[![Watch the video](/Concepts/img/Screenshot_2024-11-19_15-40-35.png)](https://www.youtube.com/watch?v=J24j1Di-Rhc)
+
+> [Microsoft installation tutorial](https://learn.microsoft.com/en-us/windows/wsl/install-manual)
+>
+> 1. Enable WSL. Open PowerShell as an administrator and run the following command:
+> ![4](/Concepts/img/3G.png)
+>
+> 2. Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+> ![5](/Concepts/img/4G.png)
+>
+> 3. Install a Linux distribution. Open the **Microsoft Store** and search for **“Linux”**. Select the Linux distribution that you want to install and click the “**`Get`**” button. Once the distribution is installed, click the “**`Launch`**” button to start it.
+> ![6](/Concepts/img/5G.png)
+>
+> 4. Create a user account for the Linux distribution. When you start the Linux distribution for the first time, you will be prompted to create a user account. Enter a username and password for your account.
+> ![7](/Concepts/img/7G.png)
+>
+> 5. Start using WSL! Once you have created a user account, you can start using WSL to run Linux commands and applications. To do this, open a PowerShell or Command Prompt window and type wsl. This will start a new Linux terminal session.
+
+## Tips for using WSL
+> * You can install multiple Linux distributions on Windows. To do this, simply repeat the installation process for each distribution.
+> * You can set the default Linux distribution. To do this, open the Settings app and go to “Apps” > “Features” > “Windows Subsystem for Linux”. Under “Default distribution”, select the distribution that you want to set as the default.
+> * You can access Windows files from WSL. To do this, use the /mnt/c directory. For example, to access the C:\Windows directory, you would use the /mnt/c/Windows directory.
+> * You can run Windows applications from WSL. To do this, use the wsl –run command. For example, to run the notepad.exe application, you would use the wsl –run notepad.exe command.
+
+# Extra Resources
+> * [Why Do So Many Software Engineers Use Linux?](https://www.youtube.com/watch?v=otDOHt_Jges)
+>
+> * [Learn Docker to the next level](https://www.simplilearn.com/tutorials/docker-tutorial/getting-started-with-docker)
+>
+> * [Docker tutorial doc](https://docker-curriculum.com/)
+
+
+
+
+
