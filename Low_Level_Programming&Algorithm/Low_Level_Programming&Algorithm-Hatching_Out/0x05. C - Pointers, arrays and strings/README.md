@@ -186,7 +186,7 @@ julien@ubuntu:~/0x05$
 ## 4. I can only go one way. I've not got a reverse gear
 Write a function that prints a string, in reverse, followed by a new line.
 
-Prototype: **`void print_rev(char *s);`**
+* Prototype: **`void print_rev(char *s);`**
 ```
 julien@ubuntu:~/0x05$ cat 4-main.c
 #include "main.h"
