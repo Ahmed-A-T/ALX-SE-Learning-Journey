@@ -2,8 +2,10 @@
 
 # Concepts
 > For this project, we expect you to look at this concept:
+> 
 > * [Python programming](/Concepts/Python-programming.md)
-
+>
+>
 
 ![1](/Concepts/img/48a9fdbd67c84a328a9df9ec8d93b9ac2458ac37721d7d53e51a27fb2bdc5263.jpg)
 
