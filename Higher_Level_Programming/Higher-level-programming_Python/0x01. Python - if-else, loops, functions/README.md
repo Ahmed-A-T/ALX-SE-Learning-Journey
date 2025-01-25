@@ -117,7 +117,7 @@
 >         * if the last digit is less than 6 and not 0: the string **`and is less than 6 and not 0`**
 >     * followed by a new line
 >
->```
+>>```
 >> guillaume@ubuntu:~/0x01$ ./1-last_digit.py
 >> Last digit of 4205 is 5 and is less than 6 and not 0
 >> guillaume@ubuntu:~/0x01$ ./1-last_digit.py
@@ -141,7 +141,7 @@
 >> guillaume@ubuntu:~/0x01$ ./1-last_digit.py
 >> Last digit of 5169 is 9 and is greater than 5
 >> guillaume@ubuntu:~/0x01$
->```
+>>```
 ### Repo:
 >
 > * GitHub repository: **`alx-higher_level_programming`**
