@@ -65,7 +65,7 @@
 # Tasks
 ## 0. Positive anything is better than negative nothing
 > This program will assign a random signed **`number`** to the variable **`number`** each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
-> * You can find the source code [https://github.com/alx-tools/0x01.py/blob/master/0-positive_or_negative_py](here)
+> * You can find the source code [here](https://github.com/alx-tools/0x01.py/blob/master/0-positive_or_negative_py)
 > * The variable **`number`** will store a different value every time you will run this program
 > * You don’t have to understand what **`import`**, **`random`**. **`randint`** do. Please do not touch this code
 > * The output of the program should be:
