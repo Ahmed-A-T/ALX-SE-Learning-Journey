@@ -87,7 +87,7 @@
 >   * the value **`10`** to a variable **`a`**
 >   * the value **`5`** to a variable **`b`**
 >   * and use those two variables only, as arguments when calling functions (including **`print`**)
-> * a and b must be defined in 2 different lines: **`a = 10`** and another **`b = 5`**
+> * **`a`** and **`b`** must be defined in 2 different lines: **`a = 10`** and another **`b = 5`**
 > * Your program should call each of the imported functions. See example below for format
 > * the word **`calculator_1`** should be used only once in your file
 > * You are not allowed to use **`*`** for importing or **`__import__`**
