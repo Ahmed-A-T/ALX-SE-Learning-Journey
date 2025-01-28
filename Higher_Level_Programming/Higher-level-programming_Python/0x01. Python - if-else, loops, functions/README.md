@@ -514,7 +514,7 @@
 >> 
 >> #endif /* LISTS_H */
 >> ```
->>
+>
 >> ```
 >> carrie@ubuntu:0x01$ cat linked_lists.c 
 >> #include <stdio.h>
@@ -591,7 +591,7 @@
 >>      }
 >> }
 >> ```
->>
+>
 >> ```
 >> carrie@ubuntu:0x01$ cat 13-main.c 
 >> #include <stdlib.h>
@@ -630,7 +630,7 @@
 >>         return (0);
 >> }
 >> ```
->> 
+>
 >> ```
 >> carrie@ubuntu:0x01$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 13-main.c linked_lists.c 13-insert_number.c -o insert
 >> carrie@ubuntu:0x01$ ./insert
