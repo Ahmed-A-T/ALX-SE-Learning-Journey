@@ -664,7 +664,7 @@
 
 ## 14. Smile in the mirror
 > Write a program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (**`z`** in lowercase and **`Y`** in uppercase) , not followed by a new line.
-
+>
 > * You can only use one **`print`** function with string format
 > * You can only use one loop in your code
 > * You are not allowed to store characters in a variable
@@ -721,29 +721,30 @@
 >
 >> ```
 >> 3           0 LOAD_FAST                0 (a)
->>               3 LOAD_FAST                1 (b)
->>                             6 COMPARE_OP               0 (<)
->>                                           9 POP_JUMP_IF_FALSE       16
+>>             3 LOAD_FAST                1 (b)
+>>             6 COMPARE_OP               0 (<)
+>>             9 POP_JUMP_IF_FALSE       16
 >> 
->>                                             4          12 LOAD_FAST                2 (c)
->>                                                          15 RETURN_VALUE
+>> 4          12 LOAD_FAST                2 (c)
+>>            15 RETURN_VALUE
 >> 
->>                                                            5     >>   16 LOAD_FAST                2 (c)
->>                                                                         19 LOAD_FAST                1 (b)
->>                                                                                      22 COMPARE_OP               4 (>)
->>                                                                                                   25 POP_JUMP_IF_FALSE       36
+>> 5     >>   16 LOAD_FAST                2 (c)
+>>            19 LOAD_FAST                1 (b)
+>>            22 COMPARE_OP               4 (>)
+>>            25 POP_JUMP_IF_FALSE       36
 >> 
->>                                                                                                     6          28 LOAD_FAST                0 (a)
->>                                                                                                                  31 LOAD_FAST                1 (b)
->>                                                                                                                               34 BINARY_ADD
->>                                                                                                                                            35 RETURN_VALUE
+>> 6          28 LOAD_FAST                0 (a)
+>>            31 LOAD_FAST                1 (b)
+>>            34 BINARY_ADD
+>>            35 RETURN_VALUE
 >> 
->>                                                                                                                                              7     >>   36 LOAD_FAST                0 (a)
->>                                                                                                                                                           39 LOAD_FAST                1 (b)
->>                                                                                                                                                                        42 BINARY_MULTIPLY
->>                                                                                                                                                                                     43 LOAD_FAST                2 (c)
->>                                                                                                                                                                                                  46 BINARY_SUBTRACT
->>                                                                                                                                                                                                               47 RETURN_VALUE)
+>> 7     >>   36 LOAD_FAST                0 (a)
+>>            39 LOAD_FAST                1 (b)
+>>            42 BINARY_MULTIPLY
+>>            43 LOAD_FAST                2 (c)
+>>            46 BINARY_SUBTRACT
+>>            47 RETURN_VALUE
+>> 
 >> ```
 >
 > [tips - ByteCode](https://docs.python.org/3.4/library/dis.html)
