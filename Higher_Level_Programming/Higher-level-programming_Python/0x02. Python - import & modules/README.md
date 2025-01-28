@@ -150,7 +150,7 @@
 >> 10 * 5 = 50
 >> 10 / 5 = 2
 >> guillaume@ubuntu:~/0x02$
->>> ```
+>> ```
 ### Repo:
 
 * GitHub repository: **`alx-higher_level_programming`**
