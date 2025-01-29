@@ -222,7 +222,7 @@
 >> ```
 >
 > Remember how you did (or did not) do it in C? **`#pythoniscool`**
-> ![Surprised Cat](ALX-SE-Learning-Journey/Concepts/img/cat.jpg)
+> ![Surprised Cat](/Concepts/img/cat.jpg)
 >
 ### Repo:
 
