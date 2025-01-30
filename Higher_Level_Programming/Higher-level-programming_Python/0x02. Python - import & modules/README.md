@@ -392,7 +392,7 @@
 > Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
 >
 >> ```
->> 3           0 LOAD_CONST               1 (0)
+>> 3            0 LOAD_CONST               1 (0)
 >>              3 LOAD_CONST               2 (('add', 'sub'))
 >>              6 IMPORT_NAME              0 (magic_calculation_102)
 >>              9 IMPORT_FROM              1 (add)
