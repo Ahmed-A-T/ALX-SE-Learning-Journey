@@ -426,8 +426,8 @@
 >>            77 LOAD_FAST                5 (i)
 >>            80 CALL_FUNCTION            2 (2 positional, 0 keyword pair)
 >>            83 STORE_FAST               4 (c)
->>            86 JUMP_ABSOLUTE           65
->>      >>    89 POP_BLOCK
+>>              86 JUMP_ABSOLUTE           65
+>>        >>    89 POP_BLOCK
 >> 
 >>  8     >>   90 LOAD_FAST                4 (c)
 >>             93 RETURN_VALUE
