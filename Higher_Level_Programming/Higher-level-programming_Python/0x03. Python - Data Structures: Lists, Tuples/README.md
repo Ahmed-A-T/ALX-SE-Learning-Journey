@@ -585,7 +585,7 @@
 >> carrie@ubuntu:0x03$
 >> >> ```
 >
->> >> ```
+>> ```
 >> carrie@ubuntu:0x03$ cat 13-main.c
 >> #include <stdio.h>
 >> #include <stdlib.h>
