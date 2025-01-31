@@ -1,6 +1,6 @@
 # 0x06. Python - Classes and Objects
 
-![/Higher_Level_Programming/Higher-level-programming_Python/0x06. Python - Classes and Objects/assets/oop-meme.jpg]
+![Picture](/Higher_Level_Programming/Higher-level-programming_Python/0x06. Python - Classes and Objects/assets/oop-meme.jpg)
 
 # Background Context
 > OOP is a totally new concept for all of you (especially those who think they know about it :)). It’s VERY important that you read at least all the material that is listed bellow (and skip what we recommend you to skip, you will see them later in the curriculum).
