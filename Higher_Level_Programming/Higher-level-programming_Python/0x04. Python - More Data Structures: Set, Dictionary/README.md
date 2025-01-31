@@ -133,7 +133,7 @@
 >> guillaume@ubuntu:~/0x04$ 
 >> ```
 
-###Repo:
+### Repo:
 
 -   GitHub repository: **`alx-higher_level_programming`**
 -   Directory: **`0x04-python-more_data_structures`**
@@ -161,7 +161,8 @@
 >> ['C']
 >> guillaume@ubuntu:~/0x04$ 
 >> ```
->
+
+
 ### Repo:
 
 -   GitHub repository: **`alx-higher_level_programming`**
