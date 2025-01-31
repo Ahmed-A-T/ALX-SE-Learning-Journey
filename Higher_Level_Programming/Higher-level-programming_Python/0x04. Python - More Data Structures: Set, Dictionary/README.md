@@ -538,11 +538,6 @@ guillaume@ubuntu:~/0x04$
 -   File: `12-roman_to_int.py`
 
 ### 13\. Weighted average!
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
 Write a function that returns the weighted average of all integers tuple `(<score>, <weight>)`
 
 -   Prototype: `def weight_average(my_list=[]):`
@@ -570,14 +565,7 @@ guillaume@ubuntu:~/0x04$
 -   Directory: `0x04-python-more_data_structures`
 -   File: `100-weight_average.py`
 
-Check submission Mark submission Get a sandbox View results
-
 ### 14\. Squared by using map
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
 Write a function that computes the square value of all integers of a matrix using `map`
 
 -   Prototype: `def square_matrix_map(matrix=[]):`
@@ -619,14 +607,7 @@ guillaume@ubuntu:~/0x04$
 -   Directory: `0x04-python-more_data_structures`
 -   File: `101-square_matrix_map.py`
 
-Check submission Mark submission Get a sandbox View results
-
 ### 15\. Delete by value
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
 Write a function that deletes keys with a specific value in a dictionary.
 
 -   Prototype: `def complex_delete(a_dictionary, value):`
@@ -679,11 +660,6 @@ guillaume@ubuntu:~/0x04$
 Check submission Mark submission Get a sandbox View results
 
 ### 16\. CPython #1: PyBytesObject
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
 Create two C functions that print some basic info about Python lists and Python bytes objects.  
   
 
