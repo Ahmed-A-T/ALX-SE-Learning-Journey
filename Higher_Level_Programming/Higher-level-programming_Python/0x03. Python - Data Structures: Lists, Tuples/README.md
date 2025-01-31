@@ -506,7 +506,7 @@
 >> carrie@ubuntu:0x03$
 >> >> ```
 >
->> >> ```
+>> ```
 >> carrie@ubuntu:0x03$ cat linked_lists.c 
 >> #include <stdio.h>
 >> #include <stdlib.h>
@@ -583,7 +583,7 @@
 >>     }
 >> }
 >> carrie@ubuntu:0x03$
->> >> ```
+>> ```
 >
 >> ```
 >> carrie@ubuntu:0x03$ cat 13-main.c
