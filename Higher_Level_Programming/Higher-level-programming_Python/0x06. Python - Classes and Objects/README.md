@@ -11,7 +11,7 @@
 
 # Resources
 ## Read or watch:
-> -   [Object Oriented Programming](https://intranet.alxswe.com/rltoken/i49z6HxrBGRNnixo7ZWbEQ "Object Oriented Programming") (_Read everything until the paragraph “Inheritance” excluded. You do NOT have to learn about class attributes, `**classmethod`** and **`staticmethod`** yet_)
+> -   [Object Oriented Programming](https://intranet.alxswe.com/rltoken/i49z6HxrBGRNnixo7ZWbEQ "Object Oriented Programming") (_Read everything until the paragraph “Inheritance” excluded. You do NOT have to learn about class attributes, **`classmethod`** and **`staticmethod`** yet_)
 > -   [Object-Oriented Programming](https://intranet.alxswe.com/rltoken/qz3KSn154ia4H2DPaabOzg "Object-Oriented Programming") (_Please \*_be careful\*_: in most of the following paragraphs, the author shows things the way you should not use or write a class in order to help you better understand some concepts and how everything works in Python 3. Make sure you read everything in the following paragraphs: General Introduction, First-class Everything, A Minimal Class in Python, Attributes (You DON’T have to learn about class attributes), Methods, The **`__init__`** Method, “Data Abstraction, Data Encapsulation, and Information Hiding,” “Public, Protected, and Private Attributes”_)
 > -   [Properties vs. Getters and Setters](https://intranet.alxswe.com/rltoken/Wy2djWXK5b4rnnYlAq_wlA "Properties vs. Getters and Setters")
 > -   [Learn to Program 9 : Object Oriented Programming](https://intranet.alxswe.com/rltoken/MxIOanLf5vG5QeCWek2nqQ "Learn to Program 9 : Object Oriented Programming")
