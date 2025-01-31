@@ -504,7 +504,7 @@
 >> 
 >> #endif /* LISTS_H */
 >> carrie@ubuntu:0x03$
->> >> ```
+>> ```
 >
 >> ```
 >> carrie@ubuntu:0x03$ cat linked_lists.c 
