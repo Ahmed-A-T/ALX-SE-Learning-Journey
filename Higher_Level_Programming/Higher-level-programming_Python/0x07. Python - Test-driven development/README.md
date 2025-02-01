@@ -468,7 +468,7 @@
 ---
 
 ## 8\. CPython #3: Python Strings
-![](assets/task8.gif)  
+![fancy](assets/task8.gif)  
 > 
 > Create a function that prints Python strings.
 > 
