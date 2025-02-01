@@ -172,7 +172,7 @@
 -   Directory: **`0x08-python-more_classes`**
 -   File: **`2-rectangle.py`**
 
---
+---
 
 ## 3\. String representation
 > Write a class **`Rectangle`** that defines a rectangle by: (based on **`2-rectangle.py`**)
@@ -619,6 +619,8 @@
 -   GitHub repository: **`alx-higher_level_programming`**
 -   Directory: **`0x08-python-more_classes`**
 -   File: **`8-rectangle.py`**
+
+---
 
 ## 9\. A square is a rectangle
 > Write a class **`Rectangle`** that defines a rectangle by: (based on **`8-rectangle.py`**)
