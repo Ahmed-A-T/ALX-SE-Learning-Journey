@@ -5,7 +5,7 @@
 > 
 > -   [Never forget a test](/Concepts/Never_forget_a_test.md)
 
-![](Project%200x07.%20Python%20-%20Test-driven%20development%20%20Cairo%20Intranet/giphy-4.gif)
+![giphy](assets/giphy-4.gif)
 
 ## Background Context
 
