@@ -689,7 +689,7 @@
 ---
 
 ## 10\. N queens
-![](assets/Vdsl.jpg)  
+![](assets/VDSL.jpg)  
 <small>Chess grandmaster <a href="https://intranet.alxswe.com/rltoken/bsRwbt64OvYjWaClriv0jg" title="Judit Polgár" target="_blank">Judit Polgár</a>, the strongest female chess player of all time</small>  
 >   
 > 
