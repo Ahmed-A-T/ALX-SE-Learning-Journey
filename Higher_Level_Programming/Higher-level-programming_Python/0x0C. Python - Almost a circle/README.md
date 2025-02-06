@@ -21,9 +21,7 @@
 > -   `args` and `kwargs`
 > -   Serialization/Deserialization
 > -   JSON
-<video width="320" height="240" controls>
-  <source src="/assets/giphy.mp4" type="video/mp4">
-</video>
+[![alt text](assets/giphy.mp4)]
 
 ## Resources
 
