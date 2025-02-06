@@ -559,7 +559,7 @@
 
 ---
 
-## 9\. Contains `a\`
+## 9\. Contains ``a\``
 > Write a script that lists all **`State`** objects that contain the letter **`a`** from the database **`hbtn_0e_6_usa`**
 > 
 > -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
