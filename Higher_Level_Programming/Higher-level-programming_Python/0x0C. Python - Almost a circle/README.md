@@ -21,7 +21,11 @@
 > -   `args` and `kwargs`
 > -   Serialization/Deserialization
 > -   JSON
-[giphy](assets/giphy.mp4)
+
+<video controls width="600">
+    <source src="assets/giphy.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
 
 # Resources
