@@ -132,9 +132,9 @@
 ---
 
 ## 2\. Exact same object
-> Write a function that returns `True` if the object is _exactly_ an instance of the specified class ; otherwise `False`.
+> Write a function that returns **`True`** if the object is _exactly_ an instance of the specified class ; otherwise **`False`**.
 > 
-> -   Prototype: `def is_same_class(obj, a_class):`
+> -   Prototype: **`def is_same_class(obj, a_class):`**
 > -   You are not allowed to import any module
 > 
 >> ```
@@ -225,395 +225,332 @@
 >> guillaume@ubuntu:~/0x0A$ 
 >> ```
 
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `4-inherits_from.py`
-
-Check submission Mark submission Get a sandbox View results
-
-### 5\. Geometry module
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write an empty class `BaseGeometry`.
-
--   You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/0x0A$ cat 5-main.py
-#!/usr/bin/python3
-BaseGeometry = __import__('5-base_geometry').BaseGeometry
-
-bg = BaseGeometry()
-
-print(bg)
-print(dir(bg))
-print(dir(BaseGeometry))
-
-guillaume@ubuntu:~/0x0A$ ./5-main.py
-&lt;5-base_geometry.BaseGeometry object at 0x7f2050c69208&gt;
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
-guillaume@ubuntu:~/0x0A$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `5-base_geometry.py`
-
-Check submission Mark submission Get a sandbox View results
-
-### 6\. Improve Geometry
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a class `BaseGeometry` (based on `5-base_geometry.py`).
-
--   Public instance method: `def area(self):` that raises an `Exception` with the message `area() is not implemented`
--   You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/0x0A$ cat 6-main.py
-#!/usr/bin/python3
-BaseGeometry = __import__('6-base_geometry').BaseGeometry
-
-bg = BaseGeometry()
-
-try:
-    print(bg.area())
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-guillaume@ubuntu:~/0x0A$ ./6-main.py
-[Exception] area() is not implemented
-guillaume@ubuntu:~/0x0A$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `6-base_geometry.py`
-
-Check submission Mark submission Get a sandbox View results
-
-### 7\. Integer validator
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a class `BaseGeometry` (based on `6-base_geometry.py`).
-
--   Public instance method: `def area(self):` that raises an `Exception` with the message `area() is not implemented`
--   Public instance method: `def integer_validator(self, name, value):` that validates `value`:
-    -   you can assume `name` is always a string
-    -   if `value` is not an integer: raise a `TypeError` exception, with the message `<name> must be an integer`
-    -   if `value` is less or equal to 0: raise a `ValueError` exception with the message `<name> must be greater than 0`
--   You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/0x0A$ cat 7-main.py
-#!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
-bg = BaseGeometry()
-
-bg.integer_validator("my_int", 12)
-bg.integer_validator("width", 89)
-
-try:
-    bg.integer_validator("name", "John")
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-try:
-    bg.integer_validator("age", 0)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-try:
-    bg.integer_validator("distance", -4)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-guillaume@ubuntu:~/0x0A$ ./7-main.py
-[TypeError] name must be an integer
-[ValueError] age must be greater than 0
-[ValueError] distance must be greater than 0
-guillaume@ubuntu:~/0x0A$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `7-base_geometry.py, tests/7-base_geometry.txt`
-
-Check submission Mark submission Get a sandbox View results
-
-### 8\. Rectangle
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a class `Rectangle` that inherits from `BaseGeometry` (`7-base_geometry.py`).
-
--   Instantiation with `width` and `height`: `def __init__(self, width, height):`
-    -   `width` and `height` must be private. No getter or setter
-    -   `width` and `height` must be positive integers, validated by `integer_validator`
-
-```
-guillaume@ubuntu:~/0x0A$ cat 8-main.py
-#!/usr/bin/python3
-Rectangle = __import__('8-rectangle').Rectangle
-
-r = Rectangle(3, 5)
-
-print(r)
-print(dir(r))
-
-try:
-    print("Rectangle: {} - {}".format(r.width, r.height))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-try:
-    r2 = Rectangle(4, True)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-guillaume@ubuntu:~/0x0A$ ./8-main.py
-&lt;8-rectangle.Rectangle object at 0x7f6f488f7eb8&gt;
-['_Rectangle__height', '_Rectangle__width', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'area', 'integer_validator']
-[AttributeError] 'Rectangle' object has no attribute 'width'
-[TypeError] height must be an integer
-guillaume@ubuntu:~/0x0A$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `8-rectangle.py`
-
-Check submission Mark submission Get a sandbox View results
-
-### 9\. Full rectangle
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a class `Rectangle` that inherits from `BaseGeometry` (`7-base_geometry.py`). (task based on `8-rectangle.py`)
-
--   Instantiation with `width` and `height`: `def __init__(self, width, height):`:
-    -   `width` and `height` must be private. No getter or setter
-    -   `width` and `height` must be positive integers validated by `integer_validator`
--   the `area()` method must be implemented
--   `print()` should print, and `str()` should return, the following rectangle description: `[Rectangle] <width>/<height>`
-
-```
-guillaume@ubuntu:~/0x0A$ cat 9-main.py
-#!/usr/bin/python3
-Rectangle = __import__('9-rectangle').Rectangle
-
-r = Rectangle(3, 5)
-
-print(r)
-print(r.area())
-
-guillaume@ubuntu:~/0x0A$ ./9-main.py
-[Rectangle] 3/5
-15
-guillaume@ubuntu:~/0x0A$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `9-rectangle.py`
-
-Check submission Mark submission Get a sandbox View results
-
-### 10\. Square #1
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`):
-
--   Instantiation with `size`: `def __init__(self, size):`:
-    -   `size` must be private. No getter or setter
-    -   `size` must be a positive integer, validated by `integer_validator`
--   the `area()` method must be implemented
-
-```
-guillaume@ubuntu:~/0x0A$ cat 10-main.py
-#!/usr/bin/python3
-Square = __import__('10-square').Square
-
-s = Square(13)
-
-print(s)
-print(s.area())
-
-guillaume@ubuntu:~/0x0A$ ./10-main.py
-[Rectangle] 13/13
-169
-guillaume@ubuntu:~/0x0A$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `10-square.py`
-
-Check submission Mark submission Get a sandbox View results
-
-### 11\. Square #2
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`). (task based on `10-square.py`).
-
--   Instantiation with `size`: `def __init__(self, size):`:
-    -   `size` must be private. No getter or setter
-    -   `size` must be a positive integer, validated by `integer_validator`
--   the `area()` method must be implemented
--   `print()` should print, and `str()` should return, the square description: `[Square] <width>/<height>`
-
-```
-guillaume@ubuntu:~/0x0A$ cat 11-main.py
-#!/usr/bin/python3
-Square = __import__('11-square').Square
-
-s = Square(13)
-
-print(s)
-print(s.area())
-
-guillaume@ubuntu:~/0x0A$ ./11-main.py
-[Square] 13/13
-169
-guillaume@ubuntu:~/0x0A$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `11-square.py`
-
-Check submission Mark submission Get a sandbox View results
-
-### 12\. My integer
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a class `MyInt` that inherits from `int`:
-
--   `MyInt` is a rebel. `MyInt` has `==` and `!=` operators inverted
--   You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/0x0A$ cat 100-main.py
-#!/usr/bin/python3
-MyInt = __import__('100-my_int').MyInt
-
-my_i = MyInt(3)
-print(my_i)
-print(my_i == 3)
-print(my_i != 3)
-
-guillaume@ubuntu:~/0x0A$ ./100-main.py
-3
-False
-True
-guillaume@ubuntu:~/0x0A$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `100-my_int.py`
-
-Check submission Mark submission Get a sandbox View results
-
-### 13\. Can I?
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a function that adds a new attribute to an object if it’s possible:
-
--   Raise a `TypeError` exception, with the message `can't add new attribute` if the object can’t have new attribute
--   You are not allowed to use `try/except`
--   You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/0x0A$ cat 101-main.py
-#!/usr/bin/python3
-add_attribute = __import__('101-add_attribute').add_attribute
-
-class MyClass():
-    pass
-
-mc = MyClass()
-add_attribute(mc, "name", "John")
-print(mc.name)
-
-try:
-    a = "My String"
-    add_attribute(a, "name", "Bob")
-    print(a.name)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-guillaume@ubuntu:~/0x0A$ ./101-main.py
-John
-[TypeError] can't add new attribute
-guillaume@ubuntu:~/0x0A$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0A-python-inheritance`
--   File: `101-add_attribute.py`
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`4-inherits_from.py`**
+
+---
+
+## 5\. Geometry module
+> Write an empty class **`BaseGeometry`**.
+> 
+> -   You are not allowed to import any module
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0A$ cat 5-main.py
+>> #!/usr/bin/python3
+>> BaseGeometry = __import__('5-base_geometry').BaseGeometry
+>> 
+>> bg = BaseGeometry()
+>> 
+>> print(bg)
+>> print(dir(bg))
+>> print(dir(BaseGeometry))
+>> 
+>> guillaume@ubuntu:~/0x0A$ ./5-main.py
+>> &lt;5-base_geometry.BaseGeometry object at 0x7f2050c69208&gt;
+>> ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
+>> ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
+>> guillaume@ubuntu:~/0x0A$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`5-base_geometry.py`**
+
+## 6\. Improve Geometry
+> Write a class **`BaseGeometry`** (based on **`5-base_geometry.py`**).
+> 
+> -   Public instance method: **`def area(self):`** that raises an **`Exception`** with the message **`area() is not implemented`**
+> -   You are not allowed to import any module
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0A$ cat 6-main.py
+>> #!/usr/bin/python3
+>> BaseGeometry = __import__('6-base_geometry').BaseGeometry
+>> 
+>> bg = BaseGeometry()
+>> 
+>> try:
+>>     print(bg.area())
+>> except Exception as e:
+>>     print("[{}] {}".format(e.__class__.__name__, e))
+>> 
+>> guillaume@ubuntu:~/0x0A$ ./6-main.py
+>> [Exception] area() is not implemented
+>> guillaume@ubuntu:~/0x0A$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`6-base_geometry.py`**
+
+---
+
+## 7\. Integer validator
+> Write a class **`BaseGeometry`** (based on **`6-base_geometry.py`**).
+> 
+> -   Public instance method: **`def area(self):`** that raises an **`Exception`** with the message **`area() is not implemented`**
+> -   Public instance method: **`def integer_validator(self, name, value):`** that validates **`value`**:
+>     -   you can assume **`name`** is always a string
+>     -   if **`value`** is not an integer: raise a **`TypeError`** exception, with the message **`<name> must be an integer`**
+>     -   if **`value`** is less or equal to 0: raise a **`ValueError`** exception with the message **`<name> must be greater than 0`**
+> -   You are not allowed to import any module
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0A$ cat 7-main.py
+>> #!/usr/bin/python3
+>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>> 
+>> bg = BaseGeometry()
+>> 
+>> bg.integer_validator("my_int", 12)
+>> bg.integer_validator("width", 89)
+>> 
+>> try:
+>>     bg.integer_validator("name", "John")
+>> except Exception as e:
+>>     print("[{}] {}".format(e.__class__.__name__, e))
+>> 
+>> try:
+>>     bg.integer_validator("age", 0)
+>> except Exception as e:
+>>     print("[{}] {}".format(e.__class__.__name__, e))
+>> 
+>> try:
+>>     bg.integer_validator("distance", -4)
+>> except Exception as e:
+>>     print("[{}] {}".format(e.__class__.__name__, e))
+>> 
+>> guillaume@ubuntu:~/0x0A$ ./7-main.py
+>> [TypeError] name must be an integer
+>> [ValueError] age must be greater than 0
+>> [ValueError] distance must be greater than 0
+>> guillaume@ubuntu:~/0x0A$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`7-base_geometry.py, tests/7-base_geometry.txt`**
+
+---
+
+## 8\. Rectangle
+> Write a class **`Rectangle`** that inherits from **`BaseGeometry`** (**`7-base_geometry.py`**).
+> 
+> -   Instantiation with **`width`** and **`height`**: **`def __init__(self, width, height):`**
+>     -   **`width`** and **`height`** must be private. No getter or setter
+>     -   **`width`** and **`height`** must be positive integers, validated by **`integer_validator`**
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0A$ cat 8-main.py
+>> #!/usr/bin/python3
+>> Rectangle = __import__('8-rectangle').Rectangle
+>> 
+>> r = Rectangle(3, 5)
+>> 
+>> print(r)
+>> print(dir(r))
+>> 
+>> try:
+>>     print("Rectangle: {} - {}".format(r.width, r.height))
+>> except Exception as e:
+>>     print("[{}] {}".format(e.__class__.__name__, e))
+>> 
+>> try:
+>>     r2 = Rectangle(4, True)
+>> except Exception as e:
+>>     print("[{}] {}".format(e.__class__.__name__, e))
+>> 
+>> guillaume@ubuntu:~/0x0A$ ./8-main.py
+>> &lt;8-rectangle.Rectangle object at 0x7f6f488f7eb8&gt;
+>> ['_Rectangle__height', '_Rectangle__width', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'area', 'integer_validator']
+>> [AttributeError] 'Rectangle' object has no attribute 'width'
+>> [TypeError] height must be an integer
+>> guillaume@ubuntu:~/0x0A$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`8-rectangle.py`**
+
+---
+
+## 9\. Full rectangle
+> Write a class **`Rectangle`** that inherits from **`BaseGeometry`** (**`7-base_geometry.py`**). (task based on **`8-rectangle.py`**)
+> 
+> -   Instantiation with **`width`** and **`height`**: **`def __init__(self, width, height):`**:
+>     -   **`width`** and **`height`** must be private. No getter or setter
+>     -   **`width`** and **`height`** must be positive integers validated by **`integer_validator`**
+> -   the **`area()`** method must be implemented
+> -   **`print()`** should print, and **`str()`** should return, the following rectangle description: **`[Rectangle] <width>/<height>`**
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0A$ cat 9-main.py
+>> #!/usr/bin/python3
+>> Rectangle = __import__('9-rectangle').Rectangle
+>> 
+>> r = Rectangle(3, 5)
+>> 
+>> print(r)
+>> print(r.area())
+>> 
+>> guillaume@ubuntu:~/0x0A$ ./9-main.py
+>> [Rectangle] 3/5
+>> 15
+>> guillaume@ubuntu:~/0x0A$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`9-rectangle.py`**
+
+---
+
+## 10\. Square #1
+> Write a class **`Square`** that inherits from **`Rectangle`** (**`9-rectangle.py`**):
+> 
+> -   Instantiation with **`size`**: **`def __init__(self, size):`**:
+>     -   **`size`** must be private. No getter or setter
+>     -   **`size`** must be a positive integer, validated by **`integer_validator`**
+> -   the **`area()`** method must be implemented
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0A$ cat 10-main.py
+>> #!/usr/bin/python3
+>> Square = __import__('10-square').Square
+>> 
+>> s = Square(13)
+>> 
+>> print(s)
+>> print(s.area())
+>> 
+>> guillaume@ubuntu:~/0x0A$ ./10-main.py
+>> [Rectangle] 13/13
+>> 169
+>> guillaume@ubuntu:~/0x0A$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`10-square.py`**
+
+---
+
+## 11\. Square #2
+> Write a class **`Square`** that inherits from **`Rectangle`** (**`9-rectangle.py`**). (task based on **`10-square.py`**).
+> 
+> -   Instantiation with **`size`**: **`def __init__(self, size):`**:
+>     -   **`size`** must be private. No getter or setter
+>     -   **`size`** must be a positive integer, validated by **`integer_validator`**
+> -   the **`area()`** method must be implemented
+> -   **`print()`** should print, and **`str()`** should return, the square description: **`[Square] <width>/<height>`**
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0A$ cat 11-main.py
+>> #!/usr/bin/python3
+>> Square = __import__('11-square').Square
+>> 
+>> s = Square(13)
+>> 
+>> print(s)
+>> print(s.area())
+>> 
+>> guillaume@ubuntu:~/0x0A$ ./11-main.py
+>> [Square] 13/13
+>> 169
+>> guillaume@ubuntu:~/0x0A$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`11-square.py`**
+
+---
+
+## 12\. My integer
+> Write a class **`MyInt`** that inherits from **`int`**:
+> 
+> -   **`MyInt`** is a rebel. **`MyInt`** has **`==`** and **`!=`** operators inverted
+> -   You are not allowed to import any module
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0A$ cat 100-main.py
+>> #!/usr/bin/python3
+>> MyInt = __import__('100-my_int').MyInt
+>> 
+>> my_i = MyInt(3)
+>> print(my_i)
+>> print(my_i == 3)
+>> print(my_i != 3)
+>> 
+>> guillaume@ubuntu:~/0x0A$ ./100-main.py
+>> 3
+>> False
+>> True
+>> guillaume@ubuntu:~/0x0A$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`100-my_int.py`**
+
+---
+
+## 13\. Can I?
+> Write a function that adds a new attribute to an object if it’s possible:
+> 
+> -   Raise a **`TypeError`** exception, with the message **`can't add new attribute`** if the object can’t have new attribute
+> -   You are not allowed to use **`try/except`**
+> -   You are not allowed to import any module
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0A$ cat 101-main.py
+>> #!/usr/bin/python3
+>> add_attribute = __import__('101-add_attribute').add_attribute
+>> 
+>> class MyClass():
+>>     pass
+>> 
+>> mc = MyClass()
+>> add_attribute(mc, "name", "John")
+>> print(mc.name)
+>> 
+>> try:
+>>     a = "My String"
+>>     add_attribute(a, "name", "Bob")
+>>     print(a.name)
+>> except Exception as e:
+>>     print("[{}] {}".format(e.__class__.__name__, e))
+>> 
+>> guillaume@ubuntu:~/0x0A$ ./101-main.py
+>> John
+>> [TypeError] can't add new attribute
+>> guillaume@ubuntu:~/0x0A$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0A-python-inheritance`**
+-   File: **`101-add_attribute.py`**
+
+---
