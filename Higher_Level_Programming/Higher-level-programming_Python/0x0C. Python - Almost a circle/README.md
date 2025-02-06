@@ -22,7 +22,7 @@
 > -   Serialization/Deserialization
 > -   JSON
 
-<video controls width="600">
+<video controls width="300">
     <source src="assets/giphy.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
