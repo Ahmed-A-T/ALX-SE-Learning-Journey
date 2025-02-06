@@ -21,18 +21,15 @@
 > -   `args` and `kwargs`
 > -   Serialization/Deserialization
 > -   JSON
-<video width="320" height="240" controls>
-    <source src="assets/giphy.mp4" type="video/mp4">
-</video>
+[![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/331/giphy.mp4)](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/331/giphy.mp4)
 
-## Resources
 
-**Read or watch**:
-
--   [args/kwargs](https://intranet.alxswe.com/rltoken/7gc6UzxSL81HcuAwklUbuQ "args/kwargs")
--   [JSON encoder and decoder](https://intranet.alxswe.com/rltoken/rGVU9mt57rVURGnjK6n4_Q "JSON encoder and decoder")
--   [unittest module](https://intranet.alxswe.com/rltoken/soictNXCPE18ASL3INoeew "unittest module")
--   [Python test cheatsheet](https://intranet.alxswe.com/rltoken/uI9iskBCcNo5pc7j9Vy86A "Python test cheatsheet")
+# Resources
+## Read or watch:
+> -   [args/kwargs](https://intranet.alxswe.com/rltoken/7gc6UzxSL81HcuAwklUbuQ "args/kwargs")
+> -   [JSON encoder and decoder](https://intranet.alxswe.com/rltoken/rGVU9mt57rVURGnjK6n4_Q "JSON encoder and decoder")
+> -   [unittest module](https://intranet.alxswe.com/rltoken/soictNXCPE18ASL3INoeew "unittest module")
+> -   [Python test cheatsheet](https://intranet.alxswe.com/rltoken/uI9iskBCcNo5pc7j9Vy86A "Python test cheatsheet")
 
 ## Learning Objectives
 
