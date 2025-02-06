@@ -2,7 +2,7 @@
 
 ## Before you start…
 
-**Please make sure your MySQL server is in 8.0** -> [How to install MySQL 8.0 in Ubuntu 20.04](Higher_Level_Programming/Higher-level programming - Databases/0x0D. SQL - Introduction)
+**Please make sure your MySQL server is in 8.0** -> [How to install MySQL 8.0 in Ubuntu 20.04](Higher_Level_Programming/Higher-level programming\ -\ Databases/0x0D.\ SQL\ -\ Introduction)
 
 ## Background Context
 
