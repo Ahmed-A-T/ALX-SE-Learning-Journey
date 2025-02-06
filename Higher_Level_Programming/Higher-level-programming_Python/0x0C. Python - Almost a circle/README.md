@@ -21,7 +21,7 @@
 > -   `args` and `kwargs`
 > -   Serialization/Deserialization
 > -   JSON
-[![alt text](assets/giphy.mp4)]
+[![alt text](assets/giphy.mp4)](hassets/giphy.mp)
 
 ## Resources
 
