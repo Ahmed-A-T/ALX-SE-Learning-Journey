@@ -2,7 +2,7 @@
 
 # Resources
 ## Read or watch:
-> -   [HTTP (https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)](https://intranet.alxswe.com/rltoken/rAon_EpQ6PGl8N0plySn4A "HTTP (HyperText Transfer Protocol)") (_except: “TRACE” Request Method, “CONNECT” Request Method, Language Negotiation and “Options MultiView” and Character Set Negotiation_)
+> -   [HTTP](https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)(https://intranet.alxswe.com/rltoken/rAon_EpQ6PGl8N0plySn4A "HTTP (HyperText Transfer Protocol)") (_except: “TRACE” Request Method, “CONNECT” Request Method, Language Negotiation and “Options MultiView” and Character Set Negotiation_)
 > -   [HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 
 # Learning Objectives
@@ -57,11 +57,11 @@
 > 
 > Please test your script in the sandbox provided, using the web server running on port 5000
 > 
-> ```
-> guillaume@ubuntu:~/0x10$ ./0-body_size.sh 0.0.0.0:5000
-> 10
-> guillaume@ubuntu:~/0x10$ 
-> ```
+>> ```
+>> guillaume@ubuntu:~/0x10$ ./0-body_size.sh 0.0.0.0:5000
+>> 10
+>> guillaume@ubuntu:~/0x10$ 
+>> ```
 
 ### Repo:
 
