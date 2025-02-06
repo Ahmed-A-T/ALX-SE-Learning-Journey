@@ -440,1005 +440,522 @@
 
 ## 6\. First state model
 ![](assets/cat01.jpg)
+> Write a python file that contains the class definition of a **`State`** and an instance **`Base = declarative_base()`**:
+> 
+> -   **`State`** class:
+>     -   inherits from **`Base`** [Tips](https://intranet.alxswe.com/rltoken/SFKIwNZ3IG6_4TL6dEsIuA "Tips")
+>     -   links to the MySQL table **`states`**
+>     -   class attribute **`id`** that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
+>     -   class attribute **`name`** that represents a column of a string with maximum 128 characters and can’t be null
+> -   You must use the module **`SQLAlchemy`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   **WARNING:** all classes who inherit from **`Base`** **must** be imported before calling **`Base.metadata.create_all(engine)`**
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ cat 6-model_state.sql
+>> -- Create database hbtn_0e_6_usa
+>> CREATE DATABASE IF NOT EXISTS hbtn_0e_6_usa;
+>> USE hbtn_0e_6_usa;
+>> SHOW CREATE TABLE states;
+>> 
+>> guillaume@ubuntu:~/0x0F$ cat 6-model_state.sql | mysql -uroot -p
+>> Enter password: 
+>> ERROR 1146 (42S02) at line 4: Table 'hbtn_0e_6_usa.states' doesn't exist
+>> guillaume@ubuntu:~/0x0F$ cat 6-model_state.py
+>> #!/usr/bin/python3
+>> """Start link class to table in database 
+>> """
+>> import sys
+>> from model_state import Base, State
+>> 
+>> from sqlalchemy import (create_engine)
+>> 
+>> if __name__ == "__main__":
+>>     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+>>     Base.metadata.create_all(engine)
+>> 
+>> guillaume@ubuntu:~/0x0F$ ./6-model_state.py root root hbtn_0e_6_usa
+>> guillaume@ubuntu:~/0x0F$ cat 6-model_state.sql | mysql -uroot -p
+>> Enter password: 
+>> Table   Create Table
+>> states  CREATE TABLE `states` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(128) NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=latin1
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
 
-Write a python file that contains the class definition of a `State` and an instance `Base = declarative_base()`:
+### Repo:
 
--   `State` class:
-    -   inherits from `Base` [Tips](https://intranet.alxswe.com/rltoken/SFKIwNZ3IG6_4TL6dEsIuA "Tips")
-    -   links to the MySQL table `states`
-    -   class attribute `id` that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
-    -   class attribute `name` that represents a column of a string with maximum 128 characters and can’t be null
--   You must use the module `SQLAlchemy`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   **WARNING:** all classes who inherit from `Base` **must** be imported before calling `Base.metadata.create_all(engine)`
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`model_state.py`**
 
-```
-guillaume@ubuntu:~/0x0F$ cat 6-model_state.sql
--- Create database hbtn_0e_6_usa
-CREATE DATABASE IF NOT EXISTS hbtn_0e_6_usa;
-USE hbtn_0e_6_usa;
-SHOW CREATE TABLE states;
+---
 
-guillaume@ubuntu:~/0x0F$ cat 6-model_state.sql | mysql -uroot -p
-Enter password: 
-ERROR 1146 (42S02) at line 4: Table 'hbtn_0e_6_usa.states' doesn't exist
-guillaume@ubuntu:~/0x0F$ cat 6-model_state.py
-#!/usr/bin/python3
-"""Start link class to table in database 
-"""
-import sys
-from model_state import Base, State
+## 7\. All states via SQLAlchemy
+> Write a script that lists all **`State`** objects from the database **`hbtn_0e_6_usa`**
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   You must import **`State`** and **`Base`** from **`model_state`** - **`from model_state import Base, State`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   Results must be sorted in ascending order by **`states.id`**
+> -   The results must be displayed as they are in the example below
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ cat 7-model_state_fetch_all.sql
+>> -- Insert states
+>> INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
+>> 
+>> guillaume@ubuntu:~/0x0F$ cat 7-model_state_fetch_all.sql | mysql -uroot -p hbtn_0e_6_usa
+>> Enter password: 
+>> guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa
+>> 1: California
+>> 2: Arizona
+>> 3: Texas
+>> 4: New York
+>> 5: Nevada
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
 
-from sqlalchemy import (create_engine)
+### Repo:
 
-if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`7-model_state_fetch_all.py`**
 
-guillaume@ubuntu:~/0x0F$ ./6-model_state.py root root hbtn_0e_6_usa
-guillaume@ubuntu:~/0x0F$ cat 6-model_state.sql | mysql -uroot -p
-Enter password: 
-Table   Create Table
-states  CREATE TABLE `states` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `name` varchar(128) NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=latin1
-guillaume@ubuntu:~/0x0F$ 
-```
+---
 
+## 8\. First state
+> Write a script that prints the first **`State`** object from the database **`hbtn_0e_6_usa`**
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   You must import **`State`** and **`Base`** from **`model_state`** - **`from model_state import Base, State`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   The state you display must be the first in **`states.id`**
+> -   You are not allowed to fetch all states from the database before displaying the result
+> -   The results must be displayed as they are in the example below
+> -   If the table **`states`** is empty, print **`Nothing`** followed by a new line
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ ./8-model_state_fetch_first.py root root hbtn_0e_6_usa
+>> 1: California
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`8-model_state_fetch_first.py`**
+
+---
+
+## 9\. Contains \**`a\`**
+> Write a script that lists all **`State`** objects that contain the letter **`a`** from the database **`hbtn_0e_6_usa`**
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   You must import **`State`** and **`Base`** from **`model_state`** - **`from model_state import Base, State`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   Results must be sorted in ascending order by **`states.id`**
+> -   The results must be displayed as they are in the example below
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ ./9-model_state_filter_a.py root root hbtn_0e_6_usa
+>> 1: California
+>> 2: Arizona
+>> 3: Texas
+>> 5: Nevada
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
 **No test cases needed**
 
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `model_state.py`
-
-Check submission
-
-×
-
-#### 6\. First state model
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 6\. First state model
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 7\. All states via SQLAlchemy
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that lists all `State` objects from the database `hbtn_0e_6_usa`
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   Results must be sorted in ascending order by `states.id`
--   The results must be displayed as they are in the example below
--   Your code should not be executed when imported
-
-```
-guillaume@ubuntu:~/0x0F$ cat 7-model_state_fetch_all.sql
--- Insert states
-INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
-
-guillaume@ubuntu:~/0x0F$ cat 7-model_state_fetch_all.sql | mysql -uroot -p hbtn_0e_6_usa
-Enter password: 
-guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa
-1: California
-2: Arizona
-3: Texas
-4: New York
-5: Nevada
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `7-model_state_fetch_all.py`
-
-Check submission
-
-×
-
-#### 7\. All states via SQLAlchemy
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 7\. All states via SQLAlchemy
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 8\. First state
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that prints the first `State` object from the database `hbtn_0e_6_usa`
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   The state you display must be the first in `states.id`
--   You are not allowed to fetch all states from the database before displaying the result
--   The results must be displayed as they are in the example below
--   If the table `states` is empty, print `Nothing` followed by a new line
--   Your code should not be executed when imported
-
-```
-guillaume@ubuntu:~/0x0F$ ./8-model_state_fetch_first.py root root hbtn_0e_6_usa
-1: California
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `8-model_state_fetch_first.py`
-
-Check submission
-
-×
-
-#### 8\. First state
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 8\. First state
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 9\. Contains \`a\`
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that lists all `State` objects that contain the letter `a` from the database `hbtn_0e_6_usa`
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   Results must be sorted in ascending order by `states.id`
--   The results must be displayed as they are in the example below
--   Your code should not be executed when imported
-
-```
-guillaume@ubuntu:~/0x0F$ ./9-model_state_filter_a.py root root hbtn_0e_6_usa
-1: California
-2: Arizona
-3: Texas
-5: Nevada
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `9-model_state_filter_a.py`
-
-Check submission
-
-×
-
-#### 9\. Contains \`a\`
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 9\. Contains \`a\`
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 10\. Get a state
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that prints the `State` object with the `name` passed as argument from the database `hbtn_0e_6_usa`
-
--   Your script should take 4 arguments: `mysql username`, `mysql password`, `database name` and `state name to search` (SQL injection free)
--   You must use the module `SQLAlchemy`
--   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   You can assume you have one record with the state name to search
--   Results must display the `states.id`
--   If no state has the name you searched for, display `Not found`
--   Your code should not be executed when imported
-
-```
-guillaume@ubuntu:~/0x0F$ ./10-model_state_my_get.py root root hbtn_0e_6_usa Texas
-3
-guillaume@ubuntu:~/0x0F$ ./10-model_state_my_get.py root root hbtn_0e_6_usa Illinois
-Not found
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `10-model_state_my_get.py`
-
-Check submission
-
-×
-
-#### 10\. Get a state
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 10\. Get a state
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 11\. Add a new state
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that adds the `State` object “Louisiana” to the database `hbtn_0e_6_usa`
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   Print the new `states.id` after creation
--   Your code should not be executed when imported
-
-```
-guillaume@ubuntu:~/0x0F$ ./11-model_state_insert.py root root hbtn_0e_6_usa 
-6
-guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
-1: California
-2: Arizona
-3: Texas
-4: New York
-5: Nevada
-6: Louisiana
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `11-model_state_insert.py`
-
-Check submission
-
-×
-
-#### 11\. Add a new state
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 11\. Add a new state
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 12\. Update a state
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that changes the name of a `State` object from the database `hbtn_0e_6_usa`
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   Change the name of the `State` where `id = 2` to `New Mexico`
--   Your code should not be executed when imported
-
-```
-guillaume@ubuntu:~/0x0F$ ./12-model_state_update_id_2.py root root hbtn_0e_6_usa 
-guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
-1: California
-2: New Mexico
-3: Texas
-4: New York
-5: Nevada
-6: Louisiana
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `12-model_state_update_id_2.py`
-
-Check submission
-
-×
-
-#### 12\. Update a state
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 12\. Update a state
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 13\. Delete states
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that deletes all `State` objects with a name containing the letter `a` from the database `hbtn_0e_6_usa`
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   Your code should not be executed when imported
-
-```
-guillaume@ubuntu:~/0x0F$ ./13-model_state_delete_a.py root root hbtn_0e_6_usa 
-guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
-2: New Mexico
-4: New York
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `13-model_state_delete_a.py`
-
-Check submission
-
-×
-
-#### 13\. Delete states
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 13\. Delete states
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 14\. Cities in state
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a Python file similar to `model_state.py` named `model_city.py` that contains the class definition of a `City`.
-
--   `City` class:
-    -   inherits from `Base` (imported from `model_state`)
-    -   links to the MySQL table `cities`
-    -   class attribute `id` that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
-    -   class attribute `name` that represents a column of a string of 128 characters and can’t be null
-    -   class attribute `state_id` that represents a column of an integer, can’t be null and is a foreign key to `states.id`
--   You must use the module `SQLAlchemy`
-
-Next, write a script `14-model_city_fetch_by_state.py` that prints all `City` objects from the database `hbtn_0e_14_usa`:
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   Results must be sorted in ascending order by `cities.id`
--   Results must be display as they are in the example below (`<state name>: (<city id>) <city name>`)
--   Your code should not be executed when imported
-
-```
-guillaume@ubuntu:~/0x0F$ cat 14-model_city_fetch_by_state.sql
--- Create database hbtn_0e_14_usa, tables states and cities + some data
-CREATE DATABASE IF NOT EXISTS hbtn_0e_14_usa;
-USE hbtn_0e_14_usa;
-
-CREATE TABLE IF NOT EXISTS states ( 
-    id INT NOT NULL AUTO_INCREMENT, 
-    name VARCHAR(256) NOT NULL,
-    PRIMARY KEY (id)
-);
-INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
-
-CREATE TABLE IF NOT EXISTS cities ( 
-    id INT NOT NULL AUTO_INCREMENT, 
-    state_id INT NOT NULL,
-    name VARCHAR(256) NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY(state_id) REFERENCES states(id)
-);
-INSERT INTO cities (state_id, name) VALUES (1, "San Francisco"), (1, "San Jose"), (1, "Los Angeles"), (1, "Fremont"), (1, "Livermore");
-INSERT INTO cities (state_id, name) VALUES (2, "Page"), (2, "Phoenix");
-INSERT INTO cities (state_id, name) VALUES (3, "Dallas"), (3, "Houston"), (3, "Austin");
-INSERT INTO cities (state_id, name) VALUES (4, "New York");
-INSERT INTO cities (state_id, name) VALUES (5, "Las Vegas"), (5, "Reno"), (5, "Henderson"), (5, "Carson City");
-
-guillaume@ubuntu:~/0x0F$ cat 14-model_city_fetch_by_state.sql | mysql -uroot -p
-Enter password: 
-guillaume@ubuntu:~/0x0F$ ./14-model_city_fetch_by_state.py root root hbtn_0e_14_usa
-California: (1) San Francisco
-California: (2) San Jose
-California: (3) Los Angeles
-California: (4) Fremont
-California: (5) Livermore
-Arizona: (6) Page
-Arizona: (7) Phoenix
-Texas: (8) Dallas
-Texas: (9) Houston
-Texas: (10) Austin
-New York: (11) New York
-Nevada: (12) Las Vegas
-Nevada: (13) Reno
-Nevada: (14) Henderson
-Nevada: (15) Carson City
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `model_city.py, 14-model_city_fetch_by_state.py`
-
-Check submission
-
-×
-
-#### 14\. Cities in state
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 14\. Cities in state
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 15\. City relationship
-
-#advanced
-
-Score: 75.0% (Checks completed: 75.0%)
-
-Improve the files `model_city.py` and `model_state.py`, and save them as `relationship_city.py` and `relationship_state.py`:
-
--   `City` class:
-    -   No change
--   `State` class:
-    -   In addition to previous requirements, the class attribute `cities` must represent a relationship with the class `City`. If the `State` object is deleted, all linked `City` objects must be automatically deleted. Also, the reference from a `City` object to his `State` should be named `state`
--   You must use the module `SQLAlchemy`
-
-Write a script that creates the `State` “California” with the `City` “San Francisco” from the database `hbtn_0e_100_usa`: (`100-relationship_states_cities.py`)
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   You must use the `cities` relationship for all `State` objects
--   Your code should not be executed when imported
-
-```
-guillaume@ubuntu:~/0x0F$ cat 100-relationship_states_cities.sql
--- Create the database hbtn_0e_100_usa
-CREATE DATABASE IF NOT EXISTS hbtn_0e_100_usa;
-USE hbtn_0e_100_usa;
-
-SELECT * FROM states;
-SELECT * FROM cities;
-
-guillaume@ubuntu:~/0x0F$ cat 100-relationship_states_cities.sql | mysql -uroot -p
-Enter password: 
-ERROR 1146 (42S02) at line 5: Table 'hbtn_0e_100_usa.states' doesn't exist
-guillaume@ubuntu:~/0x0F$ ./100-relationship_states_cities.py root root hbtn_0e_100_usa
-guillaume@ubuntu:~/0x0F$ cat 100-relationship_states_cities.sql | mysql -uroot -p
-Enter password: 
-id  name
-1   California
-id  name    state_id
-1   San Francisco   1
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `relationship_city.py, relationship_state.py, 100-relationship_states_cities.py`
-
-Check submission
-
-×
-
-#### 15\. City relationship
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 15\. City relationship
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 16\. List relationship
-
-#advanced
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that lists all `State` objects, and corresponding `City` objects, contained in the database `hbtn_0e_101_usa`
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   The connection to your MySQL server must be to `localhost` on port `3306`
--   You must only use one query to the database
--   You must use the `cities` relationship for all `State` objects
--   Results must be sorted in ascending order by `states.id` and `cities.id`
--   Results must be displayed as they are in the example below
--   Your code should not be executed when imported
-
-```
-&lt;state id&gt;: &lt;state name&gt;
-&lt;tabulation&gt;&lt;city id&gt;: &lt;city name&gt;
-```
-
-```
-guillaume@ubuntu:~/0x0F$ cat 101-relationship_states_cities_list.sql
--- Create states table in hbtn_0e_101_usa with some data
-CREATE DATABASE IF NOT EXISTS hbtn_0e_101_usa;
-USE hbtn_0e_101_usa;
-CREATE TABLE IF NOT EXISTS states ( 
-    id INT NOT NULL AUTO_INCREMENT, 
-    name VARCHAR(256) NOT NULL,
-    PRIMARY KEY (id)
-);
-INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
-
-CREATE TABLE IF NOT EXISTS cities ( 
-    id INT NOT NULL AUTO_INCREMENT, 
-    state_id INT NOT NULL,
-    name VARCHAR(256) NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY(state_id) REFERENCES states(id)
-);
-INSERT INTO cities (state_id, name) VALUES (1, "San Francisco"), (1, "San Jose"), (1, "Los Angeles"), (1, "Fremont"), (1, "Livermore");
-INSERT INTO cities (state_id, name) VALUES (2, "Page"), (2, "Phoenix");
-INSERT INTO cities (state_id, name) VALUES (3, "Dallas"), (3, "Houston"), (3, "Austin");
-INSERT INTO cities (state_id, name) VALUES (4, "New York");
-INSERT INTO cities (state_id, name) VALUES (5, "Las Vegas"), (5, "Reno"), (5, "Henderson"), (5, "Carson City");
-
-guillaume@ubuntu:~/0x0F$ cat 101-relationship_states_cities_list.sql | mysql -uroot -p
-guillaume@ubuntu:~/0x0F$ ./101-relationship_states_cities_list.py root root hbtn_0e_101_usa
-1: California
-    1: San Francisco
-    2: San Jose
-    3: Los Angeles
-    4: Fremont
-    5: Livermore
-2: Arizona
-    6: Page
-    7: Phoenix
-3: Texas
-    8: Dallas
-    9: Houston
-    10: Austin
-4: New York
-    11: New York
-5: Nevada
-    12: Las Vegas
-    13: Reno
-    14: Henderson
-    15: Carson City
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `101-relationship_states_cities_list.py`
-
-Check submission
-
-×
-
-#### 16\. List relationship
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 16\. List relationship
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 17\. From city
-
-#advanced
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that lists all `City` objects from the database `hbtn_0e_101_usa`
-
--   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
--   You must use the module `SQLAlchemy`
--   Your script should connect to a MySQL server running on `localhost` at port `3306`
--   You must use only one query to the database
--   You must use the `state` relationship to access to the `State` object linked to the `City` object
--   Results must be sorted in ascending order by `cities.id`
--   Results must be displayed as they are in the example below
--   Your code should not be executed when imported
-
-```
-&lt;city id&gt;: &lt;city name&gt; -&gt; &lt;state name&gt;
-```
-
-```
-guillaume@ubuntu:~/0x0F$ ./102-relationship_cities_states_list.py root root hbtn_0e_101_usa
-1: San Francisco -&gt; California
-2: San Jose -&gt; California
-3: Los Angeles -&gt; California
-4: Fremont -&gt; California
-5: Livermore -&gt; California
-6: Page -&gt; Arizona
-7: Phoenix -&gt; Arizona
-8: Dallas -&gt; Texas
-9: Houston -&gt; Texas
-10: Austin -&gt; Texas
-11: New York -&gt; New York
-12: Las Vegas -&gt; Nevada
-13: Reno -&gt; Nevada
-14: Henderson -&gt; Nevada
-15: Carson City -&gt; Nevada
-guillaume@ubuntu:~/0x0F$ 
-```
-
-**No test cases needed**
-
-**Repo:**
-
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x0F-python-object_relational_mapping`
--   File: `102-relationship_cities_states_list.py`
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`9-model_state_filter_a.py`**
+
+---
+
+## 10\. Get a state
+> Write a script that prints the **`State`** object with the **`name`** passed as argument from the database **`hbtn_0e_6_usa`**
+> 
+> -   Your script should take 4 arguments: **`mysql username`**, **`mysql password`**, **`database name`** and **`state name to search`** (SQL injection free)
+> -   You must use the module **`SQLAlchemy`**
+> -   You must import **`State`** and **`Base`** from **`model_state`** - **`from model_state import Base, State`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   You can assume you have one record with the state name to search
+> -   Results must display the **`states.id`**
+> -   If no state has the name you searched for, display **`Not found`**
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ ./10-model_state_my_get.py root root hbtn_0e_6_usa Texas
+>> 3
+>> guillaume@ubuntu:~/0x0F$ ./10-model_state_my_get.py root root hbtn_0e_6_usa Illinois
+>> Not found
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`10-model_state_my_get.py`**
+
+---
+
+## 11\. Add a new state
+> Write a script that adds the **`State`** object “Louisiana” to the database **`hbtn_0e_6_usa`**
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   You must import **`State`** and **`Base`** from **`model_state`** - **`from model_state import Base, State`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   Print the new **`states.id`** after creation
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ ./11-model_state_insert.py root root hbtn_0e_6_usa 
+>> 6
+>> guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
+>> 1: California
+>> 2: Arizona
+>> 3: Texas
+>> 4: New York
+>> 5: Nevada
+>> 6: Louisiana
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`11-model_state_insert.py`**
+
+---
+
+## 12\. Update a state
+> Write a script that changes the name of a **`State`** object from the database **`hbtn_0e_6_usa`**
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   You must import **`State`** and **`Base`** from **`model_state`** - **`from model_state import Base, State`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   Change the name of the **`State`** where **`id = 2`** to **`New Mexico`**
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ ./12-model_state_update_id_2.py root root hbtn_0e_6_usa 
+>> guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
+>> 1: California
+>> 2: New Mexico
+>> 3: Texas
+>> 4: New York
+>> 5: Nevada
+>> 6: Louisiana
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`12-model_state_update_id_2.py`**
+
+---
+
+## 13\. Delete states
+> Write a script that deletes all **`State`** objects with a name containing the letter **`a`** from the database **`hbtn_0e_6_usa`**
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   You must import **`State`** and **`Base`** from **`model_state`** - **`from model_state import Base, State`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ ./13-model_state_delete_a.py root root hbtn_0e_6_usa 
+>> guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
+>> 2: New Mexico
+>> 4: New York
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`13-model_state_delete_a.py`**
+
+---
+
+## 14\. Cities in state
+> Write a Python file similar to **`model_state.py`** named **`model_city.py`** that contains the class definition of a **`City`**.
+> 
+> -   **`City`** class:
+>     -   inherits from **`Base`** (imported from **`model_state`**)
+>     -   links to the MySQL table **`cities`**
+>     -   class attribute **`id`** that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
+>     -   class attribute **`name`** that represents a column of a string of 128 characters and can’t be null
+>     -   class attribute **`state_id`** that represents a column of an integer, can’t be null and is a foreign key to **`states.id`**
+> -   You must use the module **`SQLAlchemy`**
+> 
+> Next, write a script **`14-model_city_fetch_by_state.py`** that prints all **`City`** objects from the database **`hbtn_0e_14_usa`**:
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   You must import **`State`** and **`Base`** from **`model_state`** - **`from model_state import Base, State`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   Results must be sorted in ascending order by **`cities.id`**
+> -   Results must be display as they are in the example below (**`<state name>: (<city id>) <city name>`**)
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ cat 14-model_city_fetch_by_state.sql
+>> -- Create database hbtn_0e_14_usa, tables states and cities + some data
+>> CREATE DATABASE IF NOT EXISTS hbtn_0e_14_usa;
+>> USE hbtn_0e_14_usa;
+>> 
+>> CREATE TABLE IF NOT EXISTS states ( 
+>>     id INT NOT NULL AUTO_INCREMENT, 
+>>     name VARCHAR(256) NOT NULL,
+>>     PRIMARY KEY (id)
+>> );
+>> INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
+>> 
+>> CREATE TABLE IF NOT EXISTS cities ( 
+>>     id INT NOT NULL AUTO_INCREMENT, 
+>>     state_id INT NOT NULL,
+>>     name VARCHAR(256) NOT NULL,
+>>     PRIMARY KEY (id),
+>>     FOREIGN KEY(state_id) REFERENCES states(id)
+>> );
+>> INSERT INTO cities (state_id, name) VALUES (1, "San Francisco"), (1, "San Jose"), (1, "Los Angeles"), (1, "Fremont"), (1, "Livermore");
+>> INSERT INTO cities (state_id, name) VALUES (2, "Page"), (2, "Phoenix");
+>> INSERT INTO cities (state_id, name) VALUES (3, "Dallas"), (3, "Houston"), (3, "Austin");
+>> INSERT INTO cities (state_id, name) VALUES (4, "New York");
+>> INSERT INTO cities (state_id, name) VALUES (5, "Las Vegas"), (5, "Reno"), (5, "Henderson"), (5, "Carson City");
+>> 
+>> guillaume@ubuntu:~/0x0F$ cat 14-model_city_fetch_by_state.sql | mysql -uroot -p
+>> Enter password: 
+>> guillaume@ubuntu:~/0x0F$ ./14-model_city_fetch_by_state.py root root hbtn_0e_14_usa
+>> California: (1) San Francisco
+>> California: (2) San Jose
+>> California: (3) Los Angeles
+>> California: (4) Fremont
+>> California: (5) Livermore
+>> Arizona: (6) Page
+>> Arizona: (7) Phoenix
+>> Texas: (8) Dallas
+>> Texas: (9) Houston
+>> Texas: (10) Austin
+>> New York: (11) New York
+>> Nevada: (12) Las Vegas
+>> Nevada: (13) Reno
+>> Nevada: (14) Henderson
+>> Nevada: (15) Carson City
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`model_city.py, 14-model_city_fetch_by_state.py`**
+
+---
+
+## 15\. City relationship
+> Improve the files **`model_city.py`** and **`model_state.py`**, and save them as **`relationship_city.py`** and **`relationship_state.py`**:
+> 
+> -   **`City`** class:
+>     -   No change
+> -   **`State`** class:
+>     -   In addition to previous requirements, the class attribute **`cities`** must represent a relationship with the class **`City`**. If the **`State`** object is deleted, all linked **`City`** objects must be automatically deleted. Also, the reference from a **`City`** object to his **`State`** should be named **`state`**
+> -   You must use the module **`SQLAlchemy`**
+> 
+> Write a script that creates the **`State`** “California” with the **`City`** “San Francisco” from the database **`hbtn_0e_100_usa`**: (**`100-relationship_states_cities.py`**)
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   You must use the **`cities`** relationship for all **`State`** objects
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ cat 100-relationship_states_cities.sql
+>> -- Create the database hbtn_0e_100_usa
+>> CREATE DATABASE IF NOT EXISTS hbtn_0e_100_usa;
+>> USE hbtn_0e_100_usa;
+>> 
+>> SELECT * FROM states;
+>> SELECT * FROM cities;
+>> 
+>> guillaume@ubuntu:~/0x0F$ cat 100-relationship_states_cities.sql | mysql -uroot -p
+>> Enter password: 
+>> ERROR 1146 (42S02) at line 5: Table 'hbtn_0e_100_usa.states' doesn't exist
+>> guillaume@ubuntu:~/0x0F$ ./100-relationship_states_cities.py root root hbtn_0e_100_usa
+>> guillaume@ubuntu:~/0x0F$ cat 100-relationship_states_cities.sql | mysql -uroot -p
+>> Enter password: 
+>> id  name
+>> 1   California
+>> id  name    state_id
+>> 1   San Francisco   1
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`relationship_city.py, relationship_state.py, 100-relationship_states_cities.py`**
+
+---
+
+## 16\. List relationship
+> Write a script that lists all **`State`** objects, and corresponding **`City`** objects, contained in the database **`hbtn_0e_101_usa`**
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   The connection to your MySQL server must be to **`localhost`** on port **`3306`**
+> -   You must only use one query to the database
+> -   You must use the **`cities`** relationship for all **`State`** objects
+> -   Results must be sorted in ascending order by **`states.id`** and **`cities.id`**
+> -   Results must be displayed as they are in the example below
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> &lt;state id&gt;: &lt;state name&gt;
+>> &lt;tabulation&gt;&lt;city id&gt;: &lt;city name&gt;
+>> ```
+>> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ cat 101-relationship_states_cities_list.sql
+>> -- Create states table in hbtn_0e_101_usa with some data
+>> CREATE DATABASE IF NOT EXISTS hbtn_0e_101_usa;
+>> USE hbtn_0e_101_usa;
+>> CREATE TABLE IF NOT EXISTS states ( 
+>>     id INT NOT NULL AUTO_INCREMENT, 
+>>     name VARCHAR(256) NOT NULL,
+>>     PRIMARY KEY (id)
+>> );
+>> INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
+>> 
+>> CREATE TABLE IF NOT EXISTS cities ( 
+>>     id INT NOT NULL AUTO_INCREMENT, 
+>>     state_id INT NOT NULL,
+>>     name VARCHAR(256) NOT NULL,
+>>     PRIMARY KEY (id),
+>>     FOREIGN KEY(state_id) REFERENCES states(id)
+>> );
+>> INSERT INTO cities (state_id, name) VALUES (1, "San Francisco"), (1, "San Jose"), (1, "Los Angeles"), (1, "Fremont"), (1, "Livermore");
+>> INSERT INTO cities (state_id, name) VALUES (2, "Page"), (2, "Phoenix");
+>> INSERT INTO cities (state_id, name) VALUES (3, "Dallas"), (3, "Houston"), (3, "Austin");
+>> INSERT INTO cities (state_id, name) VALUES (4, "New York");
+>> INSERT INTO cities (state_id, name) VALUES (5, "Las Vegas"), (5, "Reno"), (5, "Henderson"), (5, "Carson City");
+>> 
+>> guillaume@ubuntu:~/0x0F$ cat 101-relationship_states_cities_list.sql | mysql -uroot -p
+>> guillaume@ubuntu:~/0x0F$ ./101-relationship_states_cities_list.py root root hbtn_0e_101_usa
+>> 1: California
+>>     1: San Francisco
+>>     2: San Jose
+>>     3: Los Angeles
+>>     4: Fremont
+>>     5: Livermore
+>> 2: Arizona
+>>     6: Page
+>>     7: Phoenix
+>> 3: Texas
+>>     8: Dallas
+>>     9: Houston
+>>     10: Austin
+>> 4: New York
+>>     11: New York
+>> 5: Nevada
+>>     12: Las Vegas
+>>     13: Reno
+>>     14: Henderson
+>>     15: Carson City
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`101-relationship_states_cities_list.py`**
+
+---
+
+## 17\. From city
+> Write a script that lists all **`City`** objects from the database **`hbtn_0e_101_usa`**
+> 
+> -   Your script should take 3 arguments: **`mysql username`**, **`mysql password`** and **`database name`**
+> -   You must use the module **`SQLAlchemy`**
+> -   Your script should connect to a MySQL server running on **`localhost`** at port **`3306`**
+> -   You must use only one query to the database
+> -   You must use the **`state`** relationship to access to the **`State`** object linked to the **`City`** object
+> -   Results must be sorted in ascending order by **`cities.id`**
+> -   Results must be displayed as they are in the example below
+> -   Your code should not be executed when imported
+> 
+>> ```
+>> &lt;city id&gt;: &lt;city name&gt; -&gt; &lt;state name&gt;
+>> ```
+>> 
+>> ```
+>> guillaume@ubuntu:~/0x0F$ ./102-relationship_cities_states_list.py root root hbtn_0e_101_usa
+>> 1: San Francisco -&gt; California
+>> 2: San Jose -&gt; California
+>> 3: Los Angeles -&gt; California
+>> 4: Fremont -&gt; California
+>> 5: Livermore -&gt; California
+>> 6: Page -&gt; Arizona
+>> 7: Phoenix -&gt; Arizona
+>> 8: Dallas -&gt; Texas
+>> 9: Houston -&gt; Texas
+>> 10: Austin -&gt; Texas
+>> 11: New York -&gt; New York
+>> 12: Las Vegas -&gt; Nevada
+>> 13: Reno -&gt; Nevada
+>> 14: Henderson -&gt; Nevada
+>> 15: Carson City -&gt; Nevada
+>> guillaume@ubuntu:~/0x0F$ 
+>> ```
+> 
+> **No test cases needed**
+
+### Repo:
+
+-   GitHub repository: **`alx-higher_level_programming`**
+-   Directory: **`0x0F-python-object_relational_mapping`**
+-   File: **`102-relationship_cities_states_list.py`**
+
+---
