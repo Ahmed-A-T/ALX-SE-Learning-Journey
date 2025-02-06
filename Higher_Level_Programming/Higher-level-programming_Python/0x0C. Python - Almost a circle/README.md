@@ -21,7 +21,7 @@
 > -   `args` and `kwargs`
 > -   Serialization/Deserialization
 > -   JSON
-[![alt text](assets/giphy.gif)](assets/giphy.gif)
+<iframe src="assets/giphy.mp4" allowfullscreen></iframe>
 
 ## Resources
 
