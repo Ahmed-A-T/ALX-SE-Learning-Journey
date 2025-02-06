@@ -439,7 +439,7 @@
 ---
 
 ## 6\. First state model
-![](assets/cat01.jpg)
+> ![](assets/cat01.jpg)
 > Write a python file that contains the class definition of a **`State`** and an instance **`Base = declarative_base()`**:
 > 
 > -   **`State`** class:
