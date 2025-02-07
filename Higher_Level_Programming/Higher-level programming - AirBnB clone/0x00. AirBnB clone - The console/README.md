@@ -212,7 +212,7 @@
 > 
 > _Note that this is just an example, the number of tests you create can be different from the above example_.
 > 
-> **Warning:**
+**Warning:**
 > 
 > Unit tests must also pass in non-interactive mode:
 > 
@@ -301,7 +301,7 @@
 > Now it’s time to re-create an instance with this dictionary representation.
 > 
 >> ```
->> &lt;class 'BaseModel'&gt; -&gt; to_dict() -&gt; &lt;class 'dict'&gt; -&gt; &lt;class 'BaseModel'&gt;
+>> <class 'BaseModel'> -> to_dict() -> <class 'dict'> -> <class 'BaseModel'>
 >> ```
 > 
 > Update `models/base_model.py`:
