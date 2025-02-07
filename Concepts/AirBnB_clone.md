@@ -46,7 +46,7 @@ This abstraction will also allow you to change the type of storage easily withou
 
 The console will be a tool to validate this storage engine
 
-![](Concept%20AirBnB%20clone%20%20Cairo%20Intranet/815046647d23428a14ca.png)
+![](img/airbnb-04.png)
 
 ### Web static
 
@@ -54,35 +54,35 @@ The console will be a tool to validate this storage engine
 -   create the HTML of your application
 -   create template of each object
 
-![](Concept%20AirBnB%20clone%20%20Cairo%20Intranet/87c01524ada6080f40fc.png)
+![](img/airbnb-05.png)
 
 ### MySQL storage
 
 -   replace the file storage by a Database storage
 -   map your models to a table in database by using an O.R.M.
 
-![](Concept%20AirBnB%20clone%20%20Cairo%20Intranet/5284383714459fa68841.png)
+![](img/airbnb-06.png)
 
 ### Web framework - templating
 
 -   create your first web server in Python
 -   make your static HTML file dynamic by using objects stored in a file or database
 
-![](Concept%20AirBnB%20clone%20%20Cairo%20Intranet/cb778ec8a13acecb53ef.png)
+![](img/airbnb-07.png)
 
 ### RESTful API
 
 -   expose all your objects stored via a JSON web interface
 -   manipulate your objects via a RESTful API
 
-![](Concept%20AirBnB%20clone%20%20Cairo%20Intranet/06fccc41df40ab8f9d49.png)
+![](img/airbnb-08.png)
 
 ### Web dynamic
 
 -   learn JQuery
 -   load objects from the client side by using your own RESTful API
 
-![](Concept%20AirBnB%20clone%20%20Cairo%20Intranet/d2d06462824fab5846f3.png)
+![](img/airbnb-09.png)
 
 ## Files and Directories
 
@@ -277,4 +277,4 @@ print(date_now.strftime("%A %d %B %Y at %H:%M:%S")) # Thursday 08 June 2017 at 2
 
 ## Data diagram
 
-![](Concept%20AirBnB%20clone%20%20Cairo%20Intranet/99e1a8f2be8c09d5ce5ac321e8cf39f0917f8db5.jpg)
+![](img/airbnb-10.png)
