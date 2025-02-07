@@ -145,7 +145,7 @@
 > $
 > ```
 > 
-![](assets/0x0E-02.jpg)
+![](assets/0x0E-02.png)
 
 # Tasks
 
