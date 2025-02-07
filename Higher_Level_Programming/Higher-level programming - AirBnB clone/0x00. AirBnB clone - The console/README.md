@@ -1,608 +1,376 @@
 # 0x00. AirBnB clone - The console
 
-Group projectPythonOOP
+# Concepts
+> _For this project, we expect you to look at these concepts:_
+> 
+> -   [Python packages](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Python_packages.md)
+> -   [AirBnB clone](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/AirBnB_clone.md)
 
--   Weight: 5
--   Project to be done in teams of 2 people (your team: Ahmed Abdelhafez, Dennis Nyamwamu)
--   Project over - took place from Mar 4, 2024 6:00 AM to Mar 11, 2024 6:00 AM
--   Manual QA review was done on Mar 20, 2024 10:16 AM
--   An auto review will be launched at the deadline
+![](assets/0x00-01.png)
 
-#### In a nutshell…
+# Background Context
 
--   **Contribution:** 100.0%
-    
--   **Manual QA review:** 0.0/48 mandatory
--   **Auto QA review:** 0.0/302 mandatory & 0.0/233 optional
--   **Altogether:**  **0.0%**
-    -   Mandatory: 0.0%
-    -   Optional: 0.0%
-    -   Contribution: 100.0%
-    -   Calculation:  100.0% \* (0.0% + (0.0% \* 0.0%) )  == **0.0%**
-
-**Overall comment:**
-
-Project was failed automatically.
-
-### Concepts
-
-_For this project, we expect you to look at these concepts:_
-
--   [Python packages](https://intranet.alxswe.com/concepts/66)
--   [AirBnB clone](https://intranet.alxswe.com/concepts/74)
-
-![](Project%200x00.%20AirBnB%20clone%20-%20The%20console%20%20Cairo%20Intranet/65f4a1dd9c51265f49d0.png)
-
-## Background Context
-
-### Welcome to the AirBnB clone project!
-
-Before starting, please read the **AirBnB** concept page.
-
-#### First step: Write a command interpreter to manage your AirBnB objects.
-
-This is the first step towards building your first full web application: the **AirBnB clone**. This first step is very important because you will use what you build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
-
-Each task is linked and will help you to:
-
--   put in place a parent class (called `BaseModel`) to take care of the initialization, serialization and deserialization of your future instances
--   create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
--   create all classes used for AirBnB (`User`, `State`, `City`, `Place`…) that inherit from `BaseModel`
--   create the first abstracted storage engine of the project: File storage.
--   create all unittests to validate all our classes and storage engine
-
+## Welcome to the AirBnB clone project!
+> 
+> Before starting, please read the **AirBnB** concept page.
+> 
+ #### First step: Write a command interpreter to manage your AirBnB objects.
+> 
+> This is the first step towards building your first full web application: the **AirBnB clone**. This first step is very important because you will use what you build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
+> 
+> Each task is linked and will help you to:
+> 
+> -   put in place a parent class (called **`BaseModel`**) to take care of the initialization, serialization and deserialization of your future instances
+> -   create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
+> -   create all classes used for AirBnB (**`User`**, **`State`**, **`City`**, **`Place`**…) that inherit from **`BaseModel`**
+> -   create the first abstracted storage engine of the project: File storage.
+> -   create all unittests to validate all our classes and storage engine
+>
 ### What’s a command interpreter?
-
-Do you remember the Shell? It’s exactly the same but limited to a specific use-case. In our case, we want to be able to manage the objects of our project:
-
--   Create a new object (ex: a new User or a new Place)
--   Retrieve an object from a file, a database etc…
--   Do operations on objects (count, compute stats, etc…)
--   Update attributes of an object
--   Destroy an object
-
-## Resources
-
-**Read or watch**:
-
--   [cmd module](https://intranet.alxswe.com/rltoken/8ecCwE6veBmm3Nppw4hz5A "cmd module")
--   [cmd module in depth](https://intranet.alxswe.com/rltoken/uEy4RftSdKypoig9NFTvCg "cmd module in depth")
--   **packages** concept page
--   [uuid module](https://intranet.alxswe.com/rltoken/KfL9TqwdI69W6ttG6gTPPQ "uuid module")
--   [datetime](https://intranet.alxswe.com/rltoken/1d8I3jSKgnYAtA1IZfEDpA "datetime")
--   [unittest module](https://intranet.alxswe.com/rltoken/IlFiMB8UmqBG2CxA0AD3jA "unittest module")
--   [args/kwargs](https://intranet.alxswe.com/rltoken/C_a0EKbtvKdMcwIAuSIZng "args/kwargs")
--   [Python test cheatsheet](https://intranet.alxswe.com/rltoken/tgNVrKKzlWgS4dfl3mQklw "Python test cheatsheet")
--   [cmd module wiki page](https://intranet.alxswe.com/rltoken/EvcaH9uTLlauxuw03WnkOQ "cmd module wiki page")
--   [python unittest](https://intranet.alxswe.com/rltoken/begh14KQA-3ov29KvD_HvA "python unittest")
-
-## Learning Objectives
-
-At the end of this project, you are expected to be able to [explain to anyone](https://intranet.alxswe.com/rltoken/uV5eZkRZ_XEqYbgPd-0CWw "explain to anyone"), **without the help of Google**:
-
-### General
-
--   How to create a Python package
--   How to create a command interpreter in Python using the `cmd` module
--   What is Unit testing and how to implement it in a large project
--   How to serialize and deserialize a Class
--   How to write and read a JSON file
--   How to manage `datetime`
--   What is an `UUID`
--   What is `*args` and how to use it
--   What is `**kwargs` and how to use it
--   How to handle named arguments in a function
-
-### Copyright - Plagiarism
-
--   You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
--   You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
--   You are not allowed to publish any content of this project.
--   Any form of plagiarism is strictly forbidden and will result in removal from the program.
-
-## Requirements
-
-### Python Scripts
-
--   Allowed editors: `vi`, `vim`, `emacs`
--   All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
--   All your files should end with a new line
--   The first line of all your files should be exactly `#!/usr/bin/python3`
--   A `README.md` file, at the root of the folder of the project, is mandatory
--   Your code should use the pycodestyle (version `2.8.*`)
--   All your files must be executable
--   The length of your files will be tested using `wc`
--   All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
--   All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
--   All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
--   A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
-
-### Python Unit Tests
-
--   Allowed editors: `vi`, `vim`, `emacs`
--   All your files should end with a new line
--   All your test files should be inside a folder `tests`
--   You have to use the [unittest module](https://intranet.alxswe.com/rltoken/op1-rQGlw0wwwqNBsn1yaw "unittest module")
--   All your test files should be python files (extension: `.py`)
--   All your test files and folders should start by `test_`
--   Your file organization in the tests folder should be the same as your project
--   e.g., For `models/base_model.py`, unit tests must be in: `tests/test_models/test_base_model.py`
--   e.g., For `models/user.py`, unit tests must be in: `tests/test_models/test_user.py`
--   All your tests should be executed by using this command: `python3 -m unittest discover tests`
--   You can also test file by file by using this command: `python3 -m unittest tests/test_models/test_base_model.py`
--   All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
--   All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
--   All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
--   We strongly encourage you to work together on test cases, so that you don’t miss any edge case
-
-### GitHub
-
-**There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.**
-
-## More Info
-
-### Execution
-
-Your shell should work like this in interactive mode:
-
-```
-$ ./console.py
-(hbnb) help
-
-Documented commands (type help &lt;topic&gt;):
-========================================
-EOF  help  quit
-
-(hbnb) 
-(hbnb) 
-(hbnb) quit
-$
-```
-
-But also in non-interactive mode: (like the Shell project in C)
-
-```
-$ echo "help" | ./console.py
-(hbnb)
-
-Documented commands (type help &lt;topic&gt;):
-========================================
-EOF  help  quit
-(hbnb) 
-$
-$ cat test_help
-help
-$
-$ cat test_help | ./console.py
-(hbnb)
-
-Documented commands (type help &lt;topic&gt;):
-========================================
-EOF  help  quit
-(hbnb) 
-$
-```
-
-All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
-
-![](Project%200x00.%20AirBnB%20clone%20-%20The%20console%20%20Cairo%20Intranet/815046647d23428a14ca.png)
-
-### Video library<small style="margin-left: 8px;">(8 total)</small>
-
-HBNB project overview
-
-HBNB - the console
-
-Python: Unique Identifier
-
-Python: Unittests
-
-Python: BaseModel and inheritance
-
-Code consistency
-
-Python: Modules and Packages
-
-HBNB - storage abstraction
-
-## Tasks
-
-### 0\. README, AUTHORS
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
--   Write a `README.md`:
-    -   description of the project
-    -   description of the command interpreter:
-        -   how to start it
-        -   how to use it
-        -   examples
--   You should have an `AUTHORS` file at the root of your repository, listing all individuals having contributed content to the repository. For format, reference [Docker’s AUTHORS page](https://intranet.alxswe.com/rltoken/_8n_z3pf5HWi1l7uv1E9iA "Docker's AUTHORS page")
--   You should use branches and pull requests on GitHub - it will help you as team to organize your work
-
-**Repo:**
-
--   GitHub repository: `AirBnB_clone`
--   File: `README.md, AUTHORS`
-
-View results
-
-×
-
-#### 0\. README, AUTHORS
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 1\. Be pycodestyle compliant!
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write beautiful code that passes the pycodestyle checks.
-
-**Repo:**
-
--   GitHub repository: `AirBnB_clone`
-
-Check submission
-
-×
-
-#### 1\. Be pycodestyle compliant!
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 1\. Be pycodestyle compliant!
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 2\. Unittests
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-All your files, classes, functions must be tested with unit tests
-
-```
-guillaume@ubuntu:~/AirBnB$ python3 -m unittest discover tests
-...................................................................................
-...................................................................................
-.......................
-----------------------------------------------------------------------
-Ran 189 tests in 13.135s
-
-OK
-guillaume@ubuntu:~/AirBnB$
-```
-
-_Note that this is just an example, the number of tests you create can be different from the above example_.
-
-**Warning:**
-
-Unit tests must also pass in non-interactive mode:
-
-```
-guillaume@ubuntu:~/AirBnB$ echo "python3 -m unittest discover tests" | bash
-...................................................................................
-...................................................................................
-.......................
-----------------------------------------------------------------------
-Ran 189 tests in 13.135s
-
-OK
-guillaume@ubuntu:~/AirBnB$
-```
-
-**Repo:**
-
--   GitHub repository: `AirBnB_clone`
--   File: `tests/`
-
-Check submission
-
-×
-
-#### 2\. Unittests
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 2\. Unittests
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 3\. BaseModel
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a class `BaseModel` that defines all common attributes/methods for other classes:
-
--   `models/base_model.py`
--   Public instance attributes:
-    -   `id`: string - assign with an `uuid` when an instance is created:
-        -   you can use `uuid.uuid4()` to generate unique `id` but don’t forget to convert to a string
-        -   the goal is to have unique `id` for each `BaseModel`
-    -   `created_at`: datetime - assign with the current datetime when an instance is created
-    -   `updated_at`: datetime - assign with the current datetime when an instance is created and it will be updated every time you change your object
--   `__str__`: should print: `[<class name>] (<self.id>) <self.__dict__>`
--   Public instance methods:
-    -   `save(self)`: updates the public instance attribute `updated_at` with the current datetime
-    -   `to_dict(self)`: returns a dictionary containing all keys/values of `__dict__` of the instance:
-        -   by using `self.__dict__`, only instance attributes set will be returned
-        -   a key `__class__` must be added to this dictionary with the class name of the object
-        -   `created_at` and `updated_at` must be converted to string object in ISO format:
-            -   format: `%Y-%m-%dT%H:%M:%S.%f` (ex: `2017-06-14T22:31:03.285259`)
-            -   you can use `isoformat()` of `datetime` object
-        -   This method will be the first piece of the serialization/deserialization process: create a dictionary representation with “simple object type” of our `BaseModel`
-
-```
-guillaume@ubuntu:~/AirBnB$ cat test_base_model.py
-#!/usr/bin/python3
-from models.base_model import BaseModel
-
-my_model = BaseModel()
-my_model.name = "My First Model"
-my_model.my_number = 89
-print(my_model)
-my_model.save()
-print(my_model)
-my_model_json = my_model.to_dict()
-print(my_model_json)
-print("JSON of my_model:")
-for key in my_model_json.keys():
-    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
-
-guillaume@ubuntu:~/AirBnB$ ./test_base_model.py
-[BaseModel] (b6a6e15c-c67d-4312-9a75-9d084935e579) {'my_number': 89, 'name': 'My First Model', 'updated_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119434), 'id': 'b6a6e15c-c67d-4312-9a75-9d084935e579', 'created_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119427)}
-[BaseModel] (b6a6e15c-c67d-4312-9a75-9d084935e579) {'my_number': 89, 'name': 'My First Model', 'updated_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119572), 'id': 'b6a6e15c-c67d-4312-9a75-9d084935e579', 'created_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119427)}
-{'my_number': 89, 'name': 'My First Model', '__class__': 'BaseModel', 'updated_at': '2017-09-28T21:05:54.119572', 'id': 'b6a6e15c-c67d-4312-9a75-9d084935e579', 'created_at': '2017-09-28T21:05:54.119427'}
-JSON of my_model:
-    my_number: (&lt;class 'int'&gt;) - 89
-    name: (&lt;class 'str'&gt;) - My First Model
-    __class__: (&lt;class 'str'&gt;) - BaseModel
-    updated_at: (&lt;class 'str'&gt;) - 2017-09-28T21:05:54.119572
-    id: (&lt;class 'str'&gt;) - b6a6e15c-c67d-4312-9a75-9d084935e579
-    created_at: (&lt;class 'str'&gt;) - 2017-09-28T21:05:54.119427
-
-guillaume@ubuntu:~/AirBnB$ 
-```
-
-**Repo:**
-
--   GitHub repository: `AirBnB_clone`
--   File: `models/base_model.py, models/__init__.py, tests/`
-
-Check submission
-
-×
-
-#### 3\. BaseModel
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 3\. BaseModel
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 4\. Create BaseModel from dictionary
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Previously we created a method to generate a dictionary representation of an instance (method `to_dict()`).
-
-Now it’s time to re-create an instance with this dictionary representation.
-
-```
-&lt;class 'BaseModel'&gt; -&gt; to_dict() -&gt; &lt;class 'dict'&gt; -&gt; &lt;class 'BaseModel'&gt;
-```
-
-Update `models/base_model.py`:
-
--   `__init__(self, *args, **kwargs)`:
-    -   you will use `*args, **kwargs` arguments for the constructor of a `BaseModel`. (more information inside the **AirBnB clone** concept page)
-    -   `*args` won’t be used
-    -   if `kwargs` is not empty:
-        -   each key of this dictionary is an attribute name (**Note** `__class__` from `kwargs` is the only one that should not be added as an attribute. See the example output, below)
-        -   each value of this dictionary is the value of this attribute name
-        -   **Warning**: `created_at` and `updated_at` are strings in this dictionary, but inside your `BaseModel` instance is working with `datetime` object. You have to convert these strings into `datetime` object. Tip: you know the string format of these datetime
-    -   otherwise:
-        -   create `id` and `created_at` as you did previously (new instance)
-
-```
-guillaume@ubuntu:~/AirBnB$ cat test_base_model_dict.py
-#!/usr/bin/python3
-from models.base_model import BaseModel
-
-my_model = BaseModel()
-my_model.name = "My_First_Model"
-my_model.my_number = 89
-print(my_model.id)
-print(my_model)
-print(type(my_model.created_at))
-print("--")
-my_model_json = my_model.to_dict()
-print(my_model_json)
-print("JSON of my_model:")
-for key in my_model_json.keys():
-    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
-
-print("--")
-my_new_model = BaseModel(**my_model_json)
-print(my_new_model.id)
-print(my_new_model)
-print(type(my_new_model.created_at))
-
-print("--")
-print(my_model is my_new_model)
-
-guillaume@ubuntu:~/AirBnB$ ./test_base_model_dict.py
-56d43177-cc5f-4d6c-a0c1-e167f8c27337
-[BaseModel] (56d43177-cc5f-4d6c-a0c1-e167f8c27337) {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337', 'created_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52298), 'my_number': 89, 'updated_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52302), 'name': 'My_First_Model'}
-&lt;class 'datetime.datetime'&gt;
---
-{'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337', 'created_at': '2017-09-28T21:03:54.052298', '__class__': 'BaseModel', 'my_number': 89, 'updated_at': '2017-09-28T21:03:54.052302', 'name': 'My_First_Model'}
-JSON of my_model:
-    id: (&lt;class 'str'&gt;) - 56d43177-cc5f-4d6c-a0c1-e167f8c27337
-    created_at: (&lt;class 'str'&gt;) - 2017-09-28T21:03:54.052298
-    __class__: (&lt;class 'str'&gt;) - BaseModel
-    my_number: (&lt;class 'int'&gt;) - 89
-    updated_at: (&lt;class 'str'&gt;) - 2017-09-28T21:03:54.052302
-    name: (&lt;class 'str'&gt;) - My_First_Model
---
-56d43177-cc5f-4d6c-a0c1-e167f8c27337
-[BaseModel] (56d43177-cc5f-4d6c-a0c1-e167f8c27337) {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337', 'created_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52298), 'my_number': 89, 'updated_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52302), 'name': 'My_First_Model'}
-&lt;class 'datetime.datetime'&gt;
---
-False
-guillaume@ubuntu:~/AirBnB$ 
-```
-
-**Repo:**
-
--   GitHub repository: `AirBnB_clone`
--   File: `models/base_model.py, tests/`
-
-Check submission
-
-×
-
-#### 4\. Create BaseModel from dictionary
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 4\. Create BaseModel from dictionary
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+>
+> Do you remember the Shell? It’s exactly the same but limited to a specific use-case. In our case, we want to be able to manage the objects of our project:
+> 
+> -   Create a new object (ex: a new User or a new Place)
+> -   Retrieve an object from a file, a database etc…
+> -   Do operations on objects (count, compute stats, etc…)
+> -   Update attributes of an object
+> -   Destroy an object
+
+# Resources
+
+## Read or watch:
+> -   [cmd module](https://docs.python.org/3.8/library/cmd.html)
+> -   [cmd module in depth](https://pymotw.com/2/cmd/)
+> -   **packages** concept page
+> -   [uuid module](https://docs.python.org/3.8/library/uuid.html)
+> -   [datetime](https://docs.python.org/3.8/library/datetime.html)
+> -   [unittest module](https://docs.python.org/3.8/library/unittest.html#module-unittest)
+> -   [args/kwargs](https://yasoob.me/2013/08/04/args-and-kwargs-in-python-explained/)
+> -   [Python test cheatsheet](https://www.pythonsheets.com/notes/python-tests.html)
+> -   [cmd module wiki page](https://wiki.python.org/moin/CmdModule)
+> -   [python unittest](https://realpython.com/python-testing/)
+
+# Learning Objectives
+> - At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), **without the help of Google**:
+
+# General
+> -   How to create a Python package
+> -   How to create a command interpreter in Python using the **`cmd`** module
+> -   What is Unit testing and how to implement it in a large project
+> -   How to serialize and deserialize a Class
+> -   How to write and read a JSON file
+> -   How to manage **`datetime`**
+> -   What is an **`UUID`**
+> -   What is **`*args`** and how to use it
+> -   What is **`**kwargs`** and how to use it
+> -   How to handle named arguments in a function
+
+# Requirements
+
+## Python Scripts
+> -   Allowed editors: **`vi`**, **`vim`**, **`emacs`**
+> -   All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+> -   All your files should end with a new line
+> -   The first line of all your files should be exactly **`#!/usr/bin/python3`**
+> -   A **`README.md`** file, at the root of the folder of the project, is mandatory
+> -   Your code should use the pycodestyle (version **`2.8.*`**)
+> -   All your files must be executable
+> -   The length of your files will be tested using **`wc`**
+> -   All your modules should have a documentation (**`python3 -c 'print(__import__("my_module").__doc__)'`**)
+> -   All your classes should have a documentation (**`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`**)
+> -   All your functions (inside and outside a class) should have a documentation (**`python3 -c 'print(__import__("my_module").my_function.__doc__)'`** and **`python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`**)
+> -   A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+## Python Unit Tests
+> -   Allowed editors: **`vi`**, **`vim`**, **`emacs`**
+> -   All your files should end with a new line
+> -   All your test files should be inside a folder **`tests`**
+> -   You have to use the [unittest module](https://intranet.alxswe.com/rltoken/op1-rQGlw0wwwqNBsn1yaw "unittest module")
+> -   All your test files should be python files (extension: **`.py`**)
+> -   All your test files and folders should start by **`test_`**
+> -   Your file organization in the tests folder should be the same as your project
+> -   e.g., For **`models/base_model.py`**, unit tests must be in: **`tests/test_models/test_base_model.py`**
+> -   e.g., For **`models/user.py`**, unit tests must be in: **`tests/test_models/test_user.py`**
+> -   All your tests should be executed by using this command: **`python3 -m unittest discover tests`**
+> -   You can also test file by file by using this command: **`python3 -m unittest tests/test_models/test_base_model.py`**
+> -   All your modules should have a documentation (**`python3 -c 'print(__import__("my_module").__doc__)'`**)
+> -   All your classes should have a documentation (**`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`**)
+> -   All your functions (inside and outside a class) should have a documentation (**`python3 -c 'print(__import__("my_module").my_function.__doc__)'`** and **`python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`**)
+> -   We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+
+## GitHub
+> **There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.**
+
+# More Info
+
+## Execution
+> Your shell should work like this in interactive mode:
+> 
+> ```
+> $ ./console.py
+> (hbnb) help
+> 
+> Documented commands (type help &lt;topic&gt;):
+> ========================================
+> EOF  help  quit
+> 
+> (hbnb) 
+> (hbnb) 
+> (hbnb) quit
+> $
+> ```
+> 
+> But also in non-interactive mode: (like the Shell project in C)
+> 
+> ```
+> $ echo "help" | ./console.py
+> (hbnb)
+> 
+> Documented commands (type help &lt;topic&gt;):
+> ========================================
+> EOF  help  quit
+> (hbnb) 
+> $
+> $ cat test_help
+> help
+> $
+> $ cat test_help | ./console.py
+> (hbnb)
+> 
+> Documented commands (type help &lt;topic&gt;):
+> ========================================
+> EOF  help  quit
+> (hbnb) 
+> $
+> ```
+> 
+> All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
+
+![](assets/0x00-02.png)
+
+## Video library<small style="margin-left: 8px;">(8 total)</small>
+> 
+> HBNB project overview
+> 
+> HBNB - the console
+> 
+> Python: Unique Identifier
+> 
+> Python: Unittests
+> 
+> Python: BaseModel and inheritance
+> 
+> Code consistency
+> 
+> Python: Modules and Packages
+> 
+> HBNB - storage abstraction
+
+# Tasks
+
+## 0\. README, AUTHORS
+> -   Write a **`README.md`**:
+>     -   description of the project
+>     -   description of the command interpreter:
+>         -   how to start it
+>         -   how to use it
+>         -   examples
+> -   You should have an **`AUTHORS`** file at the root of your repository, listing all individuals having contributed content to the repository. For format, reference [Docker’s AUTHORS page](https://github.com/moby/moby/blob/master/AUTHORS)
+> -   You should use branches and pull requests on GitHub - it will help you as team to organize your work
+
+### Repo:
+
+-   GitHub repository: **`AirBnB_clone`**
+-   File: **`README.md, AUTHORS`**
+
+---
+
+## 1\. Be pycodestyle compliant!
+> Write beautiful code that passes the pycodestyle checks.
+> 
+
+### Repo:
+
+-   GitHub repository: **`AirBnB_clone`**
+
+---
+
+## 2\. Unittests
+> All your files, classes, functions must be tested with unit tests
+>
+>> ```
+>> guillaume@ubuntu:~/AirBnB$ python3 -m unittest discover tests
+>> ...................................................................................
+>> ...................................................................................
+>> .......................
+>> ----------------------------------------------------------------------
+>> Ran 189 tests in 13.135s
+>> 
+>> OK
+>> guillaume@ubuntu:~/AirBnB$
+>> ```
+> 
+> _Note that this is just an example, the number of tests you create can be different from the above example_.
+> 
+> **Warning:**
+> 
+> Unit tests must also pass in non-interactive mode:
+> 
+>> ```
+>> guillaume@ubuntu:~/AirBnB$ echo "python3 -m unittest discover tests" | bash
+>> ...................................................................................
+>> ...................................................................................
+>> .......................
+>> ----------------------------------------------------------------------
+>> Ran 189 tests in 13.135s
+>> 
+>> OK
+>> guillaume@ubuntu:~/AirBnB$
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`AirBnB_clone`**
+-   File: **`tests/`**
+
+---
+
+## 3\. BaseModel
+> Write a class **`BaseModel`** that defines all common attributes/methods for other classes:
+> 
+> -   **`models/base_model.py`**
+> -   Public instance attributes:
+>     -   **`id`**: string - assign with an **`uuid`** when an instance is created:
+>         -   you can use **`uuid.uuid4()`** to generate unique **`id`** but don’t forget to convert to a string
+>         -   the goal is to have unique **`id`** for each **`BaseModel`**
+>     -   **`created_at`**: datetime - assign with the current datetime when an instance is created
+>     -   **`updated_at`**: datetime - assign with the current datetime when an instance is created and it will be updated every time you change your object
+> -   **`__str__`**: should print: **`[<class name>] (<self.id>) <self.__dict__>`**
+> -   Public instance methods:
+>     -   **`save(self)`**: updates the public instance attribute **`updated_at`** with the current datetime
+>     -   **`to_dict(self)`**: returns a dictionary containing all keys/values of **`__dict__`** of the instance:
+>         -   by using **`self.__dict__`**, only instance attributes set will be returned
+>         -   a key **`__class__`** must be added to this dictionary with the class name of the object
+>         -   **`created_at`** and **`updated_at`** must be converted to string object in ISO format:
+>             -   format: **`%Y-%m-%dT%H:%M:%S.%f`** (ex: **`2017-06-14T22:31:03.285259`**)
+>             -   you can use **`isoformat()`** of **`datetime`** object
+>         -   This method will be the first piece of the serialization/deserialization process: create a dictionary representation with “simple object type” of our **`BaseModel`**
+>
+>> ```
+>> guillaume@ubuntu:~/AirBnB$ cat test_base_model.py
+>> #!/usr/bin/python3
+>> from models.base_model import BaseModel
+>> 
+>> my_model = BaseModel()
+>> my_model.name = "My First Model"
+>> my_model.my_number = 89
+>> print(my_model)
+>> my_model.save()
+>> print(my_model)
+>> my_model_json = my_model.to_dict()
+>> print(my_model_json)
+>> print("JSON of my_model:")
+>> for key in my_model_json.keys():
+>>     print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
+>> 
+>> guillaume@ubuntu:~/AirBnB$ ./test_base_model.py
+>> [BaseModel] (b6a6e15c-c67d-4312-9a75-9d084935e579) {'my_number': 89, 'name': 'My First Model', 'updated_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119434), 'id': 'b6a6e15c-c67d-4312-9a75-9d084935e579', 'created_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119427)}
+>> [BaseModel] (b6a6e15c-c67d-4312-9a75-9d084935e579) {'my_number': 89, 'name': 'My First Model', 'updated_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119572), 'id': 'b6a6e15c-c67d-4312-9a75-9d084935e579', 'created_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119427)}
+>> {'my_number': 89, 'name': 'My First Model', '__class__': 'BaseModel', 'updated_at': '2017-09-28T21:05:54.119572', 'id': 'b6a6e15c-c67d-4312-9a75-9d084935e579', 'created_at': '2017-09-28T21:05:54.119427'}
+>> JSON of my_model:
+>>     my_number: (&lt;class 'int'&gt;) - 89
+>>     name: (&lt;class 'str'&gt;) - My First Model
+>>     __class__: (&lt;class 'str'&gt;) - BaseModel
+>>     updated_at: (&lt;class 'str'&gt;) - 2017-09-28T21:05:54.119572
+>>     id: (&lt;class 'str'&gt;) - b6a6e15c-c67d-4312-9a75-9d084935e579
+>>     created_at: (&lt;class 'str'&gt;) - 2017-09-28T21:05:54.119427
+>> 
+>> guillaume@ubuntu:~/AirBnB$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`AirBnB_clone`**
+-   File: **`models/base_model.py, models/__init__.py, tests/`**
+
+---
+
+## 4\. Create BaseModel from dictionary
+> Previously we created a method to generate a dictionary representation of an instance (method `to_dict()`).
+> 
+> Now it’s time to re-create an instance with this dictionary representation.
+> 
+>> ```
+>> &lt;class 'BaseModel'&gt; -&gt; to_dict() -&gt; &lt;class 'dict'&gt; -&gt; &lt;class 'BaseModel'&gt;
+>> ```
+> 
+> Update `models/base_model.py`:
+> 
+> -   **`__init__(self, *args, **kwargs)`**:
+>     -   you will use **`*args, **kwargs`** arguments for the constructor of a **`BaseModel`**. (more information inside the **AirBnB clone** concept page)
+>     -   **`*args`** won’t be used
+>     -   if **`kwargs`** is not empty:
+>         -   each key of this dictionary is an attribute name (**Note** **`__class__`** from **`kwargs`** is the only one that should not be added as an attribute. See the example output, below)
+>         -   each value of this dictionary is the value of this attribute name
+>         -   **Warning**: **`created_at`** and **`updated_at`** are strings in this dictionary, but inside your **`BaseModel`** instance is working with **`datetime`** object. You have to convert these strings into **`datetime`** object. Tip: you know the string format of these datetime
+>     -   otherwise:
+>         -   create `id` and `created_at` as you did previously (new instance)
+> 
+>> ```
+>> guillaume@ubuntu:~/AirBnB$ cat test_base_model_dict.py
+>> #!/usr/bin/python3
+>> from models.base_model import BaseModel
+>> 
+>> my_model = BaseModel()
+>> my_model.name = "My_First_Model"
+>> my_model.my_number = 89
+>> print(my_model.id)
+>> print(my_model)
+>> print(type(my_model.created_at))
+>> print("--")
+>> my_model_json = my_model.to_dict()
+>> print(my_model_json)
+>> print("JSON of my_model:")
+>> for key in my_model_json.keys():
+>>     print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
+>> 
+>> print("--")
+>> my_new_model = BaseModel(**my_model_json)
+>> print(my_new_model.id)
+>> print(my_new_model)
+>> print(type(my_new_model.created_at))
+>> 
+>> print("--")
+>> print(my_model is my_new_model)
+>> 
+>> guillaume@ubuntu:~/AirBnB$ ./test_base_model_dict.py
+>> 56d43177-cc5f-4d6c-a0c1-e167f8c27337
+>> [BaseModel] (56d43177-cc5f-4d6c-a0c1-e167f8c27337) {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337', 'created_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52298), 'my_number': 89, 'updated_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52302), 'name': 'My_First_Model'}
+>> &lt;class 'datetime.datetime'&gt;
+>> --
+>> {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337', 'created_at': '2017-09-28T21:03:54.052298', '__class__': 'BaseModel', 'my_number': 89, 'updated_at': '2017-09-28T21:03:54.052302', 'name': 'My_First_Model'}
+>> JSON of my_model:
+>>     id: (&lt;class 'str'&gt;) - 56d43177-cc5f-4d6c-a0c1-e167f8c27337
+>>     created_at: (&lt;class 'str'&gt;) - 2017-09-28T21:03:54.052298
+>>     __class__: (&lt;class 'str'&gt;) - BaseModel
+>>     my_number: (&lt;class 'int'&gt;) - 89
+>>     updated_at: (&lt;class 'str'&gt;) - 2017-09-28T21:03:54.052302
+>>     name: (&lt;class 'str'&gt;) - My_First_Model
+>> --
+>> 56d43177-cc5f-4d6c-a0c1-e167f8c27337
+>> [BaseModel] (56d43177-cc5f-4d6c-a0c1-e167f8c27337) {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337', 'created_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52298), 'my_number': 89, 'updated_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52302), 'name': 'My_First_Model'}
+>> &lt;class 'datetime.datetime'&gt;
+>> --
+>> False
+>> guillaume@ubuntu:~/AirBnB$ 
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`AirBnB_clone`**
+-   File: **`models/base_model.py, tests/`**
+
+---
 
 ### 5\. Store first object
 
