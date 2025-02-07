@@ -277,4 +277,4 @@ How to make it readable: [strftime](https://strftime.org/)
 
 ## Data diagram
 
-![](img/airbnb-10.png)
+![](img/airbnb-10.jpg)
