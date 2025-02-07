@@ -4,7 +4,7 @@
 
 I know you were waiting for it: it’s here!
 
-The AirBnB clone project starts now until… the end of the first year. The goal of the project is to deploy on your server a simple copy of the [AirBnB website](https://intranet.alxswe.com/rltoken/m8g02HcD2ovrl_K-zulYBw "AirBnB website").
+The AirBnB clone project starts now until… the end of the first year. The goal of the project is to deploy on your server a simple copy of the [AirBnB website](https://www.airbnb.com/).
 
 You won’t implement all the features, only some of them to cover all fundamental concepts of the higher level programming track.
 
@@ -21,11 +21,11 @@ After 4 months, you will have a complete web application composed by:
 
 ## Concepts to learn
 
--   [Unittest](https://intranet.alxswe.com/rltoken/87ml5W9WzLbH7yAJuGk_mA "Unittest") - and please work all together on tests cases
+-   [Unittest](https://docs.python.org/3.4/library/unittest.html#module-unittest) - and please work all together on tests cases
 -   **Python packages** concept page
 -   Serialization/Deserialization
--   `*args, **kwargs`
--   `datetime`
+-   **`*args, **kwargs`**
+-   **`datetime`**
 -   More coming soon!
 
 ## Steps
@@ -86,13 +86,13 @@ The console will be a tool to validate this storage engine
 
 ## Files and Directories
 
--   `models` directory will contain all classes used for the entire project. A class, called “model” in a OOP project is the representation of an object/instance.
--   `tests` directory will contain all unit tests.
--   `console.py` file is the entry point of our command interpreter.
--   `models/base_model.py` file is the base class of all our models. It contains common elements:
-    -   attributes: `id`, `created_at` and `updated_at`
-    -   methods: `save()` and `to_json()`
--   `models/engine` directory will contain all storage classes (using the same prototype). For the moment you will have only one: `file_storage.py`.
+-   **`models`** directory will contain all classes used for the entire project. A class, called “model” in a OOP project is the representation of an object/instance.
+-   **`tests`** directory will contain all unit tests.
+-   **`console.py`** file is the entry point of our command interpreter.
+-   **`models/base_model.py`** file is the base class of all our models. It contains common elements:
+    -   attributes: **`id`**, **`created_at`** and **`updated_at`**
+    -   methods: **`save()`** and **`to_json()`**
+-   **`models/engine`** directory will contain all storage classes (using the same prototype). For the moment you will have only one: **`file_storage.py`**.
 
 ## Storage
 
@@ -112,55 +112,55 @@ You will always use class attributes for any object. Why not instance attributes
 
 That’s a good question. So let’s take a look at this code:
 
-```
-class Student():
-    def __init__(self, name):
-        self.name = name
-
-students = []
-s = Student("John")
-students.append(s)
-```
+> ```
+> class Student():
+>     def __init__(self, name):
+>         self.name = name
+> 
+> students = []
+> s = Student("John")
+> students.append(s)
+> ```
 
 Here, I’m creating a student and store it in a list. But after this program execution, my Student instance doesn’t exist anymore.
 
-```
-class Student():
-    def __init__(self, name):
-        self.name = name
-
-students = reload() # recreate the list of Student objects from a file
-s = Student("John")
-students.append(s)
-save(students) # save all Student objects to a file
-```
+> ```
+> class Student():
+>     def __init__(self, name):
+>         self.name = name
+> 
+> students = reload() # recreate the list of Student objects from a file
+> s = Student("John")
+> students.append(s)
+> save(students) # save all Student objects to a file
+> ```
 
 Nice!
 
 But how it works?
 
-First, let’s look at `save(students)`:
+First, let’s look at **`save(students)`**:
 
--   Can I write each `Student` object to a file => _NO_, it will be the memory representation of the object. For another program execution, this memory representation can’t be reloaded.
--   Can I write each `Student.name` to a file => _YES_, but imagine you have other attributes to describe `Student`? It would start to be become too complex.
+-   Can I write each **`Student`** object to a file => _NO_, it will be the memory representation of the object. For another program execution, this memory representation can’t be reloaded.
+-   Can I write each **`Student.name`** to a file => _YES_, but imagine you have other attributes to describe **`Student`**? It would start to be become too complex.
 
-The best solution is to convert this list of `Student` objects to a JSON representation.
+The best solution is to convert this list of **`Student`** objects to a JSON representation.
 
 Why JSON? Because it’s a standard representation of object. It allows us to share this data with other developers, be human readable, but mainly to be understood by another language/program.
 
 Example:
 
--   My Python program creates `Student` objects and saves them to a JSON file
--   Another Javascript program can read this JSON file and manipulate its own `Student` class/representation
+-   My Python program creates **`Student`** objects and saves them to a JSON file
+-   Another Javascript program can read this JSON file and manipulate its own **`Student`** class/representation
 
-And the `reload()`? now you know the file is a JSON file representing all `Student` objects. So `reload()` has to read the file, parse the JSON string, and re-create `Student` objects based on this data-structure.
+And the **`reload()`**? now you know the file is a JSON file representing all **`Student`** objects. So **`reload()`** has to read the file, parse the JSON string, and re-create **`Student`** objects based on this data-structure.
 
 ### File storage == JSON serialization
 
 For this first step, you have to write in a file all your objects/instances created/updated in your command interpreter and restore them when you start it. You can’t store and restore a Python instance of a class as “Bytes”, the only way is to convert it to a serializable data structure:
 
--   convert an instance to Python built in serializable data structure (list, dict, number and string) - for us it will be the method `my_instance.to_json()` to retrieve a dictionary
--   convert this data structure to a string (JSON format, but it can be YAML, XML, CSV…) - for us it will be a `my_string = JSON.dumps(my_dict)`
+-   convert an instance to Python built in serializable data structure (list, dict, number and string) - for us it will be the method **`my_instance.to_json()`** to retrieve a dictionary
+-   convert this data structure to a string (JSON format, but it can be YAML, XML, CSV…) - for us it will be a **`my_string = JSON.dumps(my_dict)`**
 -   write this string to a file on disk
 
 And the process of deserialization?
@@ -168,32 +168,32 @@ And the process of deserialization?
 The same but in the other way:
 
 -   read a string from a file on disk
--   convert this string to a data structure. This string is a JSON representation, so it’s easy to convert - for us it will be a `my_dict = JSON.loads(my_string)`
--   convert this data structure to instance - for us it will be a `my_instance = MyObject(my_dict)`
+-   convert this string to a data structure. This string is a JSON representation, so it’s easy to convert - for us it will be a **`my_dict = JSON.loads(my_string)`**
+-   convert this data structure to instance - for us it will be a **`my_instance = MyObject(my_dict)`**
 
-## `*args, **kwargs`
+## **`*args, **kwargs`**
 
-[How To Use them](https://intranet.alxswe.com/rltoken/seHCY0Sq6m_-PBetEnBACg "How To Use them")
+[How To Use them](https://www.digitalocean.com/community/tutorials/how-to-use-args-and-kwargs-in-python-3)
 
 How do you pass arguments to a function?
 
-```
-def my_fct(param_1, param_2):
-    ...
+> ```
+> def my_fct(param_1, param_2):
+>     ...
+> 
+> my_fct("Best", "School")
+> ```
 
-my_fct("Best", "School")
-```
-
-But with this function definition, you must call `my_fct` with 2 parameters, no more, no less.
+But with this function definition, you must call **`my_fct`** with 2 parameters, no more, no less.
 
 Can it be dynamic? Yes you can:
 
-```
-def my_fct(*args, **kwargs):
-    ...
-
-my_fct("Best", "School")
-```
+> ```
+> def my_fct(*args, **kwargs):
+>     ...
+> 
+> my_fct("Best", "School")
+> ```
 
 What? What’s `*args` and `**kwargs`?
 
@@ -206,74 +206,74 @@ So, to make it clear, `*args` is the list of anonymous arguments, no name, just 
 
 Examples:
 
-```
-def my_fct(*args, **kwargs):
-    print("{} - {}".format(args, kwargs))
-
-my_fct() # () - {}
-my_fct("Best") # ('Best',) - {}
-my_fct("Best", 89) # ('Best', 89) - {}
-my_fct(name="Best") # () - {'name': 'Best'}
-my_fct(name="Best", number=89) # () - {'name': 'Best', 'number': 89}
-my_fct("School", 12, name="Best", number=89) # ('School', 12) - {'name': 'Best', 'number': 89}
-```
+> ```
+> def my_fct(*args, **kwargs):
+>     print("{} - {}".format(args, kwargs))
+> 
+> my_fct() # () - {}
+> my_fct("Best") # ('Best',) - {}
+> my_fct("Best", 89) # ('Best', 89) - {}
+> my_fct(name="Best") # () - {'name': 'Best'}
+> my_fct(name="Best", number=89) # () - {'name': 'Best', 'number': 89}
+> my_fct("School", 12, name="Best", number=89) # ('School', 12) - {'name': 'Best', 'number': 89}
+> ```
 
 Perfect? Of course you can mix both, but the order should be first all anonymous arguments, and after named arguments.
 
 Last example:
 
-```
-def my_fct(*args, **kwargs):
-    print("{} - {}".format(args, kwargs))
-
-a_dict = { 'name': "Best", 'age': 89 }
-
-my_fct(a_dict) # ({'age': 89, 'name': 'Best'},) - {}
-my_fct(*a_dict) # ('age', 'name') - {}
-my_fct(**a_dict) # () - {'age': 89, 'name': 'Best'}
-```
+> ```
+> def my_fct(*args, **kwargs):
+>     print("{} - {}".format(args, kwargs))
+> 
+> a_dict = { 'name': "Best", 'age': 89 }
+> 
+> my_fct(a_dict) # ({'age': 89, 'name': 'Best'},) - {}
+> my_fct(*a_dict) # ('age', 'name') - {}
+> my_fct(**a_dict) # () - {'age': 89, 'name': 'Best'}
+> ```
 
 You can play with these 2 arguments to clearly understand where and how your variables are stored.
 
 ## `datetime`
 
-`datetime` is a Python module to manipulate date, time etc…
+**`datetime`** is a Python module to manipulate date, time etc…
 
-In this example, you create an instance of `datetime` with the current date and time:
+In this example, you create an instance of **`datetime`** with the current date and time:
 
-```
-from datetime import datetime
+> ```
+> from datetime import datetime
+> 
+> date_now = datetime.now()
+> print(type(date_now)) # &lt;class 'datetime.datetime'&gt;
+> print(date_now) # 2017-06-08 20:42:42.170922
+> ```
 
-date_now = datetime.now()
-print(type(date_now)) # &lt;class 'datetime.datetime'&gt;
-print(date_now) # 2017-06-08 20:42:42.170922
-```
+**`date_now`** is an object, so you can manipulate it:
 
-`date_now` is an object, so you can manipulate it:
-
-```
-from datetime import timedelta
-
-date_tomorrow = date_now + timedelta(days=1)
-print(date_tomorrow) # 2017-06-09 20:42:42.170922
-```
+> ```
+> from datetime import timedelta
+> 
+> date_tomorrow = date_now + timedelta(days=1)
+> print(date_tomorrow) # 2017-06-09 20:42:42.170922
+> ```
 
 … you can also store it:
 
-```
-a_dict = { 'my_date': date_now }
-print(type(a_dict['my_date'])) # &lt;class 'datetime.datetime'&gt;
-print(a_dict) # {'my_date': datetime.datetime(2017, 6, 8, 20, 42, 42, 170922)}
-```
+> ```
+> a_dict = { 'my_date': date_now }
+> print(type(a_dict['my_date'])) # &lt;class 'datetime.datetime'&gt;
+> print(a_dict) # {'my_date': datetime.datetime(2017, 6, 8, 20, 42, 42, 170922)}
+> ```
 
-What? What’s this format when a `datetime` instance is in a datastructure??? It’s unreadable.
+What? What’s this format when a **`datetime`** instance is in a datastructure??? It’s unreadable.
 
-How to make it readable: [strftime](https://intranet.alxswe.com/rltoken/mLLWq3qIJc396KdHxI7sBw "strftime")
+How to make it readable: [strftime](https://strftime.org/)
 
-```
-print(date_now.strftime("%A")) # Thursday
-print(date_now.strftime("%A %d %B %Y at %H:%M:%S")) # Thursday 08 June 2017 at 20:42:42
-```
+> ```
+> print(date_now.strftime("%A")) # Thursday
+> print(date_now.strftime("%A %d %B %Y at %H:%M:%S")) # Thursday 08 June 2017 at 20:42:42
+> ```
 
 ## Data diagram
 
