@@ -1,33 +1,18 @@
 # 0x13. JavaScript - Objects, Scopes and Closures
 
-JavaScript
+# Resources
 
--   Weight: 1
--   Project over - took place from Apr 9, 2024 6:00 AM to Apr 10, 2024 6:00 AM
--   An auto review will be launched at the deadline
-
-#### In a nutshell…
-
--   **Auto QA review:** 75.4/116 mandatory & 12.35/29 optional
--   **Altogether:**  **92.68%**
-    -   Mandatory: 65.0%
-    -   Optional: 42.59%
-    -   Calculation:  65.0% + (65.0% \* 42.59%)  == **92.68%**
-
-## Resources
-
-**Read or watch**:
-
--   [JavaScript object basics](https://intranet.alxswe.com/rltoken/ASoAVcqafB0rp7mEdAAs5g "JavaScript object basics")
--   [Object-oriented JavaScript](https://intranet.alxswe.com/rltoken/pzb8DvO2RPeRS-Y23bWqig "Object-oriented JavaScript") (_**read all examples!**_)
--   [Class - ES6](https://intranet.alxswe.com/rltoken/NEm-UViCThD5hfq_3Lj9Hg "Class - ES6")
--   [super - ES6](https://intranet.alxswe.com/rltoken/_cxdVKsdqPWbbp2cHtQSbQ "super - ES6")
--   [extends - ES6](https://intranet.alxswe.com/rltoken/6wdl6Bc5yjBplpiZKmr6Zw "extends - ES6")
--   [Object prototypes](https://intranet.alxswe.com/rltoken/D0jDlpJNVMyxf8eWjCUWqA "Object prototypes")
--   [Inheritance in JavaScript](https://intranet.alxswe.com/rltoken/pzb8DvO2RPeRS-Y23bWqig "Inheritance in JavaScript")
--   [Closures](https://intranet.alxswe.com/rltoken/CybTMKEDNdTdU99kx_OXgQ "Closures")
--   [this/self](https://intranet.alxswe.com/rltoken/XcOkisoKPud4faDDkLMABw "this/self")
--   [Modern JS](https://intranet.alxswe.com/rltoken/rU_q2J3qGWfvTYNllW8JnA "Modern JS")
+> ## Read or watch:
+> -   [JavaScript object basics](https://intranet.alxswe.com/rltoken/ASoAVcqafB0rp7mEdAAs5g "JavaScript object basics")
+> -   [Object-oriented JavaScript](https://intranet.alxswe.com/rltoken/pzb8DvO2RPeRS-Y23bWqig "Object-oriented JavaScript") (_**read all examples!**_)
+> -   [Class - ES6](https://intranet.alxswe.com/rltoken/NEm-UViCThD5hfq_3Lj9Hg "Class - ES6")
+> -   [super - ES6](https://intranet.alxswe.com/rltoken/_cxdVKsdqPWbbp2cHtQSbQ "super - ES6")
+> -   [extends - ES6](https://intranet.alxswe.com/rltoken/6wdl6Bc5yjBplpiZKmr6Zw "extends - ES6")
+> -   [Object prototypes](https://intranet.alxswe.com/rltoken/D0jDlpJNVMyxf8eWjCUWqA "Object prototypes")
+> -   [Inheritance in JavaScript](https://intranet.alxswe.com/rltoken/pzb8DvO2RPeRS-Y23bWqig "Inheritance in JavaScript")
+> -   [Closures](https://intranet.alxswe.com/rltoken/CybTMKEDNdTdU99kx_OXgQ "Closures")
+> -   [this/self](https://intranet.alxswe.com/rltoken/XcOkisoKPud4faDDkLMABw "this/self")
+> -   [Modern JS](https://intranet.alxswe.com/rltoken/rU_q2J3qGWfvTYNllW8JnA "Modern JS")
 
 ## Learning Objectives
 
