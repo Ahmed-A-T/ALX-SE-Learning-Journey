@@ -53,9 +53,9 @@
 > 
 > [Documentation](https://github.com/standard/semistandard)
 >
->> ```
->> $ sudo npm install semistandard --global
->> ```
+> ```
+> $ sudo npm install semistandard --global
+> ```
 
 # Tasks
 
