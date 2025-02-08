@@ -3,7 +3,7 @@
 # Concepts
 > _For this project, we expect you to look at these concepts:_
 > 
-> -   [HTML/CSS](https://intranet.alxswe.com/concepts/2)
+> -   [HTML/CSS](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/HTML-CSS.md)
 > -   [The trinity of front-end quality](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/The_trinity_of_front-end_quality.md)
 > 
 ![](assets/0x01-01.png)
