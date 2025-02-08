@@ -13,7 +13,7 @@ As fast as possible and with small iterations in days or even hours (whereas it 
 
 From a technical point of view, quicker iterations mean fewer lines of code being pushed at every deploy, which allows easy performance impact measurement and easy troubleshooting if something goes wrong (better to debug a small code change than weeks of new code).
 
-![](img/CI-CD.jpg)
+![](img/CI-CD.png)
 
 Applied to software engineering, [CI/CD](https://digital.ai/catalyst-blog/walk-before-you-run-understanding-ci-in-cd/) (Continuous Integration/Continuous Deployment) is a principle that allows individuals or teams to have a lean/agile way of working.
 
