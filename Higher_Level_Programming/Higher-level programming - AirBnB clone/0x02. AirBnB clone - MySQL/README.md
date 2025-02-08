@@ -79,30 +79,30 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 > -   All SQL keywords should be in uppercase (**`SELECT`**, **`WHERE`**…)
 > -   A **`README.md`** file, at the root of the folder of the project, is mandatory
 > -   The length of your files will be tested using **`wc`**
+> 
+> ### GitHub
+> 
+> **There should be one project repository per group. If you clone/fork/whatever a partner’s project repository with the same name before the second deadline, you risk a 0% score.**
 
-### GitHub
+# More Info
 
-**There should be one project repository per group. If you clone/fork/whatever a partner’s project repository with the same name before the second deadline, you risk a 0% score.**
+![](assets/0x02-01.png)
 
-## More Info
-
-![](Project%200x02.%20AirBnB%20clone%20-%20MySQL%20%20Cairo%20Intranet/hbnb_step2.png)
-
-### Comments for your SQL file:
-
-```
-$ cat my_script.sql
--- first 3 students in the Batch ID=3
--- because Batch 3 is the best!
-SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
-$
-```
-
+> ### Comments for your SQL file:
+> 
+> ```
+> $ cat my_script.sql
+> -- first 3 students in the Batch ID=3
+> -- because Batch 3 is the best!
+> SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
+> $
+> ```
+> 
 ### Video library<small style="margin-left: 8px;">(2 total)</small>
-
-HBNB - storage abstraction
-
-AirBnB console
+> 
+> HBNB - storage abstraction
+> 
+> AirBnB console
 
 ## Tasks
 
