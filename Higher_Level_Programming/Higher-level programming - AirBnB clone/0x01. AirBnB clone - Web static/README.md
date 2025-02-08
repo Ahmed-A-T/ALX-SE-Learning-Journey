@@ -523,7 +523,7 @@
 >     -   **`styles/6-filters.css`**: for the filters style
 >     -   **`styles/100-places.css`**: for the places style
 > 
-![](assets/assets/0x01-10.png)
+![](assets/0x01-10.png)
 
 **Repo:**
 
