@@ -80,7 +80,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 > -   A **`README.md`** file, at the root of the folder of the project, is mandatory
 > -   The length of your files will be tested using **`wc`**
 > 
-> ### GitHub
+### GitHub
 > 
 > **There should be one project repository per group. If you clone/fork/whatever a partner’s project repository with the same name before the second deadline, you risk a 0% score.**
 
@@ -88,7 +88,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ![](assets/0x02-01.png)
 
-> ### Comments for your SQL file:
+### Comments for your SQL file:
 > 
 > ```
 > $ cat my_script.sql
@@ -99,7 +99,6 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 > ```
 > 
 ### Video library<small style="margin-left: 8px;">(2 total)</small>
-> 
 > HBNB - storage abstraction
 > 
 > AirBnB console
