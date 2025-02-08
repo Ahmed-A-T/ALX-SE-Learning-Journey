@@ -459,9 +459,9 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 >         -   Import **`FileStorage`** class in this file
 >         -   Create an instance of **`FileStorage`** and store it in the variable **`storage`** (the line **`storage.reload()`** should be executed after this instantiation)
 > -   This “switch” will allow you to change storage type directly by using an environment variable (example below)
-> 
-> State creation:
-> 
+ 
+State creation:
+ 
 >> ```
 >> guillaume@ubuntu:~/AirBnB_v2$ echo 'create State name="California"' | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py 
 >> (hbnb) 95a5abab-aa65-4861-9bc6-1da4a36069aa
@@ -480,9 +480,9 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 >>       name: California
 >> guillaume@ubuntu:~/AirBnB_v2$ 
 >> ```
-> 
-> City creation:
-> 
+ 
+City creation:
+ 
 >> ```
 >> guillaume@ubuntu:~/AirBnB_v2$ echo 'create City state_id="95a5abab-aa65-4861-9bc6-1da4a36069aa" name="San_Francisco"' | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py
 >> (hbnb) 4b457e66-c7c8-4f63-910f-fd91c3b7140b
@@ -493,7 +493,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 >> (hbnb)
 >> guillaume@ubuntu:~/AirBnB_v2$ 
 >> ```
->> 
+
 >> ```
 >> guillaume@ubuntu:~/AirBnB_v2$ echo 'create City state_id="95a5abab-aa65-4861-9bc6-1da4a36069aa" name="San_Jose"' | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py
 >> (hbnb) a7db3cdc-30e0-4d80-ad8c-679fe45343ba
