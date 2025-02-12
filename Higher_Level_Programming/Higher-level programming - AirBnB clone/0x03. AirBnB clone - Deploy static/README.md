@@ -7,7 +7,7 @@
 > -   [AirBnB clone](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/AirBnB_clone.md)
 
 # Background Context
-> Ever since you completed project [0x0F. Load balancer](https://intranet.alxswe.com/rltoken/YJeqZ68SzQ9ffIqyvk85FQ "0x0F. Load balancer") of the SysAdmin track, you’ve had 2 web servers + 1 load balancer but nothing to distribute with them.
+> Ever since you completed project [0x0F. Load balancer](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/System_Engineering_Devops/System%20engineering%20%26%20DevOps%20-%20Web%20stack/0x0F.%20Load%20balancer) of the SysAdmin track, you’ve had 2 web servers + 1 load balancer but nothing to distribute with them.
 > 
 > It’s time to make your work public!
 > 
