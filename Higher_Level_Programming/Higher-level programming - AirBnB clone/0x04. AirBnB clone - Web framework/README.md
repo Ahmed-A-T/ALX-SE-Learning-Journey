@@ -999,7 +999,7 @@ In another tab:
 > 
 > In the browser:
 > 
-![](assets/00x04-08.jpg) ![](assets/00x04-09.jpg) ![](assets/00x04-10.jpg) ![](assets/00x04-11.jpg) ![](assets/00x05-12.jpg)
+![](assets/00x04-08.jpg) ![](assets/00x04-09.jpg) ![](assets/00x04-10.jpg) ![](assets/00x04-11.jpg) ![](assets/00x04-12.jpg)
 
 ### Repo:
 
