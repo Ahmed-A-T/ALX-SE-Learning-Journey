@@ -1,46 +1,25 @@
 # 0x04. AirBnB clone - Web framework
 
-PythonBack-endWebserverFlask
+## Concepts
+> 
+> _For this project, we expect you to look at this concept:_
+> 
+> -   [AirBnB clone](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/AirBnB_clone.md)
 
--   Weight: 2
--   Project over - took place from May 16, 2024 7:00 AM to May 20, 2024 7:00 AM
--   Manual QA review was done on May 19, 2024 11:12 PM
--   An auto review will be launched at the deadline
+# Resources
 
-#### In a nutshell…
-
--   **Manual QA review:** 16.0/16 mandatory & 20.0/20 optional
--   **Auto QA review:** 132.0/143 mandatory
--   **Altogether:**  **186.16%**
-    -   Mandatory: 93.08%
-    -   Optional: 100.0%
-    -   Calculation:  93.08% + (93.08% \* 100.0%)  == **186.16%**
-
-**Overall comment:**
-
-Great job
-
-### Concepts
-
-_For this project, we expect you to look at this concept:_
-
--   [AirBnB clone](https://intranet.alxswe.com/concepts/74)
-
-## Resources
-
-**Read or watch**:
-
--   [What is a Web Framework?](https://intranet.alxswe.com/rltoken/64SQpOGx46Ljp0zFJchESg "What is a Web Framework?")
--   [A Minimal Application](https://intranet.alxswe.com/rltoken/vlTp6blXLywYb9be7J5QzQ "A Minimal Application")
--   [Routing](https://intranet.alxswe.com/rltoken/vlTp6blXLywYb9be7J5QzQ "Routing") (_except “HTTP Methods”_)
--   [Rendering Templates](https://intranet.alxswe.com/rltoken/vlTp6blXLywYb9be7J5QzQ "Rendering Templates")
--   [Synopsis](https://intranet.alxswe.com/rltoken/jrfnYxHGUOcTY6g1tcY2aw "Synopsis")
--   [Variables](https://intranet.alxswe.com/rltoken/jrfnYxHGUOcTY6g1tcY2aw "Variables")
--   [Comments](https://intranet.alxswe.com/rltoken/jrfnYxHGUOcTY6g1tcY2aw "Comments")
--   [Whitespace Control](https://intranet.alxswe.com/rltoken/jrfnYxHGUOcTY6g1tcY2aw "Whitespace Control")
--   [List of Control Structures](https://intranet.alxswe.com/rltoken/jrfnYxHGUOcTY6g1tcY2aw "List of Control Structures") (_read up to “Call”_)
--   [Flask](https://intranet.alxswe.com/rltoken/9Zf-cqcwDlzw7qibheHoXA "Flask")
--   [Jinja](https://intranet.alxswe.com/rltoken/jrfnYxHGUOcTY6g1tcY2aw "Jinja")
+## Read or watch:
+> -   [What is a Web Framework?](https://intelegain-technologies.medium.com/what-are-web-frameworks-and-why-you-need-them-c4e8806bd0fb)
+> -   [A Minimal Application](https://flask.palletsprojects.com/en/stable/quickstart/)
+> -   [Routing](https://flask.palletsprojects.com/en/stable/quickstart/) (_except “HTTP Methods”_)
+> -   [Rendering Templates](https://flask.palletsprojects.com/en/stable/quickstart/)
+> -   [Synopsis](https://jinja.palletsprojects.com/en/stable/templates/)
+> -   [Variables](https://jinja.palletsprojects.com/en/stable/templates/)
+> -   [Comments](https://jinja.palletsprojects.com/en/stable/templates/)
+> -   [Whitespace Control](https://jinja.palletsprojects.com/en/stable/templates/)
+> -   [List of Control Structures](https://jinja.palletsprojects.com/en/stable/templates/) (_read up to “Call”_)
+> -   [Flask](https://palletsprojects.com/projects/flask/)
+> -   [Jinja](https://jinja.palletsprojects.com/en/stable/templates/)
 
 #### Recommended YouTube playlist to get you started
 
