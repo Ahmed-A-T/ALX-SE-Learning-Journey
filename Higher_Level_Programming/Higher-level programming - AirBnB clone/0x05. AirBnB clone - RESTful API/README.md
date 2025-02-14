@@ -124,9 +124,9 @@ AirBnB API
 > -   add new tests as much as you can (tests are mandatory for some tasks)
 > 
 >> ```
->> guillaume@ubuntu:~/AirBnB_v3$ python3 -m unittest discover tests 2&gt;&amp;1 | tail -1
+>> guillaume@ubuntu:~/AirBnB_v3$ python3 -m unittest discover tests 2>&amp;1 | tail -1
 >> OK
->> guillaume@ubuntu:~/AirBnB_v3$ HBNB_ENV=test HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_test_db HBNB_TYPE_STORAGE=db python3 -m unittest discover tests 2&gt;&amp;1 /dev/null | tail -n 1
+>> guillaume@ubuntu:~/AirBnB_v3$ HBNB_ENV=test HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_test_db HBNB_TYPE_STORAGE=db python3 -m unittest discover tests 2>&amp;1 /dev/null | tail -n 1
 >> OK
 >> guillaume@ubuntu:~/AirBnB_v3$ 
 >> ```
@@ -173,7 +173,7 @@ AirBnB API
 >> guillaume@ubuntu:~/AirBnB_v3$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./test_get_count.py 
 >> All objects: 1013
 >> State objects: 27
->> First state: [State] (f8d21261-3e79-4f5c-829a-99d7452cd73c) {'name': 'Colorado', 'updated_at': datetime.datetime(2017, 3, 25, 2, 17, 6), 'created_at': datetime.datetime(2017, 3, 25, 2, 17, 6), '_sa_instance_state': &lt;sqlalchemy.orm.state.InstanceState object at 0x7fc0103a8e80&gt;, 'id': 'f8d21261-3e79-4f5c-829a-99d7452cd73c'}
+>> First state: [State] (f8d21261-3e79-4f5c-829a-99d7452cd73c) {'name': 'Colorado', 'updated_at': datetime.datetime(2017, 3, 25, 2, 17, 6), 'created_at': datetime.datetime(2017, 3, 25, 2, 17, 6), '_sa_instance_state': <sqlalchemy.orm.state.InstanceState object at 0x7fc0103a8e80>, 'id': 'f8d21261-3e79-4f5c-829a-99d7452cd73c'}
 >> guillaume@ubuntu:~/AirBnB_v3$
 >> guillaume@ubuntu:~/AirBnB_v3$ ./test_get_count.py 
 >> All objects: 19
@@ -210,8 +210,8 @@ AirBnB API
 >>   "status": "OK"
 >> }
 >> guillaume@ubuntu:~/AirBnB_v3$ 
->> guillaume@ubuntu:~/AirBnB_v3$ curl -X GET -s http://0.0.0.0:5000/api/v1/status -vvv 2&gt;&amp;1 | grep Content-Type
->> &lt; Content-Type: application/json
+>> guillaume@ubuntu:~/AirBnB_v3$ curl -X GET -s http://0.0.0.0:5000/api/v1/status -vvv 2>&amp;1 | grep Content-Type
+>> < Content-Type: application/json
 >> guillaume@ubuntu:~/AirBnB_v3$ 
 >> ```
 > 
@@ -293,18 +293,18 @@ AirBnB API
 >> *   Trying 0.0.0.0...
 >> * TCP_NODELAY set
 >> * Connected to 0.0.0.0 (127.0.0.1) port 5000 (#0)
->> &gt; GET /api/v1/nop HTTP/1.1
->> &gt; Host: 0.0.0.0:5000
->> &gt; User-Agent: curl/7.51.0
->> &gt; Accept: */*
->> &gt; 
+>> > GET /api/v1/nop HTTP/1.1
+>> > Host: 0.0.0.0:5000
+>> > User-Agent: curl/7.51.0
+>> > Accept: */*
+>> > 
 >> * HTTP 1.0, assume close after body
->> &lt; HTTP/1.0 404 NOT FOUND
->> &lt; Content-Type: application/json
->> &lt; Content-Length: 27
->> &lt; Server: Werkzeug/0.12.1 Python/3.4.3
->> &lt; Date: Fri, 14 Apr 2017 23:43:24 GMT
->> &lt; 
+>> < HTTP/1.0 404 NOT FOUND
+>> < Content-Type: application/json
+>> < Content-Length: 27
+>> < Server: Werkzeug/0.12.1 Python/3.4.3
+>> < Date: Fri, 14 Apr 2017 23:43:24 GMT
+>> < 
 >> {
 >>   "error": "Not found"
 >> }
@@ -384,21 +384,21 @@ AirBnB API
 >> *   Trying 0.0.0.0...
 >> * TCP_NODELAY set
 >> * Connected to 0.0.0.0 (127.0.0.1) port 5000 (#0)
->> &gt; POST /api/v1/states/ HTTP/1.1
->> &gt; Host: 0.0.0.0:5000
->> &gt; User-Agent: curl/7.51.0
->> &gt; Accept: */*
->> &gt; Content-Type: application/json
->> &gt; Content-Length: 22
->> &gt; 
+>> > POST /api/v1/states/ HTTP/1.1
+>> > Host: 0.0.0.0:5000
+>> > User-Agent: curl/7.51.0
+>> > Accept: */*
+>> > Content-Type: application/json
+>> > Content-Length: 22
+>> > 
 >> * upload completely sent off: 22 out of 22 bytes
 >> * HTTP 1.0, assume close after body
->> &lt; HTTP/1.0 201 CREATED
->> &lt; Content-Type: application/json
->> &lt; Content-Length: 195
->> &lt; Server: Werkzeug/0.12.1 Python/3.4.3
->> &lt; Date: Sat, 15 Apr 2017 01:30:27 GMT
->> &lt; 
+>> < HTTP/1.0 201 CREATED
+>> < Content-Type: application/json
+>> < Content-Length: 195
+>> < Server: Werkzeug/0.12.1 Python/3.4.3
+>> < Date: Sat, 15 Apr 2017 01:30:27 GMT
+>> < 
 >> {
 >>   "__class__": "State", 
 >>   "created_at": "2017-04-15T01:30:27.557877", 
@@ -529,21 +529,21 @@ AirBnB API
 >> *   Trying 0.0.0.0...
 >> * TCP_NODELAY set
 >> * Connected to 0.0.0.0 (127.0.0.1) port 5000 (#0)
->> &gt; POST /api/v1/states/2b9a4627-8a9e-4f32-a752-9a84fa7f4efd/cities/ HTTP/1.1
->> &gt; Host: 0.0.0.0:5000
->> &gt; User-Agent: curl/7.51.0
->> &gt; Accept: */*
->> &gt; Content-Type: application/json
->> &gt; Content-Length: 22
->> &gt; 
+>> > POST /api/v1/states/2b9a4627-8a9e-4f32-a752-9a84fa7f4efd/cities/ HTTP/1.1
+>> > Host: 0.0.0.0:5000
+>> > User-Agent: curl/7.51.0
+>> > Accept: */*
+>> > Content-Type: application/json
+>> > Content-Length: 22
+>> > 
 >> * upload completely sent off: 22 out of 22 bytes
 >> * HTTP 1.0, assume close after body
->> &lt; HTTP/1.0 201 CREATED
->> &lt; Content-Type: application/json
->> &lt; Content-Length: 249
->> &lt; Server: Werkzeug/0.12.1 Python/3.4.3
->> &lt; Date: Sun, 16 Apr 2017 03:14:05 GMT
->> &lt; 
+>> < HTTP/1.0 201 CREATED
+>> < Content-Type: application/json
+>> < Content-Length: 249
+>> < Server: Werkzeug/0.12.1 Python/3.4.3
+>> < Date: Sun, 16 Apr 2017 03:14:05 GMT
+>> < 
 >> {
 >>   "__class__": "City", 
 >>   "created_at": "2017-04-16T03:14:05.655490", 
@@ -791,19 +791,19 @@ AirBnB API
 >> *   Trying 0.0.0.0...
 >> * TCP_NODELAY set
 >> * Connected to 0.0.0.0 (127.0.0.1) port 5000 (#0)
->> &gt; GET /api/v1/states/2b9a4627-8a9e-4f32-a752-9a84fa7f4efd/cities/1da255c0-f023-4779-8134-2b1b40f87683 HTTP/1.1
->> &gt; Host: 0.0.0.0:5000
->> &gt; User-Agent: curl/7.51.0
->> &gt; Accept: */*
->> &gt; 
+>> > GET /api/v1/states/2b9a4627-8a9e-4f32-a752-9a84fa7f4efd/cities/1da255c0-f023-4779-8134-2b1b40f87683 HTTP/1.1
+>> > Host: 0.0.0.0:5000
+>> > User-Agent: curl/7.51.0
+>> > Accept: */*
+>> > 
 >> * HTTP 1.0, assume close after body
->> &lt; HTTP/1.0 200 OK
->> &lt; Content-Type: application/json
->> &lt; Access-Control-Allow-Origin: 0.0.0.0
->> &lt; Content-Length: 236
->> &lt; Server: Werkzeug/0.12.1 Python/3.4.3
->> &lt; Date: Sun, 16 Apr 2017 04:20:13 GMT
->> &lt; 
+>> < HTTP/1.0 200 OK
+>> < Content-Type: application/json
+>> < Access-Control-Allow-Origin: 0.0.0.0
+>> < Content-Length: 236
+>> < Server: Werkzeug/0.12.1 Python/3.4.3
+>> < Date: Sun, 16 Apr 2017 04:20:13 GMT
+>> < 
 >> {
 >>   "__class__": "City", 
 >>   "created_at": "2017-03-25T02:17:06", 
@@ -923,7 +923,7 @@ AirBnB API
 >>     "name": "The Lynn House", 
 >>     "city_id": "5976f0e7-5c5f-4949-aae0-90d68fd239c0", 
 >>     "user_id": "3ea61b06-e22a-459b-bb96-d900fb8f843a", 
->>     "description": "Our place is 2 blocks from Vista Park (Farmer's Market), Historic Warren Ballpark, and about 2 miles from Old Bisbee where there is shopping, dining, and site seeing. We offer continental breakfast. You get the quiet life with great mountain and garden views. This is a 100+ year old cozy home which has been on both the Garden and Home tours. You have access to whole house, except for 1 restricted area (She-Shack).  Hosts are on site in a casita in the back from 8pm until 7am when we are in town.&lt;BR /&gt;&lt;BR /&gt;Our home has two bedrooms, one king and one queen.  There are 2 bathrooms, 1  1950's soak tub with shower and 1 with shower only.  Guests have access to the living/dining room area, and the kitchen (except for use of stove/oven).  Each morning, coffee/tea, and muffins are ready for guests.  A small frig is available in the dining room with water/juice and an area for guest items.  1 parking space is directly across the street.", 
+>>     "description": "Our place is 2 blocks from Vista Park (Farmer's Market), Historic Warren Ballpark, and about 2 miles from Old Bisbee where there is shopping, dining, and site seeing. We offer continental breakfast. You get the quiet life with great mountain and garden views. This is a 100+ year old cozy home which has been on both the Garden and Home tours. You have access to whole house, except for 1 restricted area (She-Shack).  Hosts are on site in a casita in the back from 8pm until 7am when we are in town.<BR /><BR />Our home has two bedrooms, one king and one queen.  There are 2 bathrooms, 1  1950's soak tub with shower and 1 with shower only.  Guests have access to the living/dining room area, and the kitchen (except for use of stove/oven).  Each morning, coffee/tea, and muffins are ready for guests.  A small frig is available in the dining room with water/juice and an area for guest items.  1 parking space is directly across the street.", 
 >>     "number_rooms": 2,
 >>     "number_bathrooms": 2,
 >>     "max_guest": 4,
