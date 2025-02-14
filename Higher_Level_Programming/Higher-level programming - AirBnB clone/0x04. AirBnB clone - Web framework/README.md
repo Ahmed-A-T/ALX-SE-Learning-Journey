@@ -23,6 +23,7 @@
 
 #### Recommended YouTube playlist to get you started
 
+[![Watch the video](assets/00x04-01.png)](https://www.youtube.com/embed/videoseries?si=F7-vdjIipfoZVexI&amp;list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=F7-vdjIipfoZVexI&amp;list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
 
 ## Learning Objectives
