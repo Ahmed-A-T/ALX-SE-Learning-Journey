@@ -98,7 +98,7 @@ Python: Flask the web framework
 >> ....
 >> ```
 > 
-In another tab:
+> In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000 ; echo "" | cat -e
@@ -161,7 +161,7 @@ In another tab:
 >> ....
 >> ```
 > 
-In another tab:
+> In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/c/is_fun ; echo "" | cat -e
@@ -241,7 +241,7 @@ In another tab:
 >> ....
 >> ```
 > 
-In another tab:
+> In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number/89 ; echo "" | cat -e
@@ -345,7 +345,7 @@ In another tab:
 >> ....
 >> ```
 >
-In another tab:
+> In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number_odd_or_even/89 ; echo ""
@@ -410,7 +410,7 @@ In another tab:
 >> &gt;&gt;&gt; # Time to insert new data!
 >> ```
 > 
-At this moment, in another tab:
+> At this moment, in another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~/AirBnB_v2$ echo 'INSERT INTO `states` VALUES ("421a55f1-7d82-45d9-b54c-a76916479545","2017-03-25 19:42:40","2017-03-25 19:42:40","Alabama");' | mysql -uroot -p hbnb_dev_db
@@ -525,7 +525,7 @@ At this moment, in another tab:
 >> ....
 >> ```
 > 
-In another tab:
+> In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/states_list ; echo ""
@@ -577,542 +577,433 @@ In another tab:
 
 ---
 
-### 9\. Cities by states
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that starts a Flask web application:
-
--   Your web application must be listening on `0.0.0.0`, port `5000`
--   You must use `storage` for fetching data from the storage engine (`FileStorage` or `DBStorage`) => `from models import storage` and `storage.all(...)`
--   To load all cities of a `State`:
-    -   If your storage engine is `DBStorage`, you must use `cities` relationship
-    -   Otherwise, use the public getter method `cities`
--   After each request you must remove the current SQLAlchemy Session:
-    -   Declare a method to handle `@app.teardown_appcontext`
-    -   Call in this method `storage.close()`
--   Routes:
-    -   `/cities_by_states`: display a HTML page: (inside the tag `BODY`)
-        -   `H1` tag: “States”
-        -   `UL` tag: with the list of all `State` objects present in `DBStorage` **sorted by `name`** (A->Z) [tip](https://intranet.alxswe.com/rltoken/jrfnYxHGUOcTY6g1tcY2aw "tip")
-            -   `LI` tag: description of one `State`: `<state.id>: <B><state.name></B>` + `UL` tag: with the list of `City` objects linked to the `State` **sorted by `name`** (A->Z)
-                -   `LI` tag: description of one `City`: `<city.id>: <B><city.name></B>`
--   Import this [7-dump](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/7-states_list.sql "7-dump") to have some data
--   You must use the option `strict_slashes=False` in your route definition
-
+## 9\. Cities by states
+> Write a script that starts a Flask web application:
+> 
+> -   Your web application must be listening on **`0.0.0.0`**, port **`5000`**
+> -   You must use **`storage`** for fetching data from the storage engine (**`FileStorage`** or **`DBStorage`**) => **`from models import storage`** and **`storage.all(...)`**
+> -   To load all cities of a **`State`**:
+>     -   If your storage engine is **`DBStorage`**, you must use **`cities`** relationship
+>     -   Otherwise, use the public getter method **`cities`**
+> -   After each request you must remove the current SQLAlchemy Session:
+>     -   Declare a method to handle **`@app.teardown_appcontext`**
+>     -   Call in this method **`storage.close()`**
+> -   Routes:
+>     -   **`/cities_by_states`**: display a HTML page: (inside the tag **`BODY`**)
+>         -   **`H1`** tag: “States”
+>         -   **`UL`** tag: with the list of all **`State`** objects present in **`DBStorage`** **sorted by **`name`**** (A->Z) [tip](https://jinja.palletsprojects.com/en/stable/templates/)
+>             -   **`LI`** tag: description of one **`State`**: **`<state.id>: <B><state.name></B>`** + **`UL`** tag: with the list of **`City`** objects linked to the **`State`** **sorted by **`name`**** (A->Z)
+>                 -   **`LI`** tag: description of one **`City`**: **`<city.id>: <B><city.name></B>`**
+> -   Import this [7-dump](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/7-states_list.sql "7-dump") to have some data
+> -   You must use the option **`strict_slashes=False`** in your route definition
+>
 **IMPORTANT**
-
--   Make sure you have a running and valid `setup_mysql_dev.sql` in your `AirBnB_clone_v2` repository ([Task](https://intranet.alxswe.com/rltoken/v5CSUMU7FY9wj_cnBY7P1A "Task"))
--   Make sure all tables are created when you run `echo "quit" | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py`
-
-```
-guillaume@ubuntu:~/AirBnB_v2$ curl -o 7-dump.sql "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/7-states_list.sql"
-guillaume@ubuntu:~/AirBnB_v2$ cat 7-dump.sql | mysql -uroot -p
-Enter password: 
-guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.8-cities_by_states
-* Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
-```
-
-In another tab:
-
-```
-guillaume@ubuntu:~$ curl 0.0.0.0:5000/cities_by_states ; echo ""
-&lt;!DOCTYPE html&gt;
-&lt;HTML lang="en"&gt;
-    &lt;HEAD&gt;
-        &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
-    &lt;/HEAD&gt;
-    &lt;BODY&gt;
-        &lt;H1&gt;States&lt;/H1&gt;
-        &lt;UL&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Alabama&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Akron&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Babbie&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Calera&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Fairfield&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Arizona&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Douglas&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Kearny&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Tempe&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;California&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;Fremont&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;Napa&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;San Francisco&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;San Jose&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;561a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;Sonoma&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Colorado&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Denver&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Florida&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Miami&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Orlando&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479550: &lt;B&gt;Georgia&lt;/B&gt;
-                &lt;UL&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Hawaii&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Honolulu&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Kailua&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Pearl city&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Illinois&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Chicago&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;561a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Joliet&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Naperville&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Peoria&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Urbana&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479553: &lt;B&gt;Indiana&lt;/B&gt;
-                &lt;UL&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Louisiana&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Baton rouge&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Lafayette&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;New Orleans&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Minnesota&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Saint Paul&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Mississippi&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Jackson&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Meridian&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Tupelo&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Oregon&lt;/B&gt;
-                &lt;UL&gt;
-
-                        &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Eugene&lt;/B&gt;&lt;/LI&gt;
-
-                        &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Portland&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;/UL&gt;
-            &lt;/LI&gt;
-
-        &lt;/UL&gt;
-    &lt;/BODY&gt;
-&lt;/HTML&gt;
-guillaume@ubuntu:~$ 
-```
-
-![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/9a7ae8155274b17881442200437e8793cf08de48.jpg)
-
-**Repo:**
-
--   GitHub repository: `AirBnB_clone_v2`
--   File: `web_flask/8-cities_by_states.py, web_flask/templates/8-cities_by_states.html`
-
-Check submission
-
-×
-
-#### 9\. Cities by states
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 9\. Cities by states
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 10\. States and State
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that starts a Flask web application:
-
--   Your web application must be listening on `0.0.0.0`, port `5000`
--   You must use `storage` for fetching data from the storage engine (`FileStorage` or `DBStorage`) => `from models import storage` and `storage.all(...)`
--   To load all cities of a `State`:
-    -   If your storage engine is `DBStorage`, you must use `cities` relationship
-    -   Otherwise, use the public getter method `cities`
--   After each request you must remove the current SQLAlchemy Session:
-    -   Declare a method to handle `@app.teardown_appcontext`
-    -   Call in this method `storage.close()`
--   Routes:
-    -   `/states`: display a HTML page: (inside the tag `BODY`)
-        -   `H1` tag: “States”
-        -   `UL` tag: with the list of all `State` objects present in `DBStorage` **sorted by `name`** (A->Z) [tip](https://intranet.alxswe.com/rltoken/jrfnYxHGUOcTY6g1tcY2aw "tip")
-            -   `LI` tag: description of one `State`: `<state.id>: <B><state.name></B>`
-    -   `/states/<id>`: display a HTML page: (inside the tag `BODY`)
-        -   If a `State` object is found with this `id`:
-            -   `H1` tag: “State: ”
-            -   `H3` tag: “Cities:”
-            -   `UL` tag: with the list of `City` objects linked to the `State` **sorted by `name`** (A->Z)
-                -   `LI` tag: description of one `City`: `<city.id>: <B><city.name></B>`
-        -   Otherwise:
-            -   `H1` tag: “Not found!”
--   You must use the option `strict_slashes=False` in your route definition
--   Import this [7-dump](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/7-states_list.sql "7-dump") to have some data
-
+> 
+> -   Make sure you have a running and valid **`setup_mysql_dev.sql`** in your **`AirBnB_clone_v2`** repository ([Task #3](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Higher_Level_Programming/Higher-level%20programming%20-%20AirBnB%20clone/0x02.%20AirBnB%20clone%20-%20MySQL))
+> -   Make sure all tables are created when you run **`echo "quit" | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py`**
+> 
+>> ```
+>> guillaume@ubuntu:~/AirBnB_v2$ curl -o 7-dump.sql "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/7-states_list.sql"
+>> guillaume@ubuntu:~/AirBnB_v2$ cat 7-dump.sql | mysql -uroot -p
+>> Enter password: 
+>> guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.8-cities_by_states
+>> * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+>> ....
+>> ```
+> 
+> In another tab:
+> 
+>> ```
+>> guillaume@ubuntu:~$ curl 0.0.0.0:5000/cities_by_states ; echo ""
+>> &lt;!DOCTYPE html&gt;
+>> &lt;HTML lang="en"&gt;
+>>     &lt;HEAD&gt;
+>>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
+>>     &lt;/HEAD&gt;
+>>     &lt;BODY&gt;
+>>         &lt;H1&gt;States&lt;/H1&gt;
+>>         &lt;UL&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Alabama&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Akron&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Babbie&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Calera&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Fairfield&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Arizona&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Douglas&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Kearny&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Tempe&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;California&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;Fremont&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;Napa&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;San Francisco&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;San Jose&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;561a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;Sonoma&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Colorado&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Denver&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Florida&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Miami&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Orlando&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479550: &lt;B&gt;Georgia&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Hawaii&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Honolulu&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Kailua&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Pearl city&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Illinois&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Chicago&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;561a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Joliet&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Naperville&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Peoria&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Urbana&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479553: &lt;B&gt;Indiana&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Louisiana&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Baton rouge&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Lafayette&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;New Orleans&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Minnesota&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Saint Paul&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Mississippi&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Jackson&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Meridian&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Tupelo&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Oregon&lt;/B&gt;
+>>                 &lt;UL&gt;
+>> 
+>>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Eugene&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Portland&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;/UL&gt;
+>>             &lt;/LI&gt;
+>> 
+>>         &lt;/UL&gt;
+>>     &lt;/BODY&gt;
+>> &lt;/HTML&gt;
+>> guillaume@ubuntu:~$ 
+>> ```
+
+![](assets/00x04-03.jpg)
+
+### Repo:
+
+-   GitHub repository: **`AirBnB_clone_v2`**
+-   File: **`web_flask/8-cities_by_states.py, web_flask/templates/8-cities_by_states.html`**
+
+---
+
+## 10\. States and State
+> Write a script that starts a Flask web application:
+> 
+> -   Your web application must be listening on **`0.0.0.0`**, port **`5000`**
+> -   You must use **`storage`** for fetching data from the storage engine (**`FileStorage`** or **`DBStorage`**) => **`from models import storage`** and **`storage.all(...)`**
+> -   To load all cities of a **`State`**:
+>     -   If your storage engine is **`DBStorage`**, you must use **`cities`** relationship
+>     -   Otherwise, use the public getter method **`cities`**
+> -   After each request you must remove the current SQLAlchemy Session:
+>     -   Declare a method to handle **`@app.teardown_appcontext`**
+>     -   Call in this method **`storage.close()`**
+> -   Routes:
+>     -   **`/states`**: display a HTML page: (inside the tag **`BODY`**)
+>         -   **`H1`** tag: “States”
+>         -   **`UL`** tag: with the list of all **`State`** objects present in **`DBStorage`** **sorted by **`name`**** (A->Z) [tip](https://jinja.palletsprojects.com/en/stable/templates/)
+>             -   **`LI`** tag: description of one **`State`**: **`<state.id>: <B><state.name></B>`**
+>     -   **`/states/<id>`**: display a HTML page: (inside the tag **`BODY`**)
+>         -   If a **`State`** object is found with this **`id`**:
+>             -   **`H1`** tag: “State: ”
+>             -   **`H3`** tag: “Cities:”
+>             -   **`UL`** tag: with the list of **`City`** objects linked to the **`State`** **sorted by **`name`**** (A->Z)
+>                 -   **`LI`** tag: description of one **`City`**: **`<city.id>: <B><city.name></B>`**
+>         -   Otherwise:
+>             -   **`H1`** tag: “Not found!”
+> -   You must use the option **`strict_slashes=False`** in your route definition
+> -   Import this [7-dump](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/7-states_list.sql "7-dump") to have some data
+>
 **IMPORTANT**
+>
+> -   Make sure you have a running and valid **`setup_mysql_dev.sql`** in your **`AirBnB_clone_v2`** repository ([Task](https://jinja.palletsprojects.com/en/stable/templates/))
+> -   Make sure all tables are created when you run **`echo "quit" | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py`**
+> 
+>> ```
+>> guillaume@ubuntu:~/AirBnB_v2$ curl -o 7-dump.sql "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/7-states_list.sql"
+>> guillaume@ubuntu:~/AirBnB_v2$ cat 7-dump.sql | mysql -uroot -p
+>> Enter password: 
+>> guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.9-states
+>> * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+>> ....
+>> ```
+>
+> In another tab:
+>
+>> ```
+>> guillaume@ubuntu:~$ curl 0.0.0.0:5000/states ; echo ""
+>> &lt;!DOCTYPE html&gt;
+>> &lt;HTML lang="en"&gt;
+>>     &lt;HEAD&gt;
+>>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
+>>     &lt;/HEAD&gt;
+>>     &lt;BODY&gt;
+>> 
+>>         &lt;H1&gt;States&lt;/H1&gt;
+>>         &lt;UL&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Alabama&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Arizona&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;California&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Colorado&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Florida&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479550: &lt;B&gt;Georgia&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Hawaii&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Illinois&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479553: &lt;B&gt;Indiana&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Louisiana&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Minnesota&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Mississippi&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Oregon&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>         &lt;/UL&gt;
+>> 
+>>     &lt;/BODY&gt;
+>> &lt;/HTML&gt;
+>> guillaume@ubuntu:~$ curl 0.0.0.0:5000/states/421a55f4-7d82-47d9-b54c-a76916479552 ; echo ""
+>> &lt;!DOCTYPE html&gt;
+>> &lt;HTML lang="en"&gt;
+>>     &lt;HEAD&gt;
+>>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
+>>     &lt;/HEAD&gt;
+>>     &lt;BODY&gt;
+>> 
+>>         &lt;H1&gt;State: Illinois&lt;/H1&gt;
+>>         &lt;H3&gt;Cities:&lt;/H3&gt;
+>>         &lt;UL&gt;
+>>                 &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Chicago&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;LI&gt;561a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Joliet&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Naperville&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Peoria&lt;/B&gt;&lt;/LI&gt;
+>> 
+>>                 &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Urbana&lt;/B&gt;&lt;/LI&gt;
+>>         &lt;/UL&gt;
+>> 
+>>     &lt;/BODY&gt;
+>> &lt;/HTML&gt;
+>> guillaume@ubuntu:~$ curl 0.0.0.0:5000/states/holberton ; echo ""
+>> &lt;!DOCTYPE html&gt;
+>> &lt;HTML lang="en"&gt;
+>>     &lt;HEAD&gt;
+>>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
+>>     &lt;/HEAD&gt;
+>>     &lt;BODY&gt;
+>> 
+>>         &lt;H1&gt;Not found!&lt;/H1&gt;
+>> 
+>>     &lt;/BODY&gt;
+>> &lt;/HTML&gt;
+>> guillaume@ubuntu:~$ 
+>> ```
 
--   Make sure you have a running and valid `setup_mysql_dev.sql` in your `AirBnB_clone_v2` repository ([Task](https://intranet.alxswe.com/rltoken/v5CSUMU7FY9wj_cnBY7P1A "Task"))
--   Make sure all tables are created when you run `echo "quit" | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py`
+### Repo:
 
-```
-guillaume@ubuntu:~/AirBnB_v2$ curl -o 7-dump.sql "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/7-states_list.sql"
-guillaume@ubuntu:~/AirBnB_v2$ cat 7-dump.sql | mysql -uroot -p
-Enter password: 
-guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.9-states
-* Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
-```
+-   GitHub repository: **`AirBnB_clone_v2`**
+-   File: **`web_flask/9-states.py, web_flask/templates/9-states.html`**
 
-In another tab:
+---
 
-```
-guillaume@ubuntu:~$ curl 0.0.0.0:5000/states ; echo ""
-&lt;!DOCTYPE html&gt;
-&lt;HTML lang="en"&gt;
-    &lt;HEAD&gt;
-        &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
-    &lt;/HEAD&gt;
-    &lt;BODY&gt;
-
-        &lt;H1&gt;States&lt;/H1&gt;
-        &lt;UL&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Alabama&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Arizona&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;California&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Colorado&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Florida&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479550: &lt;B&gt;Georgia&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Hawaii&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Illinois&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479553: &lt;B&gt;Indiana&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Louisiana&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Minnesota&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Mississippi&lt;/B&gt;&lt;/LI&gt;
-
-            &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Oregon&lt;/B&gt;&lt;/LI&gt;
-
-        &lt;/UL&gt;
-
-    &lt;/BODY&gt;
-&lt;/HTML&gt;
-guillaume@ubuntu:~$ curl 0.0.0.0:5000/states/421a55f4-7d82-47d9-b54c-a76916479552 ; echo ""
-&lt;!DOCTYPE html&gt;
-&lt;HTML lang="en"&gt;
-    &lt;HEAD&gt;
-        &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
-    &lt;/HEAD&gt;
-    &lt;BODY&gt;
-
-        &lt;H1&gt;State: Illinois&lt;/H1&gt;
-        &lt;H3&gt;Cities:&lt;/H3&gt;
-        &lt;UL&gt;
-                &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Chicago&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;LI&gt;561a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Joliet&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Naperville&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Peoria&lt;/B&gt;&lt;/LI&gt;
-
-                &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Urbana&lt;/B&gt;&lt;/LI&gt;
-        &lt;/UL&gt;
-
-    &lt;/BODY&gt;
-&lt;/HTML&gt;
-guillaume@ubuntu:~$ curl 0.0.0.0:5000/states/holberton ; echo ""
-&lt;!DOCTYPE html&gt;
-&lt;HTML lang="en"&gt;
-    &lt;HEAD&gt;
-        &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
-    &lt;/HEAD&gt;
-    &lt;BODY&gt;
-
-        &lt;H1&gt;Not found!&lt;/H1&gt;
-
-    &lt;/BODY&gt;
-&lt;/HTML&gt;
-guillaume@ubuntu:~$ 
-```
-
-**Repo:**
-
--   GitHub repository: `AirBnB_clone_v2`
--   File: `web_flask/9-states.py, web_flask/templates/9-states.html`
-
-Check submission
-
-×
-
-#### 10\. States and State
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 10\. States and State
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 11\. HBNB filters
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that starts a Flask web application:
-
--   Your web application must be listening on `0.0.0.0`, port `5000`
--   You must use `storage` for fetching data from the storage engine (`FileStorage` or `DBStorage`) => `from models import storage` and `storage.all(...)`
--   To load all cities of a `State`:
-    -   If your storage engine is `DBStorage`, you must use `cities` relationship
-    -   Otherwise, use the public getter method `cities`
--   After each request you must remove the current SQLAlchemy Session:
-    -   Declare a method to handle `@app.teardown_appcontext`
-    -   Call in this method `storage.close()`
--   Routes:
-    -   `/hbnb_filters`: display a HTML page like `6-index.html`, which was done during the project [0x01. AirBnB clone - Web static](https://intranet.alxswe.com/rltoken/EG-iGbr_iPTlHrQQSNho1g "0x01. AirBnB clone - Web static")
-        -   Copy files `3-footer.css`, `3-header.css`, `4-common.css` and `6-filters.css` from `web_static/styles/` to the folder `web_flask/static/styles`
-        -   Copy files `icon.png` and `logo.png` from `web_static/images/` to the folder `web_flask/static/images`
-        -   Update `.popover` class in `6-filters.css` to allow scrolling in the popover and a max height of 300 pixels.
-        -   Use `6-index.html` content as source code for the template `10-hbnb_filters.html`:
-            -   Replace the content of the `H4` tag under each filter title (`H3` States and `H3` Amenities) by `&nbsp;`
-        -   `State`, `City` and `Amenity` objects must be loaded from `DBStorage` and **sorted by name** (A->Z)
--   You must use the option `strict_slashes=False` in your route definition
--   Import this [10-dump](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/10-hbnb_filters.sql "10-dump") to have some data
-
+## 11\. HBNB filters
+> Write a script that starts a Flask web application:
+> 
+> -   Your web application must be listening on **`0.0.0.0`**, port **`5000`**
+> -   You must use **`storage`** for fetching data from the storage engine (**`FileStorage`** or **`DBStorage`**) => **`from models import storage`** and **`storage.all(...)`**
+> -   To load all cities of a **`State`**:
+>     -   If your storage engine is **`DBStorage`**, you must use **`cities`** relationship
+>     -   Otherwise, use the public getter method **`cities`**
+> -   After each request you must remove the current SQLAlchemy Session:
+>     -   Declare a method to handle **`@app.teardown_appcontext`**
+>     -   Call in this method **`storage.close()`**
+> -   Routes:
+>     -   **`/hbnb_filters`**: display a HTML page like **`6-index.html`**, which was done during the project [0x01. AirBnB clone - Web static](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Higher_Level_Programming/Higher-level%20programming%20-%20AirBnB%20clone/0x01.%20AirBnB%20clone%20-%20Web%20static)
+>         -   Copy files **`3-footer.css`**, **`3-header.css`**, **`4-common.css`** and **`6-filters.css`** from **`web_static/styles/`** to the folder **`web_flask/static/styles`**
+>         -   Copy files **`icon.png`** and **`logo.png`** from **`web_static/images/`** to the folder **`web_flask/static/images`**
+>         -   Update **`.popover`** class in **`6-filters.css`** to allow scrolling in the popover and a max height of 300 pixels.
+>         -   Use **`6-index.html`** content as source code for the template **`10-hbnb_filters.html`**:
+>             -   Replace the content of the **`H4`** tag under each filter title (**`H3`** States and **`H3`** Amenities) by **`&nbsp;`**
+>         -   **`State`**, **`City`** and **`Amenity`** objects must be loaded from **`DBStorage`** and **sorted by name** (A->Z)
+> -   You must use the option **`strict_slashes=False`** in your route definition
+> -   Import this [10-dump](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/10-hbnb_filters.sql "10-dump") to have some data
+> 
 **IMPORTANT**
+> 
+> -   Make sure you have a running and valid **`setup_mysql_dev.sql`** in your **`AirBnB_clone_v2`** repository ([Task #3](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Higher_Level_Programming/Higher-level%20programming%20-%20AirBnB%20clone/0x02.%20AirBnB%20clone%20-%20MySQL))
+> -   Make sure all tables are created when you run **`echo "quit" | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py`**
+> 
+>> ```
+>> guillaume@ubuntu:~/AirBnB_v2$ curl -o 10-dump.sql "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/10-hbnb_filters.sql"
+>> guillaume@ubuntu:~/AirBnB_v2$ cat 10-dump.sql | mysql -uroot -p
+>> Enter password: 
+>> guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.10-hbnb_filters
+>> * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+>> ....
+>> ```
+> 
+> In the browser:
+> 
+![](assets/00x04-04.jpg) ![](assets/00x04-05.jpg) ![](assets/00x04-06.jpg) ![](assets/00x04-07.jpg)
 
--   Make sure you have a running and valid `setup_mysql_dev.sql` in your `AirBnB_clone_v2` repository ([Task](https://intranet.alxswe.com/rltoken/v5CSUMU7FY9wj_cnBY7P1A "Task"))
--   Make sure all tables are created when you run `echo "quit" | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py`
+### Repo:
 
-```
-guillaume@ubuntu:~/AirBnB_v2$ curl -o 10-dump.sql "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/10-hbnb_filters.sql"
-guillaume@ubuntu:~/AirBnB_v2$ cat 10-dump.sql | mysql -uroot -p
-Enter password: 
-guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.10-hbnb_filters
-* Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
-```
+-   GitHub repository: **`AirBnB_clone_v2`**
+-   File: **`web_flask/10-hbnb_filters.py, web_flask/templates/10-hbnb_filters.html, web_flask/static/`**
 
-In the browser:
-
-![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/4f993ec8ca2a2f639a80887667106ac63a0a3701.jpg) ![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/1549b553d726cc37f64440be910cb6b858aa32ae.jpg) ![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/94b3a416ba1551c59701eb6672ac0a36fbebba14.jpg) ![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/1e559707dd34a37564dc10e54b707815a516d363.jpg)
-
-**Repo:**
-
--   GitHub repository: `AirBnB_clone_v2`
--   File: `web_flask/10-hbnb_filters.py, web_flask/templates/10-hbnb_filters.html, web_flask/static/`
-
-View results
-
-×
-
-#### 11\. HBNB filters
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 12\. HBNB is alive!
-
-#advanced
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that starts a Flask web application:
-
--   Your web application must be listening on `0.0.0.0`, port `5000`
--   You must use `storage` for fetching data from the storage engine (`FileStorage` or `DBStorage`) => `from models import storage` and `storage.all(...)`
--   To load all cities of a `State`:
-    -   If your storage engine is `DBStorage`, you must use `cities` relationship
-    -   Otherwise, use the public getter method `cities`
--   After each request you must remove the current SQLAlchemy Session:
-    -   Declare a method to handle `@app.teardown_appcontext`
-    -   Call in this method `storage.close()`
--   Routes:
-    -   `/hbnb`: display a HTML page like `8-index.html`, done during the [0x01. AirBnB clone - Web static](https://intranet.alxswe.com/rltoken/EG-iGbr_iPTlHrQQSNho1g "0x01. AirBnB clone - Web static") project
-        -   Copy files `3-footer.css`, `3-header.css`, `4-common.css`, `6-filters.css` and `8-places.css` from `web_static/styles/` to the folder `web_flask/static/styles`
-        -   Copy all files from `web_static/images/` to the folder `web_flask/static/images`
-        -   Update `.popover` class in `6-filters.css` to enable scrolling in the popover and set max height to 300 pixels.
-        -   Update `8-places.css` to always have the price by night on the top right of each place element, and the name correctly aligned and visible (i.e. screenshots below)
-        -   Use `8-index.html` content as source code for the template `100-hbnb.html`:
-            -   Replace the content of the `H4` tag under each filter title (`H3` States and `H3` Amenities) by `&nbsp;`
-            -   Make sure all HTML tags from objects are correctly used (example: `<BR />` must generate a new line)
-        -   `State`, `City`, `Amenity` and `Place` objects must be loaded from `DBStorage` and **sorted by name** (A->Z)
--   You must use the option `strict_slashes=False` in your route definition
--   Import this [100-dump](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb.sql "100-dump") to have some data
-
+> Write a script that starts a Flask web application:
+> 
+> -   Your web application must be listening on **`0.0.0.0`**, port **`5000`**
+> -   You must use **`storage`** for fetching data from the storage engine (**`FileStorage`** or **`DBStorage`**) => **`from models import storage`** and **`storage.all(...)`**
+> -   To load all cities of a **`State`**:
+>     -   If your storage engine is **`DBStorage`**, you must use **`cities`** relationship
+>     -   Otherwise, use the public getter method **`cities`**
+> -   After each request you must remove the current SQLAlchemy Session:
+>     -   Declare a method to handle **`@app.teardown_appcontext`**
+>     -   Call in this method **`storage.close()`**
+> -   Routes:
+>     -   **`/hbnb`**: display a HTML page like **`8-index.html`**, done during the [0x01. AirBnB clone - Web static](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Higher_Level_Programming/Higher-level%20programming%20-%20AirBnB%20clone/0x01.%20AirBnB%20clone%20-%20Web%20static) project
+>         -   Copy files **`3-footer.css`**, **`3-header.css`**, **`4-common.css`**, **`6-filters.css`** and **`8-places.css`** from **`web_static/styles/`** to the folder **`web_flask/static/styles`**
+>         -   Copy all files from **`web_static/images/`** to the folder **`web_flask/static/images`**
+>         -   Update **`.popover`** class in **`6-filters.css`** to enable scrolling in the popover and set max height to 300 pixels.
+>         -   Update **`8-places.css`** to always have the price by night on the top right of each place element, and the name correctly aligned and visible (i.e. screenshots below)
+>         -   Use **`8-index.html`** content as source code for the template **`100-hbnb.html`**:
+>             -   Replace the content of the **`H4`** tag under each filter title (**`H3`** States and **`H3`** Amenities) by **`&nbsp;`**
+>             -   Make sure all HTML tags from objects are correctly used (example: **`<BR />`** must generate a new line)
+>         -   `State`, `City`, `Amenity` and `Place` objects must be loaded from `DBStorage` and **sorted by name** (A->Z)
+> -   You must use the option **`strict_slashes=False`** in your route definition
+> -   Import this [100-dump](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb.sql "100-dump") to have some data
+> 
 **IMPORTANT**
+> 
+> -   Make sure you have a running and valid **`setup_mysql_dev.sql`** in your **`AirBnB_clone_v2`** repository ([Task](https://intranet.alxswe.com/rltoken/v5CSUMU7FY9wj_cnBY7P1A "Task"))
+> -   Make sure all tables are created when you run **`echo "quit" | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py`**
+> 
+>> ```
+>> guillaume@ubuntu:~/AirBnB_v2$ curl -o 100-dump.sql "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb.sql"
+>> guillaume@ubuntu:~/AirBnB_v2$ cat 100-dump.sql | mysql -uroot -p
+>> Enter password: 
+>> guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.100-hbnb
+>> * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+>> ....
+>> ```
+> 
+> In the browser:
+> 
+![](assets/00x04-08.jpg) ![](assets/00x04-09.jpg) ![](assets/00x04-10.jpg) ![](assets/00x04-11.jpg) ![](assets/00x05-12.jpg)
 
--   Make sure you have a running and valid `setup_mysql_dev.sql` in your `AirBnB_clone_v2` repository ([Task](https://intranet.alxswe.com/rltoken/v5CSUMU7FY9wj_cnBY7P1A "Task"))
--   Make sure all tables are created when you run `echo "quit" | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py`
+### Repo:
 
-```
-guillaume@ubuntu:~/AirBnB_v2$ curl -o 100-dump.sql "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb.sql"
-guillaume@ubuntu:~/AirBnB_v2$ cat 100-dump.sql | mysql -uroot -p
-Enter password: 
-guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.100-hbnb
-* Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-....
-```
+-   GitHub repository: **`AirBnB_clone_v2`**
+-   File: **`web_flask/100-hbnb.py, web_flask/templates/100-hbnb.html, web_flask/static/`**
 
-In the browser:
-
-![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/396ae10c9f85a6128ae40e1b63f4bce95adf411c.jpg) ![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/9eb21499b5f3b59751fdbf561174e2f259d97482.jpg) ![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/bf248a63c15a746ad694acffdd56d80281782c71.jpg) ![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/494317aad058a649a51f416eceee1a609f07c6c0.jpg) ![](Project%200x04.%20AirBnB%20clone%20-%20Web%20framework%20%20Cairo%20Intranet/016911388aa92532e06c4d5361188a2622425517.jpg)
-
-**Repo:**
-
--   GitHub repository: `AirBnB_clone_v2`
--   File: `web_flask/100-hbnb.py, web_flask/templates/100-hbnb.html, web_flask/static/`
+---
