@@ -169,10 +169,10 @@ Python: Flask the web framework
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/c/cool ; echo "" | cat -e
 >> C cool$
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/c
->> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
->> &lt;title&gt;404 Not Found&lt;/title&gt;
->> &lt;h1&gt;Not Found&lt;/h1&gt;
->> &lt;p&gt;The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.&lt;/p&gt;
+>> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+>> <title>404 Not Found</title>
+>> <h1>Not Found</h1>
+>> <p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
 >> guillaume@ubuntu:~$ 
 >> ```
 
@@ -247,15 +247,15 @@ Python: Flask the web framework
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number/89 ; echo "" | cat -e
 >> 89 is a number$
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number/8.9 
->> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
->> &lt;title&gt;404 Not Found&lt;/title&gt;
->> &lt;h1&gt;Not Found&lt;/h1&gt;
->> &lt;p&gt;The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.&lt;/p&gt;
+>> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+>> <title>404 Not Found</title>
+>> <h1>Not Found</h1>
+>> <p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number/python 
->> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
->> &lt;title&gt;404 Not Found&lt;/title&gt;
->> &lt;h1&gt;Not Found&lt;/h1&gt;
->> &lt;p&gt;The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.&lt;/p&gt;
+>> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+>> <title>404 Not Found</title>
+>> <h1>Not Found</h1>
+>> <p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
 >> guillaume@ubuntu:~$ 
 >> ```
 
@@ -292,25 +292,25 @@ In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number_template/89 ; echo ""
->> &lt;!DOCTYPE html&gt;
->> &lt;HTML lang="en"&gt;
->>     &lt;HEAD&gt;
->>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
->>     &lt;/HEAD&gt;
->>     &lt;BODY&gt;
->>         &lt;H1&gt;Number: 89&lt;/H1&gt;
->>     &lt;/BODY&gt;
->> &lt;/HTML&gt;
+>> <!DOCTYPE html>
+>> <HTML lang="en">
+>>     <HEAD>
+>>         <TITLE>HBNB</TITLE>
+>>     </HEAD>
+>>     <BODY>
+>>         <H1>Number: 89</H1>
+>>     </BODY>
+>> </HTML>
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number_template/8.9 
->> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
->> &lt;title&gt;404 Not Found&lt;/title&gt;
->> &lt;h1&gt;Not Found&lt;/h1&gt;
->> &lt;p&gt;The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.&lt;/p&gt;
+>> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+>> <title>404 Not Found</title>
+>> <h1>Not Found</h1>
+>> <p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number_template/python 
->> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
->> &lt;title&gt;404 Not Found&lt;/title&gt;
->> &lt;h1&gt;Not Found&lt;/h1&gt;
->> &lt;p&gt;The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.&lt;/p&gt;
+>> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+>> <title>404 Not Found</title>
+>> <h1>Not Found</h1>
+>> <p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
 >> guillaume@ubuntu:~$ 
 >> ```
 
@@ -349,30 +349,30 @@ In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number_odd_or_even/89 ; echo ""
->> &lt;!DOCTYPE html&gt;
->> &lt;HTML lang="en"&gt;
->>     &lt;HEAD&gt;
->>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
->>     &lt;/HEAD&gt;
->>     &lt;BODY&gt;
->>         &lt;H1&gt;Number: 89 is odd&lt;/H1&gt;
->>     &lt;/BODY&gt;
->> &lt;/HTML&gt;
+>> <!DOCTYPE html>
+>> <HTML lang="en">
+>>     <HEAD>
+>>         <TITLE>HBNB</TITLE>
+>>     </HEAD>
+>>     <BODY>
+>>         <H1>Number: 89 is odd</H1>
+>>     </BODY>
+>> </HTML>
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number_odd_or_even/32 ; echo ""
->> &lt;!DOCTYPE html&gt;
->> &lt;HTML lang="en"&gt;
->>     &lt;HEAD&gt;
->>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
->>     &lt;/HEAD&gt;
->>     &lt;BODY&gt;
->>         &lt;H1&gt;Number: 32 is even&lt;/H1&gt;
->>     &lt;/BODY&gt;
->> &lt;/HTML&gt;
+>> <!DOCTYPE html>
+>> <HTML lang="en">
+>>     <HEAD>
+>>         <TITLE>HBNB</TITLE>
+>>     </HEAD>
+>>     <BODY>
+>>         <H1>Number: 32 is even</H1>
+>>     </BODY>
+>> </HTML>
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/number_odd_or_even/python 
->> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
->> &lt;title&gt;404 Not Found&lt;/title&gt;
->> &lt;h1&gt;Not Found&lt;/h1&gt;
->> &lt;p&gt;The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.&lt;/p&gt;
+>> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+>> <title>404 Not Found</title>
+>> <h1>Not Found</h1>
+>> <p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
 >> guillaume@ubuntu:~$ 
 >> ```
 
@@ -401,13 +401,13 @@ In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 
->> &gt;&gt;&gt; from models import storage
->> &gt;&gt;&gt; from models.state import State
->> &gt;&gt;&gt; len(storage.all(State))
+>> >>> from models import storage
+>> >>> from models.state import State
+>> >>> len(storage.all(State))
 >> 5
->> &gt;&gt;&gt; len(storage.all(State))
+>> >>> len(storage.all(State))
 >> 5
->> &gt;&gt;&gt; # Time to insert new data!
+>> >>> # Time to insert new data!
 >> ```
 > 
 > At this moment, in another tab:
@@ -421,15 +421,15 @@ In another tab:
 > And let’s go back the Python console:
 > 
 >> ```
->> &gt;&gt;&gt; # Time to insert new data!
->> &gt;&gt;&gt; len(storage.all(State))
+>> >>> # Time to insert new data!
+>> >>> len(storage.all(State))
 >> 5
->> &gt;&gt;&gt; # normal: the SQLAlchemy didn't reload his `Session`
->> &gt;&gt;&gt; # to force it, you must remove the current session to create a new one:
->> &gt;&gt;&gt; storage.close()
->> &gt;&gt;&gt; len(storage.all(State))
+>> >>> # normal: the SQLAlchemy didn't reload his `Session`
+>> >>> # to force it, you must remove the current session to create a new one:
+>> >>> storage.close()
+>> >>> len(storage.all(State))
 >> 6
->> &gt;&gt;&gt; # perfect!
+>> >>> # perfect!
 >> ```
 > 
 > And for the getter **`cities`** in the **`State`** model:
@@ -529,44 +529,44 @@ In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/states_list ; echo ""
->> &lt;!DOCTYPE html&gt;
->> &lt;HTML lang="en"&gt;
->>     &lt;HEAD&gt;
->>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
->>     &lt;/HEAD&gt;
->>     &lt;BODY&gt;
->>         &lt;H1&gt;States&lt;/H1&gt;
->>         &lt;UL&gt;
+>> <!DOCTYPE html>
+>> <HTML lang="en">
+>>     <HEAD>
+>>         <TITLE>HBNB</TITLE>
+>>     </HEAD>
+>>     <BODY>
+>>         <H1>States</H1>
+>>         <UL>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Alabama&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479545: <B>Alabama</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Arizona&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479546: <B>Arizona</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;California&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479547: <B>California</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Colorado&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479548: <B>Colorado</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Florida&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479549: <B>Florida</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479550: &lt;B&gt;Georgia&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479550: <B>Georgia</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Hawaii&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479551: <B>Hawaii</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Illinois&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479552: <B>Illinois</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479553: &lt;B&gt;Indiana&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479553: <B>Indiana</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Louisiana&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479554: <B>Louisiana</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Minnesota&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479555: <B>Minnesota</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Mississippi&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479556: <B>Mississippi</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Oregon&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479557: <B>Oregon</B></LI>
 >> 
->>         &lt;/UL&gt;
->>     &lt;/BODY&gt;
->> &lt;/HTML&gt;
+>>         </UL>
+>>     </BODY>
+>> </HTML>
 >> guillaume@ubuntu:~$ 
 >> ```
 
@@ -615,160 +615,160 @@ In another tab:
 > 
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/cities_by_states ; echo ""
->> &lt;!DOCTYPE html&gt;
->> &lt;HTML lang="en"&gt;
->>     &lt;HEAD&gt;
->>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
->>     &lt;/HEAD&gt;
->>     &lt;BODY&gt;
->>         &lt;H1&gt;States&lt;/H1&gt;
->>         &lt;UL&gt;
+>> <!DOCTYPE html>
+>> <HTML lang="en">
+>>     <HEAD>
+>>         <TITLE>HBNB</TITLE>
+>>     </HEAD>
+>>     <BODY>
+>>         <H1>States</H1>
+>>         <UL>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Alabama&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479545: <B>Alabama</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Akron&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479545: <B>Akron</B></LI>
 >> 
->>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Babbie&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>531a55f4-7d82-47d9-b54c-a76916479545: <B>Babbie</B></LI>
 >> 
->>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Calera&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>541a55f4-7d82-47d9-b54c-a76916479545: <B>Calera</B></LI>
 >> 
->>                         &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Fairfield&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>551a55f4-7d82-47d9-b54c-a76916479545: <B>Fairfield</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Arizona&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479546: <B>Arizona</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Douglas&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479546: <B>Douglas</B></LI>
 >> 
->>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Kearny&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>531a55f4-7d82-47d9-b54c-a76916479546: <B>Kearny</B></LI>
 >> 
->>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Tempe&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>541a55f4-7d82-47d9-b54c-a76916479546: <B>Tempe</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;California&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479547: <B>California</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;Fremont&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>541a55f4-7d82-47d9-b54c-a76916479547: <B>Fremont</B></LI>
 >> 
->>                         &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;Napa&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>551a55f4-7d82-47d9-b54c-a76916479547: <B>Napa</B></LI>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;San Francisco&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479547: <B>San Francisco</B></LI>
 >> 
->>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;San Jose&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>531a55f4-7d82-47d9-b54c-a76916479547: <B>San Jose</B></LI>
 >> 
->>                         &lt;LI&gt;561a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;Sonoma&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>561a55f4-7d82-47d9-b54c-a76916479547: <B>Sonoma</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Colorado&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479548: <B>Colorado</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Denver&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479548: <B>Denver</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Florida&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479549: <B>Florida</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Miami&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479549: <B>Miami</B></LI>
 >> 
->>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Orlando&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>531a55f4-7d82-47d9-b54c-a76916479549: <B>Orlando</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479550: &lt;B&gt;Georgia&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479550: <B>Georgia</B>
+>>                 <UL>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Hawaii&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479551: <B>Hawaii</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Honolulu&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479551: <B>Honolulu</B></LI>
 >> 
->>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Kailua&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>531a55f4-7d82-47d9-b54c-a76916479551: <B>Kailua</B></LI>
 >> 
->>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Pearl city&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>541a55f4-7d82-47d9-b54c-a76916479551: <B>Pearl city</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Illinois&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479552: <B>Illinois</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Chicago&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479552: <B>Chicago</B></LI>
 >> 
->>                         &lt;LI&gt;561a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Joliet&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>561a55f4-7d82-47d9-b54c-a76916479552: <B>Joliet</B></LI>
 >> 
->>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Naperville&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>541a55f4-7d82-47d9-b54c-a76916479552: <B>Naperville</B></LI>
 >> 
->>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Peoria&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>531a55f4-7d82-47d9-b54c-a76916479552: <B>Peoria</B></LI>
 >> 
->>                         &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Urbana&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>551a55f4-7d82-47d9-b54c-a76916479552: <B>Urbana</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479553: &lt;B&gt;Indiana&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479553: <B>Indiana</B>
+>>                 <UL>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Louisiana&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479554: <B>Louisiana</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Baton rouge&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>531a55f4-7d82-47d9-b54c-a76916479554: <B>Baton rouge</B></LI>
 >> 
->>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Lafayette&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>541a55f4-7d82-47d9-b54c-a76916479554: <B>Lafayette</B></LI>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;New Orleans&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479554: <B>New Orleans</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Minnesota&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479555: <B>Minnesota</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Saint Paul&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479555: <B>Saint Paul</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Mississippi&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479556: <B>Mississippi</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Jackson&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479556: <B>Jackson</B></LI>
 >> 
->>                         &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Meridian&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>541a55f4-7d82-47d9-b54c-a76916479556: <B>Meridian</B></LI>
 >> 
->>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Tupelo&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>531a55f4-7d82-47d9-b54c-a76916479556: <B>Tupelo</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Oregon&lt;/B&gt;
->>                 &lt;UL&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479557: <B>Oregon</B>
+>>                 <UL>
 >> 
->>                         &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Eugene&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>531a55f4-7d82-47d9-b54c-a76916479557: <B>Eugene</B></LI>
 >> 
->>                         &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Portland&lt;/B&gt;&lt;/LI&gt;
+>>                         <LI>521a55f4-7d82-47d9-b54c-a76916479557: <B>Portland</B></LI>
 >> 
->>                 &lt;/UL&gt;
->>             &lt;/LI&gt;
+>>                 </UL>
+>>             </LI>
 >> 
->>         &lt;/UL&gt;
->>     &lt;/BODY&gt;
->> &lt;/HTML&gt;
+>>         </UL>
+>>     </BODY>
+>> </HTML>
 >> guillaume@ubuntu:~$ 
 >> ```
 
@@ -826,82 +826,82 @@ In another tab:
 >
 >> ```
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/states ; echo ""
->> &lt;!DOCTYPE html&gt;
->> &lt;HTML lang="en"&gt;
->>     &lt;HEAD&gt;
->>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
->>     &lt;/HEAD&gt;
->>     &lt;BODY&gt;
+>> <!DOCTYPE html>
+>> <HTML lang="en">
+>>     <HEAD>
+>>         <TITLE>HBNB</TITLE>
+>>     </HEAD>
+>>     <BODY>
 >> 
->>         &lt;H1&gt;States&lt;/H1&gt;
->>         &lt;UL&gt;
+>>         <H1>States</H1>
+>>         <UL>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479545: &lt;B&gt;Alabama&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479545: <B>Alabama</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479546: &lt;B&gt;Arizona&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479546: <B>Arizona</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479547: &lt;B&gt;California&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479547: <B>California</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479548: &lt;B&gt;Colorado&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479548: <B>Colorado</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479549: &lt;B&gt;Florida&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479549: <B>Florida</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479550: &lt;B&gt;Georgia&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479550: <B>Georgia</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479551: &lt;B&gt;Hawaii&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479551: <B>Hawaii</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Illinois&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479552: <B>Illinois</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479553: &lt;B&gt;Indiana&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479553: <B>Indiana</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479554: &lt;B&gt;Louisiana&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479554: <B>Louisiana</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479555: &lt;B&gt;Minnesota&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479555: <B>Minnesota</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479556: &lt;B&gt;Mississippi&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479556: <B>Mississippi</B></LI>
 >> 
->>             &lt;LI&gt;421a55f4-7d82-47d9-b54c-a76916479557: &lt;B&gt;Oregon&lt;/B&gt;&lt;/LI&gt;
+>>             <LI>421a55f4-7d82-47d9-b54c-a76916479557: <B>Oregon</B></LI>
 >> 
->>         &lt;/UL&gt;
+>>         </UL>
 >> 
->>     &lt;/BODY&gt;
->> &lt;/HTML&gt;
+>>     </BODY>
+>> </HTML>
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/states/421a55f4-7d82-47d9-b54c-a76916479552 ; echo ""
->> &lt;!DOCTYPE html&gt;
->> &lt;HTML lang="en"&gt;
->>     &lt;HEAD&gt;
->>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
->>     &lt;/HEAD&gt;
->>     &lt;BODY&gt;
+>> <!DOCTYPE html>
+>> <HTML lang="en">
+>>     <HEAD>
+>>         <TITLE>HBNB</TITLE>
+>>     </HEAD>
+>>     <BODY>
 >> 
->>         &lt;H1&gt;State: Illinois&lt;/H1&gt;
->>         &lt;H3&gt;Cities:&lt;/H3&gt;
->>         &lt;UL&gt;
->>                 &lt;LI&gt;521a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Chicago&lt;/B&gt;&lt;/LI&gt;
+>>         <H1>State: Illinois</H1>
+>>         <H3>Cities:</H3>
+>>         <UL>
+>>                 <LI>521a55f4-7d82-47d9-b54c-a76916479552: <B>Chicago</B></LI>
 >> 
->>                 &lt;LI&gt;561a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Joliet&lt;/B&gt;&lt;/LI&gt;
+>>                 <LI>561a55f4-7d82-47d9-b54c-a76916479552: <B>Joliet</B></LI>
 >> 
->>                 &lt;LI&gt;541a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Naperville&lt;/B&gt;&lt;/LI&gt;
+>>                 <LI>541a55f4-7d82-47d9-b54c-a76916479552: <B>Naperville</B></LI>
 >> 
->>                 &lt;LI&gt;531a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Peoria&lt;/B&gt;&lt;/LI&gt;
+>>                 <LI>531a55f4-7d82-47d9-b54c-a76916479552: <B>Peoria</B></LI>
 >> 
->>                 &lt;LI&gt;551a55f4-7d82-47d9-b54c-a76916479552: &lt;B&gt;Urbana&lt;/B&gt;&lt;/LI&gt;
->>         &lt;/UL&gt;
+>>                 <LI>551a55f4-7d82-47d9-b54c-a76916479552: <B>Urbana</B></LI>
+>>         </UL>
 >> 
->>     &lt;/BODY&gt;
->> &lt;/HTML&gt;
+>>     </BODY>
+>> </HTML>
 >> guillaume@ubuntu:~$ curl 0.0.0.0:5000/states/holberton ; echo ""
->> &lt;!DOCTYPE html&gt;
->> &lt;HTML lang="en"&gt;
->>     &lt;HEAD&gt;
->>         &lt;TITLE&gt;HBNB&lt;/TITLE&gt;
->>     &lt;/HEAD&gt;
->>     &lt;BODY&gt;
+>> <!DOCTYPE html>
+>> <HTML lang="en">
+>>     <HEAD>
+>>         <TITLE>HBNB</TITLE>
+>>     </HEAD>
+>>     <BODY>
 >> 
->>         &lt;H1&gt;Not found!&lt;/H1&gt;
+>>         <H1>Not found!</H1>
 >> 
->>     &lt;/BODY&gt;
->> &lt;/HTML&gt;
+>>     </BODY>
+>> </HTML>
 >> guillaume@ubuntu:~$ 
 >> ```
 
