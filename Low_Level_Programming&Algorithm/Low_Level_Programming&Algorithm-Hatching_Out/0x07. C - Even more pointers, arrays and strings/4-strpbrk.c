@@ -37,23 +37,13 @@ char *_strpbrk(char *s, char *accept)
 {
 	for (; *s != '\0'; s++)
 	{
-		while (*accept != '\0')
+    char *a = accept;
+		while (*a != '\0')
 		{
-			if (*s == *accept)
+			if (*s == *a)
 				return (s);
-			accept++;
+			a++;
 		}
 	}
 	return (NULL);
-}
-
-int main(void)
-{
-	    char *s = "hello, world";
-		char *f = "world";
-		char *t;
-
-		t = _strpbrk(s, f);
-		printf("%s\n", t);
-		return (0);
 }
