@@ -1,39 +1,24 @@
 # 0x03. Shell, init files, variables and expansions
 
-DevOpsShellBash
-
--   Weight: 1
--   Project over - took place from Oct 3, 2023 7:00 AM to Oct 4, 2023 7:00 AM
--   An auto review will be launched at the deadline
-
-#### In a nutshell…
-
--   **Auto QA review:** 70.0/70 mandatory & 0.0/20 optional
--   **Altogether:**  **100.0%**
-    -   Mandatory: 100.0%
-    -   Optional: 0.0%
-    -   Calculation:  100.0% + (100.0% \* 0.0%)  == **100.0%**
-
 ## About Bash projects
 
 Unless stated, all your projects will be auto-corrected with Ubuntu 20.04 LTS.
 
-### Concepts
+# Concepts
+> 
+> _For this project, we expect you to look at this concept:_
+> 
+> -   [Struggling with the sandbox? Try this: Using Docker & WSL on your local host](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Using-Docker%26WSL-on-your-local-host.md)
 
-_For this project, we expect you to look at this concept:_
+# Resources
 
--   [Struggling with the sandbox? Try this: Using Docker & WSL on your local host](https://intranet.alxswe.com/concepts/100039)
-
-## Resources
-
-**Read or watch**:
-
--   [Expansions](https://intranet.alxswe.com/rltoken/oXnzBjLBA9t9dr7WuftdmQ "Expansions")
--   [Shell Arithmetic](https://intranet.alxswe.com/rltoken/PLSUQnBcKKU5eEgRfRDlug "Shell Arithmetic")
--   [Variables](https://intranet.alxswe.com/rltoken/SvdGNZJjKsPghzZEhaWu4Q "Variables")
--   [Shell initialization files](https://intranet.alxswe.com/rltoken/tqud57kjsSYgDfeZDlwl3g "Shell initialization files")
--   [The alias Command](https://intranet.alxswe.com/rltoken/1Z3nYPjmidqQJXcWQ9Fkug "The alias Command")
--   [Technical Writing](https://intranet.alxswe.com/rltoken/wYrZr3t3DeAE8PpYHYWGiw "Technical Writing")
+## **Read or watch**:
+-   [Expansions](https://linuxcommand.org/lc3_lts0080.php "Expansions")
+-   [Shell Arithmetic](https://www.gnu.org/software/bash/manual/html_node/Shell-Arithmetic.html "Shell Arithmetic")
+-   [Variables](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html "Variables")
+-   [Shell initialization files](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_01.html "Shell initialization files")
+-   [The alias Command](https://www.linfo.org/alias.html "The alias Command")
+-   [Technical Writing](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2021/6/9112669886fd446a2aa3113c31319d1f468dc160.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250328%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250328T235347Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=858cb027815163101eec2e7df2fde9d2ae56fda5f0153bc77804fd1b4d4df3cb "Technical Writing")
 
 **man or help**:
 
