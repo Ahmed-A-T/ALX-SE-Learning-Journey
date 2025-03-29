@@ -285,718 +285,280 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 -   Directory: **`0x03-shell_variables_expansions`**
 -   File: **`7-create_global_variable`**
 
-Check submission
-
-×
-
-#### 7\. Global variable
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 7\. Global variable
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 8\. Every addition to true knowledge is an addition to human power
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that prints the result of the addition of 128 with the value stored in the environment variable `TRUEKNOWLEDGE`, followed by a new line.
-
-```
-julien@production-503e7013:~$ export TRUEKNOWLEDGE=1209
-julien@production-503e7013:~$ ./8-true_knowledge | cat -e
-1337$
-julien@production-503e7013:~$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `8-true_knowledge`
-
-Check submission
-
-×
-
-#### 8\. Every addition to true knowledge is an addition to human power
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 8\. Every addition to true knowledge is an addition to human power
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 9\. Divide and rule
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that prints the result of `POWER` divided by `DIVIDE`, followed by a new line.
-
--   `POWER` and `DIVIDE` are environment variables
-
-```
-julien@production-503e7013:~$ export POWER=42784
-julien@production-503e7013:~$ export DIVIDE=32
-julien@production-503e7013:~$ ./9-divide_and_rule | cat -e
-1337$
-julien@production-503e7013:~$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `9-divide_and_rule`
-
-Check submission
-
-×
-
-#### 9\. Divide and rule
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 9\. Divide and rule
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 10\. Love is anterior to life, posterior to death, initial of creation, and the exponent of breath
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that displays the result of `BREATH` to the power `LOVE`
-
--   `BREATH` and `LOVE` are environment variables
--   The script should display the result, followed by a new line
-
-```
-julien@production-503e7013:~/$ export BREATH=4
-julien@production-503e7013:~/$ export LOVE=3
-julien@production-503e7013:~/$ ./10-love_exponent_breath
-64
-julien@production-503e7013:~/$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `10-love_exponent_breath`
-
-Check submission
-
-×
-
-#### 10\. Love is anterior to life, posterior to death, initial of creation, and the exponent of breath
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 10\. Love is anterior to life, posterior to death, initial of creation, and the exponent of breath
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 11\. There are 10 types of people in the world -- Those who understand binary, and those who don't
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that converts a number from base 2 to base 10.
-
--   The number in base 2 is stored in the environment variable `BINARY`
--   The script should display the number in base 10, followed by a new line
-
-```
-julien@production-503e7013:~/$ export BINARY=10100111001
-julien@production-503e7013:~/$ ./11-binary_to_decimal
-1337
-julien@production-503e7013:~/$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `11-binary_to_decimal`
-
-Check submission
-
-×
-
-#### 11\. There are 10 types of people in the world -- Those who understand binary, and those who don't
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 11\. There are 10 types of people in the world -- Those who understand binary, and those who don't
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 12\. Combination
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Create a script that prints all possible combinations of two letters, except `oo`.
-
--   Letters are lower cases, from `a` to `z`
--   One combination per line
--   The output should be alpha ordered, starting with `aa`
--   Do not print `oo`
--   Your script file should contain maximum 64 characters
-
-```
-julien@ubuntu:/tmp/0x03$ echo $((26 ** 2 -1))
-675
-julien@ubuntu:/tmp/0x03$ ./12-combinations | wc -l
-675
-julien@ubuntu:/tmp/0x03$ 
-julien@ubuntu:/tmp/0x03$ ./12-combinations | tail -303 | head -10
-oi
-oj
-ok
-ol
-om
-on
-op
-oq
-or
-os
-julien@ubuntu:/tmp/0x03$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `12-combinations`
-
-Check submission
-
-×
-
-#### 12\. Combination
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 12\. Combination
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 13\. Floats
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Write a script that prints a number with two decimal places, followed by a new line.
-
-The number will be stored in the environment variable `NUM`.
-
-```
-ubuntu@ip-172-31-63-244:~/0x03$ export NUM=0
-ubuntu@ip-172-31-63-244:~/0x03$ ./13-print_float
-0.00
-ubuntu@ip-172-31-63-244:~/0x03$ export NUM=98
-ubuntu@ip-172-31-63-244:~/0x03$ ./13-print_float
-98.00
-ubuntu@ip-172-31-63-244:~/0x03$ export NUM=3.14159265359
-ubuntu@ip-172-31-63-244:~/0x03$ ./13-print_float
-3.14
-ubuntu@ip-172-31-63-244:~/0x03$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `13-print_float`
-
-Check submission
-
-×
-
-#### 13\. Floats
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 13\. Floats
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 14\. Decimal to Hexadecimal
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a script that converts a number from base 10 to base 16.
-
--   The number in base 10 is stored in the environment variable `DECIMAL`
--   The script should display the number in base 16, followed by a new line
-
-```
-julien@production-503e7013:~/$ export DECIMAL=16
-julien@production-503e7013:~/$ ./100-decimal_to_hexadecimal
-10
-julien@production-503e7013:~/$ export DECIMAL=1337
-julien@production-503e7013:~/$ ./100-decimal_to_hexadecimal | cat -e
-539$
-julien@production-503e7013:~/$ export DECIMAL=15
-julien@production-503e7013:~/$ ./100-decimal_to_hexadecimal | cat -e
-f$
-julien@production-503e7013:~/$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `100-decimal_to_hexadecimal`
-
-Check submission
-
-×
-
-#### 14\. Decimal to Hexadecimal
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 14\. Decimal to Hexadecimal
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 15\. Everyone is a proponent of strong encryption
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII.
-
-```
-julien@production-503e7013:~/shell/fun_with_the_shell$ cat quote
-"Everyone is a proponent of strong encryption."
-- Dorothy E. Denning
-julien@production-503e7013:~/shell/fun_with_the_shell$ ./101-rot13 &lt; quote
-"Rirelbar vf n cebcbarag bs fgebat rapelcgvba."
-- Qbebgul R. Qraavat
-julien@production-503e7013:~/shell/fun_with_the_shell$
-
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `101-rot13`
-
-Check submission
-
-×
-
-#### 15\. Everyone is a proponent of strong encryption
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 15\. Everyone is a proponent of strong encryption
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 16\. The eggs of the brood need to be an odd number
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a script that prints every other line from the input, starting with the first line.
-
-```
-ubuntu@ip-172-31-63-244:/$ \ls -1
-bin
-boot
-dev
-etc
-home
-initrd.img
-lib
-lib32
-lib64
-libx32
-lost+found
-media
-mnt
-opt
-proc
-root
-run
-sbin
-srv
-sys
-t
-#t#
-t~
-tmp
-usr
-var
-vmlinuz
-whoareyou
-ubuntu@ip-172-31-63-244:/$ \ls -1 | ./102-odd
-bin
-dev
-home
-lib
-lib64
-lost+found
-mnt
-proc
-run
-srv
-t
-t~
-usr
-vmlinuz
-ubuntu@ip-172-31-63-244:/$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `102-odd`
-
-Check submission
-
-×
-
-#### 16\. The eggs of the brood need to be an odd number
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 16\. The eggs of the brood need to be an odd number
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 17\. I'm an instant star. Just add water and stir.
-
-#advanced
-
-Score: 0.0% (Checks completed: 0.0%)
-
-Write a shell script that adds the two numbers stored in the environment variables `WATER` and `STIR` and prints the result.
-
--   `WATER` is in base `water`
--   `STIR` is in base `stir.`
--   The result should be in base `bestchol`
-
-```
-julien@production-503e7013:~$ export WATER="ewwatratewa"
-julien@production-503e7013:~$ export STIR="ti.itirtrtr"
-julien@production-503e7013:~$ ./103-water_and_stir
-shtbeolhc
-julien@production-503e7013:~$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `103-water_and_stir`
+---
+
+## 8\. Every addition to true knowledge is an addition to human power
+> Write a script that prints the result of the addition of 128 with the value stored in the environment variable **`TRUEKNOWLEDGE`**, followed by a new line.
+> 
+>> ```
+>> julien@production-503e7013:~$ export TRUEKNOWLEDGE=1209
+>> julien@production-503e7013:~$ ./8-true_knowledge | cat -e
+>> 1337$
+>> julien@production-503e7013:~$
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`8-true_knowledge`**
+
+---
+
+## 9\. Divide and rule
+> Write a script that prints the result of **`POWER`** divided by **`DIVIDE`**, followed by a new line.
+> 
+> -   **`POWER`** and **`DIVIDE`** are environment variables
+> 
+>> ```
+>> julien@production-503e7013:~$ export POWER=42784
+>> julien@production-503e7013:~$ export DIVIDE=32
+>> julien@production-503e7013:~$ ./9-divide_and_rule | cat -e
+>> 1337$
+>> julien@production-503e7013:~$
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`9-divide_and_rule`**
+
+---
+
+## 10\. Love is anterior to life, posterior to death, initial of creation, and the exponent of breath
+> Write a script that displays the result of **`BREATH`** to the power **`LOVE`**
+> 
+> -   **`BREATH`** and **`LOVE`** are environment variables
+> -   The script should display the result, followed by a new line
+> 
+>> ```
+>> julien@production-503e7013:~/$ export BREATH=4
+>> julien@production-503e7013:~/$ export LOVE=3
+>> julien@production-503e7013:~/$ ./10-love_exponent_breath
+>> 64
+>> julien@production-503e7013:~/$
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`10-love_exponent_breath`**
+
+---
+
+## 11\. There are 10 types of people in the world -- Those who understand binary, and those who don't
+> Write a script that converts a number from base 2 to base 10.
+> 
+> -   The number in base 2 is stored in the environment variable **`BINARY`**
+> -   The script should display the number in base 10, followed by a new line
+> 
+>> ```
+>> julien@production-503e7013:~/$ export BINARY=10100111001
+>> julien@production-503e7013:~/$ ./11-binary_to_decimal
+>> 1337
+>> julien@production-503e7013:~/$
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`11-binary_to_decimal`**
+
+---
+
+## 12\. Combination
+> Create a script that prints all possible combinations of two letters, except **`oo`**.
+> 
+> -   Letters are lower cases, from **`a`** to **`z`**
+> -   One combination per line
+> -   The output should be alpha ordered, starting with **`aa`**
+> -   Do not print **`oo`**
+> -   Your script file should contain maximum 64 characters
+> 
+>> ```
+>> julien@ubuntu:/tmp/0x03$ echo $((26 ** 2 -1))
+>> 675
+>> julien@ubuntu:/tmp/0x03$ ./12-combinations | wc -l
+>> 675
+>> julien@ubuntu:/tmp/0x03$ 
+>> julien@ubuntu:/tmp/0x03$ ./12-combinations | tail -303 | head -10
+>> oi
+>> oj
+>> ok
+>> ol
+>> om
+>> on
+>> op
+>> oq
+>> or
+>> os
+>> julien@ubuntu:/tmp/0x03$ 
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`12-combinations`**
+
+---
+
+## 13\. Floats
+> Write a script that prints a number with two decimal places, followed by a new line.
+> 
+> The number will be stored in the environment variable **`NUM`**.
+> 
+>> ```
+>> ubuntu@ip-172-31-63-244:~/0x03$ export NUM=0
+>> ubuntu@ip-172-31-63-244:~/0x03$ ./13-print_float
+>> 0.00
+>> ubuntu@ip-172-31-63-244:~/0x03$ export NUM=98
+>> ubuntu@ip-172-31-63-244:~/0x03$ ./13-print_float
+>> 98.00
+>> ubuntu@ip-172-31-63-244:~/0x03$ export NUM=3.14159265359
+>> ubuntu@ip-172-31-63-244:~/0x03$ ./13-print_float
+>> 3.14
+>> ubuntu@ip-172-31-63-244:~/0x03$
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`13-print_float`**
+
+---
+
+## 14\. Decimal to Hexadecimal
+> Write a script that converts a number from base 10 to base 16.
+> 
+> -   The number in base 10 is stored in the environment variable **`DECIMAL`**
+> -   The script should display the number in base 16, followed by a new line
+> 
+>> ```
+>> julien@production-503e7013:~/$ export DECIMAL=16
+>> julien@production-503e7013:~/$ ./100-decimal_to_hexadecimal
+>> 10
+>> julien@production-503e7013:~/$ export DECIMAL=1337
+>> julien@production-503e7013:~/$ ./100-decimal_to_hexadecimal | cat -e
+>> 539$
+>> julien@production-503e7013:~/$ export DECIMAL=15
+>> julien@production-503e7013:~/$ ./100-decimal_to_hexadecimal | cat -e
+>> f$
+>> julien@production-503e7013:~/$
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`100-decimal_to_hexadecimal`**
+
+---
+
+## 15\. Everyone is a proponent of strong encryption
+> Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII.
+> 
+>> ```
+>> julien@production-503e7013:~/shell/fun_with_the_shell$ cat quote
+>> "Everyone is a proponent of strong encryption."
+>> - Dorothy E. Denning
+>> julien@production-503e7013:~/shell/fun_with_the_shell$ ./101-rot13 &lt; quote
+>> "Rirelbar vf n cebcbarag bs fgebat rapelcgvba."
+>> - Qbebgul R. Qraavat
+>> julien@production-503e7013:~/shell/fun_with_the_shell$
+>> 
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`101-rot13`**
+
+---
+
+## 16\. The eggs of the brood need to be an odd number
+> Write a script that prints every other line from the input, starting with the first line.
+> 
+>> ```
+>> ubuntu@ip-172-31-63-244:/$ \ls -1
+>> bin
+>> boot
+>> dev
+>> etc
+>> home
+>> initrd.img
+>> lib
+>> lib32
+>> lib64
+>> libx32
+>> lost+found
+>> media
+>> mnt
+>> opt
+>> proc
+>> root
+>> run
+>> sbin
+>> srv
+>> sys
+>> t
+>> #t#
+>> t~
+>> tmp
+>> usr
+>> var
+>> vmlinuz
+>> whoareyou
+>> ubuntu@ip-172-31-63-244:/$ \ls -1 | ./102-odd
+>> bin
+>> dev
+>> home
+>> lib
+>> lib64
+>> lost+found
+>> mnt
+>> proc
+>> run
+>> srv
+>> t
+>> t~
+>> usr
+>> vmlinuz
+>> ubuntu@ip-172-31-63-244:/$
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`102-odd`**
+
+---
+
+## 17\. I'm an instant star. Just add water and stir.
+> Write a shell script that adds the two numbers stored in the environment variables **`WATER`** and **`STIR`** and prints the result.
+> 
+> -   **`WATER`** is in base **`water`**
+> -   **`STIR`** is in base **`stir.`**
+> -   The result should be in base **`bestchol`**
+> 
+>> ```
+>> julien@production-503e7013:~$ export WATER="ewwatratewa"
+>> julien@production-503e7013:~$ export STIR="ti.itirtrtr"
+>> julien@production-503e7013:~$ ./103-water_and_stir
+>> shtbeolhc
+>> julien@production-503e7013:~$
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`103-water_and_stir`**
+
+---
