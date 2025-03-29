@@ -25,7 +25,7 @@
 > -   **`if`**
 
 # Learning Objectives
-At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/ "explain to anyone"), **without the help of Google**:
+> At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/ "explain to anyone"), **without the help of Google**:
 
 # General
 > -   How to create SSH keys
@@ -52,21 +52,21 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ## Shellcheck
 
-[Shellcheck](https://github.com/koalaman/shellcheck "Shellcheck") is a tool that will help you write proper Bash scripts. It will make recommendations on your syntax and semantics and provide advice on edge cases that you might not have thought about. **`Shellcheck`** is your friend! **All your Bash scripts must pass **`Shellcheck`** without any error or you will not get any points on the task**.
-
-**`Shellcheck`** is available on the school’s computers. If you want to use it on your own computer, here is how to [install it](https://github.com/koalaman/shellcheck#installing "install it").
-
-Examples:
-
-Not passing **`Shellcheck`**:  
-  
-![](assets/0x04-01.png)
-
-Passing **`Shellcheck`**:  
-  
-![](assets/0x04-02.png)
-
-For every feedback, Shellcheck will provide a code that you can use to get more information about the issue, for example for code **`SC2034`**, you can browse [https://github.com/koalaman/shellcheck/wiki/SC2034](https://github.com/koalaman/shellcheck/wiki/SC2034).
+> [Shellcheck](https://github.com/koalaman/shellcheck "Shellcheck") is a tool that will help you write proper Bash scripts. It will make recommendations on your syntax and semantics and provide advice on edge cases that you might not have thought about. **`Shellcheck`** is your friend! **All your Bash scripts must pass **`Shellcheck`** without any error or you will not get any points on the task**.
+> 
+> **`Shellcheck`** is available on the school’s computers. If you want to use it on your own computer, here is how to [install it](https://github.com/koalaman/shellcheck#installing "install it").
+> 
+> Examples:
+> 
+> Not passing **`Shellcheck`**:  
+>   
+> ![](assets/0x04-01.png)
+> 
+> Passing **`Shellcheck`**:  
+>   
+> ![](assets/0x04-02.png)
+> 
+> For every feedback, Shellcheck will provide a code that you can use to get more information about the issue, for example for code **`SC2034`**, you can browse [https://github.com/koalaman/shellcheck/wiki/SC2034](https://github.com/koalaman/shellcheck/wiki/SC2034).
 
 ## Tasks
 
