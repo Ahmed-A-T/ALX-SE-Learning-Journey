@@ -56,130 +56,52 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 ## Shell Arithmetic
 > -   How to perform arithmetic operations with the shell
 
-### The **`alias`** Command
+## The **`alias`** Command
+> -   How to create an alias
+> -   How to list aliases
+> -   How to temporarily disable an alias
 
--   How to create an alias
--   How to list aliases
--   How to temporarily disable an alias
+## Other **`help`** pages
+> -   How to execute commands from a file in the current shell
 
-### Other `help` pages
+# Requirements
 
--   How to execute commands from a file in the current shell
+## General
+> -   Allowed editors: **`vi`**, **`vim`**, **`emacs`**
+> -   All your scripts will be tested on Ubuntu 20.04 LTS
+> -   All your scripts should be exactly two lines long (**`$ wc -l file`** should print 2)
+> -   All your files should end with a new line ([why?](http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file/18789))
+> -   The first line of all your files should be exactly **`#!/bin/bash`**
+> -   A **`README.md`** file, at the root of the folder of the project, describing what each script is doing
+> -   You are not allowed to use **`&&`**, **`||`** or **`;`**
+> -   You are not allowed to use **`bc`**, **`sed`** or **`awk`**
+> -   All your files must be executable
 
-### Copyright - Plagiarism
+# More Info
+> Read your **`/etc/profile`**, **`/etc/inputrc`** and **`~/.bashrc`** files.
+> 
+> Look at some files in the **`/etc/profile.d`** directory.
+> 
+> Note: You do not have to learn about **`awk`**, **`tar`**, **`bzip2`**, **`date`**, **`scp`**, **`ulimit`**, **`umask`**, or shell scripting, yet.
 
--   You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
--   You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
--   You are not allowed to publish any content of this project.
--   Any form of plagiarism is strictly forbidden and will result in removal from the program.
+---
 
-## Requirements
+# Tasks
 
-### General
-
--   Allowed editors: `vi`, `vim`, `emacs`
--   All your scripts will be tested on Ubuntu 20.04 LTS
--   All your scripts should be exactly two lines long (`$ wc -l file` should print 2)
--   All your files should end with a new line ([why?](http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file/18789))
--   The first line of all your files should be exactly `#!/bin/bash`
--   A `README.md` file, at the root of the folder of the project, describing what each script is doing
--   You are not allowed to use `&&`, `||` or `;`
--   You are not allowed to use `bc`, `sed` or `awk`
--   All your files must be executable
-
-## More Info
-
-Read your `/etc/profile`, `/etc/inputrc` and `~/.bashrc` files.
-
-Look at some files in the `/etc/profile.d` directory.
-
-Note: You do not have to learn about `awk`, `tar`, `bzip2`, `date`, `scp`, `ulimit`, `umask`, or shell scripting, yet.
-
-### Quiz questions
-
-**Great!** You've completed the quiz successfully! Keep going! (Show quiz)
-
-#### Question #0
-
-Which command should I use to display the exit code of the previous command?
-
--   `echo ?`
-    
--   `echo $CODE`
-    
--   `echo $EXITCODE`
-    
--   `echo $?`
-    
-
-#### Question #1
-
-Which command should I use to display a variable?
-
--   `ls $MYVAR`
-    
--   `echo $MYVAR`
-    
--   `cd $MYVAR`
-    
--   `export $MYVAR`
-    
-
-#### Question #2
-
-Which command should I use to define a new command `push` for pushing in Github?
-
-Example:
-
-```
-$ push 
-Everything up-to-date
-$
-```
-
--   `alias push="git push"`
-    
--   `export push=git push`
-    
--   `export push="git push"`
-    
--   `alias push=git push`
-    
-
-#### Question #3
-
-What is the variable name who contains the previous working directory path?
-
--   `OLDPWD`
-    
--   `PREVDIR`
-    
--   `PREVPWD`
-    
--   `OLDDIR`
-    
-
-## Tasks
-
-### 0\. <o>
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Create a script that creates an alias.
-
--   Name: `ls`
--   Value: `rm *`
-
-```
-julien@ubuntu:/tmp/0x03$ ls
-0-alias  file1  file2
-julien@ubuntu:/tmp/0x03$ source ./0-alias 
-julien@ubuntu:/tmp/0x03$ ls
-julien@ubuntu:/tmp/0x03$ \ls
-julien@ubuntu:/tmp/0x03$ 
-```
+## 0\. <o>
+> Create a script that creates an alias.
+> 
+> -   Name: **`ls`**
+> -   Value: **`rm *`**
+> 
+>> ```
+>> julien@ubuntu:/tmp/0x03$ ls
+>> 0-alias  file1  file2
+>> julien@ubuntu:/tmp/0x03$ source ./0-alias 
+>> julien@ubuntu:/tmp/0x03$ ls
+>> julien@ubuntu:/tmp/0x03$ \ls
+>> julien@ubuntu:/tmp/0x03$ 
+>> ```
 
 **Repo:**
 
