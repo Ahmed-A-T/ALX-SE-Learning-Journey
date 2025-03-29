@@ -110,449 +110,180 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ---
 
-### 1\. Hello you
+## 1\. Hello you
+> Create a script that prints **`hello user`**, where user is the current Linux user.
+> 
+>> ```
+>> julien@ubuntu:/tmp/0x03$ id
+>> uid=1000(julien) gid=1000(julien) groups=1000(julien),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
+>> julien@ubuntu:/tmp/0x03$ ./1-hello_you 
+>> hello julien
+>> julien@ubuntu:/tmp/0x03$ 
+>> ```
 
-mandatory
+### **Repo:**
 
-Score: 100.0% (Checks completed: 100.0%)
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`1-hello_you`**
 
-Create a script that prints `hello user`, where user is the current Linux user.
+---
 
+## 2\. The path to success is to take massive, determined action
+> Add **`/action`** to the **`PATH`**. **`/action`** should be the last directory the shell looks into when looking for a program.
+> 
+>> ```
+>> julien@ubuntu:/tmp/0x03$ echo $PATH
+>> /home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+>> julien@ubuntu:/tmp/0x03$ source ./2-path 
+>> julien@ubuntu:/tmp/0x03$ echo $PATH
+>> /home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/action
+>> julien@ubuntu:/tmp/0x03$ 
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`2-path`**
+
+---
+
+## 3\. If the path be beautiful, let us not ask where it leads
+> Create a script that counts the number of directories in the **`PATH`**.
+> 
 ```
-julien@ubuntu:/tmp/0x03$ id
-uid=1000(julien) gid=1000(julien) groups=1000(julien),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
-julien@ubuntu:/tmp/0x03$ ./1-hello_you 
-hello julien
-julien@ubuntu:/tmp/0x03$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `1-hello_you`
-
-Check submission
-
-×
-
-#### 1\. Hello you
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 1\. Hello you
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 2\. The path to success is to take massive, determined action
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Add `/action` to the `PATH`. `/action` should be the last directory the shell looks into when looking for a program.
-
-```
-julien@ubuntu:/tmp/0x03$ echo $PATH
-/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-julien@ubuntu:/tmp/0x03$ source ./2-path 
-julien@ubuntu:/tmp/0x03$ echo $PATH
-/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/action
-julien@ubuntu:/tmp/0x03$ 
+>> julien@ubuntu:/tmp/0x03$ echo $PATH
+>> /home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+>> julien@ubuntu:/tmp/0x03$ . ./3-paths 
+>> 11
+>> julien@ubuntu:/tmp/0x03$ PATH=/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:::::/hello
+>> julien@ubuntu:/tmp/0x03$ . ./3-paths 
+>> 12
+>> julien@ubuntu:/tmp/0x03$ 
 ```
 
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `2-path`
-
-Check submission
-
-×
-
-#### 2\. The path to success is to take massive, determined action
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 2\. The path to success is to take massive, determined action
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 3\. If the path be beautiful, let us not ask where it leads
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Create a script that counts the number of directories in the `PATH`.
-
-```
-julien@ubuntu:/tmp/0x03$ echo $PATH
-/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-julien@ubuntu:/tmp/0x03$ . ./3-paths 
-11
-julien@ubuntu:/tmp/0x03$ PATH=/home/julien/bin:/home/julien/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:::::/hello
-julien@ubuntu:/tmp/0x03$ . ./3-paths 
-12
-julien@ubuntu:/tmp/0x03$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `3-paths`
-
-Check submission
-
-×
-
-#### 3\. If the path be beautiful, let us not ask where it leads
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 3\. If the path be beautiful, let us not ask where it leads
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 4\. Global variables
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Create a script that lists environment variables.
-
-```
-julien@ubuntu:/tmp/0x03$ source ./4-global_variables
-CC=gcc
-CDPATH=.:~:/usr/local:/usr:/
-CFLAGS=-O2 -fomit-frame-pointer
-COLORTERM=gnome-terminal
-CXXFLAGS=-O2 -fomit-frame-pointer
-DISPLAY=:0
-DOMAIN=hq.garrels.be
-e=
-TOR=vi
-FCEDIT=vi
-FIGNORE=.o:~
-G_BROKEN_FILENAMES=1
-GDK_USE_XFT=1
-GDMSESSION=Default
-GNOME_DESKTOP_SESSION_ID=Default
-GTK_RC_FILES=/etc/gtk/gtkrc:/nethome/franky/.gtkrc-1.2-gnome2
-GWMCOLOR=darkgreen
-GWMTERM=xterm
-HISTFILESIZE=5000
-history_control=ignoredups
-HISTSIZE=2000
-HOME=/nethome/franky
-HOSTNAME=octarine.hq.garrels.be
-INPUTRC=/etc/inputrc
-IRCNAME=franky
-JAVA_HOME=/usr/java/j2sdk1.4.0
-LANG=en_US
-LDFLAGS=-s
-LD_LIBRARY_PATH=/usr/lib/mozilla:/usr/lib/mozilla/plugins
-LESSCHARSET=latin1
-LESS=-edfMQ
-LESSOPEN=|/usr/bin/lesspipe.sh %s
-LEX=flex
-LOCAL_MACHINE=octarine
-LOGNAME=franky
-[...]
-julien@ubuntu:/tmp/0x03$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `4-global_variables`
-
-Check submission
-
-×
-
-#### 4\. Global variables
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 4\. Global variables
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 5\. Local variables
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Create a script that lists all local variables and environment variables, and functions.
-
-```
-julien@ubuntu:/tmp/0x03$ . ./5-local_variables
-BASH=/bin/bash
-BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extglob:extquote:force_fignore:histappend:interactive_comments:progcomp:promptvars:sourcepath
-BASH_ALIASES=()
-BASH_ARGC=()
-BASH_ARGV=()
-BASH_CMDS=()
-BASH_COMPLETION_COMPAT_DIR=/etc/bash_completion.d
-BASH_LINENO=()
-BASH_REMATCH=()
-BASH_SOURCE=()
-BASH_VERSINFO=([0]="4" [1]="3" [2]="46" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
-BASH_VERSION='4.3.46(1)-release'
-CLUTTER_IM_MODULE=xim
-COLUMNS=133
-COMPIZ_CONFIG_PROFILE=ubuntu
-COMP_WORDBREAKS=$' \t\n"\'&gt;&lt;=;|&amp;(:'
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Fg27Lr20bq
-DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path
-DESKTOP_SESSION=ubuntu
-[...]
-julien@ubuntu:/tmp/0x03$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `5-local_variables`
-
-Check submission
-
-×
-
-#### 5\. Local variables
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 5\. Local variables
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 6\. Local variable
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Create a script that creates a new local variable.
-
--   Name: `BEST`
--   Value: `School`
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `6-create_local_variable`
-
-Check submission
-
-×
-
-#### 6\. Local variable
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 6\. Local variable
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 7\. Global variable
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Create a script that creates a new global variable.
-
--   Name: `BEST`
--   Value: `School`
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `7-create_global_variable`
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`3-paths`**
+
+---
+
+## 4\. Global variables
+> Create a script that lists environment variables.
+> 
+>> ```
+>> julien@ubuntu:/tmp/0x03$ source ./4-global_variables
+>> CC=gcc
+>> CDPATH=.:~:/usr/local:/usr:/
+>> CFLAGS=-O2 -fomit-frame-pointer
+>> COLORTERM=gnome-terminal
+>> CXXFLAGS=-O2 -fomit-frame-pointer
+>> DISPLAY=:0
+>> DOMAIN=hq.garrels.be
+>> e=
+>> TOR=vi
+>> FCEDIT=vi
+>> FIGNORE=.o:~
+>> G_BROKEN_FILENAMES=1
+>> GDK_USE_XFT=1
+>> GDMSESSION=Default
+>> GNOME_DESKTOP_SESSION_ID=Default
+>> GTK_RC_FILES=/etc/gtk/gtkrc:/nethome/franky/.gtkrc-1.2-gnome2
+>> GWMCOLOR=darkgreen
+>> GWMTERM=xterm
+>> HISTFILESIZE=5000
+>> history_control=ignoredups
+>> HISTSIZE=2000
+>> HOME=/nethome/franky
+>> HOSTNAME=octarine.hq.garrels.be
+>> INPUTRC=/etc/inputrc
+>> IRCNAME=franky
+>> JAVA_HOME=/usr/java/j2sdk1.4.0
+>> LANG=en_US
+>> LDFLAGS=-s
+>> LD_LIBRARY_PATH=/usr/lib/mozilla:/usr/lib/mozilla/plugins
+>> LESSCHARSET=latin1
+>> LESS=-edfMQ
+>> LESSOPEN=|/usr/bin/lesspipe.sh %s
+>> LEX=flex
+>> LOCAL_MACHINE=octarine
+>> LOGNAME=franky
+>> [...]
+>> julien@ubuntu:/tmp/0x03$ 
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`4-global_variables`**
+
+---
+
+## 5\. Local variables
+> Create a script that lists all local variables and environment variables, and functions.
+> 
+>> ```
+>> julien@ubuntu:/tmp/0x03$ . ./5-local_variables
+>> BASH=/bin/bash
+>> BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extglob:extquote:force_fignore:histappend:interactive_comments:progcomp:promptvars:sourcepath
+>> BASH_ALIASES=()
+>> BASH_ARGC=()
+>> BASH_ARGV=()
+>> BASH_CMDS=()
+>> BASH_COMPLETION_COMPAT_DIR=/etc/bash_completion.d
+>> BASH_LINENO=()
+>> BASH_REMATCH=()
+>> BASH_SOURCE=()
+>> BASH_VERSINFO=([0]="4" [1]="3" [2]="46" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
+>> BASH_VERSION='4.3.46(1)-release'
+>> CLUTTER_IM_MODULE=xim
+>> COLUMNS=133
+>> COMPIZ_CONFIG_PROFILE=ubuntu
+>> COMP_WORDBREAKS=$' \t\n"\'&gt;&lt;=;|&amp;(:'
+>> DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Fg27Lr20bq
+>> DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path
+>> DESKTOP_SESSION=ubuntu
+>> [...]
+>> julien@ubuntu:/tmp/0x03$ 
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`5-local_variables`**
+
+---
+
+## 6\. Local variable
+> Create a script that creates a new local variable.
+> 
+> -   Name: **`BEST`**
+> -   Value: **`School`**
+> 
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`6-create_local_variable`**
+
+---
+
+## 7\. Global variable
+> Create a script that creates a new global variable.
+> 
+> -   Name: **`BEST`**
+> -   Value: **`School`**
+
+### **Repo:**
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`7-create_global_variable`**
 
 Check submission
 
