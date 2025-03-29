@@ -84,7 +84,6 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 > 
 > Note: You do not have to learn about **`awk`**, **`tar`**, **`bzip2`**, **`date`**, **`scp`**, **`ulimit`**, **`umask`**, or shell scripting, yet.
 
----
 
 # Tasks
 
@@ -103,52 +102,13 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 >> julien@ubuntu:/tmp/0x03$ 
 >> ```
 
-**Repo:**
+### **Repo:**
 
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x03-shell_variables_expansions`
--   File: `0-alias`
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x03-shell_variables_expansions`**
+-   File: **`0-alias`**
 
-Check submission
-
-×
-
-#### 0\. <o>
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 0\. <o>
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 1\. Hello you
 
