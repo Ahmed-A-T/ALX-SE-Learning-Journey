@@ -705,7 +705,7 @@
 > 
 > Today the Customer Support department reported that a user reported that the site is being “buggy”. Not being a detailed description, you want to have a look at the Apache logs and gather data about the traffic.
 > 
-> Write a Bash script that displays the visitor IP along with the [HTTP status code](https://intranet-projects-files.s3.amazonaws.com/holbertonschool-sysadmin_devops/80/apache-access.log "HTTP status code") from the Apache log file.
+> Write a Bash script that displays the visitor IP along with the [HTTP status code](./apache-access(1).log "HTTP status code") from the Apache log file.
 > 
 > Requirement:
 > 
@@ -714,7 +714,7 @@
 >     -   See example
 > -   You must use **`awk`**
 > -   You are not allowed to use **`while`**, **`for`**, **`until`** and **`cut`**
-> -   Download and commit the [apache-access.log file](https://intranet-projects-files.s3.amazonaws.com/holbertonschool-sysadmin_devops/80/apache-access.log "apache-access.log file") along with your answers files
+> -   Download and commit the [apache-access.log file](./apache-access.log "apache-access.log file") along with your answers files
 > 
 >> ```
 >> sylvain@ubuntu$ ./102-lets_parse_apache_logs | tail -n 10
