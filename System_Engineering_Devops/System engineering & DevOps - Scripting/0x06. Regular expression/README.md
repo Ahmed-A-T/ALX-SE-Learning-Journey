@@ -1,104 +1,78 @@
 # 0x06. Regular expression
 
-RegexDevOps
-
--   Weight: 1
--   Project over - took place from Feb 27, 2024 6:00 AM to Feb 28, 2024 6:00 AM
--   An auto review will be launched at the deadline
-
-#### In a nutshell…
-
--   **Auto QA review:** 0.0/24 mandatory & 0.0/9 optional
--   **Altogether:**  **0.0%**
-    -   Mandatory: 0.0%
-    -   Optional: 0.0%
-    -   Calculation:  0.0% + (0.0% \* 0.0%)  == **0.0%**
-
-### Concepts
-
-_For this project, we expect you to look at this concept:_
-
--   [Regular Expression](https://intranet.alxswe.com/concepts/29)
+## Concepts
+> _For this project, we expect you to look at this concept:_
+> 
+> -   [Regular Expression](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Regular_Expression.md)
+> 
 
 ## Background Context
+> For this project, you have to build your regular expression using Oniguruma, a regular expression library that which is used by Ruby by default. Note that other regular expression libraries sometimes have different properties.
+> 
+> Because the focus of this exercise is to play with regular expressions (regex), here is the Ruby code that you should use, just replace the regexp part, meaning the code in between the **`//`**:
+> 
+>> ```
+>> sylvain@ubuntu$ cat example.rb
+>> #!/usr/bin/env ruby
+>> puts ARGV[0].scan(/127.0.0.[0-9]/).join
+>> sylvain@ubuntu$
+>> sylvain@ubuntu$ ./example.rb 127.0.0.2
+>> 127.0.0.2
+>> sylvain@ubuntu$ ./example.rb 127.0.0.1
+>> 127.0.0.1
+>> sylvain@ubuntu$ ./example.rb 127.0.0.a
+>> ```
 
-For this project, you have to build your regular expression using Oniguruma, a regular expression library that which is used by Ruby by default. Note that other regular expression libraries sometimes have different properties.
+# Resources
 
-Because the focus of this exercise is to play with regular expressions (regex), here is the Ruby code that you should use, just replace the regexp part, meaning the code in between the `//`:
+## **Read or watch**:
+> -   [Regular expressions - basics](https://www.slideshare.net/slideshow/introducing-regular-expressions/63676155 "Regular expressions - basics")
+> -   [Regular expressions - advanced](https://www.slideshare.net/slideshow/advanced-regular-expressions-80296518/80296518 "Regular expressions - advanced")
+> -   [Rubular is your best friend](https://rubular.com/ "Rubular is your best friend")
+> -   [Use a regular expression against a problem: now you have 2 problems](https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/ "Use a regular expression against a problem: now you have 2 problems")
+> -   [Learn Regular Expressions with simple, interactive exercises](https://regexone.com/ "Learn Regular Expressions with simple, interactive exercises")
 
-```
-sylvain@ubuntu$ cat example.rb
-#!/usr/bin/env ruby
-puts ARGV[0].scan(/127.0.0.[0-9]/).join
-sylvain@ubuntu$
-sylvain@ubuntu$ ./example.rb 127.0.0.2
-127.0.0.2
-sylvain@ubuntu$ ./example.rb 127.0.0.1
-127.0.0.1
-sylvain@ubuntu$ ./example.rb 127.0.0.a
-```
+# Requirements
 
-## Resources
+## General
+> -   Allowed editors: **`vi`**, **`vim`**, **`emacs`**
+> -   All your files will be interpreted on Ubuntu 20.04 LTS
+> -   All your files should end with a new line
+> -   A **`README.md`** file, at the root of the folder of the project, is mandatory
+> -   All your Bash script files must be executable
+> -   The first line of all your Bash scripts should be exactly **`#!/usr/bin/env ruby`**
+> -   All your regex must be built for the Oniguruma library
 
-**Read or watch**:
+# Tasks
 
--   [Regular expressions - basics](https://intranet.alxswe.com/rltoken/rtBWhqR4L-6p9PRwzlNLug "Regular expressions - basics")
--   [Regular expressions - advanced](https://intranet.alxswe.com/rltoken/grJS5VDnUKBYwDpBTM7yCg "Regular expressions - advanced")
--   [Rubular is your best friend](https://intranet.alxswe.com/rltoken/RGkVuw1lZ_hoCCbLsiOAhg "Rubular is your best friend")
--   [Use a regular expression against a problem: now you have 2 problems](https://intranet.alxswe.com/rltoken/Vwm8lpMUGa4x_FBtlyUQ8g "Use a regular expression against a problem: now you have 2 problems")
--   [Learn Regular Expressions with simple, interactive exercises](https://intranet.alxswe.com/rltoken/XsQ6rzS1uy-E6bnswUqIKg "Learn Regular Expressions with simple, interactive exercises")
+## 0\. Simply matching School
+> ![](./assets/0x06-01.png)
+> 
+> Requirements:
+> 
+> -   The regular expression must match **`School`**
+> -   Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
+> 
+> Example:
+> 
+>> ```
+>> sylvain@ubuntu$ ./0-simply_match_school.rb School | cat -e
+>> School$
+>> sylvain@ubuntu$ ./0-simply_match_school.rb "Best School" | cat -e
+>> School$
+>> sylvain@ubuntu$ ./0-simply_match_school.rb "School Best School" | cat -e
+>> SchoolSchool$
+>> sylvain@ubuntu$ ./0-simply_match_school.rb "Grace Hopper" | cat -e
+>> $
+>> ```
 
-## Requirements
+### **Repo:**
 
-### General
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x06-regular_expressions`**
+-   File: **`0-simply_match_school.rb`**
 
--   Allowed editors: `vi`, `vim`, `emacs`
--   All your files will be interpreted on Ubuntu 20.04 LTS
--   All your files should end with a new line
--   A `README.md` file, at the root of the folder of the project, is mandatory
--   All your Bash script files must be executable
--   The first line of all your Bash scripts should be exactly `#!/usr/bin/env ruby`
--   All your regex must be built for the Oniguruma library
-
-### Quiz questions
-
-**Great!** You've completed the quiz successfully! Keep going! (Show quiz)
-
-## Tasks
-
-### 0\. Simply matching School
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/ec65557f0da1fbfbff6659413885e4d4822f5b1d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250211%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250211T185629Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=3d0121eb30070d4020d3aee7679e74d4541cb6bbaae16207100c7c40f222a9b0)
-
-Requirements:
-
--   The regular expression must match `School`
--   Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
-
-Example:
-
-```
-sylvain@ubuntu$ ./0-simply_match_school.rb School | cat -e
-School$
-sylvain@ubuntu$ ./0-simply_match_school.rb "Best School" | cat -e
-School$
-sylvain@ubuntu$ ./0-simply_match_school.rb "School Best School" | cat -e
-SchoolSchool$
-sylvain@ubuntu$ ./0-simply_match_school.rb "Grace Hopper" | cat -e
-$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x06-regular_expressions`
--   File: `0-simply_match_school.rb`
-
-Check submission Mark submission Get a sandbox View results
+---
 
 ### 1\. Repetition Token #0
 
