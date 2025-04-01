@@ -1,27 +1,12 @@
 # 0x0F. Load balancer
 
-DevOpsSysAdmin
-
--   Weight: 1
--   Project over - took place from Apr 29, 2024 7:00 AM to Apr 30, 2024 7:00 AM
--   An auto review will be launched at the deadline
-
-#### In a nutshell…
-
--   **Auto QA review:** 0.0/4 mandatory & 0.0/2 optional
--   **Altogether:**  **0.0%**
-    -   Mandatory: 0.0%
-    -   Optional: 0.0%
-    -   Calculation:  0.0% + (0.0% \* 0.0%)  == **0.0%**
-
-### Concepts
-
-_For this project, we expect you to look at these concepts:_
-
--   [Load balancer](https://intranet.alxswe.com/concepts/46)
--   [Web stack debugging](https://intranet.alxswe.com/concepts/68)
-
-![](Project%200x0F.%20Load%20balancer%20%20Cairo%20Intranet/qfdked8.png)
+# Concepts
+> _For this project, we expect you to look at these concepts:_
+> 
+> -   [Load balancer](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Load_balancer.md)
+> -   [Web stack debugging](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/web_stack_debugging.md)
+> 
+> ![](./assets/0x0F-01.png)
 
 ## Background Context
 
