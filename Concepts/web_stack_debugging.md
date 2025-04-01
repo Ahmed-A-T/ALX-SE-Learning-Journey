@@ -103,4 +103,4 @@ If a piece of Software isn’t behaving as expected, it can obviously be because
 
 Debugging can be frustrating, but it will definitely be part of your job, it requires experience and methodology to become good at it. The good news is that bugs are never going away, and the more experienced you become, trickier bugs will be assigned to you! Good luck :)
 
-![](./img/web-stack02.gif)
+![](./img/web_stack02.gif)
