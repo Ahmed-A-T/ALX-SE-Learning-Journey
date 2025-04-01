@@ -1,32 +1,13 @@
 # 0x11. What happens when you type google.com in your browser and press Enter
 
-DevOpsNetworkSysAdmin
-
--   Weight: 1
--   Project over - took place from May 7, 2024 7:00 AM to May 13, 2024 7:00 AM
--   Manual QA review was done on May 13, 2024 1:59 AM
-
-#### In a nutshell…
-
--   **Manual QA review:** 8.0/8 mandatory & 8.0/8 optional
--   **Altogether:**  **200.0%**
-    -   Mandatory: 100.0%
-    -   Optional: 100.0%
-    -   Calculation:  100.0% + (100.0% \* 100.0%)  == **200.0%**
-
-**Overall comment:**
-
-Nice Job
-
-## Background Context
-
-Being a Full-Stack Software Engineer means you’re comfortable interacting with any layer of the stack.
-
-A way to easily assess this is to simply ask an engineer to explain how a software system works. They can have a general overview of the flow or can choose to dig deep in a certain area.
-
-Let’s practice by exploring the infrastructure side (network, servers, security…) of the question.
-
-![](Project%200x11.%20What%20happens%20when%20you%20type%20google.com%20in%20your%20browser%20and%20press%20Enter%20%20Cairo%20Intranet/aJPw3mw.jpg)
+# Background Context
+> Being a Full-Stack Software Engineer means you’re comfortable interacting with any layer of the stack.
+> 
+> A way to easily assess this is to simply ask an engineer to explain how a software system works. They can have a general overview of the flow or can choose to dig deep in a certain area.
+> 
+> Let’s practice by exploring the infrastructure side (network, servers, security…) of the question.
+> 
+> ![](./assets/0x11-01.jpg)
 
 ## Requirements
 
