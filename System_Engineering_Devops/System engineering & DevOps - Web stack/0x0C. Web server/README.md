@@ -139,153 +139,111 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 -   Directory: **`0x0C-web_server`**
 -   File: **`0-transfer_file`**
 
+---
+
 ## 1\. Install nginx web server
 ![](./assets/0x0C-03.jpg)
+> 
+> Readme:
+> 
+> -   [\-y on apt-get command](https://askubuntu.com/questions/672892/what-does-y-mean-in-apt-get-y-install-command)
+> 
+> Web servers are the piece of software generating and serving HTML pages, let’s install one!
+> 
+> Requirements:
+> 
+> -   Install **`nginx`** on your **`web-01`**
+> -   server
+> -   Nginx should be listening on port 80
+> -   When querying Nginx at its root **`/`** with a GET request (requesting a page) using **`curl`**, it must return a page that contains the string **`Hello World!`**
+> -   As an answer file, write a Bash script that configures a new Ubuntu machine to respect above requirements (this script will be run on the server itself)
+> -   You can’t use **`systemctl`** for restarting **`nginx`**
+> 
+> Server terminal:
+> 
+>> ```
+>> root@sy-web-01$ ./1-install_nginx_web_server &gt; /dev/null 2&gt;&amp;1
+>> root@sy-web-01$ 
+>> root@sy-web-01$ curl localhost
+>> Hello World!
+>> root@sy-web-01$ 
+>> ```
+> 
+> Local terminal:
+> 
+>> ```
+>> sylvain@ubuntu$ curl 34.198.248.145/
+>> Hello World!
+>> sylvain@ubuntu$ curl -sI 34.198.248.145/
+>> HTTP/1.1 200 OK
+>> Server: nginx/1.4.6 (Ubuntu)
+>> Date: Tue, 21 Feb 2017 23:43:22 GMT
+>> Content-Type: text/html
+>> Content-Length: 30
+>> Last-Modified: Tue, 21 Feb 2017 07:21:32 GMT
+>> Connection: keep-alive
+>> ETag: "58abea7c-1e"
+>> Accept-Ranges: bytes
+>> 
+>> sylvain@ubuntu$
+>> ```
+> 
+> In this example **`34.198.248.145`** is the IP of my **`web-01`** server. If you want to query the Nginx that is locally installed on your server, you can use **`curl 127.0.0.1`**.
+> 
+> If things are not going as expected, make sure to check out Nginx logs, they can be found in **`/var/log/`**.
+> 
+> **Maarten’s PRO-tip:** When you use **`sudo su`** on your web-01 you can become root like this to test your file:
+> 
+>> ```
+>> sylvain@ubuntu$ sudo su
+>> root@ubuntu#
+>> ```
 
-Readme:
+### Repo:
 
--   [\-y on apt-get command](https://intranet.alxswe.com/rltoken/KJiFZ4yJyTGp_cv3DYQLaQ "-y on apt-get command")
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x0C-web_server`**
+-   File: **`1-install_nginx_web_server`**
 
-Web servers are the piece of software generating and serving HTML pages, let’s install one!
+---
 
-Requirements:
-
--   Install `nginx` on your `web-01`
--   server
--   Nginx should be listening on port 80
--   When querying Nginx at its root `/` with a GET request (requesting a page) using `curl`, it must return a page that contains the string `Hello World!`
--   As an answer file, write a Bash script that configures a new Ubuntu machine to respect above requirements (this script will be run on the server itself)
--   You can’t use `systemctl` for restarting `nginx`
-
-Server terminal:
-
-```
-root@sy-web-01$ ./1-install_nginx_web_server &gt; /dev/null 2&gt;&amp;1
-root@sy-web-01$ 
-root@sy-web-01$ curl localhost
-Hello World!
-root@sy-web-01$ 
-```
-
-Local terminal:
-
-```
-sylvain@ubuntu$ curl 34.198.248.145/
-Hello World!
-sylvain@ubuntu$ curl -sI 34.198.248.145/
-HTTP/1.1 200 OK
-Server: nginx/1.4.6 (Ubuntu)
-Date: Tue, 21 Feb 2017 23:43:22 GMT
-Content-Type: text/html
-Content-Length: 30
-Last-Modified: Tue, 21 Feb 2017 07:21:32 GMT
-Connection: keep-alive
-ETag: "58abea7c-1e"
-Accept-Ranges: bytes
-
-sylvain@ubuntu$
-```
-
-In this example `34.198.248.145` is the IP of my `web-01` server. If you want to query the Nginx that is locally installed on your server, you can use `curl 127.0.0.1`.
-
-If things are not going as expected, make sure to check out Nginx logs, they can be found in `/var/log/`.
-
-**Maarten’s PRO-tip:** When you use `sudo su` on your web-01 you can become root like this to test your file:
-
-```
-sylvain@ubuntu$ sudo su
-root@ubuntu#
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x0C-web_server`
--   File: `1-install_nginx_web_server`
-
-Check submission
-
-×
-
-#### 1\. Install nginx web server
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 1\. Install nginx web server
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 2\. Setup a domain name
-
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
-[.TECH Domains](https://get.tech/ ".TECH Domains") is one of the top domain providers. They are known for the stability and quality of their DNS hosting solution. We partnered with .TECH Domains so that you can learn about DNS.
-
-**YOU** can have a **free .tech domain** for 1 year by following these steps:
-
--   Access the [tools space](https://intranet.alxswe.com/dashboards/my_tools "tools space")
--   Unlock the **GitHub student pack**: WARNING - this invitation link is unique to you and can’t be reclaimed! If you have any issue, please contact [GitHub education support](https://support.github.com/request/landing "GitHub education support")
-
-![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/b685ce8e2cae17f1edf5eaf8bc09a5b6d1b4bb8f.png)
-
--   When registered, access your [benefits](https://github.com/login?client_id=de7e3b6548f2ed9bbceb&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3Dde7e3b6548f2ed9bbceb%26redirect_uri%3Dhttps%253A%252F%252Feducation.github.com%252Fauth%252Fgithubber%252Fcallback%26response_type%3Dcode%26scope%3Dread%253Auser%26state%3D3cbd7536e1f790e9f372dce1d64193884e9b0a0903eb9bba "benefits"):
-
-![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/eb4046306303faed2a6de4fdd634d5ac959fd763.png)
-
--   And scroll to **.Tech domain**:
-
-![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/368388422d1cf757af7017483b70ffd415c3a455.png)
-
--   Start to register your domain and checkout
--   At the Checkout step, please click on “Login with GitHub”:
-
-![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/91a4c94fa971df87066aacabb68b9839b08c7f28.png) ![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/6247533b7b283cb2333375a1993c3490b92730d3.png)
-
--   The cost of the domain should be now at **$0**
--   You can finalize it by creating an account in [.Tech domains](https://get.tech/ ".Tech domains")
--   And manage your domain there!
-
-Provide the domain name in your answer file.
-
-Requirement:
-
--   provide the domain name only (example: `foobar.tech`), no subdomain (example: `www.foobar.tech`)
--   configure your DNS records with an A entry so that your root domain points to your `web-01` IP address **Warning: the propagation of your records can take time (~1-2 hours)**
--   go to [your profile](https://intranet.alxswe.com/users/my_profile "your profile") and enter your domain in the `Project website url` field
-
-Example:
-
+## 2\. Setup a domain name
+> [.TECH Domains](https://get.tech/ ".TECH Domains") is one of the top domain providers. They are known for the stability and quality of their DNS hosting solution. We partnered with .TECH Domains so that you can learn about DNS.
+> 
+> **YOU** can have a **free .tech domain** for 1 year by following these steps:
+> 
+> -   Access the [tools space](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/My_Tools.md "tools space")
+> -   Unlock the **GitHub student pack**: WARNING - this invitation link is unique to you and can’t be reclaimed! If you have any issue, please contact [GitHub education support](https://support.github.com/ "GitHub education support")
+> 
+> ![](./assets/0x0C-04.png)
+> 
+> -   When registered, access your [benefits](https://github.com/login?client_id=de7e3b6548f2ed9bbceb&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3Dde7e3b6548f2ed9bbceb%26redirect_uri%3Dhttps%253A%252F%252Feducation.github.com%252Fauth%252Fgithubber%252Fcallback%26response_type%3Dcode%26scope%3Dread%253Auser%26state%3D3cbd7536e1f790e9f372dce1d64193884e9b0a0903eb9bba "benefits"):
+> 
+> ![](./assets/0x0C-05.png)
+> 
+> -   And scroll to **.Tech domain**:
+> 
+> ![](./assets/0x0C-06.png)
+> 
+> -   Start to register your domain and checkout
+> -   At the Checkout step, please click on “Login with GitHub”:
+> 
+> ![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/91a4c94fa971df87066aacabb68b9839b08c7f28.png) ![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/6247533b7b283cb2333375a1993c3490b92730d3.png)
+> 
+> -   The cost of the domain should be now at **$0**
+> -   You can finalize it by creating an account in [.Tech domains](https://get.tech/ ".Tech domains")
+> -   And manage your domain there!
+> 
+> Provide the domain name in your answer file.
+> 
+> Requirement:
+> 
+> -   provide the domain name only (example: `foobar.tech`), no subdomain (example: `www.foobar.tech`)
+> -   configure your DNS records with an A entry so that your root domain points to your `web-01` IP address **Warning: the propagation of your records can take time (~1-2 hours)**
+> -   go to [your profile](https://intranet.alxswe.com/users/my_profile "your profile") and enter your domain in the `Project website url` field
+> 
+> Example:
+> 
 ```
 sylvain@ubuntu$ cat 2-setup_a_domain_name
 myschool.tech
