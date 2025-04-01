@@ -140,7 +140,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 -   File: **`0-transfer_file`**
 
 ## 1\. Install nginx web server
-![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/01cab59e881e31842b8d47a0974e8d3b6f0f2001.jpg)
+![](./assets/0x0C-03.jpg)
 
 Readme:
 
