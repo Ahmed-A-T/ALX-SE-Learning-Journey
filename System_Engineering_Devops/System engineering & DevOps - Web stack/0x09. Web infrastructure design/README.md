@@ -1,36 +1,18 @@
 # 0x09. Web infrastructure design
 
-DevOpsSysAdminweb infrastructure
-
--   Weight: 1
--   Project to be done in teams of 3 people (your team: Ahmed Abdelhafez)
--   Project over - took place from Mar 21, 2024 6:00 AM to Mar 25, 2024 6:00 AM
--   Manual QA review was done on Mar 24, 2024 10:12 PM
-
-#### In a nutshell…
-
--   **Manual QA review:** 42.0/42 mandatory & 5.0/5 optional
--   **Altogether:**  **200.0%**
-    -   Mandatory: 100.0%
-    -   Optional: 100.0%
-    -   Calculation:  100.0% + (100.0% \* 100.0%)  == **200.0%**
-
-**Overall comment:**
-
-good job
-
-### Concepts
-
-_For this project, we expect you to look at these concepts:_
-
--   [DNS](https://intranet.alxswe.com/concepts/12)
--   [Monitoring](https://intranet.alxswe.com/concepts/13)
--   [Web Server](https://intranet.alxswe.com/concepts/17)
--   [Network basics](https://intranet.alxswe.com/concepts/33)
--   [Load balancer](https://intranet.alxswe.com/concepts/46)
--   [Server](https://intranet.alxswe.com/concepts/67)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lQNEW76KdYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+# Concepts
+> _For this project, we expect you to look at these concepts:_
+> 
+> -   [DNS](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/DNS.md)
+> -   [Monitoring](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Monitoring.md)
+> -   [Web Server](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Web_Server.md)
+> -   [Network basics](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Network_basics.md)
+> -   [Load balancer](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Load_balancer.md)
+> -   [Server](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Server.md)
+> 
+<video width="320" height="240" controls>
+  <source src="https://www.youtube.com/watch?v=lQNEW76KdYg" type="video/mp4">
+</video>
 
 ## Resources
 
