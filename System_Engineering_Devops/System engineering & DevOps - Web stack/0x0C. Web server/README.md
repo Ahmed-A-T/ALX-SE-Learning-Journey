@@ -6,7 +6,7 @@
 > -   [What is a Child Process?](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/What_is_a_Child_Process.md)
 
 > 
-> ![](./assets/0x0C.png)
+> ![](./assets/01.png)
 
 ## Background Context
 > In this project, some of the tasks will be graded on 2 aspects:
@@ -29,7 +29,7 @@
 > 
 > As you can tell, I am not using **`emacs`** to perform the task in my answer file. This exercise is aiming at training you on automating your work. If you can automate tasks that you do manually, you can then automate yourself out of repetitive tasks and focus your energy on something more interesting. For an [SRE](https://www.atlassian.com/incident-management/devops/sre "SRE"), that comes very handy when there are hundreds or thousands of servers to manage, the work cannot be only done manually. Note that the checker will execute your script as the **`root`** user, you do not need to use the **`sudo`** command.
 > 
-> A good Software Engineer is a [lazy Software Engineer](https://www.techwell.com/techwell-insights/2013/12/why-best-programmers-are-lazy-and-act-dumb). ![](./assets/0x0C-02.jpg)
+> A good Software Engineer is a [lazy Software Engineer](https://www.techwell.com/techwell-insights/2013/12/why-best-programmers-are-lazy-and-act-dumb). ![](./assets/02.jpg)
 > 
 > Tips: to test your answer Bash script, feel free to reproduce the checker environment:
 > 
@@ -142,7 +142,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 ---
 
 ## 1\. Install nginx web server
-![](./assets/0x0C-03.jpg)
+![](./assets/03.jpg)
 > 
 > Readme:
 > 
@@ -215,20 +215,20 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 > -   Access the [tools space](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/My_Tools.md "tools space")
 > -   Unlock the **GitHub student pack**: WARNING - this invitation link is unique to you and can’t be reclaimed! If you have any issue, please contact [GitHub education support](https://support.github.com/ "GitHub education support")
 > 
-> ![](./assets/0x0C-04.png)
+> ![](./assets/04.png)
 > 
 > -   When registered, access your [benefits](https://github.com/login?client_id=de7e3b6548f2ed9bbceb&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3Dde7e3b6548f2ed9bbceb%26redirect_uri%3Dhttps%253A%252F%252Feducation.github.com%252Fauth%252Fgithubber%252Fcallback%26response_type%3Dcode%26scope%3Dread%253Auser%26state%3D3cbd7536e1f790e9f372dce1d64193884e9b0a0903eb9bba "benefits"):
 > 
-> ![](./assets/0x0C-05.png)
+> ![](./assets/05.png)
 > 
 > -   And scroll to **.Tech domain**:
 > 
-> ![](./assets/0x0C-06.png)
+> ![]()
 > 
 > -   Start to register your domain and checkout
 > -   At the Checkout step, please click on “Login with GitHub”:
 > 
-> ![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/91a4c94fa971df87066aacabb68b9839b08c7f28.png) ![](Project%200x0C.%20Web%20server%20%20Cairo%20Intranet/6247533b7b283cb2333375a1993c3490b92730d3.png)
+> ![](./assets/06.png) ![](./assets/07.png)
 > 
 > -   The cost of the domain should be now at **$0**
 > -   You can finalize it by creating an account in [.Tech domains](https://get.tech/ ".Tech domains")
@@ -244,259 +244,129 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 > 
 > Example:
 > 
-```
-sylvain@ubuntu$ cat 2-setup_a_domain_name
-myschool.tech
-sylvain@ubuntu$
-sylvain@ubuntu$ dig myschool.tech
+>> ```
+>> sylvain@ubuntu$ cat 2-setup_a_domain_name
+>> myschool.tech
+>> sylvain@ubuntu$
+>> sylvain@ubuntu$ dig myschool.tech
+>> 
+>> ; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; myschool.tech
+>> ;; global options: +cmd
+>> ;; Got answer:
+>> ;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 26785
+>> ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+>> 
+>> ;; OPT PSEUDOSECTION:
+>> ; EDNS: version: 0, flags:; udp: 512
+>> ;; QUESTION SECTION:
+>> ;myschool.tech.     IN  A
+>> 
+>> ;; ANSWER SECTION:
+>> myschool.tech.  7199    IN  A   184.72.193.201
+>> 
+>> ;; Query time: 65 msec
+>> ;; SERVER: 8.8.8.8#53(8.8.8.8)
+>> ;; WHEN: Fri Aug 02 09:44:36 PDT 2019
+>> ;; MSG SIZE  rcvd: 65
+>> 
+>> sylvain@ubuntu$
+>> ```
+> 
+> When your domain name is setup, please verify the Registrar here: [https://whois.whoisxmlapi.com/](https://whois.whoisxmlapi.com/ "https://whois.whoisxmlapi.com/") and you must see in the JSON response: `"registrarName": "Dotserve Inc"`
+
+### Repo:
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x0C-web_server`**
+-   File: **`2-setup_a_domain_name`**
+
+---
+
+## 3\. Redirection
+> Readme:
+> 
+> -   [Replace a line with multiple lines with sed](https://stackoverflow.com/questions/26041088/sed-replace-line-with-multiline-variable "Replace a line with multiple lines with sed")
+> 
+> Configure your Nginx server so that **`/redirect_me`** is redirecting to another page.
+> 
+> Requirements:
+> 
+> -   The redirection must be a “301 Moved Permanently”
+> -   You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements
+> -   Using what you did with **`1-install_nginx_web_server`**, write **`3-redirection`** so that it configures a brand new Ubuntu machine to the requirements asked in this task
+> 
+> Example:
+> 
+>> ```
+>> sylvain@ubuntu$ curl -sI 34.198.248.145/redirect_me/
+>> HTTP/1.1 301 Moved Permanently
+>> Server: nginx/1.4.6 (Ubuntu)
+>> Date: Tue, 21 Feb 2017 21:36:04 GMT
+>> Content-Type: text/html
+>> Content-Length: 193
+>> Connection: keep-alive
+>> Location: https://www.youtube.com/watch?v=QH2-TGUlwu4
+>> 
+>> sylvain@ubuntu$
+>> ```
+
+### Repo:
+
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x0C-web_server`**
+-   File: **`3-redirection`**
+
+---
+
+## 4\. Not found page 404
+> Configure your Nginx server to have a custom 404 page that contains the string **`Ceci n'est pas une page`**.
+> 
+> Requirements:
+> 
+> -   The page must return an HTTP 404 error code
+> -   The page must contain the string **`Ceci n'est pas une page`**
+> -   Using what you did with **`3-redirection`**, write **`4-not_found_page_404`** so that it configures a brand new Ubuntu machine to the requirements asked in this task
+> 
+> Example:
+> 
+>> ```
+>> sylvain@ubuntu$ curl -sI 34.198.248.145/xyz
+>> HTTP/1.1 404 Not Found
+>> Server: nginx/1.4.6 (Ubuntu)
+>> Date: Tue, 21 Feb 2017 21:46:43 GMT
+>> Content-Type: text/html
+>> Content-Length: 26
+>> Connection: keep-alive
+>> ETag: "58acb50e-1a"
+>> 
+>> sylvain@ubuntu$ curl 34.198.248.145/xyzfoo
+>> Ceci n'est pas une page
+>> 
+>> sylvain@ubuntu$
+>> ```
+
+### Repo:
 
-; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; myschool.tech
-;; global options: +cmd
-;; Got answer:
-;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 26785
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x0C-web_server`**
+-   File: **`4-not_found_page_404`**
 
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 512
-;; QUESTION SECTION:
-;myschool.tech.     IN  A
+---
 
-;; ANSWER SECTION:
-myschool.tech.  7199    IN  A   184.72.193.201
+## 5\. Install Nginx web server (w/ Puppet)
+> Time to practice configuring your server with Puppet! Just as you did before, we’d like you to install and configure an Nginx server using Puppet instead of Bash. To save time and effort, you should also include resources in your manifest to perform a 301 redirect when querying /redirect\_me.
+> 
+> Requirements:
+> 
+> -   Nginx should be listening on port 80
+> -   When querying Nginx at its root **`/`** with a GET request (requesting a page) using **`curl`**, it must return a page that contains the string **`Hello World!`**
+> -   The redirection must be a “301 Moved Permanently”
+> -   Your answer file should be a Puppet manifest containing commands to automatically configure an Ubuntu machine to respect above requirements
 
-;; Query time: 65 msec
-;; SERVER: 8.8.8.8#53(8.8.8.8)
-;; WHEN: Fri Aug 02 09:44:36 PDT 2019
-;; MSG SIZE  rcvd: 65
+### Repo:
 
-sylvain@ubuntu$
-```
+-   GitHub repository: **`alx-system_engineering-devops`**
+-   Directory: **`0x0C-web_server`**
+-   File: **`7-puppet_install_nginx_web_server.pp`**
 
-When your domain name is setup, please verify the Registrar here: [https://whois.whoisxmlapi.com/](https://whois.whoisxmlapi.com/ "https://whois.whoisxmlapi.com/") and you must see in the JSON response: `"registrarName": "Dotserve Inc"`
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x0C-web_server`
--   File: `2-setup_a_domain_name`
-
-Check submission
-
-×
-
-#### 2\. Setup a domain name
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 2\. Setup a domain name
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 3\. Redirection
-
-mandatory
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Readme:
-
--   [Replace a line with multiple lines with sed](https://intranet.alxswe.com/rltoken/RRP9hX3MlQdABaKZD-Y_cA "Replace a line with multiple lines with sed")
-
-Configure your Nginx server so that `/redirect_me` is redirecting to another page.
-
-Requirements:
-
--   The redirection must be a “301 Moved Permanently”
--   You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements
--   Using what you did with `1-install_nginx_web_server`, write `3-redirection` so that it configures a brand new Ubuntu machine to the requirements asked in this task
-
-Example:
-
-```
-sylvain@ubuntu$ curl -sI 34.198.248.145/redirect_me/
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.4.6 (Ubuntu)
-Date: Tue, 21 Feb 2017 21:36:04 GMT
-Content-Type: text/html
-Content-Length: 193
-Connection: keep-alive
-Location: https://www.youtube.com/watch?v=QH2-TGUlwu4
-
-sylvain@ubuntu$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x0C-web_server`
--   File: `3-redirection`
-
-Check submission
-
-×
-
-#### 3\. Redirection
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 3\. Redirection
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 4\. Not found page 404
-
-mandatory
-
-Score: 66.67% (Checks completed: 66.67%)
-
-Configure your Nginx server to have a custom 404 page that contains the string `Ceci n'est pas une page`.
-
-Requirements:
-
--   The page must return an HTTP 404 error code
--   The page must contain the string `Ceci n'est pas une page`
--   Using what you did with `3-redirection`, write `4-not_found_page_404` so that it configures a brand new Ubuntu machine to the requirements asked in this task
-
-Example:
-
-```
-sylvain@ubuntu$ curl -sI 34.198.248.145/xyz
-HTTP/1.1 404 Not Found
-Server: nginx/1.4.6 (Ubuntu)
-Date: Tue, 21 Feb 2017 21:46:43 GMT
-Content-Type: text/html
-Content-Length: 26
-Connection: keep-alive
-ETag: "58acb50e-1a"
-
-sylvain@ubuntu$ curl 34.198.248.145/xyzfoo
-Ceci n'est pas une page
-
-sylvain@ubuntu$
-```
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x0C-web_server`
--   File: `4-not_found_page_404`
-
-Check submission
-
-×
-
-#### 4\. Not found page 404
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Mark submission : in progress... : an error occurred Get a sandbox View results
-
-×
-
-#### 4\. Not found page 404
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 5\. Install Nginx web server (w/ Puppet)
-
-#advanced
-
-Score: 100.0% (Checks completed: 100.0%)
-
-Time to practice configuring your server with Puppet! Just as you did before, we’d like you to install and configure an Nginx server using Puppet instead of Bash. To save time and effort, you should also include resources in your manifest to perform a 301 redirect when querying /redirect\_me.
-
-Requirements:
-
--   Nginx should be listening on port 80
--   When querying Nginx at its root `/` with a GET request (requesting a page) using `curl`, it must return a page that contains the string `Hello World!`
--   The redirection must be a “301 Moved Permanently”
--   Your answer file should be a Puppet manifest containing commands to automatically configure an Ubuntu machine to respect above requirements
-
-**Repo:**
-
--   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x0C-web_server`
--   File: `7-puppet_install_nginx_web_server.pp`
+---
