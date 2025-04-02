@@ -11,9 +11,7 @@
 
 # Background Context
 > 
-> [![](./assets/0x1A-02.png)](https://youtu.be/pSrKT7m4Ego)
-> 
-> Your web infrastructure is already serving web pages via **`Nginx`** that you installed in your [first web stack project](https://intranet.alxswe.com/rltoken/95oRNZ-zRGwLxtWECJqsWA "first web stack project"). While a web server can also serve dynamic content, this task is usually given to an application server. In this project you will add this piece to your infrastructure, plug it to your **`Nginx`** and make is serve your Airbnb clone project.
+> Your web infrastructure is already serving web pages via **`Nginx`** that you installed in your [first web stack project](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/System_Engineering_Devops/System%20engineering%20%26%20DevOps%20-%20Web%20stack/0x0C.%20Web%20server "first web stack project"). While a web server can also serve dynamic content, this task is usually given to an application server. In this project you will add this piece to your infrastructure, plug it to your **`Nginx`** and make is serve your Airbnb clone project.
 > 
 
 # Resources
@@ -140,7 +138,7 @@
 > 
 > ##### Window 1:
 > 
-```
+>> ```
 >> ubuntu@229-web-01:~/AirBnB_clone_v2$ gunicorn --bind 0.0.0.0:5000 web_flask.0-hello_route:app
 >> [2019-05-06 20:43:57 +0000] [14026] [INFO] Starting gunicorn 19.9.0
 >> [2019-05-06 20:43:57 +0000] [14026] [INFO] Listening at: http://0.0.0.0:5000 (14026)
