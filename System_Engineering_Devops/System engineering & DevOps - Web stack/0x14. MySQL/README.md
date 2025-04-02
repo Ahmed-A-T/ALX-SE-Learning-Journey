@@ -170,7 +170,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 > 
 > Example:
 > 
-## **`web-01`**
+> ## **`web-01`**
 >> 
 >> ```
 >> ubuntu@web-01:~$ mysql -uholberton_user -p
@@ -198,7 +198,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 >> mysql&gt; 
 >> ```
 
-## **`web-02`**
+> ## **`web-02`**
 >> 
 >> ```
 >> root@web-02:/home/ubuntu# mysql -uholberton_user -p
