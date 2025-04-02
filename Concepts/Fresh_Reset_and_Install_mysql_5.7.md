@@ -12,7 +12,7 @@ If this command did not install 5.7 correctly you can continue reading the follo
 
 You can also use this guide for more visual and sample outputs :
 
-##### [For a comprehensive Guide Click Here 📄](https://intranet.alxswe.com/rltoken/7Vopd7lb8_-GwkYXAzmWpg "For a comprehensive Guide Click Here 📄 ")
+##### [For a comprehensive Guide Click Here 📄](https://docs.google.com/document/d/1btVRofXP75Cj90_xq2x8AmzuMPOKq6D_Dt_SCDD6GrU/edit?pli=1&tab=t.0#heading=h.nu0sqigqw1o9 "For a comprehensive Guide Click Here 📄 ")
 
 ### STEPS :
 
