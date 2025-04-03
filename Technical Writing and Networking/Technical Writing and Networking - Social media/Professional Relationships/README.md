@@ -95,14 +95,14 @@
 > -   Offer to buy them coffee - if someone’s offered their in-person time to answer questions, at least compensate with a cup of their preferred beverage at a convenient location per their lifestyle.
 > -   Let them propose their best availability - maybe you don’t like waking up early; if that’s their proposed time to meet, accommodate.
 > 
-> **Here is an example of a message sent to a mutual contact:**
+**Here is an example of a message sent to a mutual contact:**
 > 
 > _Hello \[contact\]! I’m a student at ALX and \[mutual friend\] recommended I reach out to you regarding your perspective/experience at \[company in question\], or learning on the job overall. In the future, would you mind if I asked you a few questions? Thank you either way for the time! \[signature\]_
 > 
-> **Here is one for connecting after a meetup/conference/etc (you had connected on LinkedIn):**
+**Here is one for connecting after a meetup/conference/etc (you had connected on LinkedIn):**
 > 
 > _Hi \[contact’s name\], It was great meeting you at \[event\]. I had a great time hearing your thoughts on \[conversation topic\]. On your LinkedIn profile, it says you’re currently working with \[particular tech you like\]—and \[reason why it relates to you\]. Let me know if I could ever buy you a coffee and hear about your experience with it! Best, \[signature\]_
 > 
-> **For good measure, here is another sent to a complete stranger whose keynote had been unfortunately missed:**
+**For good measure, here is another sent to a complete stranger whose keynote had been unfortunately missed:**
 > 
 > _Hello \[name of speaker\]! I was disappointed to have missed your \[keynote at xyz event\] given that \[tech field\] is one of the areas I’m most interested in pursuing. I am looking forward to learning more, and hope I’ll be able to catch your professional insight at another event. Need be, may I contact you with industry specific questions in the future? Regardless, have a great week! \[signature\]_
