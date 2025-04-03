@@ -1,21 +1,6 @@
 # Professional Relationships
 
-Soft-skillProfessionalism
-
--   Weight: 1
--   Project over - took place from Oct 2, 2023 7:00 AM to Oct 23, 2023 7:00 AM
--   An auto review will be launched at the deadline
-
-#### In a nutshell…
-
--   **Auto QA review:** 1.0/1 mandatory & 1.0/1 optional
--   **Altogether:**  **200.0%**
-    -   Mandatory: 100.0%
-    -   Optional: 100.0%
-    -   Calculation:  100.0% + (100.0% \* 100.0%)  == **200.0%**
-
 ## Background Context
-
 The word “networking” elicits a variety of responses – excitement, dread, confusion, and more. Befriending strangers for career betterment can feel selfish, insincere, and difficult if you are doing it incorrectly.
 
 > _Networking is all about relationships._
@@ -30,7 +15,7 @@ As you network, be mindful of the traits you’re contributing to the tech indus
 
 This project will explore how to develop appropriate and sustainable networking skills. Although everyone will develop their professional circles differently, there are some tried and true mentalities and habits that will benefit regardless of your needs.
 
-### Finding Direction
+## Finding Direction
 
 Networking should always begin with a committed, clear pursuit of your passion. If you don’t know what you love, or why you love it, you won’t know where to invest or which questions to ask.
 
