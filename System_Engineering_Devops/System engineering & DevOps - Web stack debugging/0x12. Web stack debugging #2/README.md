@@ -5,7 +5,7 @@
 > 
 > -   [Web stack debugging](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/web_stack_debugging.md)
 > 
-> ![](Project%200x12.%20Web%20stack%20debugging%202%20%20Cairo%20Intranet/99littlebugsinthecode-holberton.jpg)
+> ![](./assets/0x12-02.png)
 
 # Requirements
 
