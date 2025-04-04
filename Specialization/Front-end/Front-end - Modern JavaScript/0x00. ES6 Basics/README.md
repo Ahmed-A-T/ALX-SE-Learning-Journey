@@ -345,9 +345,9 @@ _For this project, we expect you to look at these concepts:_
 > Example:
 > 
 >> ```
->> &gt; returnHowManyArguments("Hello", "ALX", 2020);
+>> > returnHowManyArguments("Hello", "ALX", 2020);
 >> 3
->> &gt;
+>> >
 >> ```
 > 
 > Execution:
@@ -531,7 +531,7 @@ _For this project, we expect you to look at these concepts:_
 ## 9\. ES6 method properties
 > Rewrite **`getFullBudgetObject`** to use ES6 method properties in the **`fullBudget`** object
 > 
-```
+>> ```
 >> import getBudgetObject from './7-getBudgetObject.js';
 >> 
 >> export default function getFullBudgetObject(income, gdp, capita) {
@@ -792,16 +792,16 @@ _For this project, we expect you to look at these concepts:_
 > Full example:
 > 
 >> ```
->> &gt; employees = {
+>> > employees = {
 >>       ...createEmployeesObject('engineering', engineering),
 >>       ...createEmployeesObject('design', design),
 >>     };
->> &gt;
->> &gt; const report = createReportObject(employees);
->> &gt; const reportWithIterator = createIteratorObject(report);
->> &gt; iterateThroughObject(reportWithIterator)
+>> >
+>> > const report = createReportObject(employees);
+>> > const reportWithIterator = createIteratorObject(report);
+>> > iterateThroughObject(reportWithIterator)
 >> 'John Doe | Guillaume Salva | Kanye East | Jay Li'
->> &gt; 
+>> > 
 >> ```
 > 
 > Execution:
