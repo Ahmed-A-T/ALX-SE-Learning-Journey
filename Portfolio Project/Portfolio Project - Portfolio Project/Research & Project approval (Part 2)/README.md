@@ -64,7 +64,6 @@
 > In a section called “APIs and Methods”:
 > 
 > -   List and describe the API routes that you will be creating for your web client to communicate with your web server
->>     
 >>     ```
 >>     Example:
 >>     /api/rewards
@@ -74,9 +73,7 @@
 >>     /api/job_search
 >>     POST: Returns job's matching the parameters through GitHub Jobs API
 >>     ```
->>     
 > -   List and describe any API endpoints or function/methods that you will be creating to allow any other clients to use:
->>     
 >>     ```
 >>     Example: 
 >>     class arrow.arrow.Arrow(year, month, day, hour=0, minute=0, second=0, microsecond=0, tzinfo=None)
@@ -94,9 +91,7 @@
 >>     tzinfo – (optional) A timezone expression. Defaults to UTC.
 >>     (source https://arrow.readthedocs.io/en/latest/#api-guide)
 >>     ```
->>     
 > -   List and describe any 3rd party APIs that you will be using
->>     
 >>     ```
 >>     e.g. https://developer.twitter.com/en/docs/tweets/post-and-engage/overview
 >>     POST statuses/update
@@ -105,7 +100,6 @@
 >>     GET statuses/oembed
 >>     GET statuses/lookup
 >>     ```
->>     
 > 
 > If there are no APIs used or provided, skip this section.
 
