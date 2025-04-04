@@ -222,6 +222,8 @@
 -   Directory: **`0x04-TypeScript`**
 -   File: **`task_1/js/main.ts, task_1/webpack.config.js, task_1/tsconfig.json, task_1/package.json`**
 
+---
+
 ## 2\. Extending the Teacher class
 > Write an interface named **`Directors`** that extends **`Teacher`**. It requires an attribute named **`numberOfReports(number)`**
 > 
@@ -252,6 +254,8 @@
 -   Directory: **`0x04-TypeScript`**
 -   File: **`task_1/js/main.ts`**
 
+---
+
 ## 3\. Printing teachers
 > Write a function **`printTeacher`**:
 > 
@@ -266,6 +270,8 @@
 -   GitHub repository: **`alx-frontend-javascript`**
 -   Directory: **`0x04-TypeScript`**
 -   File: **`task_1/js/main.ts`**
+
+---
 
 ## 4\. Writing a class
 > Write a Class named **`StudentClass`**:
@@ -287,6 +293,8 @@
 -   GitHub repository: **`alx-frontend-javascript`**
 -   Directory: **`0x04-TypeScript`**
 -   File: **`task_1/js/main.ts`**
+
+---
 
 ## 5\. Advanced types Part 1
 > Create the **`DirectorInterface`** interface with the 3 expected methods:
@@ -337,6 +345,8 @@
 -   Directory: **`0x04-TypeScript`**
 -   File: **`task_2/js/main.ts, task_2/webpack.config.js, task_2/tsconfig.json, task_2/package.json`**
 
+---
+
 ## 6\. Creating functions specific to employees
 > Write a function **`isDirector`**:
 > 
@@ -363,6 +373,8 @@
 -   GitHub repository: **`alx-frontend-javascript`**
 -   Directory: **`0x04-TypeScript`**
 -   File: **`task_2/js/main.ts`**
+
+---
 
 ## 7\. String literal types
 > Write a String literal type named **`Subjects`** allowing a variable to have the value **`Math`** or **`History`** only. Write a function named **`teachClass`**:
