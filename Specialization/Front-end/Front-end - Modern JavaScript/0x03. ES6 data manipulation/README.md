@@ -55,8 +55,8 @@
 ## Configuration files
 > 
 > Add the following to the project directory.
-
-### **`package.json`**
+>
+> ### **`package.json`**
 > 
 > Click to show/hide file contents
 > 
@@ -82,8 +82,8 @@
 >>   }
 >> }
 >> ```
-
-### **`babel.config.js`**
+> 
+> ### **`babel.config.js`**
 > 
 > Click to show/hide file contents
 > 
@@ -102,8 +102,8 @@
 >>   ],
 >> };
 >> ```
-
-### **`.eslintrc.js`**
+> 
+> ### **`.eslintrc.js`**
 > 
 > Click to show/hide file contents
 > 
@@ -147,11 +147,13 @@
 >>   ]
 >> };
 >> ```
-
-### and…
+> 
+> ### and…
 > 
 > Don’t forget to run **`$ npm install`** when you have the **`package.json`**
 > 
+
+---
 
 # Tasks
 
