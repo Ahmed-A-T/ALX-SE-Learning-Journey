@@ -95,9 +95,9 @@
 > -   **Web Applications:** The presentation must load the website and demonstrate at least one key feature in action.  
 >     
 > -   **Non-Web Applications (Including the Maze Project):** The video should showcase the application in action.  
-    
-
-**Hint:**
+>     
+> 
+> **Hint:**
 > 
 > If a process takes too long (e.g., 30 minutes to process a file), you may instead:
 > 
@@ -105,8 +105,8 @@
 >     
 > -   Display output from a previous run that represents the final result.  
 >     
-
-**Scoring Criteria:**
+> 
+> **Scoring Criteria:**
 > 
 > -   **5/5 points**: Functional and engaging demo.  
 >     
