@@ -1,6 +1,6 @@
 # Cleanup your Portfolio Project
 
-### Concepts
+## Concepts
 > 
 > _For this project, we expect you to look at this concept:_
 > 
@@ -71,7 +71,7 @@
 
 ---
 
-## 6 Optional: Include much more technical detail and incorporate your story into your **`README.md\`**
+## 6 Optional: Include much more technical detail and incorporate your story into your **`README.md`**
 > Your portfolio project will **not** be the most technically impressive application that a recruiter or hiring manager sees. Bring context to the application by sharing your inspiration for creating this, or express the technical challenge you set out to solve. Be honest where you struggled and what you envision for a next-iteration. Add the emotion, the timeline, and a reminder of the human behind the keyboard so that your project is seen through the lens of “Wow, I’d like to work with a human who thinks like this!”
 > 
 > Pull from all your planning materials, your blog post, and project screenshots to create a **`README.md`** that stands out and tells the story of this project. This is a wonderful place to go into more technical depth than you did in your blog post. Really explain the details of the algorithm you chose, or the details of why you chose a specific solution. Add visuals (gifs, screenshots, emoji!) to bring the file to life!
