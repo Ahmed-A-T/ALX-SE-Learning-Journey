@@ -64,7 +64,7 @@
 > In a section called “APIs and Methods”:
 > 
 > -   List and describe the API routes that you will be creating for your web client to communicate with your web server
->>     ```
+>>```
 >>     Example:
 >>     /api/rewards
 >>     GET: Returns a randomized array of ten rewards based on rarity for a user to win based on a roll POST: Takes a user id and reward id and adds that to the user rewards table
@@ -72,14 +72,14 @@
 >>     GET: Returns the user's information based on session id
 >>     /api/job_search
 >>     POST: Returns job's matching the parameters through GitHub Jobs API
->>     ```
+>>```
 > -   List and describe any API endpoints or function/methods that you will be creating to allow any other clients to use:
->>     ```
+>>```
 >>     Example: 
 >>     class arrow.arrow.Arrow(year, month, day, hour=0, minute=0, second=0, microsecond=0, tzinfo=None)
 >>     An Arrow object.
 >>     Implements the datetime interface, behaving as an aware datetime while implementing additional functionality.
->>     
+>>
 >>     Parameters
 >>     year – the calendar year.
 >>     month – the calendar month.
@@ -90,16 +90,16 @@
 >>     microsecond – (optional) the microsecond. Defaults 0.
 >>     tzinfo – (optional) A timezone expression. Defaults to UTC.
 >>     (source https://arrow.readthedocs.io/en/latest/#api-guide)
->>     ```
+>>```
 > -   List and describe any 3rd party APIs that you will be using
->>     ```
+>>```
 >>     e.g. https://developer.twitter.com/en/docs/tweets/post-and-engage/overview
 >>     POST statuses/update
 >>     POST statuses/destroy/:id
 >>     GET statuses/show/:id
 >>     GET statuses/oembed
 >>     GET statuses/lookup
->>     ```
+>>```
 > 
 > If there are no APIs used or provided, skip this section.
 
