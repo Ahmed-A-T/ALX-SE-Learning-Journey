@@ -6,7 +6,7 @@
 > -   [CSS fundamentals](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/CSS_fundamentals.md)
 > -   [CSS advanced](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/CSS_advanced.md)
 > 
-> ![](./assets/00x02-01.jpeg)
+> ![](./assets/00x02-01.jpg)
 
 # Resources
 
