@@ -51,19 +51,19 @@
 > 
 > ![](./assets/00x02-05.jpg)
 > 
-> [download favicon.jpg](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/10/2ba3a0d7878316de5aaa.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250212%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250212T185707Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=309260b764a27818715e4f12fd890060748606cd04811731e51768ebf3bc8c48 "download favicon.jpg")
+> [download favicon.jpg](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/10/2ba3a0d7878316de5aaa.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250405%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250405T115640Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=d411cf083a1bfbe26ef9d18505b69e351aba019ccf4b547fd24f4b694e51d3f4 "download favicon.jpg")
 > 
 > #### **`logo-black.png`**
 > 
-> ![](Project%200x02.%20Advanced%20CSS%20%20Cairo%20Intranet/06f32e89f2a82582234e.png)
+> ![](./assets/00x02-06.png)
 > 
-> [download logo-black.png](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/10/06f32e89f2a82582234e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250212%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250212T185707Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=84025b3783bfcfb8fc0e68e4a48a61e16fbdec253dfde8d080e88cd6243301a8 "download logo-black.png")
+> [download logo-black.png](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/10/06f32e89f2a82582234e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250405%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250405T115640Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=820d3309bee479a7c71927984a6a0cf089f6bb98f30f654087e7929cd4cb8572 "download logo-black.png")
 > 
 > #### `logo-white.png`
 > 
-> ![](./assets/00x02-03.png)
+> ![](./assets/00x02-07.png)
 > 
-> [download logo-white.png](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/10/0fa48a04048a2d050cab.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250212%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250212T185707Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=72d2d97a6ffcc8abe78687ccaf66b5e004519849dbf7decf3e30763d6b038bdb "download logo-white.png")
+> [download logo-white.png](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/10/0fa48a04048a2d050cab.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250405%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250405T115640Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=9ce94822cec333b45c4d316b9151bc2b448db88531fbb759a6d26663d2e6fdf0 "download logo-white.png")
 > 
 > Store all these under a directory named “images”
 > 
