@@ -5,7 +5,7 @@
 > 
 > -   [HTML - elements of a web page](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/HTML-elements_of_a_web_page.md)
 > 
-> ![](./assets/00x00-01.png)
+> ![](./assets/00x00-01.jpg)
 
 # Welcome!
 > 
