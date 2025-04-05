@@ -169,7 +169,7 @@
 > -   Make sure that the button is on a new line
 > -   The screen should look like the image below:
 > 
-> ![](Project%200x04.%20React%20inline%20styling%20%20Cairo%20Intranet/c3ed54e1dba4b232adc1.png)
+> ![](./assets/h-02.png)
 > 
 > **Modify the component **`Notifications`** in **`task_3/dashboard/src/Notifications/Notifications.js`**:**
 > 
@@ -188,7 +188,7 @@
 > 
 > -   When the notifications panel is open, the screen should look like the image below:
 > 
-> ![](./assets/h-02.png)
+> ![](./assets/h-03.png)
 
 **Repo:**
 
@@ -216,7 +216,7 @@
 > 
 > -   When the notifications panel is hovered or opened, the UI should look like the image below:
 > 
-> ![](./assets/h-03.png)
+> ![](./assets/h-04.gif)
 
 ### **Repo:**
 
