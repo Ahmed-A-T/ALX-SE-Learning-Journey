@@ -1476,7 +1476,7 @@ Or some basics assets from this [archive.zip](./assets/archive.zip "archive.zip"
 > 
 > **Rendering on screen with max-width: 767px, the check box is the input**
 > 
-> ![](./assets/00x003-08.png)
+> ![](./assets/00x003-09.png)
 
 ### **Repo:**
 
@@ -1523,7 +1523,7 @@ Or some basics assets from this [archive.zip](./assets/archive.zip "archive.zip"
 > 
 > **Rendering of the hamburger on max-width: 767px**
 > 
-> ![](./assets/00x003-09.png)
+> ![](./assets/00x003-10.png)
 
 ### **Repo:**
 
@@ -1588,15 +1588,15 @@ Or some basics assets from this [archive.zip](./assets/archive.zip "archive.zip"
 > 
 > **Rendering on screen with max-width: 767px, when the input is unchecked the menu is not displayed**
 > 
-> ![](./assets/00x003-10.png)
+> ![](./assets/00x003-11.png)
 > 
 > **Rendering on screen with max-width: 767 px, when input is checked the menu block is displayed**
 > 
-> ![](./assets/00x003-11.png)
+> ![](./assets/00x003-12.png)
 > 
 > **Rendering on desktop screen, menu icon is not visible**
 > 
-> ![](./assets/00x003-12.png)
+> ![](./assets/00x003-13.png)
 
 ### **Repo:**
 
@@ -1642,7 +1642,7 @@ Or some basics assets from this [archive.zip](./assets/archive.zip "archive.zip"
 > 
 > **Rendering on screen of max-width: 767px**
 > 
-> ![](./assets/00x003-13.png)
+> ![](./assets/00x003-14.png)
 
 ### **Repo:**
 
@@ -1665,7 +1665,7 @@ Or some basics assets from this [archive.zip](./assets/archive.zip "archive.zip"
 > 
 > **Rendering on screen of max-width: 767px**
 > 
-> ![](./assets/00x003-13.png)
+> ![](./assets/00x003-15.png)
 
 ### **Repo:**
 
@@ -1686,7 +1686,7 @@ Or some basics assets from this [archive.zip](./assets/archive.zip "archive.zip"
 > 
 > **Rendering of **`header`** and **`section-hero`** class elements**
 > 
-> ![](./assets/00x003-14.png)
+> ![](./assets/00x003-16.png)
 
 ### **Repo:**
 
@@ -2046,11 +2046,11 @@ Or some basics assets from this [archive.zip](./assets/archive.zip "archive.zip"
 > 
 > **Rendering on desktop screen**
 > 
-> ![](./assets/00x003-15.png)
+> ![](./assets/00x003-17.png)
 > 
 > **Rendering on screen of max-width: 767px**
 > 
-> ![](./assets/00x003-16.png)
+> ![](./assets/00x003-18.png)
 
 ### **Repo:**
 
