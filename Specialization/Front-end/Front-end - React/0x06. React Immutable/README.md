@@ -368,104 +368,76 @@
 
 ---
 
-### 7\. Equality
+## 7\. Equality
+> Create a function named **`areMapsEqual`**
+> 
+> -   It accepts two arguments `map1` and `map2`. Both are Immutable.js Maps
+> -   It should return true if the Maps are equal
+>
+>Example:
+>
+>> ```
+>> const map1 = new Map(
+>>   {
+>>     firstName: 'Guillaume',
+>>     lastName: 'Salva',
+>>   }
+>> );
+>> const map2 = new Map(
+>>   {
+>>     firstName: 'Guillaume',
+>>     lastName: 'Salva',
+>>   }
+>> );
+>> 
+>> areMapsEqual(map1, map2);
+>> ```
+> 
+> Should return **`true`**
+> 
+> **Requirements:**
+> 
+> -   Use **`is`** from the **`immutable.js`** library
 
-mandatory
+### **Repo:**
 
-Create a function named `areMapsEqual`
+-   GitHub repository: **`alx-react`**
+-   Directory: **`0x06-React_Immutable`**
+-   File: **`7-equality.js`**
 
--   It accepts two arguments `map1` and `map2`. Both are Immutable.js Maps
--   It should return true if the Maps are equal
+---
 
-Example:
+## 8\. Lazy Seq
+> Create a function named **`printBestStudents`**:
+> 
+> -   It accepts one object as argument. The object is formed with the following structure:
+> 
+>> ```
+>> const grades = {
+>>   1: {
+>>     score: 99,
+>>     firstName: 'guillaume',
+>>     lastName: 'salva',
+>>   }
+>> };
+>> ```
 
-```
-const map1 = new Map(
-  {
-    firstName: 'Guillaume',
-    lastName: 'Salva',
-  }
-);
-const map2 = new Map(
-  {
-    firstName: 'Guillaume',
-    lastName: 'Salva',
-  }
-);
+> -   Calling the function should filter any student with a score < 70 and print to the **`console`** the first name and the last name with the first letter capitalized:
+> 
+>> ```
+>> {
+>>     "1": { score: 99, firstName: "Guillaume", lastName: "Salva" },
+>> }
+>> ```
+>
+> Requirements:
+> 
+> -   Uses **`seq`** from **`immutable.js`**
 
-areMapsEqual(map1, map2);
-```
+### **Repo:**
 
-Should return `true`
+-   GitHub repository: **`alx-react`**
+-   Directory: **`0x06-React_Immutable`**
+-   File: **`8-seq.js`**
 
-**Requirements:**
-
--   Use `is` from the `immutable.js` library
-
-**Repo:**
-
--   GitHub repository: `alx-react`
--   Directory: `0x06-React_Immutable`
--   File: `7-equality.js`
-
-Check submission
-
-×
-
-#### 7\. Equality
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-### 8\. Lazy Seq
-
-mandatory
-
-Create a function named `printBestStudents`:
-
--   It accepts one object as argument. The object is formed with the following structure:
-
-```
-const grades = {
-  1: {
-    score: 99,
-    firstName: 'guillaume',
-    lastName: 'salva',
-  }
-};
-```
-
--   Calling the function should filter any student with a score < 70 and print to the `console` the first name and the last name with the first letter capitalized:
-
-```
-{
-    "1": { score: 99, firstName: "Guillaume", lastName: "Salva" },
-}
-```
-
-Requirements:
-
--   Uses `seq` from `immutable.js`
-
-**Repo:**
-
--   GitHub repository: `alx-react`
--   Directory: `0x06-React_Immutable`
--   File: `8-seq.js`
+---
