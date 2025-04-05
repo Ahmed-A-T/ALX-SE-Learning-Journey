@@ -49,7 +49,6 @@
 > 
 > #### **`favicon.jpg`**
 > 
-> ![](./assets/00x02-01.jpg)
 > 
 > [download favicon.jpg](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/10/2ba3a0d7878316de5aaa.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250212%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250212T185707Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=309260b764a27818715e4f12fd890060748606cd04811731e51768ebf3bc8c48 "download favicon.jpg")
 > 
