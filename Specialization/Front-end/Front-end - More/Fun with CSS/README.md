@@ -1,178 +1,171 @@
 # Fun with CSS
 
-CSSFront-end
-
--   Weight: 1
--   Project over - took place from Sep 2, 2024 7:00 AM to Sep 9, 2024 7:00 AM
-
 In this project, you will experiment and implement fun layout with HTML and CSS **ONLY**!
 
 Yes, no JavaScript!
 
 Enjoy!
 
-## Tasks
+---
 
-### 0\. Sprite languages
+# Tasks
 
-#advanced
+## 0\. Sprite languages
+> By using this HTML:
+> 
+>> ```
+>> <!DOCTYPE html>
+>> <html lang="en">
+>>     <head>
+>>         <meta charset="UTF-8" />
+>>         <title>HBTN - 0- Sprite</title>
+>> 
+>>         <link href="0-styles.css" media="all" rel="stylesheet" type="text/css">
+>>     </head>
+>>     <body>
+>>         <ul>
+>>             <li>HTML<span class="icon i-html"></span></li>
+>>             <li>CSS<span class="icon i-css"></span></li>
+>>             <li>JavaScript<span class="icon i-js"></span></li>
+>>         </ul>
+>>     </body>
+>> </html>
+>> ```
+> 
+> And this image file: [0-sprite.png](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/2/d416199ca6ecdbd0f8a3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250406%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250406T142903Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=30dcaa2fe96f5b287e831e2bab878b2067cb3b16eff442dc121d84411ff43a51 "0-sprite.png")
+> 
+> Create **`0-styles.css`** and generate this layout:
+> 
+> ![](./assets/FC-01.png)
+> 
+> You are not allowed to change the image and the HTML - _sprite is cool!_
 
-By using this HTML:
+### **Repo:**
 
-```
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8" /&gt;
-        &lt;title&gt;HBTN - 0- Sprite&lt;/title&gt;
+-   GitHub repository: **`alx-frontend-for-fun`**
+-   File: **`0-styles.css`**
 
-        &lt;link href="0-styles.css" media="all" rel="stylesheet" type="text/css"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;ul&gt;
-            &lt;li&gt;HTML&lt;span class="icon i-html"&gt;&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;CSS&lt;span class="icon i-css"&gt;&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;JavaScript&lt;span class="icon i-js"&gt;&lt;/span&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-```
+---
 
-And this image file: [0-sprite.png](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/2/d416199ca6ecdbd0f8a3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250213%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250213T161248Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=af3b54033692a073da2f045ef9145e8b251cdf36daca7a705b2bb528047bf057 "0-sprite.png")
+## 1\. Move the (under)line
+> By using this HTML:
+> 
+>> ```
+>> <!DOCTYPE html>
+>> <html lang="en">
+>>     <head>
+>>         <meta charset="UTF-8" />
+>>         <title>HBTN - 1- Underline</title>
+>> 
+>>         <link href="1-styles.css" media="all" rel="stylesheet" type="text/css">
+>>     </head>
+>>     <body>
+>>         <h2>
+>>             Hello <a href="https://www.alxafrica.com">ALX!</a>
+>>         </h2>
+>>     </body>
+>> </html>
+>> ```
+> 
+> Create **`1-styles.css`** and generate this layout where the underline is hidden by default and appeared slowly…:
+> 
+> ![](./assets/FC-02.gif)
+> 
+> You are not allowed to change the HTML
 
-Create `0-styles.css` and generate this layout:
+### **Repo:**
 
-![](Project%20Fun%20with%20CSS%20%20Cairo%20Intranet/94aa60f76c412f40a87b.png)
+-   GitHub repository: **`alx-frontend-for-fun`**
+-   File: **`1-styles.css`**
 
-You are not allowed to change the image and the HTML - _sprite is cool!_
+---
 
-**Repo:**
+## 2\. Toggle
+> By using this HTML:
+> 
+>> ```
+>> <!DOCTYPE html>
+>> <html lang="en">
+>>     <head>
+>>         <meta charset="UTF-8" />
+>>         <title>HBTN - 2- toggle</title>
+>> 
+>>         <link href="2-styles.css" media="all" rel="stylesheet" type="text/css">
+>>     </head>
+>>     <body>
+>>         <div class="toggle">
+>>             <input type="checkbox" name="toggle" class="toggle-cb" id="toggle-0" checked>
+>>             <label class="toggle-label" for="toggle-0">
+>>                 <div class="toggle-inner"></div>
+>>                 <div class="toggle-switch"></div>
+>>             </label>
+>>         </div>
+>>     </body>
+>> </html>
+>> ```
+> 
+> Create **`2-styles.css`** and generate this layout where the **`<input>`** is has this custom toggle layout:
+> 
+> **Checked:**
+> 
+> ![](./assets/FC-03.png)
+> 
+> **Unchecked:**
+> 
+> ![](./assets/FC-04.png)
+> 
+> You are not allowed to change the HTML
 
--   GitHub repository: `alx-frontend-for-fun`
--   File: `0-styles.css`
+### **Repo:**
 
-### 1\. Move the (under)line
+-   GitHub repository: **`alx-frontend-for-fun`**
+-   File: **`2-styles.css`**
 
-#advanced
+---
 
-By using this HTML:
+## 3\. Menu
+> By using this HTML:
+> 
+>> ```
+>> <!DOCTYPE html>
+>> <html lang="en">
+>>     <head>
+>>         <meta charset="UTF-8" />
+>>         <title>HBTN - 2- toggle</title>
+>> 
+>>         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+>>         <link href="3-styles.css" media="all" rel="stylesheet" type="text/css">
+>>     </head>
+>>     <body>
+>> 
+>>         <nav class="menu">
+>>             <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+>>             <label class="menu-open-button" for="menu-open">
+>>                 <span class="menu-line menu-line-1"></span>
+>>                 <span class="menu-line menu-line-2"></span>
+>>                 <span class="menu-line menu-line-3"></span>
+>>             </label>
+>> 
+>>             <a href="#" class="menu-item"> <i class="fa fa-area-chart"></i> </a>
+>>             <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+>>             <a href="#" class="menu-item"> <i class="fa fa-line-chart"></i> </a>
+>>             <a href="#" class="menu-item"> <i class="fa fa-pie-chart"></i> </a>
+>>             <a href="#" class="menu-item"> <i class="fa fa-table"></i> </a>
+>>         </nav>
+>> 
+>>     </body>
+>> </html>
+>> ```
+> 
+> Create `3-styles.css` and generate this layout/animation:
+> 
+> ![](./assets/FC-05.gif)
+> 
+> You are not allowed to change the HTML
 
-```
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8" /&gt;
-        &lt;title&gt;HBTN - 1- Underline&lt;/title&gt;
+### **Repo:**
 
-        &lt;link href="1-styles.css" media="all" rel="stylesheet" type="text/css"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h2&gt;
-            Hello &lt;a href="https://www.alxafrica.com"&gt;ALX!&lt;/a&gt;
-        &lt;/h2&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-```
+-   GitHub repository: **`alx-frontend-for-fun`**
+-   File: **`3-styles.css`**
 
-Create `1-styles.css` and generate this layout where the underline is hidden by default and appeared slowly…:
-
-![](Project%20Fun%20with%20CSS%20%20Cairo%20Intranet/b791cfdbd11c0eefa5f7.gif)
-
-You are not allowed to change the HTML
-
-**Repo:**
-
--   GitHub repository: `alx-frontend-for-fun`
--   File: `1-styles.css`
-
-### 2\. Toggle
-
-#advanced
-
-By using this HTML:
-
-```
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8" /&gt;
-        &lt;title&gt;HBTN - 2- toggle&lt;/title&gt;
-
-        &lt;link href="2-styles.css" media="all" rel="stylesheet" type="text/css"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div class="toggle"&gt;
-            &lt;input type="checkbox" name="toggle" class="toggle-cb" id="toggle-0" checked&gt;
-            &lt;label class="toggle-label" for="toggle-0"&gt;
-                &lt;div class="toggle-inner"&gt;&lt;/div&gt;
-                &lt;div class="toggle-switch"&gt;&lt;/div&gt;
-            &lt;/label&gt;
-        &lt;/div&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-```
-
-Create `2-styles.css` and generate this layout where the `<input>` is has this custom toggle layout:
-
-**Checked:**
-
-![](Project%20Fun%20with%20CSS%20%20Cairo%20Intranet/3848b025c8f25636bba5.png)
-
-**Unchecked:**
-
-![](Project%20Fun%20with%20CSS%20%20Cairo%20Intranet/aeae59fdee93b17f360f.png)
-
-You are not allowed to change the HTML
-
-**Repo:**
-
--   GitHub repository: `alx-frontend-for-fun`
--   File: `2-styles.css`
-
-### 3\. Menu
-
-#advanced
-
-By using this HTML:
-
-```
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8" /&gt;
-        &lt;title&gt;HBTN - 2- toggle&lt;/title&gt;
-
-        &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
-        &lt;link href="3-styles.css" media="all" rel="stylesheet" type="text/css"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-
-        &lt;nav class="menu"&gt;
-            &lt;input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/&gt;
-            &lt;label class="menu-open-button" for="menu-open"&gt;
-                &lt;span class="menu-line menu-line-1"&gt;&lt;/span&gt;
-                &lt;span class="menu-line menu-line-2"&gt;&lt;/span&gt;
-                &lt;span class="menu-line menu-line-3"&gt;&lt;/span&gt;
-            &lt;/label&gt;
-
-            &lt;a href="#" class="menu-item"&gt; &lt;i class="fa fa-area-chart"&gt;&lt;/i&gt; &lt;/a&gt;
-            &lt;a href="#" class="menu-item"&gt; &lt;i class="fa fa-bar-chart"&gt;&lt;/i&gt; &lt;/a&gt;
-            &lt;a href="#" class="menu-item"&gt; &lt;i class="fa fa-line-chart"&gt;&lt;/i&gt; &lt;/a&gt;
-            &lt;a href="#" class="menu-item"&gt; &lt;i class="fa fa-pie-chart"&gt;&lt;/i&gt; &lt;/a&gt;
-            &lt;a href="#" class="menu-item"&gt; &lt;i class="fa fa-table"&gt;&lt;/i&gt; &lt;/a&gt;
-        &lt;/nav&gt;
-
-    &lt;/body&gt;
-&lt;/html&gt;
-```
-
-Create `3-styles.css` and generate this layout/animation:
-
-![](Project%20Fun%20with%20CSS%20%20Cairo%20Intranet/252a25667dc7c65fe0e9.gif)
-
-You are not allowed to change the HTML
-
-**Repo:**
-
--   GitHub repository: `alx-frontend-for-fun`
--   File: `3-styles.css`
+---
