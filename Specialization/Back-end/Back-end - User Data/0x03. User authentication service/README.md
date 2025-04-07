@@ -482,933 +482,402 @@
 
 ---
 
-### 8\. Credentials validation
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement the `Auth.valid_login` method. It should expect `email` and `password` required arguments and return a boolean.
-
-Try locating the user by email. If it exists, check the password with `bcrypt.checkpw`. If it matches return `True`. In any other case, return `False`.
-
-```
-bob@dylan:~$ cat main.py
-#!/usr/bin/env python3
-"""
-Main file
-"""
-from auth import Auth
-
-email = 'bob@bob.com'
-password = 'MyPwdOfBob'
-auth = Auth()
-
-auth.register_user(email, password)
-
-print(auth.valid_login(email, password))
-
-print(auth.valid_login(email, "WrongPwd"))
-
-print(auth.valid_login("unknown@email", password))
-
-bob@dylan:~$ python3 main.py
-True
-False
-False
-bob@dylan:~$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `auth.py`
-
-Check submission
-
-×
-
-#### 8\. Credentials validation
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 8\. Credentials validation
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 9\. Generate UUIDs
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task you will implement a `_generate_uuid` function in the `auth` module. The function should return a string representation of a new UUID. Use the `uuid` module.
-
-Note that the method is private to the `auth` module and should **NOT** be used outside of it.
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `auth.py`
-
-Check submission
-
-×
-
-#### 9\. Generate UUIDs
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 9\. Generate UUIDs
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 10\. Get session ID
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement the `Auth.create_session` method. It takes an `email` string argument and returns the session ID as a string.
-
-The method should find the user corresponding to the email, generate a new UUID and store it in the database as the user’s `session_id`, then return the session ID.
-
-Remember that only public methods of `self._db` can be used.
-
-```
-bob@dylan:~$ cat main.py
-#!/usr/bin/env python3
-"""
-Main file
-"""
-from auth import Auth
-
-email = 'bob@bob.com'
-password = 'MyPwdOfBob'
-auth = Auth()
-
-auth.register_user(email, password)
-
-print(auth.create_session(email))
-print(auth.create_session("unknown@email.com"))
-
-bob@dylan:~$ python3 main.py
-5a006849-343e-4a48-ba4e-bbd523fcca58
-None
-bob@dylan:~$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `auth.py`
-
-Check submission
-
-×
-
-#### 10\. Get session ID
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 10\. Get session ID
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 11\. Log in
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement a `login` function to respond to the `POST /sessions` route.
-
-The request is expected to contain form data with `"email"` and a `"password"` fields.
-
-If the login information is incorrect, use `flask.abort` to respond with a 401 HTTP status.
-
-Otherwise, create a new session for the user, store it the session ID as a cookie with key `"session_id"` on the response and return a JSON payload of the form
-
-```
-{"email": "<user email>", "message": "logged in"}
-```
-
-```
-bob@dylan:~$ curl -XPOST localhost:5000/users -d 'email=bob@bob.com' -d 'password=mySuperPwd'
-{"email":"bob@bob.com","message":"user created"}
-bob@dylan:~$ 
-bob@dylan:~$  curl -XPOST localhost:5000/sessions -d 'email=bob@bob.com' -d 'password=mySuperPwd' -v
-Note: Unnecessary use of -X or --request, POST is already inferred.
-*   Trying 127.0.0.1...
-* TCP_NODELAY set
-* Connected to localhost (127.0.0.1) port 5000 (#0)
-> POST /sessions HTTP/1.1
-> Host: localhost:5000
-> User-Agent: curl/7.58.0
-> Accept: */*
-> Content-Length: 37
-> Content-Type: application/x-www-form-urlencoded
+## 8\. Credentials validation
+> In this task, you will implement the **`Auth.valid_login`** method. It should expect **`email`** and **`password`** required arguments and return a boolean.
 > 
-* upload completely sent off: 37 out of 37 bytes
-* HTTP 1.0, assume close after body
-< HTTP/1.0 200 OK
-< Content-Type: application/json
-< Content-Length: 46
-< Set-Cookie: session_id=163fe508-19a2-48ed-a7c8-d9c6e56fabd1; Path=/
-< Server: Werkzeug/1.0.1 Python/3.7.3
-< Date: Wed, 19 Aug 2020 00:12:34 GMT
-< 
-{"email":"bob@bob.com","message":"logged in"}
-* Closing connection 0
-bob@dylan:~$ 
-bob@dylan:~$ curl -XPOST localhost:5000/sessions -d 'email=bob@bob.com' -d 'password=BlaBla' -v
-Note: Unnecessary use of -X or --request, POST is already inferred.
-*   Trying 127.0.0.1...
-* TCP_NODELAY set
-* Connected to localhost (127.0.0.1) port 5000 (#0)
-> POST /sessions HTTP/1.1
-> Host: localhost:5000
-> User-Agent: curl/7.58.0
-> Accept: */*
-> Content-Length: 34
-> Content-Type: application/x-www-form-urlencoded
+> Try locating the user by email. If it exists, check the password with **`bcrypt.checkpw`**. If it matches return **`True`**. In any other case, return **`False`**.
 > 
-* upload completely sent off: 34 out of 34 bytes
-* HTTP 1.0, assume close after body
-< HTTP/1.0 401 UNAUTHORIZED
-< Content-Type: text/html; charset=utf-8
-< Content-Length: 338
-< Server: Werkzeug/1.0.1 Python/3.7.3
-< Date: Wed, 19 Aug 2020 00:12:45 GMT
-< 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<title>401 Unauthorized</title>
-<h1>Unauthorized</h1>
-<p>The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.</p>
-* Closing connection 0
-bob@dylan:~$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `app.py`
-
-Check submission
-
-×
-
-#### 11\. Log in
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 11\. Log in
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 12\. Find user by session ID
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement the `Auth.get_user_from_session_id` method. It takes a single `session_id` string argument and returns the corresponding `User` or `None`.
-
-If the session ID is `None` or no user is found, return `None`. Otherwise return the corresponding user.
-
-Remember to only use public methods of `self._db`.
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `auth.py`
-
-Check submission
-
-×
-
-#### 12\. Find user by session ID
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 12\. Find user by session ID
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 13\. Destroy session
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement `Auth.destroy_session`. The method takes a single `user_id` integer argument and returns `None`.
-
-The method updates the corresponding user’s session ID to `None`.
-
-Remember to only use public methods of `self._db`.
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `auth.py`
-
-Check submission
-
-×
-
-#### 13\. Destroy session
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 13\. Destroy session
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 14\. Log out
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement a `logout` function to respond to the `DELETE /sessions` route.
-
-The request is expected to contain the session ID as a cookie with key `"session_id"`.
-
-Find the user with the requested session ID. If the user exists destroy the session and redirect the user to `GET /`. If the user does not exist, respond with a 403 HTTP status.
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `app.py`
-
-Check submission
-
-×
-
-#### 14\. Log out
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 14\. Log out
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 15\. User profile
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement a `profile` function to respond to the `GET /profile` route.
-
-The request is expected to contain a `session_id` cookie. Use it to find the user. If the user exist, respond with a 200 HTTP status and the following JSON payload:
-
-```
-{"email": "<user email>"}
-```
-
-If the session ID is invalid or the user does not exist, respond with a 403 HTTP status.
-
-```
-bob@dylan:~$ curl -XPOST localhost:5000/sessions -d 'email=bob@bob.com' -d 'password=mySuperPwd' -v
-Note: Unnecessary use of -X or --request, POST is already inferred.
-*   Trying 127.0.0.1...
-* TCP_NODELAY set
-* Connected to localhost (127.0.0.1) port 5000 (#0)
-> POST /sessions HTTP/1.1
-> Host: localhost:5000
-> User-Agent: curl/7.58.0
-> Accept: */*
-> Content-Length: 37
-> Content-Type: application/x-www-form-urlencoded
+>> ```
+>> bob@dylan:~$ cat main.py
+>> #!/usr/bin/env python3
+>> """
+>> Main file
+>> """
+>> from auth import Auth
+>> 
+>> email = 'bob@bob.com'
+>> password = 'MyPwdOfBob'
+>> auth = Auth()
+>> 
+>> auth.register_user(email, password)
+>> 
+>> print(auth.valid_login(email, password))
+>> 
+>> print(auth.valid_login(email, "WrongPwd"))
+>> 
+>> print(auth.valid_login("unknown@email", password))
+>> 
+>> bob@dylan:~$ python3 main.py
+>> True
+>> False
+>> False
+>> bob@dylan:~$ 
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`auth.py`**
+
+---
+
+## 9\. Generate UUIDs
+> In this task you will implement a **`_generate_uuid`** function in the **`auth`** module. The function should return a string representation of a new UUID. Use the **`uuid`** module.
 > 
-* upload completely sent off: 37 out of 37 bytes
-* HTTP 1.0, assume close after body
-< HTTP/1.0 200 OK
-< Content-Type: application/json
-< Content-Length: 46
-< Set-Cookie: session_id=75c89af8-1729-44d9-a592-41b5e59de9a1; Path=/
-< Server: Werkzeug/1.0.1 Python/3.7.3
-< Date: Wed, 19 Aug 2020 00:15:57 GMT
-< 
-{"email":"bob@bob.com","message":"logged in"}
-* Closing connection 0
-bob@dylan:~$
-bob@dylan:~$ curl -XGET localhost:5000/profile -b "session_id=75c89af8-1729-44d9-a592-41b5e59de9a1"
-{"email": "bob@bob.com"}
-bob@dylan:~$ 
-bob@dylan:~$ curl -XGET localhost:5000/profile -b "session_id=nope" -v
-Note: Unnecessary use of -X or --request, GET is already inferred.
-*   Trying 127.0.0.1...
-* TCP_NODELAY set
-* Connected to localhost (127.0.0.1) port 5000 (#0)
-> GET /profile HTTP/1.1
-> Host: localhost:5000
-> User-Agent: curl/7.58.0
-> Accept: */*
-> Cookie: session_id=75c89af8-1729-44d9-a592-41b5e59de9a
+> Note that the method is private to the **`auth`** module and should **NOT** be used outside of it.
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`auth.py`**
+
+---
+
+## 10\. Get session ID
+> In this task, you will implement the **`Auth.create_session`** method. It takes an **`email`** string argument and returns the session ID as a string.
 > 
-* HTTP 1.0, assume close after body
-< HTTP/1.0 403 FORBIDDEN
-< Content-Type: text/html; charset=utf-8
-< Content-Length: 234
-< Server: Werkzeug/1.0.1 Python/3.7.3
-< Date: Wed, 19 Aug 2020 00:16:43 GMT
-< 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<title>403 Forbidden</title>
-<h1>Forbidden</h1>
-<p>You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.</p>
-* Closing connection 0
-
-bob@dylan:~$ 
-```
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `app.py`
-
-Check submission
-
-×
-
-#### 15\. User profile
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 15\. User profile
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 16\. Generate reset password token
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement the `Auth.get_reset_password_token` method. It take an `email` string argument and returns a string.
-
-Find the user corresponding to the email. If the user does not exist, raise a `ValueError` exception. If it exists, generate a UUID and update the user’s `reset_token` database field. Return the token.
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `auth.py`
-
-Check submission
-
-×
-
-#### 16\. Generate reset password token
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 16\. Generate reset password token
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 17\. Get reset password token
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement a `get_reset_password_token` function to respond to the `POST /reset_password` route.
-
-The request is expected to contain form data with the `"email"` field.
-
-If the email is not registered, respond with a 403 status code. Otherwise, generate a token and respond with a 200 HTTP status and the following JSON payload:
-
-```
-{"email": "<user email>", "reset_token": "<reset token>"}
-```
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `app.py`
-
-Check submission
-
-×
-
-#### 17\. Get reset password token
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 17\. Get reset password token
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 18\. Update password
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task, you will implement the `Auth.update_password` method. It takes `reset_token` string argument and a `password` string argument and returns `None`.
-
-Use the `reset_token` to find the corresponding user. If it does not exist, raise a `ValueError` exception.
-
-Otherwise, hash the password and update the user’s `hashed_password` field with the new hashed password and the `reset_token` field to `None`.
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `auth.py`
-
-Check submission
-
-×
-
-#### 18\. Update password
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 18\. Update password
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 19\. Update password end-point
-
-mandatory
-
-Score: 65.0% (Checks completed: 100.0%)
-
-In this task you will implement the `update_password` function in the `app` module to respond to the `PUT /reset_password` route.
-
-The request is expected to contain form data with fields `"email"`, `"reset_token"` and `"new_password"`.
-
-Update the password. If the token is invalid, catch the exception and respond with a 403 HTTP code.
-
-If the token is valid, respond with a 200 HTTP code and the following JSON payload:
-
-```
-{"email": "<user email>", "message": "Password updated"}
-```
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `app.py`
-
-Check submission
-
-×
-
-#### 19\. Update password end-point
-
-Request a new review Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox View results
-
-×
-
-#### 19\. Update password end-point
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
-
-### 20\. End-to-end integration test
-
-#advanced
-
-Score: 65.0% (Checks completed: 100.0%)
-
-Start your app. Open a new terminal window.
-
-Create a new module called `main.py`. Create one function for each of the following tasks. Use the `requests` module to query your web server for the corresponding end-point. Use `assert` to validate the response’s expected status code and payload (if any) for each task.
-
--   `register_user(email: str, password: str) -> None`
--   `log_in_wrong_password(email: str, password: str) -> None`
--   `log_in(email: str, password: str) -> str`
--   `profile_unlogged() -> None`
--   `profile_logged(session_id: str) -> None`
--   `log_out(session_id: str) -> None`
--   `reset_password_token(email: str) -> str`
--   `update_password(email: str, reset_token: str, new_password: str) -> None`
-
-Then copy the following code at the end of the `main` module:
-
-```
-EMAIL = "guillaume@holberton.io"
-PASSWD = "b4l0u"
-NEW_PASSWD = "t4rt1fl3tt3"
-
-
-if __name__ == "__main__":
-
-    register_user(EMAIL, PASSWD)
-    log_in_wrong_password(EMAIL, NEW_PASSWD)
-    profile_unlogged()
-    session_id = log_in(EMAIL, PASSWD)
-    profile_logged(session_id)
-    log_out(session_id)
-    reset_token = reset_password_token(EMAIL)
-    update_password(EMAIL, reset_token, NEW_PASSWD)
-    log_in(EMAIL, NEW_PASSWD)
-```
-
-Run `python main.py`. If everything is correct, you should see no output.
-
-**Repo:**
-
--   GitHub repository: `alx-backend-user-data`
--   Directory: `0x03-user_authentication_service`
--   File: `main.py`
+> The method should find the user corresponding to the email, generate a new UUID and store it in the database as the user’s **`session_id`**, then return the session ID.
+> 
+> Remember that only public methods of **`self._db`** can be used.
+> 
+> ```
+> bob@dylan:~$ cat main.py
+> #!/usr/bin/env python3
+> """
+> Main file
+> """
+> from auth import Auth
+> 
+> email = 'bob@bob.com'
+> password = 'MyPwdOfBob'
+> auth = Auth()
+> 
+> auth.register_user(email, password)
+> 
+> print(auth.create_session(email))
+> print(auth.create_session("unknown@email.com"))
+> 
+> bob@dylan:~$ python3 main.py
+> 5a006849-343e-4a48-ba4e-bbd523fcca58
+> None
+> bob@dylan:~$ 
+> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`auth.py`**
+
+---
+
+## 11\. Log in
+> In this task, you will implement a **`login`** function to respond to the **`POST /sessions`** route.
+> 
+> The request is expected to contain form data with **`"email"`** and a **`"password"`** fields.
+> 
+> If the login information is incorrect, use **`flask.abort`** to respond with a 401 HTTP status.
+> 
+> Otherwise, create a new session for the user, store it the session ID as a cookie with key **`"session_id"`** on the response and return a JSON payload of the form
+> 
+>> ```
+>> {"email": "<user email>", "message": "logged in"}
+>> ```
+>> 
+>> ```
+>> bob@dylan:~$ curl -XPOST localhost:5000/users -d 'email=bob@bob.com' -d 'password=mySuperPwd'
+>> {"email":"bob@bob.com","message":"user created"}
+>> bob@dylan:~$ 
+>> bob@dylan:~$  curl -XPOST localhost:5000/sessions -d 'email=bob@bob.com' -d 'password=mySuperPwd' -v
+>> Note: Unnecessary use of -X or --request, POST is already inferred.
+>> *   Trying 127.0.0.1...
+>> * TCP_NODELAY set
+>> * Connected to localhost (127.0.0.1) port 5000 (#0)
+>> > POST /sessions HTTP/1.1
+>> > Host: localhost:5000
+>> > User-Agent: curl/7.58.0
+>> > Accept: */*
+>> > Content-Length: 37
+>> > Content-Type: application/x-www-form-urlencoded
+>> > 
+>> * upload completely sent off: 37 out of 37 bytes
+>> * HTTP 1.0, assume close after body
+>> < HTTP/1.0 200 OK
+>> < Content-Type: application/json
+>> < Content-Length: 46
+>> < Set-Cookie: session_id=163fe508-19a2-48ed-a7c8-d9c6e56fabd1; Path=/
+>> < Server: Werkzeug/1.0.1 Python/3.7.3
+>> < Date: Wed, 19 Aug 2020 00:12:34 GMT
+>> < 
+>> {"email":"bob@bob.com","message":"logged in"}
+>> * Closing connection 0
+>> bob@dylan:~$ 
+>> bob@dylan:~$ curl -XPOST localhost:5000/sessions -d 'email=bob@bob.com' -d 'password=BlaBla' -v
+>> Note: Unnecessary use of -X or --request, POST is already inferred.
+>> *   Trying 127.0.0.1...
+>> * TCP_NODELAY set
+>> * Connected to localhost (127.0.0.1) port 5000 (#0)
+>> > POST /sessions HTTP/1.1
+>> > Host: localhost:5000
+>> > User-Agent: curl/7.58.0
+>> > Accept: */*
+>> > Content-Length: 34
+>> > Content-Type: application/x-www-form-urlencoded
+>> > 
+>> * upload completely sent off: 34 out of 34 bytes
+>> * HTTP 1.0, assume close after body
+>> < HTTP/1.0 401 UNAUTHORIZED
+>> < Content-Type: text/html; charset=utf-8
+>> < Content-Length: 338
+>> < Server: Werkzeug/1.0.1 Python/3.7.3
+>> < Date: Wed, 19 Aug 2020 00:12:45 GMT
+>> < 
+>> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+>> <title>401 Unauthorized</title>
+>> <h1>Unauthorized</h1>
+>> <p>The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.</p>
+>> * Closing connection 0
+>> bob@dylan:~$ 
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`app.py`**
+
+---
+
+## 12\. Find user by session ID
+> In this task, you will implement the **`Auth.get_user_from_session_id`** method. It takes a single **`session_id`** string argument and returns the corresponding **`User`** or **`None`**.
+> 
+> If the session ID is **`None`** or no user is found, return **`None`**. Otherwise return the corresponding user.
+> 
+> Remember to only use public methods of **`self._db`**.
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`auth.py`**
+
+---
+
+## 13\. Destroy session
+> In this task, you will implement **`Auth.destroy_session`**. The method takes a single **`user_id`** integer argument and returns **`None`**.
+> 
+> The method updates the corresponding user’s session ID to **`None`**.
+> 
+> Remember to only use public methods of **`self._db`**.
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`auth.py`**
+
+---
+
+## 14\. Log out
+> In this task, you will implement a **`logout`** function to respond to the **`DELETE /sessions`** route.
+> 
+> The request is expected to contain the session ID as a cookie with key **`"session_id"`**.
+> 
+> Find the user with the requested session ID. If the user exists destroy the session and redirect the user to **`GET /`**. If the user does not exist, respond with a 403 HTTP status.
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`app.py`**
+
+---
+
+## 15\. User profile
+> In this task, you will implement a **`profile`** function to respond to the **`GET /profile`** route.
+> 
+> The request is expected to contain a **`session_id`** cookie. Use it to find the user. If the user exist, respond with a 200 HTTP status and the following JSON payload:
+> 
+>> ```
+>> {"email": "<user email>"}
+>> ```
+> 
+> If the session ID is invalid or the user does not exist, respond with a 403 HTTP status.
+> 
+>> ```
+>> bob@dylan:~$ curl -XPOST localhost:5000/sessions -d 'email=bob@bob.com' -d 'password=mySuperPwd' -v
+>> Note: Unnecessary use of -X or --request, POST is already inferred.
+>> *   Trying 127.0.0.1...
+>> * TCP_NODELAY set
+>> * Connected to localhost (127.0.0.1) port 5000 (#0)
+>> > POST /sessions HTTP/1.1
+>> > Host: localhost:5000
+>> > User-Agent: curl/7.58.0
+>> > Accept: */*
+>> > Content-Length: 37
+>> > Content-Type: application/x-www-form-urlencoded
+>> > 
+>> * upload completely sent off: 37 out of 37 bytes
+>> * HTTP 1.0, assume close after body
+>> < HTTP/1.0 200 OK
+>> < Content-Type: application/json
+>> < Content-Length: 46
+>> < Set-Cookie: session_id=75c89af8-1729-44d9-a592-41b5e59de9a1; Path=/
+>> < Server: Werkzeug/1.0.1 Python/3.7.3
+>> < Date: Wed, 19 Aug 2020 00:15:57 GMT
+>> < 
+>> {"email":"bob@bob.com","message":"logged in"}
+>> * Closing connection 0
+>> bob@dylan:~$
+>> bob@dylan:~$ curl -XGET localhost:5000/profile -b "session_id=75c89af8-1729-44d9-a592-41b5e59de9a1"
+>> {"email": "bob@bob.com"}
+>> bob@dylan:~$ 
+>> bob@dylan:~$ curl -XGET localhost:5000/profile -b "session_id=nope" -v
+>> Note: Unnecessary use of -X or --request, GET is already inferred.
+>> *   Trying 127.0.0.1...
+>> * TCP_NODELAY set
+>> * Connected to localhost (127.0.0.1) port 5000 (#0)
+>> > GET /profile HTTP/1.1
+>> > Host: localhost:5000
+>> > User-Agent: curl/7.58.0
+>> > Accept: */*
+>> > Cookie: session_id=75c89af8-1729-44d9-a592-41b5e59de9a
+>> > 
+>> * HTTP 1.0, assume close after body
+>> < HTTP/1.0 403 FORBIDDEN
+>> < Content-Type: text/html; charset=utf-8
+>> < Content-Length: 234
+>> < Server: Werkzeug/1.0.1 Python/3.7.3
+>> < Date: Wed, 19 Aug 2020 00:16:43 GMT
+>> < 
+>> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+>> <title>403 Forbidden</title>
+>> <h1>Forbidden</h1>
+>> <p>You don't have the permission to access the requested resource. It is either read-protected or not readable by the server.</p>
+>> * Closing connection 0
+>> 
+>> bob@dylan:~$ 
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`app.py`**
+
+---
+
+## 16\. Generate reset password token
+> In this task, you will implement the **`Auth.get_reset_password_token`** method. It take an **`email`** string argument and returns a string.
+> 
+> Find the user corresponding to the email. If the user does not exist, raise a **`ValueError`** exception. If it exists, generate a UUID and update the user’s **`reset_token`** database field. Return the token.
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`auth.py`**
+
+---
+
+## 17\. Get reset password token
+> In this task, you will implement a **`get_reset_password_token`** function to respond to the **`POST /reset_password`** route.
+> 
+> The request is expected to contain form data with the **`"email"`** field.
+> 
+> If the email is not registered, respond with a 403 status code. Otherwise, generate a token and respond with a 200 HTTP status and the following JSON payload:
+> 
+>> ```
+>> {"email": "<user email>", "reset_token": "<reset token>"}
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`app.py`**
+
+---
+
+## 18\. Update password
+> In this task, you will implement the **`Auth.update_password`** method. It takes **`reset_token`** string argument and a **`password`** string argument and returns **`None`**.
+> 
+> Use the **`reset_token`** to find the corresponding user. If it does not exist, raise a **`ValueError`** exception.
+> 
+> Otherwise, hash the password and update the user’s **`hashed_password`** field with the new hashed password and the **`reset_token`** field to **`None`**.
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`auth.py`**
+
+---
+
+## 19\. Update password end-point
+> In this task you will implement the **`update_password`** function in the **`app`** module to respond to the **`PUT /reset_password`** route.
+> 
+> The request is expected to contain form data with fields **`"email"`**, **`"reset_token"`** and **`"new_password"`**.
+> 
+> Update the password. If the token is invalid, catch the exception and respond with a 403 HTTP code.
+> 
+> If the token is valid, respond with a 200 HTTP code and the following JSON payload:
+> 
+>> ```
+>> {"email": "<user email>", "message": "Password updated"}
+>> ```
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`app.py`**
+
+---
+
+## 20\. End-to-end integration test
+> Start your app. Open a new terminal window.
+> 
+> Create a new module called **`main.py`**. Create one function for each of the following tasks. Use the **`requests`** module to query your web server for the corresponding end-point. Use **`assert`** to validate the response’s expected status code and payload (if any) for each task.
+> 
+> -   **`register_user(email: str, password: str) -> None`**
+> -   **`log_in_wrong_password(email: str, password: str) -> None`**
+> -   **`log_in(email: str, password: str) -> str`**
+> -   **`profile_unlogged() -> None`**
+> -   **`profile_logged(session_id: str) -> None`**
+> -   **`log_out(session_id: str) -> None`**
+> -   **`reset_password_token(email: str) -> str`**
+> -   **`update_password(email: str, reset_token: str, new_password: str) -> None`**
+> 
+> Then copy the following code at the end of the **`main`** module:
+> 
+>> ```
+>> EMAIL = "guillaume@holberton.io"
+>> PASSWD = "b4l0u"
+>> NEW_PASSWD = "t4rt1fl3tt3"
+>> 
+>> 
+>> if __name__ == "__main__":
+>> 
+>>     register_user(EMAIL, PASSWD)
+>>     log_in_wrong_password(EMAIL, NEW_PASSWD)
+>>     profile_unlogged()
+>>     session_id = log_in(EMAIL, PASSWD)
+>>     profile_logged(session_id)
+>>     log_out(session_id)
+>>     reset_token = reset_password_token(EMAIL)
+>>     update_password(EMAIL, reset_token, NEW_PASSWD)
+>>     log_in(EMAIL, NEW_PASSWD)
+>> ```
+> 
+> Run **`python main.py`**. If everything is correct, you should see no output.
+
+### **Repo:**
+
+-   GitHub repository: **`alx-backend-user-data`**
+-   Directory: **`0x03-user_authentication_service`**
+-   File: **`main.py`**
+
+---
