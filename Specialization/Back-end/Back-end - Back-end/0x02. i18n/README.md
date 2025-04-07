@@ -167,9 +167,9 @@
 > 
 > **Visiting **`http://127.0.0.1:5000/`** in your browser should display this:**
 > 
-> ![](Project%200x02.%20i18n%20%20Cairo%20Intranet/2c5b2c8190f88c6b4668.png)
+> ![](./assets/in-03.png)
 > 
-> **Visiting **`http://127.0.0.1:5000/?login_as=2`** in your browser should display this:** ![](./assets/in-03.png)
+> **Visiting **`http://127.0.0.1:5000/?login_as=2`** in your browser should display this:** ![](./assets/in-04.png)
 
 ### **Repo:**
 
@@ -191,7 +191,7 @@
 > 
 > Test by logging in as different users
 > 
-> ![](./assets/in-04.png)
+> ![](./assets/in-05.png)
 
 ### **Repo:**
 
