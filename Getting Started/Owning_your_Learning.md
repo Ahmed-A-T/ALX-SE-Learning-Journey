@@ -3,10 +3,10 @@
 ## Concepts
 _For this project, we expect you to look at these concepts:_
 
--   [Technical Questioning](https://intranet.alxswe.com/concepts/100006)
--   [The Framework](https://intranet.alxswe.com/concepts/75)
+-   [Technical Questioning](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Technical_Questioning.md)
+-   [The Framework](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/The-Framework.md)
 -   [Peer Learning Day - How To Get Started](https://intranet.alxswe.com/concepts/58)
--   [Approaching a Project](https://intranet.alxswe.com/concepts/350)
+-   [Approaching a Project](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Approaching_a_Project.md)
 
 # Resources
 
