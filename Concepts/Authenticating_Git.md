@@ -43,17 +43,17 @@ Your PAT will be displayed in a text box. Copy and store your PAT in a secure lo
 2.  Navigate to the directory where you want to clone the repository.
 3.  Clone the repository using the following command:
 
-```
-   git clone https://github.com/&lt;username&gt;/&lt;repository&gt;.git --token &lt;pat&gt;
-```
+> ```
+>    git clone https://github.com/&lt;username&gt;/&lt;repository&gt;.git --token &lt;pat&gt;
+> ```
 
 Replace **`<username>`** with your GitHub username, **`<repository>`** with the name of the repository you want to clone, and **`<pat>`** with your PAT.
 
 For example, to clone the **`my-repo-001`** repository owned by the user **`betascribbles`**, you would use the following command:
 
-```
-git clone https://github.com/betascribbles/my-repo-001.git --token &lt;pat&gt;
-```
+> ```
+> git clone https://github.com/betascribbles/my-repo-001.git --token &lt;pat&gt;
+> ```
 
 1.  Once the repository has been cloned, you can navigate to it using the **`cd`** command and start working on the code.
 
@@ -65,17 +65,17 @@ git clone https://github.com/betascribbles/my-repo-001.git --token &lt;pat&gt;
 4.  Commit the changes using the **`git commit`** command.
 5.  Push the changes to the remote repository using the following command:
 
-```
-   git push https://github.com/&lt;username&gt;/&lt;repository&gt;.git --token &lt;pat&gt;
-```
+> ```
+>    git push https://github.com/&lt;username&gt;/&lt;repository&gt;.git --token &lt;pat&gt;
+> ```
 
 Replace **`<username>`** with your GitHub username, **`<repository>`** with the name of the repository you want to push to, and **`<pat>`** with your PAT.
 
 For example, to push the changes to the **`my-repo-001`** repository owned by the user **`betascribbles`**, you would use the following command:
 
-```
-git push https://github.com/betascribbles/my-repo-001.git --token &lt;pat&gt;
-```
+> ```
+> git push https://github.com/betascribbles/my-repo-001.git --token &lt;pat&gt;
+> ```
 
 ## SSH Key
 
@@ -87,9 +87,9 @@ git push https://github.com/betascribbles/my-repo-001.git --token &lt;pat&gt;
 1.  Open a terminal window.
 2.  Generate a new SSH key with the following command:
 
-```
-   ssh-keygen -t ed25519
-```
+> ```
+>    ssh-keygen -t ed25519
+> ```
 
 1.  Enter a passphrase for your key when prompted. The passphrase is optional.
 2.  Press Enter to accept the default file location for your key.
@@ -112,29 +112,28 @@ To use SSH key authentication with GitHub, you will need to generate an SSH key 
 
 1.  Generate an SSH key. If you don’t already have one, you can generate an SSH key using the following command:
 
-```
-   ssh-keygen -t ed25519 -C "your_email@example.com"
-```
+> ```
+>    ssh-keygen -t ed25519 -C "your_email@example.com"
+> ```
 
 1.  Add your SSH key to GitHub. Go to your **GitHub account settings** and click the **SSH and GPG keys** tab. Click the **New SSH key** button and paste the contents of your public key file (**`~/.ssh/id_ed25519.pub`**) into the Key field. Click the **Add SSH key** button.
 2.  Clone a GitHub repository using SSH. To clone a GitHub repository using SSH, use the following command:
 
-```
-   git clone git@github.com:username/repository.git
-```
+> ```
+>    git clone git@github.com:username/repository.git
+> ```
 
 Replace **`username`** with your GitHub username and **`repository`** with the name of the repository you want to clone.
 
 1.  Push changes to a GitHub repository using SSH. To push changes to a GitHub repository using SSH, use the following command:
 
-```
-   git push git@github.com:username/repository.git
-```
+> ```
+>    git push git@github.com:username/repository.git
+> ```
 
 Replace **`username`** with your GitHub username and **`repository`** with the name of the repository you want to push to.
 
 ## Resources
-
--   [GitHub auth documentation](https://intranet.alxswe.com/rltoken/_SM_8rqaSqTcoptG_dxGnQ "GitHub auth documentation")
--   [Support for password authentication was removed GitHub Fixed using Token (August 13, 2021) - Linux by Code With Arjun](https://intranet.alxswe.com/rltoken/nBDsvR7lUFkETIZ-4EYcwg "Support for password authentication was removed GitHub Fixed using Token (August 13, 2021) - Linux by Code With Arjun")
--   [How to generate GitHub PAT](https://intranet.alxswe.com/rltoken/RI8vRkGq9rzX2BMzIhY0DQ "How to generate GitHub PAT")
+> -   [GitHub auth documentation](https://www.google.com/url?q=https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github "GitHub auth documentation")
+> -   [Support for password authentication was removed GitHub Fixed using Token (August 13, 2021) - Linux by Code With Arjun](https://www.youtube.com/watch?v=ytSoabxSQ6E "Support for password authentication was removed GitHub Fixed using Token (August 13, 2021) - Linux by Code With Arjun")
+> -   [How to generate GitHub PAT](https://www.youtube.com/watch?v=iLrywUfs7yU "How to generate GitHub PAT")
