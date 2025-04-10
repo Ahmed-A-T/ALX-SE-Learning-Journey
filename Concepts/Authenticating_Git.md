@@ -79,7 +79,7 @@ git push https://github.com/betascribbles/my-repo-001.git --token &lt;pat&gt;
 
 ## SSH Key
 
-[![](https://markdown-videos-api.jorgenkh.no/youtube/watch?v=X8Mp-s6ZQVo)](https://www.youtube.com/watch?v=X8Mp-s6ZQVo)
+[![](./img/SSH-Key.png)](https://www.youtube.com/watch?v=X8Mp-s6ZQVo)
 
 
 ### Generate an SSH Key
