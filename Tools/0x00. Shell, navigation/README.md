@@ -127,7 +127,7 @@
 > -   Don’t forget to validate your current working directory
 > -   Don’t forget to display the list of directories of your current directory to validate the creation of the directory
 
----   **Date:** \---
+---
 
 ## 6\. No need
 > Access your sandbox and:
