@@ -1,6 +1,6 @@
 # Your network is your net worth
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2023/3/6ddad484f1e4677b6a0fafd3efd76c91a2015fa0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250410T205232Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=117284080596ee33b688b65c7401b5374a3e4860d3492b42fa434457ed256d76)
+![](./assets/02.png)
 
 [LinkedIn](https://www.linkedin.com/ "LinkedIn") can be a valuable tool for software engineers looking to build their professional network, find job opportunities, showcase their skills and experience, and stay up-to-date with industry trends and insights.
 
