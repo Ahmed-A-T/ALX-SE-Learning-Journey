@@ -4,8 +4,8 @@
 
 _For this project, we expect you to look at these concepts:_
 
--   [White boarding](https://intranet.alxswe.com/concepts/100000)
--   [Flowcharts](https://intranet.alxswe.com/concepts/130)
+-   [White boarding](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/White_boarding.md)
+-   [Flowcharts](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/blob/main/Concepts/Flowcharts.md)
 
 # Resources
 
