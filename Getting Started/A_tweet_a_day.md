@@ -12,7 +12,7 @@ These may include:
 
 Having a Twitter account can also be a good way to establish a personal brand and showcase your expertise to potential employers or collaborators. It’s good to start early and to connect with your peers as soon as possible to start building your network.
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2023/1/7d5b22a7bb943b00ba557ffef754914fe5d7b695.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20250410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250410T205012Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e95ba14ba6e1950497cf9b804dd2dc6481521b8660fb2fb4f8c04f867a92f598)
+![](./assets/01.png)
 
 ---
 
