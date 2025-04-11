@@ -12,9 +12,9 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 ## Curriculum
 > ## Software Engineering Foundation
 > ### Month #0
->> * [x] **0x01. Emacs**
->> * [x] **0x00. Shell, navigation**
->> * [x] **Setting up your local coding environment (optional)**
+>> * [x] **[0x01. Emacs](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Tools/0x02.%20Emacs)**
+>> * [x] **[0x00. Shell, navigation](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Tools/0x00.%20Shell%2C%20navigation)**
+>> * [x] **[Setting up your local coding environment (optional)](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/0-Day%20-%200-Day/Setting%20up%20your%20local%20coding%20environment)**
 >> * [x] **0x02. vi**
 >> * [x] **0x03. Git**
 >> * [x] **0x04. Professional Technologies**
