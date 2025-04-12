@@ -146,46 +146,46 @@ Welcome to my ALX Software Engineering Learning Journey repository! 🚀
 >
 > ## Short Specialization (Backend)
 > ### Month #0
->> * **[] 0x00. ES6 Basics**
->> * **[] 0x00. Pascal's Triangle**
->> * **[] 0x01. ES6 Promises**
->> * **[] 0x02. ES6 classes**
->> * **[] 0x03. ES6 data manipulation**
->> * **[] 0x01. Lockboxes**
->> * **[] 0x04. Typescript**
->> * **[] 0x00. Python - Variable Annotations**
->> * **[] 0x01. Python - Async**
->> * **[] 0x02. Minimum Operations**
->> * **[] 0x02. Python - Async Comprehension**
->> * **[] 0x00. MySQL advanced**
->> * **[] 0x01. NoSQL**
->> * **[] 0x03. Log Parsing**
->> * **[] 0x02. Redis basic**
+>> * **[] [0x00. ES6 Basics](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Modern%20JavaScript/0x00.%20ES6%20Basics)**
+>> * **[] [0x00. Pascal's Triangle](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x00.%20Pascal's%20Triangle)**
+>> * **[] [0x01. ES6 Promises](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Modern%20JavaScript/0x01.%20ES6%20Promises)**
+>> * **[] [0x02. ES6 classes](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Modern%20JavaScript/0x02.%20ES6%20classes)**
+>> * **[] [0x03. ES6 data manipulation](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Modern%20JavaScript/0x03.%20ES6%20data%20manipulation)**
+>> * **[] [0x01. Lockboxes](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x01.%20Lockboxes)**
+>> * **[] [0x04. Typescript](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Modern%20JavaScript/0x04.%20Typescript)**
+>> * **[] [0x00. Python - Variable Annotations](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Python/0x00.%20Python%20-%20Variable%20Annotations)**
+>> * **[] [0x01. Python - Async](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Python/0x01.%20Python%20-%20Async)**
+>> * **[] [0x02. Minimum Operations](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x02.%20Minimum%20Operations)**
+>> * **[] [0x02. Python - Async Comprehension](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Python/0x02.%20Python%20-%20Async%20Comprehension)**
+>> * **[] [0x00. MySQL advanced](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Storage/0x00.%20MySQL%20advanced)**
+>> * **[] [0x01. NoSQL](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Storage/0x01.%20NoSQL)**
+>> * **[] [0x03. Log Parsing](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x03.%20Log%20Parsing)**
+>> * **[] [0x02. Redis basic](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Storage/0x02.%20Redis%20basic)**
 >
 > ### Month #1
->> * **[] 0x00. Pagination**
->> * **[] 0x04. UTF-8 Validation**
->> * **[] 0x01. Caching**
->> * **[] 0x03. Unittests and Integration Tests**
->> * **[] 0x05. N Queens**
->> * **[] 0x02. i18n**
->> * **[] 0x00. Personal data**
->> * **[] 0x01. Basic authentication**
->> * **[] 0x06. Star Wars API**
->> * **[] 0x02. Session authentication**
->> * **[] 0x03. User authentication service**
->> * **[] 0x07. Rotate 2D Matrix**
+>> * **[] [0x00. Pagination](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Back-end/0x00.%20Pagination)**
+>> * **[] [0x04. UTF-8 Validation](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x04.%20UTF-8%20Validation)**
+>> * **[] [0x01. Caching](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Back-end/0x01.%20Caching)**
+>> * **[] [0x03. Unittests and Integration Tests](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Python/0x03.%20Unittests%20and%20Integration%20Tests)**
+>> * **[] [0x05. N Queens](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x05.%20N%20Queens)**
+>> * **[] [0x02. i18n](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Back-end/0x02.%20i18n)**
+>> * **[] [0x00. Personal data](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20User%20Data/0x00.%20Personal%20data)**
+>> * **[] [0x01. Basic authentication](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20User%20Data/0x01.%20Basic%20authentication)**
+>> * **[] [0x06. Star Wars API](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x06.%20Star%20Wars%20API)**
+>> * **[] [0x02. Session authentication](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20User%20Data/0x02.%20Session%20authentication)**
+>> * **[] [0x03. User authentication service](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20User%20Data/0x03.%20User%20authentication%20service)**
+>> * **[] [0x07. Rotate 2D Matrix](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x07.%20Rotate%202D%20Matrix)**
 >
 > ### Month #2
->> * **[] 0x05. NodeJS Basics**
->> * **[] 0x08. Making Change**
->> * **[] 0x06. Unittests in JS**
->> * **[] 0x03. Queuing System in JS**
->> * **[] 0x09. Island Perimeter**
->> * **[] Webstack - Portfolio Project - Pitch**
->> * **[] 0x04. Files manager**
->> * **[] 0x0A. Prime Game**
->> * **[] Webstack - Portfolio Project**
+>> * **[] [0x05. NodeJS Basics](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Modern%20JavaScript/0x05.%20NodeJS%20Basics)**
+>> * **[] [0x08. Making Change](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x08.%20Making%20Change)**
+>> * **[] [0x06. Unittests in JS](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Modern%20JavaScript/0x06.%20Unittests%20in%20JS)**
+>> * **[] [0x03. Queuing System in JS](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Back-end/0x03.%20Queuing%20System%20in%20JS)**
+>> * **[] [0x09. Island Perimeter](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x09.%20Island%20Perimeter)**
+>> * **[] [Webstack - Portfolio Project - Pitch](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Portfolio%20project/Portfolio%20project%20-%20Portfolio%20project/Webstack%20-%20Portfolio%20Project%20-%20Pitch)**
+>> * **[] [0x04. Files manager](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Back-end/Back-end%20-%20Back-end/0x04.%20Files%20manager)**
+>> * **[] [0x0A. Prime Game](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Interview%20Preparation/Interview%20Preparation%20-%20Interview%20Preparation/0x0A.%20Prime%20Game)**
+>> * **[] [Webstack - Portfolio Project](https://github.com/Ahmed-A-T/ALX-SE-Learning-Journey/tree/main/Specialization/Portfolio%20project/Portfolio%20project%20-%20Portfolio%20project/Webstack%20-%20Portfolio%20Project)**
 >
 ---
 * ### [**Getting Started**](Getting_Started/)
